@@ -8,7 +8,7 @@ import Profile from './pages/Profile.jsx'
 import ProfilePicker from './pages/ProfilePicker.jsx'
 import SignUp from './pages/SignUp.jsx'
 import Series from './pages/Series.jsx'
-import { sitePath } from './utils/sitePath.js'
+import { routerPath } from './utils/sitePath.js'
 
 function App() {
   return (
@@ -17,12 +17,12 @@ function App() {
       <main>
         <ErrorBoundary>
           <Router>
-            <Route path={sitePath('/')} component={RequireAuth} page={Home} />
-            <Route path={sitePath('/signup')} component={SignUp} />
-            <Route path={sitePath('/profiles')} component={ProfilePicker} />
-            <Route path={sitePath('/profile')} component={RequireAuth} page={Profile} />
-            <Route path={sitePath('/comic/:comicId')} component={RequireAuth} page={ComicViewer} />
-            <Route path={sitePath('/:seriesId')} component={RequireAuth} page={Series} />
+            <Route path={routerPath('/')} component={RequireAuth} page={Home} />
+            <Route path={routerPath('/signup')} component={SignUp} />
+            <Route path={routerPath('/profiles')} component={ProfilePicker} />
+            <Route path={routerPath('/profile')} component={RequireAuth} page={Profile} />
+            <Route path={routerPath('/comic/:comicId')} component={RequireAuth} page={ComicViewer} />
+            <Route path={routerPath('/:seriesId')} component={RequireAuth} page={Series} />
             <Route default component={NotFound} />
           </Router>
         </ErrorBoundary>
