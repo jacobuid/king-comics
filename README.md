@@ -1,106 +1,54 @@
 # King Comics
 
-A browser-based family comic archive built with Preact, Vite, and preact-iso.
+A family comic archive built with Preact and Vite.
 
-The sign-up page creates local profiles, and the profile picker starts a
-seven-day browser session for the selected reader. This is not authentication,
-and profiles do not sync between browsers. Each profile keeps its own per-comic
-Bookmarks and History in local storage. The most recently updated History comic
-appears in the profile hero. The active reader can change their display name
-without losing that progress.
+Profiles, bookmarks, history, and reading progress are stored in the browser.
+They do not sync between devices.
 
-## Development
+Live site: <https://jacobuid.github.io/king-comics/>
+
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Create a production build with `npm run build`.
-
 ## Adding comics
 
-Put each series in its own folder under `public/comics`. Both CBZ (ZIP) and CBR
-(RAR) archives are supported:
+1. Put each CBZ or CBR file in its series folder:
 
-```text
-public/comics/
-  Sonic The Hedgehog (1993)/
-    Sonic The Hedgehog 001.cbz
-    Sonic The Hedgehog 002.cbr
-```
+   ```text
+   public/comics/
+     Series Name/
+       Comic 001.cbz
+       Comic 002.cbr
+   ```
 
-`npm run dev` scans that folder and generates the comic catalog. Run
-`npm run catalog` after adding or renaming archives when the development server
-is already open. Publish one new or updated series with:
+2. Generate the catalog and covers, then upload the new files to S3:
 
-```bash
-npm run publish:comic
-```
+   ```bash
+   npm run publish:comic
+   ```
 
-This regenerates the local catalog and covers, uploads only new or changed
-objects to S3, and prints the series and CloudFront asset URLs. Use `--dry-run`
-to preview the S3 changes, or `--series "My little Pony (2013)"` to target one
-series folder. The first image in each ZIP- or RAR-based comic archive is
-also extracted as its cover, even when the file extension does not match its
-internal archive format. Commit `src/data/comics.generated.js`; production
-builds use that committed catalog instead of rescanning the local-only files.
+3. Build, commit the generated catalog, and trigger the GitHub Pages deploy:
 
-After publishing the assets, build, commit the generated catalog, and trigger
-the GitHub Pages deployment with:
+   ```bash
+   npm run deploy:comic
+   ```
+
+To publish only one series or preview an upload:
 
 ```bash
-npm run deploy:comic
+npm run publish:comic -- --series "Series Name"
+npm run publish:comic -- --dry-run
 ```
 
-Pass `--message "Add a comic series"` to choose the catalog commit message.
-The deploy command commits only `src/data/comics.generated.js`; other working
-files are left untouched.
+The publish command requires the local AWS CLI profile `king-comics`. The
+deploy command requires Git access to `jacobuid/king-comics`.
 
-The home page lists one card per series folder. Selecting a card opens that
-series at a generated route such as `/sonic-the-hedgehog-1993`, where its
-individual issues can be opened or bookmarked.
-Comic archives and generated covers are excluded from Git. Local development
-reads them from `public/`. Production reads the same paths from the object
-storage URL configured with `VITE_COMICS_BASE_URL`. Reading page, History, and
-Bookmarks remain separate for each browser profile.
+## Storage
 
-## Comic storage on AWS
-
-The production site expects these object keys in an Amazon S3 bucket:
-
-```text
-comics/Series Name/Comic.cbz
-generated/covers/generated-cover.jpg
-```
-
-Keep the S3 bucket private and serve it through an Amazon CloudFront
-distribution configured with Origin Access Control. The AWS CLI can regenerate
-the catalog and synchronize the local assets with:
-
-```bash
-npm run publish:comic
-```
-
-`npm run publish:comics` and `npm run upload:comics` remain aliases for the same
-command. It regenerates the catalog, cleans stale generated covers, and uses the local
-`king-comics` AWS CLI profile to synchronize assets into
-`s3://king-comics-jacobuid`. It does not delete remote objects. Never put AWS
-credentials in this repository or in a `VITE_` variable.
-
-Local development is configured in the ignored `.env.local` file with:
-
-```text
-VITE_COMICS_BASE_URL=https://d1ktco3tjlf7cv.cloudfront.net
-```
-
-The CloudFront distribution ID is `E3C2G8VW4ZZM4W`. It uses Origin Access
-Control to read the private `king-comics-jacobuid` bucket and returns CORS
-headers for the GitHub Pages origin and `http://localhost:5173`.
-
-The production output is written to `dist/`. When built by GitHub Actions, the
-app uses `/king-comics/` as its base path for GitHub Pages. The deployment
-workflow already supplies the CloudFront asset URL.
-
-To publish, select **GitHub Actions** under **Settings → Pages → Build and
-deployment**. Every push to `main` will then build and deploy the site.
+Comic archives and generated covers are excluded from Git. Production assets
+are stored in the private `king-comics-jacobuid` S3 bucket and served through
+CloudFront. Do not put AWS credentials in this repository.
