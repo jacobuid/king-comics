@@ -13,6 +13,7 @@ export default defineConfig({
     preact({
       prerender: {
         enabled: true,
+        renderTarget: '#root',
         additionalPrerenderRoutes: [
           '/',
           '/signup',
