@@ -32,7 +32,15 @@ public/comics/
 
 `npm run dev` scans that folder and generates the comic catalog. Run
 `npm run catalog` after adding or renaming archives when the development server
-is already open. The first image in each ZIP- or RAR-based comic archive is
+is already open. Publish one new or updated series with:
+
+```bash
+npm run publish:comics -- --series "My little Pony (2013)"
+```
+
+Use `--dry-run` to preview the S3 changes, or omit `--series` to synchronize all
+changed comics. The command prints the series page and CloudFront archive/cover
+URLs. The first image in each ZIP- or RAR-based comic archive is
 also extracted as its cover, even when the file extension does not match its
 internal archive format. Commit `src/data/comics.generated.js`; production
 builds use that committed catalog instead of rescanning the local-only files.
@@ -55,14 +63,15 @@ generated/covers/generated-cover.jpg
 ```
 
 Keep the S3 bucket private and serve it through an Amazon CloudFront
-distribution configured with Origin Access Control. After running
-`npm run catalog`, the AWS CLI can synchronize the local assets:
+distribution configured with Origin Access Control. The AWS CLI can regenerate
+the catalog and synchronize the local assets with:
 
 ```bash
-npm run upload:comics
+npm run publish:comics
 ```
 
-This regenerates the catalog, cleans stale generated covers, and uses the local
+`npm run upload:comics` remains an alias for the same command. It regenerates
+the catalog, cleans stale generated covers, and uses the local
 `king-comics` AWS CLI profile to synchronize assets into
 `s3://king-comics-jacobuid`. It does not delete remote objects. Never put AWS
 credentials in this repository or in a `VITE_` variable.

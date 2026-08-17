@@ -1,7 +1,7 @@
 import AdmZip from 'adm-zip'
 import { createExtractorFromData } from 'node-unrar-js'
 import { createHash } from 'node:crypto'
-import { copyFile, mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, readFile, readdir, stat, unlink, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const projectRoot = process.cwd()
@@ -10,6 +10,7 @@ const coversRoot = path.join(projectRoot, 'public', 'generated', 'covers')
 const libarchiveRoot = path.join(projectRoot, 'public', 'libarchive')
 const generatedFile = path.join(projectRoot, 'src', 'data', 'comics.generated.js')
 const supportedExtensions = new Set(['.cbr', '.cbz'])
+const coverExtensions = ['.avif', '.gif', '.jpg', '.png', '.webp']
 
 async function findArchives(directory) {
   const entries = await readdir(directory, { withFileTypes: true })
@@ -31,6 +32,18 @@ function naturalCompare(first, second) {
 }
 
 async function extractCover(filePath, comicId) {
+  const archiveDetails = await stat(filePath)
+
+  for (const extension of coverExtensions) {
+    const coverFilename = `${comicId}${extension}`
+    const coverPath = path.join(coversRoot, coverFilename)
+    const coverDetails = await stat(coverPath).catch(() => null)
+
+    if (coverDetails && coverDetails.mtimeMs >= archiveDetails.mtimeMs) {
+      return `/generated/covers/${coverFilename}`
+    }
+  }
+
   try {
     const zip = new AdmZip(filePath)
     const imageEntries = zip.getEntries()

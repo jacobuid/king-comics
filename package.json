@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "catalog": "node scripts/generate-comic-catalog.mjs",
-    "upload:comics": "npm run catalog && aws s3 sync public/comics s3://king-comics-jacobuid/comics --exclude \"*.gitkeep\" --profile king-comics && aws s3 sync public/generated/covers s3://king-comics-jacobuid/generated/covers --profile king-comics",
+    "publish:comics": "node scripts/publish-comics.mjs",
+    "upload:comics": "node scripts/publish-comics.mjs",
     "predev": "npm run catalog",
     "dev": "vite",
     "prebuild": "node scripts/prepare-libarchive.mjs",
