@@ -3250,6 +3250,24 @@ export const comics = [
     "cover": "/generated/covers/sonic-the-hedgehog-miniseries-03-91f3ed49.jpg"
   },
   {
+    "id": "spidey-his-amazing-friends-01-be050c92",
+    "title": "Spidey & His Amazing Friends",
+    "series": "Spidey & His Amazing Friends (2024)",
+    "seriesId": "spidey-his-amazing-friends-2024",
+    "issue": "#1",
+    "archive": "/comics/Spidey%20%26%20His%20Amazing%20Friends%20(2024)/Spidey%20%26%20His%20Amazing%20Friends%2001%20.cbz",
+    "cover": "/generated/covers/spidey-his-amazing-friends-01-be050c92.jpg"
+  },
+  {
+    "id": "spidey-his-amazing-friends-02-467ea5ce",
+    "title": "Spidey & His Amazing Friends",
+    "series": "Spidey & His Amazing Friends (2024)",
+    "seriesId": "spidey-his-amazing-friends-2024",
+    "issue": "#2",
+    "archive": "/comics/Spidey%20%26%20His%20Amazing%20Friends%20(2024)/Spidey%20%26%20His%20Amazing%20Friends%2002.cbz",
+    "cover": "/generated/covers/spidey-his-amazing-friends-02-467ea5ce.jpg"
+  },
+  {
     "id": "tailsminiseries01-de5a4676",
     "title": "Tails Miniseries",
     "series": "Tails Miniseries",
