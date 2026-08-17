@@ -73,8 +73,10 @@ function main() {
   }
 
   console.log('Verifying the GitHub Pages production build...')
-  const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm'
-  execute(npmCommand, ['run', 'build'], {
+  const npmCli = process.env.npm_execpath
+  if (!npmCli) throw new Error('Could not locate the npm CLI used to start this command.')
+
+  execute(process.execPath, [npmCli, 'run', 'build'], {
     env: { ...process.env, GITHUB_ACTIONS: 'true' },
   })
 
