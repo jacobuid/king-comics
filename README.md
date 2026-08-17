@@ -35,15 +35,27 @@ public/comics/
 is already open. Publish one new or updated series with:
 
 ```bash
-npm run publish:comics -- --series "My little Pony (2013)"
+npm run publish:comic
 ```
 
-Use `--dry-run` to preview the S3 changes, or omit `--series` to synchronize all
-changed comics. The command prints the series page and CloudFront archive/cover
-URLs. The first image in each ZIP- or RAR-based comic archive is
+This regenerates the local catalog and covers, uploads only new or changed
+objects to S3, and prints the series and CloudFront asset URLs. Use `--dry-run`
+to preview the S3 changes, or `--series "My little Pony (2013)"` to target one
+series folder. The first image in each ZIP- or RAR-based comic archive is
 also extracted as its cover, even when the file extension does not match its
 internal archive format. Commit `src/data/comics.generated.js`; production
 builds use that committed catalog instead of rescanning the local-only files.
+
+After publishing the assets, build, commit the generated catalog, and trigger
+the GitHub Pages deployment with:
+
+```bash
+npm run deploy:comic
+```
+
+Pass `--message "Add a comic series"` to choose the catalog commit message.
+The deploy command commits only `src/data/comics.generated.js`; other working
+files are left untouched.
 
 The home page lists one card per series folder. Selecting a card opens that
 series at a generated route such as `/sonic-the-hedgehog-1993`, where its
@@ -67,11 +79,11 @@ distribution configured with Origin Access Control. The AWS CLI can regenerate
 the catalog and synchronize the local assets with:
 
 ```bash
-npm run publish:comics
+npm run publish:comic
 ```
 
-`npm run upload:comics` remains an alias for the same command. It regenerates
-the catalog, cleans stale generated covers, and uses the local
+`npm run publish:comics` and `npm run upload:comics` remain aliases for the same
+command. It regenerates the catalog, cleans stale generated covers, and uses the local
 `king-comics` AWS CLI profile to synchronize assets into
 `s3://king-comics-jacobuid`. It does not delete remote objects. Never put AWS
 credentials in this repository or in a `VITE_` variable.

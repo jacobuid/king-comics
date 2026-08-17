@@ -15,9 +15,9 @@ const catalogFile = path.join(projectRoot, 'src', 'data', 'comics.generated.js')
 
 function usage() {
   console.log(`Usage:
-  npm run publish:comics
-  npm run publish:comics -- --series "Series Folder"
-  npm run publish:comics -- --series "Series Folder" --dry-run
+  npm run publish:comic
+  npm run publish:comic -- --series "Series Folder"
+  npm run publish:comic -- --series "Series Folder" --dry-run
 
 Without --series, every changed comic archive is synchronized. AWS sync uploads
 only new or changed files and never deletes remote objects.`)
@@ -158,10 +158,9 @@ async function main() {
   }
 
   if (!options.dryRun) {
-    console.log('\nThe assets are live on CloudFront. To update the website catalog, commit and push:')
-    console.log('  git add src/data/comics.generated.js')
-    console.log('  git commit -m "Add comics to the catalog"')
-    console.log('  git push origin main')
+    console.log('\nThe assets are live on CloudFront and the local catalog is updated.')
+    console.log('Deploy the catalog to GitHub Pages with:')
+    console.log('  npm run deploy:comic')
   }
 }
 

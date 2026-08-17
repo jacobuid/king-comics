@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "catalog": "node scripts/generate-comic-catalog.mjs",
+    "publish:comic": "node scripts/publish-comics.mjs",
     "publish:comics": "node scripts/publish-comics.mjs",
     "upload:comics": "node scripts/publish-comics.mjs",
+    "deploy:comic": "node scripts/deploy-comic.mjs",
     "predev": "npm run catalog",
     "dev": "vite",
     "prebuild": "node scripts/prepare-libarchive.mjs",
