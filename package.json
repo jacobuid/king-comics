@@ -1,0 +1,27 @@
+{
+  "name": "king-comics",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "catalog": "node scripts/generate-comic-catalog.mjs",
+    "upload:comics": "npm run catalog && aws s3 sync public/comics s3://king-comics-jacobuid/comics --exclude \"*.gitkeep\" --profile king-comics && aws s3 sync public/generated/covers s3://king-comics-jacobuid/generated/covers --profile king-comics",
+    "predev": "npm run catalog",
+    "dev": "vite",
+    "prebuild": "node scripts/prepare-libarchive.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "adm-zip": "^0.6.0",
+    "fflate": "^0.8.3",
+    "libarchive.js": "^2.0.2",
+    "node-unrar-js": "^2.0.2",
+    "preact": "^10.29.8",
+    "preact-iso": "^2.12.2"
+  }
+}

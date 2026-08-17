@@ -1,0 +1,17 @@
+node_modules/
+dist/
+public/libarchive/
+public/generated/covers/
+public/comics/*
+!public/comics/.gitkeep
+.vite/
+.env
+.env.local
+*.local
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+.vscode/*
+!.vscode/extensions.json

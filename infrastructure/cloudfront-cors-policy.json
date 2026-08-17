@@ -1,0 +1,41 @@
+{
+  "ResponseHeadersPolicyConfig": {
+    "Name": "king-comics-cors",
+    "Comment": "Allow the King Comics app and local development to fetch comic assets",
+    "CorsConfig": {
+      "AccessControlAllowOrigins": {
+        "Quantity": 2,
+        "Items": [
+          "https://jacobuid.github.io",
+          "http://localhost:5173"
+        ]
+      },
+      "AccessControlAllowHeaders": {
+        "Quantity": 1,
+        "Items": ["*"]
+      },
+      "AccessControlAllowMethods": {
+        "Quantity": 3,
+        "Items": ["GET", "HEAD", "OPTIONS"]
+      },
+      "AccessControlAllowCredentials": false,
+      "AccessControlExposeHeaders": {
+        "Quantity": 3,
+        "Items": ["Accept-Ranges", "Content-Length", "Content-Range"]
+      },
+      "AccessControlMaxAgeSec": 86400,
+      "OriginOverride": true
+    },
+    "SecurityHeadersConfig": {
+      "ContentTypeOptions": {
+        "Override": true
+      },
+      "StrictTransportSecurity": {
+        "Override": true,
+        "IncludeSubdomains": true,
+        "Preload": false,
+        "AccessControlMaxAgeSec": 31536000
+      }
+    }
+  }
+}
