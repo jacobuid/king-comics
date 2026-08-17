@@ -568,6 +568,24 @@ export const comics = [
     "cover": "/generated/covers/megaman55-f85448c1.jpg"
   },
   {
+    "id": "mylittleponyfriendshipismagic01-062d1239",
+    "title": "My little Pony",
+    "series": "My little Pony (2013)",
+    "seriesId": "my-little-pony-2013",
+    "issue": "#1",
+    "archive": "/comics/My%20little%20Pony%20(2013)/MyLittlePonyFriendshipIsMagic01.cbr",
+    "cover": "/generated/covers/mylittleponyfriendshipismagic01-062d1239.jpg"
+  },
+  {
+    "id": "mylittleponyfriendshipismagic02-2016b9ff",
+    "title": "My little Pony",
+    "series": "My little Pony (2013)",
+    "seriesId": "my-little-pony-2013",
+    "issue": "#2",
+    "archive": "/comics/My%20little%20Pony%20(2013)/MyLittlePonyFriendshipIsMagic02.cbr",
+    "cover": "/generated/covers/mylittleponyfriendshipismagic02-2016b9ff.jpg"
+  },
+  {
     "id": "princesssallyminiseries01-3f158e81",
     "title": "PrincessSallyMiniseries01",
     "series": "Princess Sally Acorn Miniseries",
