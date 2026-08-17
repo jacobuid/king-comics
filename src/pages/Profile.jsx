@@ -25,6 +25,10 @@ function isInHistory(item) {
   return Boolean(item?.lastReadAt) || normalizedStatus(item?.status) === 'read'
 }
 
+function historyTimestamp(item) {
+  return item?.lastReadAt ?? item?.updatedAt ?? ''
+}
+
 function Profile({ user }) {
   const { route } = useLocation()
   const [currentUser, setCurrentUser] = useState(user)
@@ -42,6 +46,10 @@ function Profile({ user }) {
       if (isBookmarked(item)) grouped.saved.push(comic)
     }
 
+    grouped.read.sort((first, second) => (
+      historyTimestamp(progress[second.id]).localeCompare(historyTimestamp(progress[first.id]))
+    ))
+
     return grouped
   }, [progress])
 
@@ -49,8 +57,8 @@ function Profile({ user }) {
     const historyEntries = Object.entries(progress)
       .filter(([, item]) => isInHistory(item))
       .sort(([, first], [, second]) => (
-        second.lastReadAt ?? second.updatedAt ?? ''
-      ).localeCompare(first.lastReadAt ?? first.updatedAt ?? ''))
+        historyTimestamp(second).localeCompare(historyTimestamp(first))
+      ))
 
     return comics.find((comic) => comic.id === historyEntries[0]?.[0]) ?? null
   }, [progress])
