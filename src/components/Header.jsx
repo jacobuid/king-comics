@@ -29,7 +29,11 @@ function Header() {
         ariaLabel: `Back to ${currentComic.series}`,
       }
     : currentSeries
-      ? { href: sitePath('/'), label: '← All Series', ariaLabel: 'Back to all series' }
+      ? {
+          href: `${sitePath('/')}#series-${currentSeries.id}`,
+          label: '← All Series',
+          ariaLabel: 'Back to all series',
+        }
       : null
 
   useEffect(() => {

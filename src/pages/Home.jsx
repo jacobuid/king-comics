@@ -1,8 +1,26 @@
+import { useEffect } from 'preact/hooks'
 import { seriesList } from '../data/comics.js'
 import { assetPath } from '../utils/assetPath.js'
 import { sitePath } from '../utils/sitePath.js'
 
 function Home() {
+  useEffect(() => {
+    const targetId = window.location.hash.slice(1)
+    if (!targetId.startsWith('series-')) return
+
+    let secondFrame = null
+    const firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView({ block: 'center' })
+      })
+    })
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame)
+      if (secondFrame !== null) window.cancelAnimationFrame(secondFrame)
+    }
+  }, [])
+
   return (
     <section class="page">
       {seriesList.length === 0 && (
@@ -14,7 +32,12 @@ function Home() {
 
       <div class="series-grid">
         {seriesList.map((series) => (
-          <a class="series-card" href={sitePath(`/${series.id}`)} key={series.id}>
+          <a
+            class="series-card"
+            href={sitePath(`/${series.id}`)}
+            id={`series-${series.id}`}
+            key={series.id}
+          >
             {series.cover ? (
               <img class="comic-cover-image" src={assetPath(series.cover)} alt={`${series.name} cover`} />
             ) : (
