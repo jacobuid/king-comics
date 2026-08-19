@@ -6,6 +6,7 @@ import { useLocation, useRoute } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import GestureGuide from '../components/GestureGuide.jsx'
 import { getComic, getSeries } from '../data/comics.js'
+import { applyComicPageOrder } from '../data/comicPageOrder.js'
 import { getProfileProgress, setComicProgress } from '../utils/progress.js'
 import { assetPath } from '../utils/assetPath.js'
 import { sitePath } from '../utils/sitePath.js'
@@ -241,11 +242,11 @@ function ComicViewer({ user }) {
           images = flattenImages(await archive.extractFiles())
         }
 
-        images = images
+        images = applyComicPageOrder(images
           .sort((first, second) => first.path.localeCompare(second.path, undefined, {
             numeric: true,
             sensitivity: 'base',
-          }))
+          })), comic.pageOrder)
 
         if (images.length === 0) throw new Error('This archive does not contain any supported images.')
 

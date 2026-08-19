@@ -448,7 +448,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#22",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20022.cbz",
-    "cover": "/generated/covers/looney-tunes-022-e048fce6-v1.webp"
+    "cover": "/generated/covers/looney-tunes-022-e048fce6-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-023-99dd34ad",
@@ -484,7 +487,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#26",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20026.cbz",
-    "cover": "/generated/covers/looney-tunes-026-700bad11-v1.webp"
+    "cover": "/generated/covers/looney-tunes-026-700bad11-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-027-dedce51c",
@@ -520,7 +526,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#30",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20030.cbz",
-    "cover": "/generated/covers/looney-tunes-030-9be2205b-v1.webp"
+    "cover": "/generated/covers/looney-tunes-030-9be2205b-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-031-6f19b1f7",
@@ -529,7 +538,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#31",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20031.cbz",
-    "cover": "/generated/covers/looney-tunes-031-6f19b1f7-v1.webp"
+    "cover": "/generated/covers/looney-tunes-031-6f19b1f7-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-032-370c0345",
@@ -538,7 +550,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#32",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20032.cbz",
-    "cover": "/generated/covers/looney-tunes-032-370c0345-v1.webp"
+    "cover": "/generated/covers/looney-tunes-032-370c0345-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-033-b505b294",
@@ -547,7 +562,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#33",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20033.cbz",
-    "cover": "/generated/covers/looney-tunes-033-b505b294-v1.webp"
+    "cover": "/generated/covers/looney-tunes-033-b505b294-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-034-46e0fe0b",
@@ -592,7 +610,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#38",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20038.cbz",
-    "cover": "/generated/covers/looney-tunes-038-6105d0cc-v1.webp"
+    "cover": "/generated/covers/looney-tunes-038-6105d0cc-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-039-812176ff",
@@ -610,7 +631,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#40",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20040.cbz",
-    "cover": "/generated/covers/looney-tunes-040-c43240cd-v1.webp"
+    "cover": "/generated/covers/looney-tunes-040-c43240cd-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-041-b21db4c3",
@@ -637,7 +661,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#43",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20043.cbr",
-    "cover": "/generated/covers/looney-tunes-043-6028f3f0-v1.webp"
+    "cover": "/generated/covers/looney-tunes-043-6028f3f0-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-044-29754d88",
@@ -664,7 +691,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#46",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20046.cbz",
-    "cover": "/generated/covers/looney-tunes-046-4ae0e61d-v1.webp"
+    "cover": "/generated/covers/looney-tunes-046-4ae0e61d-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-047-bc7e0ccb",
@@ -673,7 +703,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#47",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20047.cbz",
-    "cover": "/generated/covers/looney-tunes-047-bc7e0ccb-v1.webp"
+    "cover": "/generated/covers/looney-tunes-047-bc7e0ccb-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-048-2e12b1c7",
@@ -682,7 +715,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#48",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20048.cbz",
-    "cover": "/generated/covers/looney-tunes-048-2e12b1c7-v1.webp"
+    "cover": "/generated/covers/looney-tunes-048-2e12b1c7-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-049-de1daf5f",
@@ -700,7 +736,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#50",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20050.cbz",
-    "cover": "/generated/covers/looney-tunes-050-46eb7974-v1.webp"
+    "cover": "/generated/covers/looney-tunes-050-46eb7974-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-051-4931121a",
@@ -718,7 +757,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#52",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20052.cbz",
-    "cover": "/generated/covers/looney-tunes-052-34353612-v1.webp"
+    "cover": "/generated/covers/looney-tunes-052-34353612-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-053-55bb8e42",
@@ -727,7 +769,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#53",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20053.cbz",
-    "cover": "/generated/covers/looney-tunes-053-55bb8e42-v1.webp"
+    "cover": "/generated/covers/looney-tunes-053-55bb8e42-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-054-7fa3251f",
@@ -736,7 +781,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#54",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20054.cbz",
-    "cover": "/generated/covers/looney-tunes-054-7fa3251f-v1.webp"
+    "cover": "/generated/covers/looney-tunes-054-7fa3251f-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-055-6863e63e",
@@ -754,7 +802,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#56",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20056.cbz",
-    "cover": "/generated/covers/looney-tunes-056-2b3997f7-v1.webp"
+    "cover": "/generated/covers/looney-tunes-056-2b3997f7-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-057-118450cd",
@@ -763,7 +814,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#57",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20057.cbz",
-    "cover": "/generated/covers/looney-tunes-057-118450cd-v1.webp"
+    "cover": "/generated/covers/looney-tunes-057-118450cd-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-058-594ffe04",
@@ -772,7 +826,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#58",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20058.cbz",
-    "cover": "/generated/covers/looney-tunes-058-594ffe04-v1.webp"
+    "cover": "/generated/covers/looney-tunes-058-594ffe04-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-059-1cbae864",
@@ -790,7 +847,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#60",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20060.cbz",
-    "cover": "/generated/covers/looney-tunes-060-69c6bd40-v1.webp"
+    "cover": "/generated/covers/looney-tunes-060-69c6bd40-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-061-52e8417a",
@@ -1429,7 +1489,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#131",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20131.cbz",
-    "cover": "/generated/covers/looney-tunes-131-66d31942-v1.webp"
+    "cover": "/generated/covers/looney-tunes-131-66d31942-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-132-d7065f01",
@@ -1447,7 +1510,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#133",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20133.cbz",
-    "cover": "/generated/covers/looney-tunes-133-5a385cbc-v1.webp"
+    "cover": "/generated/covers/looney-tunes-133-5a385cbc-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-134-e741b8ba",
@@ -1456,7 +1522,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#134",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20134.cbz",
-    "cover": "/generated/covers/looney-tunes-134-e741b8ba-v1.webp"
+    "cover": "/generated/covers/looney-tunes-134-e741b8ba-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-135-f0906320",
@@ -1474,7 +1543,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#136",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20136.cbz",
-    "cover": "/generated/covers/looney-tunes-136-820a70d0-v1.webp"
+    "cover": "/generated/covers/looney-tunes-136-820a70d0-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-137-79877e53",
@@ -1492,7 +1564,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#138",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20138.cbz",
-    "cover": "/generated/covers/looney-tunes-138-6aa2e25d-v1.webp"
+    "cover": "/generated/covers/looney-tunes-138-6aa2e25d-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-139-96778582",
@@ -1510,7 +1585,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#140",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20140.cbz",
-    "cover": "/generated/covers/looney-tunes-140-70394cef-v1.webp"
+    "cover": "/generated/covers/looney-tunes-140-70394cef-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-141-b1b7f32b",
@@ -1519,7 +1597,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#141",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20141.cbz",
-    "cover": "/generated/covers/looney-tunes-141-b1b7f32b-v1.webp"
+    "cover": "/generated/covers/looney-tunes-141-b1b7f32b-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-142-8707d1c2",
@@ -1528,7 +1609,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#142",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20142.cbz",
-    "cover": "/generated/covers/looney-tunes-142-8707d1c2-v1.webp"
+    "cover": "/generated/covers/looney-tunes-142-8707d1c2-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-143-210fda76",
@@ -1537,7 +1621,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#143",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20143.cbz",
-    "cover": "/generated/covers/looney-tunes-143-210fda76-v1.webp"
+    "cover": "/generated/covers/looney-tunes-143-210fda76-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-144-1e37d2f0",
@@ -1546,7 +1633,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#144",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20144.cbz",
-    "cover": "/generated/covers/looney-tunes-144-1e37d2f0-v1.webp"
+    "cover": "/generated/covers/looney-tunes-144-1e37d2f0-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-145-e7138603",
@@ -1555,7 +1645,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#145",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20145.cbz",
-    "cover": "/generated/covers/looney-tunes-145-e7138603-v1.webp"
+    "cover": "/generated/covers/looney-tunes-145-e7138603-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 1
+    }
   },
   {
     "id": "looney-tunes-146-f942d2e9",
@@ -2077,7 +2170,10 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#203",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20203.cbz",
-    "cover": "/generated/covers/looney-tunes-203-ea894ae1-v1.webp"
+    "cover": "/generated/covers/looney-tunes-203-ea894ae1-order-v1.webp",
+    "pageOrder": {
+      "coverFromEnd": 2
+    }
   },
   {
     "id": "looney-tunes-204-a07a88ee",

@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { copyFile, mkdir, readFile, readdir, stat, unlink, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
+import { comicPageOrderOverride } from '../src/data/comicPageOrder.js'
 
 const projectRoot = process.cwd()
 const comicsRoot = path.join(projectRoot, 'public', 'comics')
@@ -14,6 +15,11 @@ const supportedExtensions = new Set(['.cbr', '.cbz'])
 const coverWidth = 400
 const coverQuality = 80
 const coverVersion = 1
+
+function generatedCoverFilename(comicId, pageOrder) {
+  const orderVersion = pageOrder ? `-order-v${coverVersion}` : `-v${coverVersion}`
+  return `${comicId}${orderVersion}.webp`
+}
 
 async function findArchives(directory) {
   const entries = await readdir(directory, { withFileTypes: true })
@@ -34,8 +40,8 @@ function naturalCompare(first, second) {
   return first.localeCompare(second, undefined, { numeric: true, sensitivity: 'base' })
 }
 
-async function writeOptimizedCover(imageData, comicId) {
-  const coverFilename = `${comicId}-v${coverVersion}.webp`
+async function writeOptimizedCover(imageData, comicId, pageOrder) {
+  const coverFilename = generatedCoverFilename(comicId, pageOrder)
   const coverPath = path.join(coversRoot, coverFilename)
 
   await sharp(imageData)
@@ -47,10 +53,10 @@ async function writeOptimizedCover(imageData, comicId) {
   return `/generated/covers/${coverFilename}`
 }
 
-async function extractCover(filePath, comicId) {
+async function extractCover(filePath, comicId, pageOrder) {
   const archiveDetails = await stat(filePath)
 
-  const coverFilename = `${comicId}-v${coverVersion}.webp`
+  const coverFilename = generatedCoverFilename(comicId, pageOrder)
   const coverPath = path.join(coversRoot, coverFilename)
   const coverDetails = await stat(coverPath).catch(() => null)
 
@@ -71,10 +77,12 @@ async function extractCover(filePath, comicId) {
       })
       .sort((first, second) => naturalCompare(first.entryName, second.entryName))
 
-    const coverEntry = imageEntries[0]
+    const coverEntry = pageOrder
+      ? imageEntries.at(-pageOrder.coverFromEnd)
+      : imageEntries[0]
     if (!coverEntry) return null
 
-    return await writeOptimizedCover(coverEntry.getData(), comicId)
+    return await writeOptimizedCover(coverEntry.getData(), comicId, pageOrder)
   } catch {
     // Some comic archives have a CBZ extension but contain RAR data.
   }
@@ -94,14 +102,16 @@ async function extractCover(filePath, comicId) {
       })
       .sort((first, second) => naturalCompare(first.name, second.name))
 
-    const coverHeader = imageHeaders[0]
+    const coverHeader = pageOrder
+      ? imageHeaders.at(-pageOrder.coverFromEnd)
+      : imageHeaders[0]
     if (!coverHeader) return null
 
     const extractedFiles = [...extractor.extract({ files: [coverHeader.name] }).files]
     const coverFile = extractedFiles.find((file) => file.fileHeader.name === coverHeader.name)
     if (!coverFile?.extraction) return null
 
-    return await writeOptimizedCover(coverFile.extraction, comicId)
+    return await writeOptimizedCover(coverFile.extraction, comicId, pageOrder)
   } catch (error) {
     console.warn(`Could not generate a cover for ${path.basename(filePath)}: ${error.message}`)
     return null
@@ -136,6 +146,7 @@ async function comicFromPath(filePath) {
   const hash = createHash('sha1').update(relativePath).digest('hex').slice(0, 8)
   const archive = `/comics/${relativePath.split('/').map(encodeURIComponent).join('/')}`
   const id = `${slug}-${hash}`
+  const pageOrder = comicPageOrderOverride(seriesId, normalizedIssue)
 
   return {
     id,
@@ -144,7 +155,8 @@ async function comicFromPath(filePath) {
     seriesId,
     issue: normalizedIssue ? `#${normalizedIssue}` : '',
     archive,
-    cover: await extractCover(filePath, id),
+    cover: await extractCover(filePath, id, pageOrder),
+    ...(pageOrder ? { pageOrder } : {}),
   }
 }
 
