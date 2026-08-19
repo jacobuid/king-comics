@@ -762,6 +762,20 @@ button:disabled {
   overflow: auto;
 }
 
+.single-page-view {
+  cursor: grab;
+  touch-action: pan-y pinch-zoom;
+}
+
+.single-page-view:active {
+  cursor: grabbing;
+}
+
+.single-page-view .comic-page {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 .continuous-view {
   display: flex;
   flex-direction: column;
@@ -814,6 +828,22 @@ button:disabled {
 
 .previous-page { left: 0.5rem; }
 .next-page { right: 0.5rem; }
+
+@media (hover: none) and (pointer: coarse) {
+  .page-arrow {
+    top: auto;
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    opacity: 0.6;
+    transition: opacity 160ms ease-out;
+  }
+
+  .previous-page { left: 1rem; }
+  .next-page { right: 1rem; }
+
+  .touch-controls-active .page-arrow:not(:disabled) {
+    opacity: 1;
+  }
+}
 
 .page-counter,
 .viewer-status {

@@ -1,6 +1,7 @@
-const cacheName = 'king-comics-shell-v1'
+const cacheName = 'king-comics-shell-v2'
 const scopeUrl = new URL(self.registration.scope)
 const appRoot = scopeUrl.pathname
+const isLocalDevelopment = ['localhost', '127.0.0.1'].includes(scopeUrl.hostname)
 const shellUrls = [
   appRoot,
   `${appRoot}favicon/favicon-32x32.png`,
@@ -30,6 +31,11 @@ async function cacheShell() {
 }
 
 self.addEventListener('install', (event) => {
+  if (isLocalDevelopment) {
+    event.waitUntil(self.skipWaiting())
+    return
+  }
+
   event.waitUntil(
     cacheShell()
       .then(() => self.skipWaiting()),
@@ -37,6 +43,20 @@ self.addEventListener('install', (event) => {
 })
 
 self.addEventListener('activate', (event) => {
+  if (isLocalDevelopment) {
+    event.waitUntil(
+      caches.keys()
+        .then((keys) => Promise.all(
+          keys
+            .filter((key) => key.startsWith('king-comics-'))
+            .map((key) => caches.delete(key)),
+        ))
+        .then(() => self.registration.unregister())
+        .then(() => self.clients.claim()),
+    )
+    return
+  }
+
   event.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(
@@ -73,6 +93,8 @@ async function cacheFirst(request) {
 }
 
 self.addEventListener('fetch', (event) => {
+  if (isLocalDevelopment) return
+
   const request = event.request
   const url = new URL(request.url)
 

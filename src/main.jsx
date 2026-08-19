@@ -6,13 +6,36 @@ if (typeof window !== 'undefined') {
   hydrate(<App />, document.getElementById('root'))
 
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`, {
-        scope: import.meta.env.BASE_URL,
-      }).catch((error) => {
-        console.warn('Could not register the offline app worker.', error)
+    if (import.meta.env.PROD) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`, {
+          scope: import.meta.env.BASE_URL,
+          updateViaCache: 'none',
+        }).then((registration) => registration.update()).catch((error) => {
+          console.warn('Could not register the offline app worker.', error)
+        })
       })
-    })
+    } else {
+      Promise.all([
+        navigator.serviceWorker.getRegistrations()
+          .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister()))),
+        caches.keys()
+          .then((keys) => Promise.all(
+            keys
+              .filter((key) => key.startsWith('king-comics-'))
+              .map((key) => caches.delete(key)),
+          )),
+      ]).then(() => {
+        if (navigator.serviceWorker.controller && !sessionStorage.getItem('king-comics-dev-worker-cleared')) {
+          sessionStorage.setItem('king-comics-dev-worker-cleared', 'true')
+          window.location.reload()
+        } else {
+          sessionStorage.removeItem('king-comics-dev-worker-cleared')
+        }
+      }).catch((error) => {
+        console.warn('Could not clear the development app worker.', error)
+      })
+    }
   }
 }
 

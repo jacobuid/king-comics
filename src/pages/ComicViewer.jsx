@@ -70,6 +70,9 @@ function ComicViewer({ user }) {
   const viewerRef = useRef(null)
   const continuousViewRef = useRef(null)
   const continuousPageRefs = useRef([])
+  const touchControlsTimerRef = useRef(null)
+  const pageDragRef = useRef(null)
+  const lastPageTapRef = useRef(null)
   const [pages, setPages] = useState([])
   const [pageIndex, setPageIndex] = useState(0)
   const [loadedComicId, setLoadedComicId] = useState(null)
@@ -78,6 +81,94 @@ function ComicViewer({ user }) {
   const [fit, setFit] = useState('width')
   const [readerMode, setReaderMode] = useState('single')
   const [isFullscreen, setIsFullscreen] = useState(false)
+  const [touchControlsActive, setTouchControlsActive] = useState(false)
+
+  function activateTouchControls() {
+    setTouchControlsActive(true)
+    window.clearTimeout(touchControlsTimerRef.current)
+    touchControlsTimerRef.current = window.setTimeout(() => {
+      setTouchControlsActive(false)
+    }, 10_000)
+  }
+
+  useEffect(() => () => window.clearTimeout(touchControlsTimerRef.current), [])
+
+  function startPageDrag(event) {
+    if (event.button !== undefined && event.button !== 0) return
+    if (event.target.closest('button')) return
+    pageDragRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+    }
+    event.currentTarget.setPointerCapture?.(event.pointerId)
+  }
+
+  function finishPageDrag(event) {
+    const drag = pageDragRef.current
+    pageDragRef.current = null
+    if (!drag || drag.pointerId !== event.pointerId) return
+
+    const horizontalDistance = event.clientX - drag.startX
+    const verticalDistance = event.clientY - drag.startY
+    const isHorizontalGesture = Math.abs(horizontalDistance) >= 50
+      && Math.abs(horizontalDistance) > Math.abs(verticalDistance) * 1.25
+
+    if (isHorizontalGesture) {
+      lastPageTapRef.current = null
+      activateTouchControls()
+
+      if (horizontalDistance < 0) {
+        setPageIndex((index) => Math.min(pages.length - 1, index + 1))
+      } else {
+        setPageIndex((index) => Math.max(0, index - 1))
+      }
+      return
+    }
+
+    const isTap = Math.abs(horizontalDistance) <= 10 && Math.abs(verticalDistance) <= 10
+    const comicPage = viewerRef.current?.querySelector('.single-page-view .comic-page')
+    if (!isTap || !comicPage) {
+      lastPageTapRef.current = null
+      return
+    }
+
+    const pageBounds = comicPage.getBoundingClientRect()
+    const isInsidePage = event.clientX >= pageBounds.left
+      && event.clientX <= pageBounds.right
+      && event.clientY >= pageBounds.top
+      && event.clientY <= pageBounds.bottom
+    if (!isInsidePage) {
+      lastPageTapRef.current = null
+      return
+    }
+
+    const side = event.clientX < pageBounds.left + pageBounds.width / 2 ? 'left' : 'right'
+    const now = performance.now()
+    const previousTap = lastPageTapRef.current
+    const isDoubleTap = previousTap
+      && previousTap.side === side
+      && now - previousTap.time <= 350
+
+    if (!isDoubleTap) {
+      lastPageTapRef.current = { side, time: now }
+      return
+    }
+
+    event.preventDefault()
+    lastPageTapRef.current = null
+    activateTouchControls()
+    if (side === 'right') {
+      setPageIndex((index) => Math.min(pages.length - 1, index + 1))
+    } else {
+      setPageIndex((index) => Math.max(0, index - 1))
+    }
+  }
+
+  function cancelPageDrag() {
+    pageDragRef.current = null
+    lastPageTapRef.current = null
+  }
 
   useEffect(() => {
     function updateFullscreenState() {
@@ -202,7 +293,10 @@ function ComicViewer({ user }) {
   }
 
   return (
-    <section class="comic-viewer" ref={viewerRef}>
+    <section
+      class={touchControlsActive ? 'comic-viewer touch-controls-active' : 'comic-viewer'}
+      ref={viewerRef}
+    >
       <div class="viewer-toolbar">
         <div class="viewer-comic-nav">
           <strong>{comic.series}</strong>
@@ -244,19 +338,31 @@ function ComicViewer({ user }) {
       {loading && <p class="viewer-status" role="status">Opening comic…</p>}
       {error && <p class="viewer-status error" role="alert">{error}</p>}
       {pages.length > 0 && readerMode === 'single' && (
-        <div class="viewer-stage">
+        <div
+          class="viewer-stage single-page-view"
+          onPointerDown={startPageDrag}
+          onPointerUp={finishPageDrag}
+          onPointerCancel={cancelPageDrag}
+        >
           <button
             class="page-arrow previous-page"
             type="button"
             disabled={pageIndex === 0}
+            onPointerDown={activateTouchControls}
             onClick={() => setPageIndex((index) => Math.max(0, index - 1))}
             aria-label="Previous page"
           >‹</button>
-          <img class={`comic-page fit-${fit}`} src={pages[pageIndex].url} alt={`Page ${pageIndex + 1}`} />
+          <img
+            class={`comic-page fit-${fit}`}
+            src={pages[pageIndex].url}
+            alt={`Page ${pageIndex + 1}`}
+            draggable={false}
+          />
           <button
             class="page-arrow next-page"
             type="button"
             disabled={pageIndex === pages.length - 1}
+            onPointerDown={activateTouchControls}
             onClick={() => setPageIndex((index) => Math.min(pages.length - 1, index + 1))}
             aria-label="Next page"
           >›</button>
