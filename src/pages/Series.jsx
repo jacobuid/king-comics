@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks'
+import { useEffect, useMemo, useState } from 'preact/hooks'
 import { useRoute } from 'preact-iso'
 import { getSeries } from '../data/comics.js'
 import { getProfileProgress, setComicBookmark } from '../utils/progress.js'
@@ -9,6 +9,18 @@ function Series({ user }) {
   const { params } = useRoute()
   const series = getSeries(params.seriesId)
   const [progress, setProgress] = useState(() => getProfileProgress(user.username))
+  const [comicQuery, setComicQuery] = useState('')
+
+  const visibleComics = useMemo(() => {
+    const query = comicQuery.trim().toLocaleLowerCase()
+    if (!query) return series?.comics ?? []
+
+    const issueQuery = query.replace(/^issue\s*/i, '').replace(/^#/, '')
+    return (series?.comics ?? []).filter((comic) => (
+      comic.title.toLocaleLowerCase().includes(query)
+      || String(comic.issue ?? '').toLocaleLowerCase().includes(issueQuery)
+    ))
+  }, [comicQuery, series])
 
   useEffect(() => {
     const targetId = window.location.hash.slice(1)
@@ -49,8 +61,25 @@ function Series({ user }) {
         <p>{series.comics.length} {series.comics.length === 1 ? 'issue' : 'issues'}</p>
       </div>
 
+      <div class="series-browser-tools">
+        <label for="comic-search">Find an issue</label>
+        <input
+          id="comic-search"
+          type="search"
+          value={comicQuery}
+          onInput={(event) => setComicQuery(event.currentTarget.value)}
+          placeholder="Search a title or enter an issue number"
+          autoComplete="off"
+        />
+        {comicQuery && (
+          <span class="series-search-count" role="status">
+            {visibleComics.length} {visibleComics.length === 1 ? 'comic' : 'comics'} found
+          </span>
+        )}
+      </div>
+
       <div class="comic-grid">
-        {series.comics.map((comic) => {
+        {visibleComics.map((comic) => {
           const item = progress[comic.id]
           const isBookmarked = item?.bookmarked ?? (item?.status === 'saved' || item?.status === 'queue')
 
@@ -58,7 +87,13 @@ function Series({ user }) {
             <article class="comic-card" id={`comic-${comic.id}`} key={comic.id}>
               <a class="comic-open" href={sitePath(`/comic/${comic.id}`)}>
                 {comic.cover ? (
-                  <img class="comic-cover-image" src={assetPath(comic.cover)} alt={`${comic.title} ${comic.issue} cover`} />
+                  <img
+                    class="comic-cover-image"
+                    src={assetPath(comic.cover)}
+                    alt={`${comic.title} ${comic.issue} cover`}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
                   <div class="comic-cover" aria-hidden="true">{comic.issue || 'READ'}</div>
                 )}
@@ -78,6 +113,9 @@ function Series({ user }) {
           )
         })}
       </div>
+      {visibleComics.length === 0 && (
+        <p class="empty-list series-search-empty">No comics match “{comicQuery}”.</p>
+      )}
     </section>
   )
 }

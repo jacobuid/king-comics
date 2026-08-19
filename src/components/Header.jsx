@@ -1,5 +1,7 @@
+import { faBookOpen, faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from 'preact-iso'
 import { useEffect, useRef, useState } from 'preact/hooks'
+import FontAwesomeIcon from './FontAwesomeIcon.jsx'
 import { getComic, getSeries } from '../data/comics.js'
 import {
   getCurrentUser,
@@ -55,6 +57,11 @@ function Header() {
   useEffect(() => {
     let lastScrollY = Math.max(window.scrollY, 0)
     let animationFrame = null
+    let preserveMenuStateUntil = 0
+
+    function preserveMenuState() {
+      preserveMenuStateUntil = performance.now() + 400
+    }
 
     function updateMenu() {
       animationFrame = null
@@ -65,6 +72,9 @@ function Header() {
 
       setMenuMode((currentMode) => {
         if (scrollY < menuTop) return 'static'
+        if (performance.now() < preserveMenuStateUntil) {
+          return currentMode === 'static' ? 'fixed-hidden' : currentMode
+        }
         if (scrollY < lastScrollY - 3) return 'fixed-visible'
         if (scrollY > lastScrollY + 3) return 'fixed-hidden'
         return currentMode === 'static' ? 'fixed-visible' : currentMode
@@ -80,10 +90,12 @@ function Header() {
     updateMenu()
     window.addEventListener('scroll', queueUpdate, { passive: true })
     window.addEventListener('resize', queueUpdate)
+    window.addEventListener('king-comics:preserve-menu-state', preserveMenuState)
 
     return () => {
       window.removeEventListener('scroll', queueUpdate)
       window.removeEventListener('resize', queueUpdate)
+      window.removeEventListener('king-comics:preserve-menu-state', preserveMenuState)
       if (animationFrame !== null) window.cancelAnimationFrame(animationFrame)
     }
   }, [])
@@ -102,7 +114,18 @@ function Header() {
           )}
           {activeProfile ? (
             <nav aria-label="Main navigation">
-              <a href={sitePath('/profile')}>{activeProfile.name}</a>
+              <a class="header-library-link" href={sitePath('/')} aria-label="Open Library">
+                <FontAwesomeIcon icon={faBookOpen} />
+                <span>Library</span>
+              </a>
+              <a
+                class="header-profile-link"
+                href={sitePath('/profile')}
+                aria-label={`Open ${activeProfile.name}'s profile`}
+              >
+                <FontAwesomeIcon icon={faCircleUser} />
+                <span>{activeProfile.name}</span>
+              </a>
             </nav>
           ) : !hasProfiles ? (
             <nav aria-label="Main navigation">

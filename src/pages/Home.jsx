@@ -39,7 +39,13 @@ function Home() {
             key={series.id}
           >
             {series.cover ? (
-              <img class="comic-cover-image" src={assetPath(series.cover)} alt={`${series.name} cover`} />
+              <img
+                class="comic-cover-image"
+                src={assetPath(series.cover)}
+                alt={`${series.name} cover`}
+                loading="lazy"
+                decoding="async"
+              />
             ) : (
               <div class="comic-cover" aria-hidden="true">READ</div>
             )}

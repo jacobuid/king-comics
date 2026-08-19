@@ -1,9 +1,11 @@
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useMemo, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
+import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import { comics } from '../data/comics.js'
 import { assetPath } from '../utils/assetPath.js'
 import { clearSession, renameAccount } from '../utils/auth.js'
-import { getProfileProgress, renameProfileProgress } from '../utils/progress.js'
+import { getProfileProgress, renameProfileProgress, setComicBookmark } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
 
 const shelves = [
@@ -97,6 +99,11 @@ function Profile({ user }) {
     route(sitePath('/profiles'), true)
   }
 
+  function removeBookmark(comicId) {
+    const updatedProgress = setComicBookmark(currentUser.username, comicId, false)
+    setProgress({ ...updatedProgress })
+  }
+
   return (
     <section class="page profile-page">
       <section class="reading-hero">
@@ -139,14 +146,33 @@ function Profile({ user }) {
               <div class="cover-row-frame">
                 <div class="cover-row">
                   {comicsByStatus[shelf.status].map((comic) => (
-                    <a class="dashboard-comic" href={sitePath(`/comic/${comic.id}`)} key={comic.id}>
-                      {comic.cover ? (
-                        <img class="dashboard-cover dashboard-cover-image" src={assetPath(comic.cover)} alt="" />
-                      ) : (
-                        <span class="dashboard-cover" aria-hidden="true">{comic.issue || 'READ'}</span>
+                    <article class="dashboard-comic" key={comic.id}>
+                      <a class="dashboard-comic-link" href={sitePath(`/comic/${comic.id}`)}>
+                        {comic.cover ? (
+                          <img
+                            class="dashboard-cover dashboard-cover-image"
+                            src={assetPath(comic.cover)}
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        ) : (
+                          <span class="dashboard-cover" aria-hidden="true">{comic.issue || 'READ'}</span>
+                        )}
+                        <strong>{comic.issue ? `Issue ${comic.issue}` : comic.title}</strong>
+                      </a>
+                      {shelf.status === 'saved' && (
+                        <button
+                          class="remove-bookmark"
+                          type="button"
+                          onClick={() => removeBookmark(comic.id)}
+                          aria-label={`Remove ${comic.title} from Bookmarks`}
+                          title="Remove from Bookmarks"
+                        >
+                          <FontAwesomeIcon icon={faXmark} />
+                        </button>
                       )}
-                      <strong>{comic.issue ? `Issue ${comic.issue}` : comic.title}</strong>
-                    </a>
+                    </article>
                   ))}
                 </div>
               </div>

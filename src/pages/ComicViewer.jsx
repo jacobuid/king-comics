@@ -1,6 +1,9 @@
 import { Archive } from 'libarchive.js'
-import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
-import { unzipSync } from 'fflate'
+import {
+  faChevronLeft,
+  faChevronRight,
+  faCircleQuestion,
+} from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import { useLocation, useRoute } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
@@ -41,15 +44,55 @@ async function archiveFormat(blob) {
 }
 
 async function extractZipImages(blob) {
-  const archiveData = new Uint8Array(await blob.arrayBuffer())
-  const files = unzipSync(archiveData)
+  const archiveData = await blob.arrayBuffer()
 
-  return Object.entries(files)
-    .filter(([name]) => imagePattern.test(name))
-    .map(([path, data]) => ({
-      file: new Blob([data], { type: imageMimeType(path) }),
-      path,
-    }))
+  return new Promise((resolve, reject) => {
+    const worker = new Worker(new URL('../workers/unzipComic.worker.js', import.meta.url), {
+      type: 'module',
+    })
+
+    worker.addEventListener('message', (event) => {
+      worker.terminate()
+      if (event.data.error) {
+        reject(new Error(event.data.error))
+        return
+      }
+
+      resolve(event.data.images.map(({ path, data }) => ({
+        file: new Blob([data], { type: imageMimeType(path) }),
+        path,
+      })))
+    }, { once: true })
+
+    worker.addEventListener('error', (event) => {
+      worker.terminate()
+      reject(new Error(event.message || 'Could not extract this CBZ archive.'))
+    }, { once: true })
+
+    worker.postMessage(archiveData, [archiveData])
+  })
+}
+
+async function downloadComic(url, signal, onProgress) {
+  const response = await fetch(url, { signal })
+  if (!response.ok) throw new Error(`Could not load this comic (${response.status}).`)
+
+  const totalBytes = Number(response.headers.get('content-length')) || null
+  if (!response.body) return response.blob()
+
+  const reader = response.body.getReader()
+  const chunks = []
+  let receivedBytes = 0
+
+  while (true) {
+    const { done, value } = await reader.read()
+    if (done) break
+    chunks.push(value)
+    receivedBytes += value.byteLength
+    onProgress(totalBytes ? Math.min(100, Math.round((receivedBytes / totalBytes) * 100)) : null)
+  }
+
+  return new Blob(chunks, { type: response.headers.get('content-type') || 'application/octet-stream' })
 }
 
 function flattenImages(value, parentPath = '') {
@@ -71,7 +114,13 @@ function ComicViewer({ user }) {
   const { route } = useLocation()
   const comic = getComic(params.comicId)
   const series = comic ? getSeries(comic.seriesId) : null
+  const comicIndex = series?.comics.findIndex((seriesComic) => seriesComic.id === comic?.id) ?? -1
+  const previousComic = comicIndex > 0 ? series.comics[comicIndex - 1] : null
+  const nextComic = comicIndex >= 0 && comicIndex < (series?.comics.length ?? 0) - 1
+    ? series.comics[comicIndex + 1]
+    : null
   const viewerRef = useRef(null)
+  const singlePageViewRef = useRef(null)
   const continuousViewRef = useRef(null)
   const continuousPageRefs = useRef([])
   const touchControlsTimerRef = useRef(null)
@@ -81,12 +130,14 @@ function ComicViewer({ user }) {
   const [pageIndex, setPageIndex] = useState(0)
   const [loadedComicId, setLoadedComicId] = useState(null)
   const [loading, setLoading] = useState(Boolean(comic))
+  const [loadingStatus, setLoadingStatus] = useState({ message: 'Opening comic…', percent: null })
   const [error, setError] = useState('')
   const [fit, setFit] = useState('width')
   const [readerMode, setReaderMode] = useState('single')
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [touchControlsActive, setTouchControlsActive] = useState(false)
   const [showGestureGuide, setShowGestureGuide] = useState(false)
+  const [usesTouchInput, setUsesTouchInput] = useState(false)
 
   function dismissGestureGuide() {
     setShowGestureGuide(false)
@@ -107,6 +158,17 @@ function ComicViewer({ user }) {
   }
 
   useEffect(() => () => window.clearTimeout(touchControlsTimerRef.current), [])
+
+  useEffect(() => {
+    const coarsePointer = window.matchMedia('(any-pointer: coarse)')
+    const updateInputType = () => {
+      setUsesTouchInput(coarsePointer.matches || navigator.maxTouchPoints > 0)
+    }
+
+    updateInputType()
+    coarsePointer.addEventListener?.('change', updateInputType)
+    return () => coarsePointer.removeEventListener?.('change', updateInputType)
+  }, [])
 
   useEffect(() => {
     if (readerMode !== 'single' || pages.length === 0) return
@@ -216,7 +278,9 @@ function ComicViewer({ user }) {
 
     let active = true
     let pageUrls = []
+    const controller = new AbortController()
     setLoading(true)
+    setLoadingStatus({ message: 'Downloading comic…', percent: null })
     setError('')
     setPages([])
     setPageIndex(0)
@@ -226,10 +290,14 @@ function ComicViewer({ user }) {
     async function loadComic() {
       try {
         Archive.init({ workerUrl: sitePath('/libarchive/worker-bundle.js') })
-        const response = await fetch(assetPath(comic.archive))
-        if (!response.ok) throw new Error(`Could not load this comic (${response.status}).`)
-
-        const archiveBlob = await response.blob()
+        const archiveBlob = await downloadComic(
+          assetPath(comic.archive),
+          controller.signal,
+          (percent) => {
+            if (active) setLoadingStatus({ message: 'Downloading comic…', percent })
+          },
+        )
+        if (active) setLoadingStatus({ message: 'Extracting comic pages…', percent: null })
         const format = await archiveFormat(archiveBlob)
         let images
 
@@ -258,6 +326,7 @@ function ComicViewer({ user }) {
         setPageIndex(Math.min(Math.max(savedPage - 1, 0), pageUrls.length - 1))
         setLoadedComicId(comic.id)
       } catch (loadError) {
+        if (loadError.name === 'AbortError') return
         if (active) setError(loadError.message || 'This comic could not be opened.')
       } finally {
         if (active) setLoading(false)
@@ -268,6 +337,7 @@ function ComicViewer({ user }) {
 
     return () => {
       active = false
+      controller.abort()
       pageUrls.forEach(({ url }) => URL.revokeObjectURL(url))
     }
   }, [comic?.id, user.username])
@@ -290,6 +360,30 @@ function ComicViewer({ user }) {
     window.addEventListener('keydown', handleKeydown)
     return () => window.removeEventListener('keydown', handleKeydown)
   }, [pages.length, readerMode])
+
+  useEffect(() => {
+    if (readerMode !== 'single' || !loadedComicId || !singlePageViewRef.current) return undefined
+
+    const animationFrame = window.requestAnimationFrame(() => {
+      const stage = singlePageViewRef.current
+      if (!stage) return
+
+      stage.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+
+      const globalMenu = document.querySelector('.header-menu.fixed-visible')
+      const comicMenu = viewerRef.current?.querySelector('.viewer-toolbar')
+      const stickyOffset = (globalMenu?.offsetHeight ?? 0) + (comicMenu?.offsetHeight ?? 0)
+      const stageTop = stage.getBoundingClientRect().top + window.scrollY
+
+      window.dispatchEvent(new Event('king-comics:preserve-menu-state'))
+      window.scrollTo({
+        top: Math.max(0, stageTop - stickyOffset),
+        behavior: 'auto',
+      })
+    })
+
+    return () => window.cancelAnimationFrame(animationFrame)
+  }, [loadedComicId, pageIndex, readerMode])
 
   useEffect(() => {
     if (readerMode !== 'continuous' || pages.length === 0 || !continuousViewRef.current) return
@@ -322,18 +416,40 @@ function ComicViewer({ user }) {
     >
       <div class="viewer-toolbar">
         <div class="viewer-comic-nav">
-          <strong>{comic.series}</strong>
-          <select
-            aria-label="Choose another comic in this series"
-            value={comic.id}
-            onChange={(event) => route(sitePath(`/comic/${event.currentTarget.value}`))}
+          <button
+            class="viewer-comic-step"
+            type="button"
+            disabled={!previousComic}
+            onClick={() => previousComic && route(sitePath(`/comic/${previousComic.id}`))}
+            aria-label={previousComic ? `Previous comic: ${previousComic.title}` : 'No previous comic'}
           >
-            {series?.comics.map((seriesComic) => (
-              <option value={seriesComic.id} key={seriesComic.id}>
-                {seriesComic.issue ? `Issue ${seriesComic.issue}` : seriesComic.title}
-              </option>
-            ))}
-          </select>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <label class="viewer-comic-picker">
+            <strong>
+              {comic.series}{comic.issue ? ` ${comic.issue}` : ''}
+            </strong>
+            <select
+              aria-label="Choose another comic in this series"
+              value={comic.id}
+              onChange={(event) => route(sitePath(`/comic/${event.currentTarget.value}`))}
+            >
+              {series?.comics.map((seriesComic) => (
+                <option value={seriesComic.id} key={seriesComic.id}>
+                  {seriesComic.issue ? `${seriesComic.title} - ${seriesComic.issue}` : seriesComic.title}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button
+            class="viewer-comic-step"
+            type="button"
+            disabled={!nextComic}
+            onClick={() => nextComic && route(sitePath(`/comic/${nextComic.id}`))}
+            aria-label={nextComic ? `Next comic: ${nextComic.title}` : 'No next comic'}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
         <div class="viewer-tools">
           {readerMode === 'single' && (
@@ -373,11 +489,27 @@ function ComicViewer({ user }) {
         </div>
       </div>
 
-      {loading && <p class="viewer-status" role="status">Opening comic…</p>}
+      {loading && (
+        <div class="viewer-status viewer-loading" role="status">
+          <span>{loadingStatus.message}</span>
+          {loadingStatus.percent !== null && (
+            <>
+              <progress max="100" value={loadingStatus.percent} />
+              <strong>{loadingStatus.percent}%</strong>
+            </>
+          )}
+          {loadingStatus.percent === null && (
+            <div class="viewer-loading-indeterminate" aria-hidden="true">
+              <span />
+            </div>
+          )}
+        </div>
+      )}
       {error && <p class="viewer-status error" role="alert">{error}</p>}
       {pages.length > 0 && readerMode === 'single' && (
         <div
           class="viewer-stage single-page-view"
+          ref={singlePageViewRef}
           onPointerDown={startPageDrag}
           onPointerUp={finishPageDrag}
           onPointerCancel={cancelPageDrag}
@@ -408,7 +540,11 @@ function ComicViewer({ user }) {
       )}
 
       {pages.length > 0 && readerMode === 'single' && showGestureGuide && (
-        <GestureGuide onDismiss={dismissGestureGuide} />
+        <GestureGuide
+          isTouchDevice={usesTouchInput}
+          onClose={() => setShowGestureGuide(false)}
+          onDismiss={dismissGestureGuide}
+        />
       )}
 
       {pages.length > 0 && readerMode === 'continuous' && (
