@@ -85,7 +85,7 @@ function ComicViewer({ user }) {
   const [fit, setFit] = useState('width')
   const [readerMode, setReaderMode] = useState('single')
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [activeTouchControl, setActiveTouchControl] = useState(null)
+  const [touchControlsActive, setTouchControlsActive] = useState(false)
   const [showGestureGuide, setShowGestureGuide] = useState(false)
 
   function dismissGestureGuide() {
@@ -98,11 +98,11 @@ function ComicViewer({ user }) {
     }
   }
 
-  function activateTouchControl(control) {
-    setActiveTouchControl(control)
+  function activateTouchControls() {
+    setTouchControlsActive(true)
     window.clearTimeout(touchControlsTimerRef.current)
     touchControlsTimerRef.current = window.setTimeout(() => {
-      setActiveTouchControl(null)
+      setTouchControlsActive(false)
     }, 10_000)
   }
 
@@ -316,7 +316,10 @@ function ComicViewer({ user }) {
   }
 
   return (
-    <section class="comic-viewer" ref={viewerRef}>
+    <section
+      class={touchControlsActive ? 'comic-viewer touch-controls-active' : 'comic-viewer'}
+      ref={viewerRef}
+    >
       <div class="viewer-toolbar">
         <div class="viewer-comic-nav">
           <strong>{comic.series}</strong>
@@ -380,10 +383,10 @@ function ComicViewer({ user }) {
           onPointerCancel={cancelPageDrag}
         >
           <button
-              class={`page-arrow previous-page${activeTouchControl === 'previous' ? ' page-arrow-active' : ''}`}
+              class="page-arrow previous-page"
               type="button"
               disabled={pageIndex === 0}
-              onPointerDown={() => activateTouchControl('previous')}
+              onPointerDown={activateTouchControls}
             onClick={() => setPageIndex((index) => Math.max(0, index - 1))}
             aria-label="Previous page"
           >‹</button>
@@ -394,10 +397,10 @@ function ComicViewer({ user }) {
             draggable={false}
           />
           <button
-              class={`page-arrow next-page${activeTouchControl === 'next' ? ' page-arrow-active' : ''}`}
+              class="page-arrow next-page"
               type="button"
               disabled={pageIndex === pages.length - 1}
-              onPointerDown={() => activateTouchControl('next')}
+              onPointerDown={activateTouchControls}
             onClick={() => setPageIndex((index) => Math.min(pages.length - 1, index + 1))}
             aria-label="Next page"
           >›</button>
