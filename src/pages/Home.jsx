@@ -1,9 +1,17 @@
-import { useEffect } from 'preact/hooks'
+import { useEffect, useMemo, useState } from 'preact/hooks'
 import { seriesList } from '../data/comics.js'
 import { assetPath } from '../utils/assetPath.js'
 import { sitePath } from '../utils/sitePath.js'
 
 function Home() {
+  const [seriesQuery, setSeriesQuery] = useState('')
+  const visibleSeries = useMemo(() => {
+    const query = seriesQuery.trim().toLocaleLowerCase()
+    if (!query) return seriesList
+
+    return seriesList.filter((series) => series.name.toLocaleLowerCase().includes(query))
+  }, [seriesQuery])
+
   useEffect(() => {
     const targetId = window.location.hash.slice(1)
     if (!targetId.startsWith('series-')) return
@@ -22,7 +30,7 @@ function Home() {
   }, [])
 
   return (
-    <section class="page">
+    <section class="page library-page">
       {seriesList.length === 0 && (
         <div class="empty-library">
           <h2>Your shelves are ready</h2>
@@ -30,8 +38,27 @@ function Home() {
         </div>
       )}
 
+      {seriesList.length > 0 && (
+        <div class="series-browser-tools library-search-tools">
+          <label for="library-search">Search library</label>
+          <input
+            id="library-search"
+            type="search"
+            value={seriesQuery}
+            onInput={(event) => setSeriesQuery(event.currentTarget.value)}
+            placeholder="Search series"
+            autoComplete="off"
+          />
+          {seriesQuery && (
+            <span class="series-search-count" role="status">
+              {visibleSeries.length} series found
+            </span>
+          )}
+        </div>
+      )}
+
       <div class="series-grid">
-        {seriesList.map((series) => (
+        {visibleSeries.map((series) => (
           <a
             class="series-card"
             href={sitePath(`/${series.id}`)}
@@ -56,6 +83,9 @@ function Home() {
           </a>
         ))}
       </div>
+      {seriesList.length > 0 && visibleSeries.length === 0 && (
+        <p class="empty-list series-search-empty">No series match “{seriesQuery}”.</p>
+      )}
     </section>
   )
 }

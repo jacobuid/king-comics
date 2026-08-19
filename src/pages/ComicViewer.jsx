@@ -1,8 +1,14 @@
 import { Archive } from 'libarchive.js'
 import {
+  faArrowsLeftRight,
+  faArrowsUpDown,
   faChevronLeft,
   faChevronRight,
   faCircleQuestion,
+  faExpand,
+  faFileImage,
+  faImages,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import { useLocation, useRoute } from 'preact-iso'
@@ -15,6 +21,39 @@ import { sitePath } from '../utils/sitePath.js'
 
 const imagePattern = /\.(avif|bmp|gif|jpe?g|png|webp)$/i
 const gestureGuideStorageKey = 'king-comics:gesture-guide-v1'
+const fitOptions = [
+  { value: 'width', label: 'Width', icon: faArrowsLeftRight },
+  { value: 'page', label: 'Page', icon: faFileImage },
+  { value: 'height', label: 'Height', icon: faArrowsUpDown },
+]
+const validFitModes = new Set(fitOptions.map(({ value }) => value))
+const validReaderModes = new Set(['single', 'continuous'])
+
+function readerPreferencesStorageKey(username) {
+  return `king-comics:reader-preferences:${encodeURIComponent(username)}`
+}
+
+function getReaderPreferences(username) {
+  const defaults = { fit: 'width', readerMode: 'single' }
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(readerPreferencesStorageKey(username)))
+    return {
+      fit: validFitModes.has(saved?.fit) ? saved.fit : defaults.fit,
+      readerMode: validReaderModes.has(saved?.readerMode) ? saved.readerMode : defaults.readerMode,
+    }
+  } catch {
+    return defaults
+  }
+}
+
+function saveReaderPreferences(username, preferences) {
+  try {
+    localStorage.setItem(readerPreferencesStorageKey(username), JSON.stringify(preferences))
+  } catch {
+    // Reader controls still work when browser storage is unavailable.
+  }
+}
 
 function imageMimeType(path) {
   const extension = path.split('.').pop()?.toLowerCase()
@@ -132,9 +171,10 @@ function ComicViewer({ user }) {
   const [loading, setLoading] = useState(Boolean(comic))
   const [loadingStatus, setLoadingStatus] = useState({ message: 'Opening comic…', percent: null })
   const [error, setError] = useState('')
-  const [fit, setFit] = useState('width')
-  const [readerMode, setReaderMode] = useState('single')
+  const [fit, setFit] = useState(() => getReaderPreferences(user.username).fit)
+  const [readerMode, setReaderMode] = useState(() => getReaderPreferences(user.username).readerMode)
   const [isFullscreen, setIsFullscreen] = useState(false)
+  const [supportsFullscreen, setSupportsFullscreen] = useState(false)
   const [touchControlsActive, setTouchControlsActive] = useState(false)
   const [showGestureGuide, setShowGestureGuide] = useState(false)
   const [usesTouchInput, setUsesTouchInput] = useState(false)
@@ -158,6 +198,10 @@ function ComicViewer({ user }) {
   }
 
   useEffect(() => () => window.clearTimeout(touchControlsTimerRef.current), [])
+
+  useEffect(() => {
+    saveReaderPreferences(user.username, { fit, readerMode })
+  }, [fit, readerMode, user.username])
 
   useEffect(() => {
     const coarsePointer = window.matchMedia('(any-pointer: coarse)')
@@ -256,6 +300,12 @@ function ComicViewer({ user }) {
   }
 
   useEffect(() => {
+    setSupportsFullscreen(Boolean(
+      document.fullscreenEnabled
+      && document.exitFullscreen
+      && viewerRef.current?.requestFullscreen,
+    ))
+
     function updateFullscreenState() {
       setIsFullscreen(document.fullscreenElement === viewerRef.current)
     }
@@ -463,29 +513,42 @@ function ComicViewer({ user }) {
               <FontAwesomeIcon icon={faCircleQuestion} />
             </button>
           )}
+          <div class="viewer-fit-control" role="group" aria-label="Fit comic page">
+            {fitOptions.map((option) => (
+              <button
+                class={fit === option.value ? 'active' : ''}
+                type="button"
+                aria-pressed={fit === option.value}
+                title={`Fit ${option.label.toLowerCase()}`}
+                onClick={() => setFit(option.value)}
+                key={option.value}
+              >
+                <FontAwesomeIcon icon={option.icon} />
+                <span>{option.label}</span>
+              </button>
+            ))}
+          </div>
           <button
-            class="viewer-fit-button"
-            type="button"
-            onClick={() => setFit((value) => value === 'width' ? 'page' : 'width')}
-          >
-            Fit {fit === 'width' ? 'page' : 'width'}
-          </button>
-          <button
+            class="viewer-mode-button"
             type="button"
             aria-pressed={readerMode === 'continuous'}
             onClick={() => setReaderMode((mode) => mode === 'single' ? 'continuous' : 'single')}
           >
-            {readerMode === 'single' ? 'All pages' : 'Single page'}
+            <FontAwesomeIcon icon={readerMode === 'single' ? faImages : faFileImage} />
+            <span>{readerMode === 'single' ? 'All pages' : 'Single page'}</span>
           </button>
-          <button
-            class={isFullscreen ? 'fullscreen-toggle exit-fullscreen' : 'fullscreen-toggle'}
-            type="button"
-            onClick={toggleFullscreen}
-            aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-          >
-            {isFullscreen ? '×' : 'Fullscreen'}
-          </button>
+          {supportsFullscreen && (
+            <button
+              class={isFullscreen ? 'fullscreen-toggle exit-fullscreen' : 'fullscreen-toggle'}
+              type="button"
+              onClick={toggleFullscreen}
+              aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+              title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+            >
+              <FontAwesomeIcon icon={isFullscreen ? faXmark : faExpand} />
+              {!isFullscreen && <span>Fullscreen</span>}
+            </button>
+          )}
         </div>
       </div>
 
@@ -551,7 +614,7 @@ function ComicViewer({ user }) {
         <div class="viewer-stage continuous-view" ref={continuousViewRef}>
           {pages.map((page, index) => (
             <img
-              class="comic-page fit-width"
+              class={`comic-page fit-${fit}`}
               src={page.url}
               alt={`Page ${index + 1}`}
               data-page-index={index}

@@ -732,6 +732,14 @@ button:disabled {
   text-align: left;
 }
 
+.library-search-tools {
+  margin-top: 0;
+}
+
+.library-page {
+  margin-top: calc(-1 * clamp(1rem, 3vw, 2.5rem));
+}
+
 .series-browser-tools label {
   padding-left: 0.25rem;
   white-space: nowrap;
@@ -969,7 +977,69 @@ button:disabled {
   font-size: 0.8rem;
 }
 
+.viewer-fit-control {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid #53b9ff;
+  border-radius: 999px;
+  background: rgb(3 17 39 / 72%);
+}
+
+.viewer-toolbar .viewer-fit-control button {
+  display: inline-flex;
+  padding: 0.45rem 0.65rem;
+  border: 0;
+  border-radius: 0;
+  align-items: center;
+  gap: 0.35rem;
+  color: #b9d5ef;
+  background: transparent;
+}
+
+.viewer-toolbar .viewer-fit-control button + button {
+  border-left: 1px solid rgb(83 185 255 / 34%);
+}
+
+.viewer-toolbar .viewer-fit-control button:hover,
+.viewer-toolbar .viewer-fit-control button:focus-visible {
+  color: #fff;
+  background: rgb(83 185 255 / 14%);
+}
+
+.viewer-toolbar .viewer-fit-control button:focus-visible {
+  outline: 2px solid #8fd8ff;
+  outline-offset: -2px;
+}
+
+.viewer-toolbar .viewer-fit-control button.active {
+  color: #fff;
+  background: linear-gradient(#167af0, #0752b6);
+}
+
+.viewer-toolbar .viewer-fit-control svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #fff;
+  fill: currentcolor;
+}
+
+.viewer-toolbar .viewer-mode-button,
+.viewer-toolbar .fullscreen-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.viewer-toolbar .viewer-mode-button svg,
+.viewer-toolbar .fullscreen-toggle svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #fff;
+  fill: currentcolor;
+}
+
 .viewer-toolbar .exit-fullscreen {
+  justify-content: center;
   min-width: 2.25rem;
   padding-inline: 0.65rem;
   font-size: 1.25rem;
@@ -1294,8 +1364,16 @@ button:disabled {
 
 .comic-page.fit-page {
   width: auto;
-  max-width: 100%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+}
+
+.comic-page.fit-height {
+  width: auto;
+  max-width: none;
   height: calc(100vh - 150px);
+  height: calc(100dvh - 150px);
 }
 
 .page-arrow {
@@ -1643,7 +1721,7 @@ input {
     justify-self: center;
   }
 
-  .viewer-fit-button {
+  .viewer-fit-control {
     display: none;
   }
 
