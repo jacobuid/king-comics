@@ -25,6 +25,7 @@
     "libarchive.js": "^2.0.2",
     "node-unrar-js": "^2.0.2",
     "preact": "^10.29.8",
-    "preact-iso": "^2.12.2"
+    "preact-iso": "^2.12.2",
+    "sharp": "^0.35.3"
   }
 }

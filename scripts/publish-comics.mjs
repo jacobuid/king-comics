@@ -20,7 +20,8 @@ function usage() {
   npm run publish:comic -- --series "Series Folder" --dry-run
 
 Without --series, every changed comic archive is synchronized. AWS sync uploads
-only new or changed files and never deletes remote objects.`)
+only new or changed comic archives. Generated covers are synchronized separately,
+and obsolete files are deleted only from the generated/covers prefix.`)
 }
 
 function parseArguments(args) {
@@ -118,25 +119,12 @@ async function main() {
   ])
 
   console.log(`${options.dryRun ? 'Checking' : 'Uploading'} generated covers...`)
-  if (options.series) {
-    for (const comic of selectedComics) {
-      if (!comic.cover) continue
-
-      const coverFilename = comic.cover.split('/').at(-1)
-      run('aws', [
-        's3', 'cp', path.join(coversRoot, coverFilename),
-        `s3://${bucket}${comic.cover}`,
-        '--profile', profile,
-        ...dryRunArguments,
-      ])
-    }
-  } else {
-    run('aws', [
-      's3', 'sync', coversRoot, `s3://${bucket}/generated/covers`,
-      '--profile', profile,
-      ...dryRunArguments,
-    ])
-  }
+  run('aws', [
+    's3', 'sync', coversRoot, `s3://${bucket}/generated/covers`,
+    '--delete',
+    '--profile', profile,
+    ...dryRunArguments,
+  ])
 
   const selectedSeries = new Map()
   for (const comic of selectedComics) selectedSeries.set(comic.seriesId, comic.series)

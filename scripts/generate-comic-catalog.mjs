@@ -3,6 +3,7 @@ import { createExtractorFromData } from 'node-unrar-js'
 import { createHash } from 'node:crypto'
 import { copyFile, mkdir, readFile, readdir, stat, unlink, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import sharp from 'sharp'
 
 const projectRoot = process.cwd()
 const comicsRoot = path.join(projectRoot, 'public', 'comics')
@@ -10,7 +11,9 @@ const coversRoot = path.join(projectRoot, 'public', 'generated', 'covers')
 const libarchiveRoot = path.join(projectRoot, 'public', 'libarchive')
 const generatedFile = path.join(projectRoot, 'src', 'data', 'comics.generated.js')
 const supportedExtensions = new Set(['.cbr', '.cbz'])
-const coverExtensions = ['.avif', '.gif', '.jpg', '.png', '.webp']
+const coverWidth = 400
+const coverQuality = 80
+const coverVersion = 1
 
 async function findArchives(directory) {
   const entries = await readdir(directory, { withFileTypes: true })
@@ -31,17 +34,28 @@ function naturalCompare(first, second) {
   return first.localeCompare(second, undefined, { numeric: true, sensitivity: 'base' })
 }
 
+async function writeOptimizedCover(imageData, comicId) {
+  const coverFilename = `${comicId}-v${coverVersion}.webp`
+  const coverPath = path.join(coversRoot, coverFilename)
+
+  await sharp(imageData)
+    .rotate()
+    .resize({ width: coverWidth, withoutEnlargement: true })
+    .webp({ quality: coverQuality, effort: 4 })
+    .toFile(coverPath)
+
+  return `/generated/covers/${coverFilename}`
+}
+
 async function extractCover(filePath, comicId) {
   const archiveDetails = await stat(filePath)
 
-  for (const extension of coverExtensions) {
-    const coverFilename = `${comicId}${extension}`
-    const coverPath = path.join(coversRoot, coverFilename)
-    const coverDetails = await stat(coverPath).catch(() => null)
+  const coverFilename = `${comicId}-v${coverVersion}.webp`
+  const coverPath = path.join(coversRoot, coverFilename)
+  const coverDetails = await stat(coverPath).catch(() => null)
 
-    if (coverDetails && coverDetails.mtimeMs >= archiveDetails.mtimeMs) {
-      return `/generated/covers/${coverFilename}`
-    }
+  if (coverDetails && coverDetails.mtimeMs >= archiveDetails.mtimeMs) {
+    return `/generated/covers/${coverFilename}`
   }
 
   try {
@@ -60,10 +74,7 @@ async function extractCover(filePath, comicId) {
     const coverEntry = imageEntries[0]
     if (!coverEntry) return null
 
-    const extension = path.extname(coverEntry.entryName).toLowerCase().replace('.jpeg', '.jpg')
-    const coverFilename = `${comicId}${extension}`
-    await writeFile(path.join(coversRoot, coverFilename), coverEntry.getData())
-    return `/generated/covers/${coverFilename}`
+    return await writeOptimizedCover(coverEntry.getData(), comicId)
   } catch {
     // Some comic archives have a CBZ extension but contain RAR data.
   }
@@ -90,10 +101,7 @@ async function extractCover(filePath, comicId) {
     const coverFile = extractedFiles.find((file) => file.fileHeader.name === coverHeader.name)
     if (!coverFile?.extraction) return null
 
-    const extension = path.extname(coverHeader.name).toLowerCase().replace('.jpeg', '.jpg')
-    const coverFilename = `${comicId}${extension}`
-    await writeFile(path.join(coversRoot, coverFilename), coverFile.extraction)
-    return `/generated/covers/${coverFilename}`
+    return await writeOptimizedCover(coverFile.extraction, comicId)
   } catch (error) {
     console.warn(`Could not generate a cover for ${path.basename(filePath)}: ${error.message}`)
     return null
