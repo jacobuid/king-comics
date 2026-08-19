@@ -1050,7 +1050,7 @@ button:disabled {
     width: 6rem;
     height: 8rem;
     border-radius: 0;
-    opacity: 0.6;
+    opacity: 0.5;
     font-size: 5rem;
     line-height: 1;
     place-items: center;
@@ -1067,7 +1067,7 @@ button:disabled {
     left: auto;
   }
 
-  .touch-controls-active .page-arrow:not(:disabled) {
+  .page-arrow.page-arrow-active:not(:disabled) {
     opacity: 1;
   }
 }

@@ -85,7 +85,7 @@ function ComicViewer({ user }) {
   const [fit, setFit] = useState('width')
   const [readerMode, setReaderMode] = useState('single')
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [touchControlsActive, setTouchControlsActive] = useState(false)
+  const [activeTouchControl, setActiveTouchControl] = useState(null)
   const [showGestureGuide, setShowGestureGuide] = useState(false)
 
   function dismissGestureGuide() {
@@ -98,11 +98,11 @@ function ComicViewer({ user }) {
     }
   }
 
-  function activateTouchControls() {
-    setTouchControlsActive(true)
+  function activateTouchControl(control) {
+    setActiveTouchControl(control)
     window.clearTimeout(touchControlsTimerRef.current)
     touchControlsTimerRef.current = window.setTimeout(() => {
-      setTouchControlsActive(false)
+      setActiveTouchControl(null)
     }, 10_000)
   }
 
@@ -141,7 +141,6 @@ function ComicViewer({ user }) {
 
     if (isHorizontalGesture) {
       lastPageTapRef.current = null
-      activateTouchControls()
 
       if (horizontalDistance < 0) {
         setPageIndex((index) => Math.min(pages.length - 1, index + 1))
@@ -182,7 +181,6 @@ function ComicViewer({ user }) {
 
     event.preventDefault()
     lastPageTapRef.current = null
-    activateTouchControls()
     if (side === 'right') {
       setPageIndex((index) => Math.min(pages.length - 1, index + 1))
     } else {
@@ -318,10 +316,7 @@ function ComicViewer({ user }) {
   }
 
   return (
-    <section
-      class={touchControlsActive ? 'comic-viewer touch-controls-active' : 'comic-viewer'}
-      ref={viewerRef}
-    >
+    <section class="comic-viewer" ref={viewerRef}>
       <div class="viewer-toolbar">
         <div class="viewer-comic-nav">
           <strong>{comic.series}</strong>
@@ -385,10 +380,10 @@ function ComicViewer({ user }) {
           onPointerCancel={cancelPageDrag}
         >
           <button
-            class="page-arrow previous-page"
-            type="button"
-            disabled={pageIndex === 0}
-            onPointerDown={activateTouchControls}
+              class={`page-arrow previous-page${activeTouchControl === 'previous' ? ' page-arrow-active' : ''}`}
+              type="button"
+              disabled={pageIndex === 0}
+              onPointerDown={() => activateTouchControl('previous')}
             onClick={() => setPageIndex((index) => Math.max(0, index - 1))}
             aria-label="Previous page"
           >‹</button>
@@ -399,10 +394,10 @@ function ComicViewer({ user }) {
             draggable={false}
           />
           <button
-            class="page-arrow next-page"
-            type="button"
-            disabled={pageIndex === pages.length - 1}
-            onPointerDown={activateTouchControls}
+              class={`page-arrow next-page${activeTouchControl === 'next' ? ' page-arrow-active' : ''}`}
+              type="button"
+              disabled={pageIndex === pages.length - 1}
+              onPointerDown={() => activateTouchControl('next')}
             onClick={() => setPageIndex((index) => Math.min(pages.length - 1, index + 1))}
             aria-label="Next page"
           >›</button>
