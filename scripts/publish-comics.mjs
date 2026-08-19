@@ -1,4 +1,5 @@
 import { spawnSync } from 'node:child_process'
+import { existsSync } from 'node:fs'
 import { stat } from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -12,6 +13,10 @@ const comicsRoot = path.join(projectRoot, 'public', 'comics')
 const coversRoot = path.join(projectRoot, 'public', 'generated', 'covers')
 const catalogScript = path.join(projectRoot, 'scripts', 'generate-comic-catalog.mjs')
 const catalogFile = path.join(projectRoot, 'src', 'data', 'comics.generated.js')
+const windowsAwsPath = 'C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe'
+const awsCommand = process.platform === 'win32' && existsSync(windowsAwsPath)
+  ? windowsAwsPath
+  : 'aws'
 
 function usage() {
   console.log(`Usage:
@@ -111,7 +116,7 @@ async function main() {
   }
 
   console.log(`${options.dryRun ? 'Checking' : 'Uploading'} comic archives...`)
-  run('aws', [
+  run(awsCommand, [
     's3', 'sync', comicSource, comicDestination,
     '--exclude', '*.gitkeep',
     '--profile', profile,
@@ -119,7 +124,7 @@ async function main() {
   ])
 
   console.log(`${options.dryRun ? 'Checking' : 'Uploading'} generated covers...`)
-  run('aws', [
+  run(awsCommand, [
     's3', 'sync', coversRoot, `s3://${bucket}/generated/covers`,
     '--delete',
     '--profile', profile,

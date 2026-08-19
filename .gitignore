@@ -4,6 +4,7 @@ public/libarchive/
 public/generated/covers/
 public/comics/*
 !public/comics/.gitkeep
+.archive-backups/
 .vite/
 .env
 .env.local
