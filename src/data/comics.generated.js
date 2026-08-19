@@ -7,7 +7,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#1",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%201%20-%20In%20Your%20Face.cbr",
-    "cover": "/generated/covers/special-1-in-your-face-677086eb.jpg"
+    "cover": "/generated/covers/special-1-in-your-face-677086eb-v1.webp"
   },
   {
     "id": "special-2-sonic-and-knuckles-dbd5356f",
@@ -16,7 +16,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#2",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%202%20-%20Sonic%20and%20Knuckles.cbr",
-    "cover": "/generated/covers/special-2-sonic-and-knuckles-dbd5356f.jpg"
+    "cover": "/generated/covers/special-2-sonic-and-knuckles-dbd5356f-v1.webp"
   },
   {
     "id": "special-3-triple-trouble-76a3a252",
@@ -25,7 +25,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#3",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%203%20-%20Triple%20Trouble.cbr",
-    "cover": "/generated/covers/special-3-triple-trouble-76a3a252.jpg"
+    "cover": "/generated/covers/special-3-triple-trouble-76a3a252-v1.webp"
   },
   {
     "id": "special-4-knuckles-chaotix-8c807c9a",
@@ -34,7 +34,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#4",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%204%20-%20Knuckles%20Chaotix.cbr",
-    "cover": "/generated/covers/special-4-knuckles-chaotix-8c807c9a.jpg"
+    "cover": "/generated/covers/special-4-knuckles-chaotix-8c807c9a-v1.webp"
   },
   {
     "id": "special-5-super-sonic-vs-hyper-knuckles-1f9c0d44",
@@ -43,7 +43,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#5",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%205%20-%20Super%20Sonic%20vs.%20Hyper%20Knuckles.cbr",
-    "cover": "/generated/covers/special-5-super-sonic-vs-hyper-knuckles-1f9c0d44.jpg"
+    "cover": "/generated/covers/special-5-super-sonic-vs-hyper-knuckles-1f9c0d44-v1.webp"
   },
   {
     "id": "special-6-sonic-knuckles-mecha-madness-98d45010",
@@ -52,7 +52,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#6",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%206%20-%20Sonic%20%26_Knuckles%20Mecha_Madness.cbz",
-    "cover": "/generated/covers/special-6-sonic-knuckles-mecha-madness-98d45010.jpg"
+    "cover": "/generated/covers/special-6-sonic-knuckles-mecha-madness-98d45010-v1.webp"
   },
   {
     "id": "special-7-sonic-live-96fcf5eb",
@@ -61,7 +61,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#7",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%207%20-%20Sonic%20Live!.cbz",
-    "cover": "/generated/covers/special-7-sonic-live-96fcf5eb.jpg"
+    "cover": "/generated/covers/special-7-sonic-live-96fcf5eb-v1.webp"
   },
   {
     "id": "special-8-sonic-blast-add24f2d",
@@ -70,7 +70,7 @@ export const comics = [
     "seriesId": "classic-sonic-specials",
     "issue": "#8",
     "archive": "/comics/Classic%20Sonic%20Specials/Special%208%20-%20Sonic%20Blast.cbz",
-    "cover": "/generated/covers/special-8-sonic-blast-add24f2d.jpg"
+    "cover": "/generated/covers/special-8-sonic-blast-add24f2d-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-1-13a4bdea",
@@ -79,7 +79,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#1",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%231.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-1-13a4bdea.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-1-13a4bdea-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-2-ccbb8446",
@@ -88,7 +88,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#2",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%232.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-2-ccbb8446.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-2-ccbb8446-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-3-a4d574f6",
@@ -97,7 +97,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#3",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%233.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-3-a4d574f6.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-3-a4d574f6-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-4-0c21f102",
@@ -106,7 +106,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#4",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%234.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-4-0c21f102.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-4-0c21f102-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-5-ce22bb39",
@@ -115,7 +115,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#5",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%235.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-5-ce22bb39.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-5-ce22bb39-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-6-9829a3f2",
@@ -124,7 +124,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#6",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%236.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-6-9829a3f2.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-6-9829a3f2-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-7-5c95867b",
@@ -133,7 +133,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#7",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%237.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-7-5c95867b.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-7-5c95867b-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-8-3bfd3840",
@@ -142,7 +142,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#8",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%238.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-8-3bfd3840.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-8-3bfd3840-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-9-bb500208",
@@ -151,7 +151,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#9",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%239.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-9-bb500208.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-9-bb500208-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-10-78ab731d",
@@ -160,7 +160,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#10",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2310.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-10-78ab731d.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-10-78ab731d-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-11-1322a37b",
@@ -169,7 +169,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#11",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2311.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-11-1322a37b.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-11-1322a37b-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-12-bfd47182",
@@ -178,7 +178,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#12",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2312.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-12-bfd47182.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-12-bfd47182-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-13-7ec7dad0",
@@ -187,7 +187,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#13",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2313.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-13-7ec7dad0.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-13-7ec7dad0-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-14-59e8fde4",
@@ -196,7 +196,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#14",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2314.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-14-59e8fde4.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-14-59e8fde4-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-15-c78baed9",
@@ -205,7 +205,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#15",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2315.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-15-c78baed9.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-15-c78baed9-v1.webp"
   },
   {
     "id": "disney-comic-hits-issue-16-b3a1465f",
@@ -214,7 +214,7 @@ export const comics = [
     "seriesId": "disney-comic-hits",
     "issue": "#16",
     "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2316.cbz",
-    "cover": "/generated/covers/disney-comic-hits-issue-16-b3a1465f.jpg"
+    "cover": "/generated/covers/disney-comic-hits-issue-16-b3a1465f-v1.webp"
   },
   {
     "id": "knucklesminiseries01-a41d6a41",
@@ -223,7 +223,7 @@ export const comics = [
     "seriesId": "knuckles-miniseries",
     "issue": "#1",
     "archive": "/comics/Knuckles%20Miniseries/KnucklesMiniseries01.cbr",
-    "cover": "/generated/covers/knucklesminiseries01-a41d6a41.jpg"
+    "cover": "/generated/covers/knucklesminiseries01-a41d6a41-v1.webp"
   },
   {
     "id": "knucklesminiseries02-fe6302dd",
@@ -232,7 +232,7 @@ export const comics = [
     "seriesId": "knuckles-miniseries",
     "issue": "#2",
     "archive": "/comics/Knuckles%20Miniseries/KnucklesMiniseries02.cbr",
-    "cover": "/generated/covers/knucklesminiseries02-fe6302dd.jpg"
+    "cover": "/generated/covers/knucklesminiseries02-fe6302dd-v1.webp"
   },
   {
     "id": "knucklesminiseries03-2f5acfe9",
@@ -241,7 +241,7 @@ export const comics = [
     "seriesId": "knuckles-miniseries",
     "issue": "#3",
     "archive": "/comics/Knuckles%20Miniseries/KnucklesMiniseries03.cbr",
-    "cover": "/generated/covers/knucklesminiseries03-2f5acfe9.jpg"
+    "cover": "/generated/covers/knucklesminiseries03-2f5acfe9-v1.webp"
   },
   {
     "id": "looney-tunes-001-b9bb7e01",
@@ -250,7 +250,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#1",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20001.cbr",
-    "cover": "/generated/covers/looney-tunes-001-b9bb7e01.jpg"
+    "cover": "/generated/covers/looney-tunes-001-b9bb7e01-v1.webp"
   },
   {
     "id": "looney-tunes-002-2-9f5867d4",
@@ -259,7 +259,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#2",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20002%20(2).cbr",
-    "cover": "/generated/covers/looney-tunes-002-2-9f5867d4.jpg"
+    "cover": "/generated/covers/looney-tunes-002-2-9f5867d4-v1.webp"
   },
   {
     "id": "looney-tunes-002-a9d42d41",
@@ -268,7 +268,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#2",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20002.cbr",
-    "cover": "/generated/covers/looney-tunes-002-a9d42d41.jpg"
+    "cover": "/generated/covers/looney-tunes-002-a9d42d41-v1.webp"
   },
   {
     "id": "looney-tunes-003-9322b07a",
@@ -277,7 +277,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#3",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20003.cbr",
-    "cover": "/generated/covers/looney-tunes-003-9322b07a.jpg"
+    "cover": "/generated/covers/looney-tunes-003-9322b07a-v1.webp"
   },
   {
     "id": "looney-tunes-004-4d2f4308",
@@ -286,7 +286,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#4",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20004.cbr",
-    "cover": "/generated/covers/looney-tunes-004-4d2f4308.jpg"
+    "cover": "/generated/covers/looney-tunes-004-4d2f4308-v1.webp"
   },
   {
     "id": "looney-tunes-005-ea2683e8",
@@ -295,7 +295,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#5",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20005.cbr",
-    "cover": "/generated/covers/looney-tunes-005-ea2683e8.jpg"
+    "cover": "/generated/covers/looney-tunes-005-ea2683e8-v1.webp"
   },
   {
     "id": "looney-tunes-006-a9705af9",
@@ -304,7 +304,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#6",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20006.cbr",
-    "cover": "/generated/covers/looney-tunes-006-a9705af9.jpg"
+    "cover": "/generated/covers/looney-tunes-006-a9705af9-v1.webp"
   },
   {
     "id": "looney-tunes-007-2d931025",
@@ -313,7 +313,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#7",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20007.cbr",
-    "cover": "/generated/covers/looney-tunes-007-2d931025.jpg"
+    "cover": "/generated/covers/looney-tunes-007-2d931025-v1.webp"
   },
   {
     "id": "looney-tunes-008-c33e1c46",
@@ -322,7 +322,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#8",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20008.cbr",
-    "cover": "/generated/covers/looney-tunes-008-c33e1c46.jpg"
+    "cover": "/generated/covers/looney-tunes-008-c33e1c46-v1.webp"
   },
   {
     "id": "looney-tunes-009-d2c750bf",
@@ -331,7 +331,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#9",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20009.cbr",
-    "cover": "/generated/covers/looney-tunes-009-d2c750bf.jpg"
+    "cover": "/generated/covers/looney-tunes-009-d2c750bf-v1.webp"
   },
   {
     "id": "looney-tunes-010-d79e610b",
@@ -340,7 +340,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#10",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20010.cbr",
-    "cover": "/generated/covers/looney-tunes-010-d79e610b.jpg"
+    "cover": "/generated/covers/looney-tunes-010-d79e610b-v1.webp"
   },
   {
     "id": "looney-tunes-011-8526b84f",
@@ -349,7 +349,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#11",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20011.cbr",
-    "cover": "/generated/covers/looney-tunes-011-8526b84f.jpg"
+    "cover": "/generated/covers/looney-tunes-011-8526b84f-v1.webp"
   },
   {
     "id": "looney-tunes-012-fb9d9d97",
@@ -358,7 +358,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#12",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20012.cbr",
-    "cover": "/generated/covers/looney-tunes-012-fb9d9d97.jpg"
+    "cover": "/generated/covers/looney-tunes-012-fb9d9d97-v1.webp"
   },
   {
     "id": "looney-tunes-013-e949f8d6",
@@ -367,7 +367,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#13",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20013.cbr",
-    "cover": "/generated/covers/looney-tunes-013-e949f8d6.jpg"
+    "cover": "/generated/covers/looney-tunes-013-e949f8d6-v1.webp"
   },
   {
     "id": "looney-tunes-014-568b3562",
@@ -376,7 +376,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#14",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20014.cbr",
-    "cover": "/generated/covers/looney-tunes-014-568b3562.jpg"
+    "cover": "/generated/covers/looney-tunes-014-568b3562-v1.webp"
   },
   {
     "id": "looney-tunes-015-175453b0",
@@ -385,7 +385,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#15",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20015.cbz",
-    "cover": "/generated/covers/looney-tunes-015-175453b0.jpg"
+    "cover": "/generated/covers/looney-tunes-015-175453b0-v1.webp"
   },
   {
     "id": "looney-tunes-016-e0dad811",
@@ -394,7 +394,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#16",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20016.cbz",
-    "cover": "/generated/covers/looney-tunes-016-e0dad811.jpg"
+    "cover": "/generated/covers/looney-tunes-016-e0dad811-v1.webp"
   },
   {
     "id": "looney-tunes-017-258c7ba3",
@@ -403,7 +403,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#17",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20017.cbz",
-    "cover": "/generated/covers/looney-tunes-017-258c7ba3.jpg"
+    "cover": "/generated/covers/looney-tunes-017-258c7ba3-v1.webp"
   },
   {
     "id": "looney-tunes-018-c3f29ffb",
@@ -412,7 +412,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#18",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20018.cbr",
-    "cover": "/generated/covers/looney-tunes-018-c3f29ffb.jpg"
+    "cover": "/generated/covers/looney-tunes-018-c3f29ffb-v1.webp"
   },
   {
     "id": "looney-tunes-019-a746086d",
@@ -421,7 +421,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#19",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20019.cbr",
-    "cover": "/generated/covers/looney-tunes-019-a746086d.jpg"
+    "cover": "/generated/covers/looney-tunes-019-a746086d-v1.webp"
   },
   {
     "id": "looney-tunes-020-26055fba",
@@ -430,7 +430,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#20",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20020.cbz",
-    "cover": "/generated/covers/looney-tunes-020-26055fba.jpg"
+    "cover": "/generated/covers/looney-tunes-020-26055fba-v1.webp"
   },
   {
     "id": "looney-tunes-021-1ecdbf7d",
@@ -439,7 +439,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#21",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20021.cbz",
-    "cover": "/generated/covers/looney-tunes-021-1ecdbf7d.jpg"
+    "cover": "/generated/covers/looney-tunes-021-1ecdbf7d-v1.webp"
   },
   {
     "id": "looney-tunes-022-e048fce6",
@@ -448,7 +448,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#22",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20022.cbz",
-    "cover": "/generated/covers/looney-tunes-022-e048fce6.jpg"
+    "cover": "/generated/covers/looney-tunes-022-e048fce6-v1.webp"
   },
   {
     "id": "looney-tunes-023-99dd34ad",
@@ -457,7 +457,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#23",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20023.cbr",
-    "cover": "/generated/covers/looney-tunes-023-99dd34ad.jpg"
+    "cover": "/generated/covers/looney-tunes-023-99dd34ad-v1.webp"
   },
   {
     "id": "looney-tunes-024-0bfffbb5",
@@ -466,7 +466,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#24",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20024.cbz",
-    "cover": "/generated/covers/looney-tunes-024-0bfffbb5.jpg"
+    "cover": "/generated/covers/looney-tunes-024-0bfffbb5-v1.webp"
   },
   {
     "id": "looney-tunes-025-69c13478",
@@ -475,7 +475,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#25",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20025.cbz",
-    "cover": "/generated/covers/looney-tunes-025-69c13478.jpg"
+    "cover": "/generated/covers/looney-tunes-025-69c13478-v1.webp"
   },
   {
     "id": "looney-tunes-026-700bad11",
@@ -484,7 +484,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#26",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20026.cbz",
-    "cover": "/generated/covers/looney-tunes-026-700bad11.jpg"
+    "cover": "/generated/covers/looney-tunes-026-700bad11-v1.webp"
   },
   {
     "id": "looney-tunes-027-dedce51c",
@@ -493,7 +493,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#27",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20027.cbz",
-    "cover": "/generated/covers/looney-tunes-027-dedce51c.jpg"
+    "cover": "/generated/covers/looney-tunes-027-dedce51c-v1.webp"
   },
   {
     "id": "looney-tunes-028-823efcf0",
@@ -502,7 +502,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#28",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20028.cbz",
-    "cover": "/generated/covers/looney-tunes-028-823efcf0.jpg"
+    "cover": "/generated/covers/looney-tunes-028-823efcf0-v1.webp"
   },
   {
     "id": "looney-tunes-029-679b23e4",
@@ -511,7 +511,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#29",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20029.cbz",
-    "cover": "/generated/covers/looney-tunes-029-679b23e4.jpg"
+    "cover": "/generated/covers/looney-tunes-029-679b23e4-v1.webp"
   },
   {
     "id": "looney-tunes-030-9be2205b",
@@ -520,7 +520,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#30",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20030.cbz",
-    "cover": "/generated/covers/looney-tunes-030-9be2205b.jpg"
+    "cover": "/generated/covers/looney-tunes-030-9be2205b-v1.webp"
   },
   {
     "id": "looney-tunes-031-6f19b1f7",
@@ -529,7 +529,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#31",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20031.cbz",
-    "cover": "/generated/covers/looney-tunes-031-6f19b1f7.jpg"
+    "cover": "/generated/covers/looney-tunes-031-6f19b1f7-v1.webp"
   },
   {
     "id": "looney-tunes-032-370c0345",
@@ -538,7 +538,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#32",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20032.cbz",
-    "cover": "/generated/covers/looney-tunes-032-370c0345.jpg"
+    "cover": "/generated/covers/looney-tunes-032-370c0345-v1.webp"
   },
   {
     "id": "looney-tunes-033-b505b294",
@@ -547,7 +547,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#33",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20033.cbz",
-    "cover": "/generated/covers/looney-tunes-033-b505b294.jpg"
+    "cover": "/generated/covers/looney-tunes-033-b505b294-v1.webp"
   },
   {
     "id": "looney-tunes-034-46e0fe0b",
@@ -556,7 +556,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#34",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20034%20.cbr",
-    "cover": "/generated/covers/looney-tunes-034-46e0fe0b.jpg"
+    "cover": "/generated/covers/looney-tunes-034-46e0fe0b-v1.webp"
   },
   {
     "id": "looney-tunes-035-d3129c9e",
@@ -565,7 +565,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#35",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20035.cbz",
-    "cover": "/generated/covers/looney-tunes-035-d3129c9e.jpg"
+    "cover": "/generated/covers/looney-tunes-035-d3129c9e-v1.webp"
   },
   {
     "id": "looney-tunes-036-ab546933",
@@ -574,7 +574,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#36",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20036.cbz",
-    "cover": "/generated/covers/looney-tunes-036-ab546933.jpg"
+    "cover": "/generated/covers/looney-tunes-036-ab546933-v1.webp"
   },
   {
     "id": "looney-tunes-037-38d181a4",
@@ -583,7 +583,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#37",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20037.cbr",
-    "cover": "/generated/covers/looney-tunes-037-38d181a4.jpg"
+    "cover": "/generated/covers/looney-tunes-037-38d181a4-v1.webp"
   },
   {
     "id": "looney-tunes-038-6105d0cc",
@@ -592,7 +592,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#38",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20038.cbz",
-    "cover": "/generated/covers/looney-tunes-038-6105d0cc.jpg"
+    "cover": "/generated/covers/looney-tunes-038-6105d0cc-v1.webp"
   },
   {
     "id": "looney-tunes-039-812176ff",
@@ -601,7 +601,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#39",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20039.cbr",
-    "cover": "/generated/covers/looney-tunes-039-812176ff.jpg"
+    "cover": "/generated/covers/looney-tunes-039-812176ff-v1.webp"
   },
   {
     "id": "looney-tunes-040-c43240cd",
@@ -610,7 +610,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#40",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20040.cbz",
-    "cover": "/generated/covers/looney-tunes-040-c43240cd.jpg"
+    "cover": "/generated/covers/looney-tunes-040-c43240cd-v1.webp"
   },
   {
     "id": "looney-tunes-041-b21db4c3",
@@ -619,7 +619,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#41",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20041.cbz",
-    "cover": "/generated/covers/looney-tunes-041-b21db4c3.jpg"
+    "cover": "/generated/covers/looney-tunes-041-b21db4c3-v1.webp"
   },
   {
     "id": "looney-tunes-042-1b1ed348",
@@ -628,7 +628,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#42",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20042.cbr",
-    "cover": "/generated/covers/looney-tunes-042-1b1ed348.jpg"
+    "cover": "/generated/covers/looney-tunes-042-1b1ed348-v1.webp"
   },
   {
     "id": "looney-tunes-043-6028f3f0",
@@ -637,7 +637,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#43",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20043.cbr",
-    "cover": "/generated/covers/looney-tunes-043-6028f3f0.jpg"
+    "cover": "/generated/covers/looney-tunes-043-6028f3f0-v1.webp"
   },
   {
     "id": "looney-tunes-044-29754d88",
@@ -646,7 +646,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#44",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20044.cbr",
-    "cover": "/generated/covers/looney-tunes-044-29754d88.jpg"
+    "cover": "/generated/covers/looney-tunes-044-29754d88-v1.webp"
   },
   {
     "id": "looney-tunes-045-84e494c7",
@@ -655,7 +655,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#45",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20045.cbr",
-    "cover": "/generated/covers/looney-tunes-045-84e494c7.jpg"
+    "cover": "/generated/covers/looney-tunes-045-84e494c7-v1.webp"
   },
   {
     "id": "looney-tunes-046-4ae0e61d",
@@ -664,7 +664,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#46",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20046.cbz",
-    "cover": "/generated/covers/looney-tunes-046-4ae0e61d.jpg"
+    "cover": "/generated/covers/looney-tunes-046-4ae0e61d-v1.webp"
   },
   {
     "id": "looney-tunes-047-bc7e0ccb",
@@ -673,7 +673,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#47",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20047.cbz",
-    "cover": "/generated/covers/looney-tunes-047-bc7e0ccb.jpg"
+    "cover": "/generated/covers/looney-tunes-047-bc7e0ccb-v1.webp"
   },
   {
     "id": "looney-tunes-048-2e12b1c7",
@@ -682,7 +682,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#48",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20048.cbz",
-    "cover": "/generated/covers/looney-tunes-048-2e12b1c7.jpg"
+    "cover": "/generated/covers/looney-tunes-048-2e12b1c7-v1.webp"
   },
   {
     "id": "looney-tunes-049-de1daf5f",
@@ -691,7 +691,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#49",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20049.cbr",
-    "cover": "/generated/covers/looney-tunes-049-de1daf5f.jpg"
+    "cover": "/generated/covers/looney-tunes-049-de1daf5f-v1.webp"
   },
   {
     "id": "looney-tunes-050-46eb7974",
@@ -700,7 +700,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#50",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20050.cbz",
-    "cover": "/generated/covers/looney-tunes-050-46eb7974.jpg"
+    "cover": "/generated/covers/looney-tunes-050-46eb7974-v1.webp"
   },
   {
     "id": "looney-tunes-051-4931121a",
@@ -709,7 +709,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#51",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20051.cbz",
-    "cover": "/generated/covers/looney-tunes-051-4931121a.jpg"
+    "cover": "/generated/covers/looney-tunes-051-4931121a-v1.webp"
   },
   {
     "id": "looney-tunes-052-34353612",
@@ -718,7 +718,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#52",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20052.cbz",
-    "cover": "/generated/covers/looney-tunes-052-34353612.jpg"
+    "cover": "/generated/covers/looney-tunes-052-34353612-v1.webp"
   },
   {
     "id": "looney-tunes-053-55bb8e42",
@@ -727,7 +727,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#53",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20053.cbz",
-    "cover": "/generated/covers/looney-tunes-053-55bb8e42.jpg"
+    "cover": "/generated/covers/looney-tunes-053-55bb8e42-v1.webp"
   },
   {
     "id": "looney-tunes-054-7fa3251f",
@@ -736,7 +736,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#54",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20054.cbz",
-    "cover": "/generated/covers/looney-tunes-054-7fa3251f.jpg"
+    "cover": "/generated/covers/looney-tunes-054-7fa3251f-v1.webp"
   },
   {
     "id": "looney-tunes-055-6863e63e",
@@ -745,7 +745,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#55",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20055.cbr",
-    "cover": "/generated/covers/looney-tunes-055-6863e63e.jpg"
+    "cover": "/generated/covers/looney-tunes-055-6863e63e-v1.webp"
   },
   {
     "id": "looney-tunes-056-2b3997f7",
@@ -754,7 +754,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#56",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20056.cbz",
-    "cover": "/generated/covers/looney-tunes-056-2b3997f7.jpg"
+    "cover": "/generated/covers/looney-tunes-056-2b3997f7-v1.webp"
   },
   {
     "id": "looney-tunes-057-118450cd",
@@ -763,7 +763,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#57",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20057.cbz",
-    "cover": "/generated/covers/looney-tunes-057-118450cd.jpg"
+    "cover": "/generated/covers/looney-tunes-057-118450cd-v1.webp"
   },
   {
     "id": "looney-tunes-058-594ffe04",
@@ -772,7 +772,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#58",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20058.cbz",
-    "cover": "/generated/covers/looney-tunes-058-594ffe04.jpg"
+    "cover": "/generated/covers/looney-tunes-058-594ffe04-v1.webp"
   },
   {
     "id": "looney-tunes-059-1cbae864",
@@ -781,7 +781,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#59",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20059.cbz",
-    "cover": "/generated/covers/looney-tunes-059-1cbae864.jpg"
+    "cover": "/generated/covers/looney-tunes-059-1cbae864-v1.webp"
   },
   {
     "id": "looney-tunes-060-69c6bd40",
@@ -790,7 +790,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#60",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20060.cbz",
-    "cover": "/generated/covers/looney-tunes-060-69c6bd40.jpg"
+    "cover": "/generated/covers/looney-tunes-060-69c6bd40-v1.webp"
   },
   {
     "id": "looney-tunes-061-52e8417a",
@@ -799,7 +799,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#61",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20061.cbr",
-    "cover": "/generated/covers/looney-tunes-061-52e8417a.jpg"
+    "cover": "/generated/covers/looney-tunes-061-52e8417a-v1.webp"
   },
   {
     "id": "looney-tunes-062-39db9d81",
@@ -808,7 +808,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#62",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20062.cbr",
-    "cover": "/generated/covers/looney-tunes-062-39db9d81.jpg"
+    "cover": "/generated/covers/looney-tunes-062-39db9d81-v1.webp"
   },
   {
     "id": "looney-tunes-063-bd7b1d2e",
@@ -817,7 +817,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#63",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20063.cbr",
-    "cover": "/generated/covers/looney-tunes-063-bd7b1d2e.jpg"
+    "cover": "/generated/covers/looney-tunes-063-bd7b1d2e-v1.webp"
   },
   {
     "id": "looney-tunes-064-eb7e8426",
@@ -826,7 +826,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#64",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20064.cbr",
-    "cover": "/generated/covers/looney-tunes-064-eb7e8426.jpg"
+    "cover": "/generated/covers/looney-tunes-064-eb7e8426-v1.webp"
   },
   {
     "id": "looney-tunes-065-fb0fc2a5",
@@ -835,7 +835,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#65",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20065.cbr",
-    "cover": "/generated/covers/looney-tunes-065-fb0fc2a5.jpg"
+    "cover": "/generated/covers/looney-tunes-065-fb0fc2a5-v1.webp"
   },
   {
     "id": "looney-tunes-066-abee9213",
@@ -844,7 +844,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#66",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20066.cbr",
-    "cover": "/generated/covers/looney-tunes-066-abee9213.jpg"
+    "cover": "/generated/covers/looney-tunes-066-abee9213-v1.webp"
   },
   {
     "id": "looney-tunes-067-c78a3e6a",
@@ -853,7 +853,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#67",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20067.cbr",
-    "cover": "/generated/covers/looney-tunes-067-c78a3e6a.jpg"
+    "cover": "/generated/covers/looney-tunes-067-c78a3e6a-v1.webp"
   },
   {
     "id": "looney-tunes-068-2448c53f",
@@ -862,7 +862,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#68",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20068.cbr",
-    "cover": "/generated/covers/looney-tunes-068-2448c53f.jpg"
+    "cover": "/generated/covers/looney-tunes-068-2448c53f-v1.webp"
   },
   {
     "id": "looney-tunes-069-b650a19c",
@@ -871,7 +871,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#69",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20069.cbr",
-    "cover": "/generated/covers/looney-tunes-069-b650a19c.jpg"
+    "cover": "/generated/covers/looney-tunes-069-b650a19c-v1.webp"
   },
   {
     "id": "looney-tunes-070-c88627c5",
@@ -880,7 +880,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#70",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20070.cbr",
-    "cover": "/generated/covers/looney-tunes-070-c88627c5.jpg"
+    "cover": "/generated/covers/looney-tunes-070-c88627c5-v1.webp"
   },
   {
     "id": "looney-tunes-071-a75dbb23",
@@ -889,7 +889,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#71",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20071.cbr",
-    "cover": "/generated/covers/looney-tunes-071-a75dbb23.jpg"
+    "cover": "/generated/covers/looney-tunes-071-a75dbb23-v1.webp"
   },
   {
     "id": "looney-tunes-072-479c04c7",
@@ -898,7 +898,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#72",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20072.cbr",
-    "cover": "/generated/covers/looney-tunes-072-479c04c7.jpg"
+    "cover": "/generated/covers/looney-tunes-072-479c04c7-v1.webp"
   },
   {
     "id": "looney-tunes-073-802f749a",
@@ -907,7 +907,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#73",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20073.cbr",
-    "cover": "/generated/covers/looney-tunes-073-802f749a.jpg"
+    "cover": "/generated/covers/looney-tunes-073-802f749a-v1.webp"
   },
   {
     "id": "looney-tunes-074-4e15ffdd",
@@ -916,7 +916,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#74",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20074.cbr",
-    "cover": "/generated/covers/looney-tunes-074-4e15ffdd.jpg"
+    "cover": "/generated/covers/looney-tunes-074-4e15ffdd-v1.webp"
   },
   {
     "id": "looney-tunes-075-e2ea1fca",
@@ -925,7 +925,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#75",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20075.cbr",
-    "cover": "/generated/covers/looney-tunes-075-e2ea1fca.jpg"
+    "cover": "/generated/covers/looney-tunes-075-e2ea1fca-v1.webp"
   },
   {
     "id": "looney-tunes-076-7ee2c1ee",
@@ -934,7 +934,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#76",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20076.cbr",
-    "cover": "/generated/covers/looney-tunes-076-7ee2c1ee.jpg"
+    "cover": "/generated/covers/looney-tunes-076-7ee2c1ee-v1.webp"
   },
   {
     "id": "looney-tunes-077-6b936844",
@@ -943,7 +943,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#77",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20077.cbr",
-    "cover": "/generated/covers/looney-tunes-077-6b936844.jpg"
+    "cover": "/generated/covers/looney-tunes-077-6b936844-v1.webp"
   },
   {
     "id": "looney-tunes-078-3c258bbb",
@@ -952,7 +952,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#78",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20078.cbr",
-    "cover": "/generated/covers/looney-tunes-078-3c258bbb.jpg"
+    "cover": "/generated/covers/looney-tunes-078-3c258bbb-v1.webp"
   },
   {
     "id": "looney-tunes-079-bbab9713",
@@ -961,7 +961,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#79",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20079.cbr",
-    "cover": "/generated/covers/looney-tunes-079-bbab9713.jpg"
+    "cover": "/generated/covers/looney-tunes-079-bbab9713-v1.webp"
   },
   {
     "id": "looney-tunes-080-2bbbeca1",
@@ -970,7 +970,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#80",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20080.cbr",
-    "cover": "/generated/covers/looney-tunes-080-2bbbeca1.jpg"
+    "cover": "/generated/covers/looney-tunes-080-2bbbeca1-v1.webp"
   },
   {
     "id": "looney-tunes-081-a764bcb0",
@@ -979,7 +979,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#81",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20081.cbr",
-    "cover": "/generated/covers/looney-tunes-081-a764bcb0.jpg"
+    "cover": "/generated/covers/looney-tunes-081-a764bcb0-v1.webp"
   },
   {
     "id": "looney-tunes-082-da16d7a1",
@@ -988,7 +988,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#82",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20082.cbr",
-    "cover": "/generated/covers/looney-tunes-082-da16d7a1.jpg"
+    "cover": "/generated/covers/looney-tunes-082-da16d7a1-v1.webp"
   },
   {
     "id": "looney-tunes-083-df909b64",
@@ -997,7 +997,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#83",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20083.cbr",
-    "cover": "/generated/covers/looney-tunes-083-df909b64.jpg"
+    "cover": "/generated/covers/looney-tunes-083-df909b64-v1.webp"
   },
   {
     "id": "looney-tunes-084-42616531",
@@ -1006,7 +1006,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#84",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20084.cbr",
-    "cover": "/generated/covers/looney-tunes-084-42616531.jpg"
+    "cover": "/generated/covers/looney-tunes-084-42616531-v1.webp"
   },
   {
     "id": "looney-tunes-085-fc22c823",
@@ -1015,7 +1015,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#85",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20085.cbr",
-    "cover": "/generated/covers/looney-tunes-085-fc22c823.jpg"
+    "cover": "/generated/covers/looney-tunes-085-fc22c823-v1.webp"
   },
   {
     "id": "looney-tunes-086-78ef8d37",
@@ -1024,7 +1024,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#86",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20086.cbr",
-    "cover": "/generated/covers/looney-tunes-086-78ef8d37.jpg"
+    "cover": "/generated/covers/looney-tunes-086-78ef8d37-v1.webp"
   },
   {
     "id": "looney-tunes-087-e1e3635a",
@@ -1033,7 +1033,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#87",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20087.cbr",
-    "cover": "/generated/covers/looney-tunes-087-e1e3635a.jpg"
+    "cover": "/generated/covers/looney-tunes-087-e1e3635a-v1.webp"
   },
   {
     "id": "looney-tunes-088-a82b9df7",
@@ -1042,7 +1042,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#88",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20088.cbr",
-    "cover": "/generated/covers/looney-tunes-088-a82b9df7.jpg"
+    "cover": "/generated/covers/looney-tunes-088-a82b9df7-v1.webp"
   },
   {
     "id": "looney-tunes-089-d5695937",
@@ -1051,7 +1051,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#89",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20089.cbr",
-    "cover": "/generated/covers/looney-tunes-089-d5695937.jpg"
+    "cover": "/generated/covers/looney-tunes-089-d5695937-v1.webp"
   },
   {
     "id": "looney-tunes-090-74be2b1e",
@@ -1060,7 +1060,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#90",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20090.cbr",
-    "cover": "/generated/covers/looney-tunes-090-74be2b1e.jpg"
+    "cover": "/generated/covers/looney-tunes-090-74be2b1e-v1.webp"
   },
   {
     "id": "looney-tunes-091-a86349e4",
@@ -1069,7 +1069,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#91",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20091.cbr",
-    "cover": "/generated/covers/looney-tunes-091-a86349e4.jpg"
+    "cover": "/generated/covers/looney-tunes-091-a86349e4-v1.webp"
   },
   {
     "id": "looney-tunes-092-c3111f13",
@@ -1078,7 +1078,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#92",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20092.cbr",
-    "cover": "/generated/covers/looney-tunes-092-c3111f13.jpg"
+    "cover": "/generated/covers/looney-tunes-092-c3111f13-v1.webp"
   },
   {
     "id": "looney-tunes-093-580b0c49",
@@ -1087,7 +1087,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#93",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20093.cbr",
-    "cover": "/generated/covers/looney-tunes-093-580b0c49.jpg"
+    "cover": "/generated/covers/looney-tunes-093-580b0c49-v1.webp"
   },
   {
     "id": "looney-tunes-094-6c38ecc6",
@@ -1096,7 +1096,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#94",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20094.cbr",
-    "cover": "/generated/covers/looney-tunes-094-6c38ecc6.jpg"
+    "cover": "/generated/covers/looney-tunes-094-6c38ecc6-v1.webp"
   },
   {
     "id": "looney-tunes-095-60833cd0",
@@ -1105,7 +1105,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#95",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20095.cbr",
-    "cover": "/generated/covers/looney-tunes-095-60833cd0.jpg"
+    "cover": "/generated/covers/looney-tunes-095-60833cd0-v1.webp"
   },
   {
     "id": "looney-tunes-096-2f42896c",
@@ -1114,7 +1114,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#96",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20096.cbr",
-    "cover": "/generated/covers/looney-tunes-096-2f42896c.jpg"
+    "cover": "/generated/covers/looney-tunes-096-2f42896c-v1.webp"
   },
   {
     "id": "looney-tunes-097-71029e60",
@@ -1123,7 +1123,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#97",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20097.cbr",
-    "cover": "/generated/covers/looney-tunes-097-71029e60.jpg"
+    "cover": "/generated/covers/looney-tunes-097-71029e60-v1.webp"
   },
   {
     "id": "looney-tunes-098-1280db0b",
@@ -1132,7 +1132,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#98",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20098.cbr",
-    "cover": "/generated/covers/looney-tunes-098-1280db0b.jpg"
+    "cover": "/generated/covers/looney-tunes-098-1280db0b-v1.webp"
   },
   {
     "id": "looney-tunes-099-8a58eb9c",
@@ -1141,7 +1141,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#99",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20099.cbr",
-    "cover": "/generated/covers/looney-tunes-099-8a58eb9c.jpg"
+    "cover": "/generated/covers/looney-tunes-099-8a58eb9c-v1.webp"
   },
   {
     "id": "looney-tunes-100-00246537",
@@ -1150,7 +1150,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#100",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20100.cbr",
-    "cover": "/generated/covers/looney-tunes-100-00246537.jpg"
+    "cover": "/generated/covers/looney-tunes-100-00246537-v1.webp"
   },
   {
     "id": "looney-tunes-101-fd28e8bf",
@@ -1159,7 +1159,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#101",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20101.cbr",
-    "cover": "/generated/covers/looney-tunes-101-fd28e8bf.jpg"
+    "cover": "/generated/covers/looney-tunes-101-fd28e8bf-v1.webp"
   },
   {
     "id": "looney-tunes-102-810d6ff2",
@@ -1168,7 +1168,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#102",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20102.cbr",
-    "cover": "/generated/covers/looney-tunes-102-810d6ff2.jpg"
+    "cover": "/generated/covers/looney-tunes-102-810d6ff2-v1.webp"
   },
   {
     "id": "looney-tunes-103-9d2dc188",
@@ -1177,7 +1177,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#103",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20103.cbr",
-    "cover": "/generated/covers/looney-tunes-103-9d2dc188.jpg"
+    "cover": "/generated/covers/looney-tunes-103-9d2dc188-v1.webp"
   },
   {
     "id": "looney-tunes-104-d5b1398a",
@@ -1186,7 +1186,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#104",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20104.cbr",
-    "cover": "/generated/covers/looney-tunes-104-d5b1398a.jpg"
+    "cover": "/generated/covers/looney-tunes-104-d5b1398a-v1.webp"
   },
   {
     "id": "looney-tunes-105-d2887047",
@@ -1195,7 +1195,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#105",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20105.cbr",
-    "cover": "/generated/covers/looney-tunes-105-d2887047.jpg"
+    "cover": "/generated/covers/looney-tunes-105-d2887047-v1.webp"
   },
   {
     "id": "looney-tunes-106-33eec712",
@@ -1204,7 +1204,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#106",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20106.cbr",
-    "cover": "/generated/covers/looney-tunes-106-33eec712.jpg"
+    "cover": "/generated/covers/looney-tunes-106-33eec712-v1.webp"
   },
   {
     "id": "looney-tunes-107-33d6fcbf",
@@ -1213,7 +1213,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#107",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20107.cbr",
-    "cover": "/generated/covers/looney-tunes-107-33d6fcbf.jpg"
+    "cover": "/generated/covers/looney-tunes-107-33d6fcbf-v1.webp"
   },
   {
     "id": "looney-tunes-108-1ee997d2",
@@ -1222,7 +1222,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#108",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20108.cbr",
-    "cover": "/generated/covers/looney-tunes-108-1ee997d2.jpg"
+    "cover": "/generated/covers/looney-tunes-108-1ee997d2-v1.webp"
   },
   {
     "id": "looney-tunes-109-1331c5bd",
@@ -1231,7 +1231,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#109",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20109.cbr",
-    "cover": "/generated/covers/looney-tunes-109-1331c5bd.jpg"
+    "cover": "/generated/covers/looney-tunes-109-1331c5bd-v1.webp"
   },
   {
     "id": "looney-tunes-110-8cd480e1",
@@ -1240,7 +1240,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#110",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20110.cbr",
-    "cover": "/generated/covers/looney-tunes-110-8cd480e1.jpg"
+    "cover": "/generated/covers/looney-tunes-110-8cd480e1-v1.webp"
   },
   {
     "id": "looney-tunes-111-6cbe018c",
@@ -1249,7 +1249,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#111",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20111.cbr",
-    "cover": "/generated/covers/looney-tunes-111-6cbe018c.jpg"
+    "cover": "/generated/covers/looney-tunes-111-6cbe018c-v1.webp"
   },
   {
     "id": "looney-tunes-112-415f4f5b",
@@ -1258,7 +1258,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#112",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20112.cbr",
-    "cover": "/generated/covers/looney-tunes-112-415f4f5b.jpg"
+    "cover": "/generated/covers/looney-tunes-112-415f4f5b-v1.webp"
   },
   {
     "id": "looney-tunes-113-e8d5d76c",
@@ -1267,7 +1267,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#113",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20113.cbz",
-    "cover": "/generated/covers/looney-tunes-113-e8d5d76c.jpg"
+    "cover": "/generated/covers/looney-tunes-113-e8d5d76c-v1.webp"
   },
   {
     "id": "looney-tunes-114-a2595cb1",
@@ -1276,7 +1276,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#114",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20114.cbr",
-    "cover": "/generated/covers/looney-tunes-114-a2595cb1.jpg"
+    "cover": "/generated/covers/looney-tunes-114-a2595cb1-v1.webp"
   },
   {
     "id": "looney-tunes-115-02e9b8e1",
@@ -1285,7 +1285,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#115",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20115.cbr",
-    "cover": "/generated/covers/looney-tunes-115-02e9b8e1.jpg"
+    "cover": "/generated/covers/looney-tunes-115-02e9b8e1-v1.webp"
   },
   {
     "id": "looney-tunes-116-c21b235e",
@@ -1294,7 +1294,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#116",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20116.cbr",
-    "cover": "/generated/covers/looney-tunes-116-c21b235e.jpg"
+    "cover": "/generated/covers/looney-tunes-116-c21b235e-v1.webp"
   },
   {
     "id": "looney-tunes-117-1d695a92",
@@ -1303,7 +1303,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#117",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20117.cbr",
-    "cover": "/generated/covers/looney-tunes-117-1d695a92.jpg"
+    "cover": "/generated/covers/looney-tunes-117-1d695a92-v1.webp"
   },
   {
     "id": "looney-tunes-118-a7e1edef",
@@ -1312,7 +1312,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#118",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20118.cbr",
-    "cover": "/generated/covers/looney-tunes-118-a7e1edef.jpg"
+    "cover": "/generated/covers/looney-tunes-118-a7e1edef-v1.webp"
   },
   {
     "id": "looney-tunes-119-b4e1b1ec",
@@ -1321,7 +1321,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#119",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20119.cbr",
-    "cover": "/generated/covers/looney-tunes-119-b4e1b1ec.jpg"
+    "cover": "/generated/covers/looney-tunes-119-b4e1b1ec-v1.webp"
   },
   {
     "id": "looney-tunes-120-aa8e0f60",
@@ -1330,7 +1330,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#120",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20120.cbr",
-    "cover": "/generated/covers/looney-tunes-120-aa8e0f60.jpg"
+    "cover": "/generated/covers/looney-tunes-120-aa8e0f60-v1.webp"
   },
   {
     "id": "looney-tunes-121-1bb21e41",
@@ -1339,7 +1339,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#121",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20121.cbr",
-    "cover": "/generated/covers/looney-tunes-121-1bb21e41.jpg"
+    "cover": "/generated/covers/looney-tunes-121-1bb21e41-v1.webp"
   },
   {
     "id": "looney-tunes-122-1ab9e7b1",
@@ -1348,7 +1348,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#122",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20122.cbr",
-    "cover": "/generated/covers/looney-tunes-122-1ab9e7b1.jpg"
+    "cover": "/generated/covers/looney-tunes-122-1ab9e7b1-v1.webp"
   },
   {
     "id": "looney-tunes-123-35b223fd",
@@ -1357,7 +1357,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#123",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20123.cbr",
-    "cover": "/generated/covers/looney-tunes-123-35b223fd.jpg"
+    "cover": "/generated/covers/looney-tunes-123-35b223fd-v1.webp"
   },
   {
     "id": "looney-tunes-124-d2b7aa4e",
@@ -1366,7 +1366,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#124",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20124.cbr",
-    "cover": "/generated/covers/looney-tunes-124-d2b7aa4e.jpg"
+    "cover": "/generated/covers/looney-tunes-124-d2b7aa4e-v1.webp"
   },
   {
     "id": "looney-tunes-125-2d89a0d6",
@@ -1375,7 +1375,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#125",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20125.cbr",
-    "cover": "/generated/covers/looney-tunes-125-2d89a0d6.jpg"
+    "cover": "/generated/covers/looney-tunes-125-2d89a0d6-v1.webp"
   },
   {
     "id": "looney-tunes-126-ee476c07",
@@ -1384,7 +1384,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#126",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20126.cbz",
-    "cover": "/generated/covers/looney-tunes-126-ee476c07.jpg"
+    "cover": "/generated/covers/looney-tunes-126-ee476c07-v1.webp"
   },
   {
     "id": "looney-tunes-127-0f288dbc",
@@ -1393,7 +1393,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#127",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20127.cbr",
-    "cover": "/generated/covers/looney-tunes-127-0f288dbc.jpg"
+    "cover": "/generated/covers/looney-tunes-127-0f288dbc-v1.webp"
   },
   {
     "id": "looney-tunes-128-cdcf6af8",
@@ -1402,7 +1402,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#128",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20128.cbr",
-    "cover": "/generated/covers/looney-tunes-128-cdcf6af8.jpg"
+    "cover": "/generated/covers/looney-tunes-128-cdcf6af8-v1.webp"
   },
   {
     "id": "looney-tunes-129-1d906721",
@@ -1411,7 +1411,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#129",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20129.cbr",
-    "cover": "/generated/covers/looney-tunes-129-1d906721.jpg"
+    "cover": "/generated/covers/looney-tunes-129-1d906721-v1.webp"
   },
   {
     "id": "looney-tunes-130-66a0e3ca",
@@ -1420,7 +1420,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#130",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20130.cbr",
-    "cover": "/generated/covers/looney-tunes-130-66a0e3ca.jpg"
+    "cover": "/generated/covers/looney-tunes-130-66a0e3ca-v1.webp"
   },
   {
     "id": "looney-tunes-131-66d31942",
@@ -1429,7 +1429,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#131",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20131.cbz",
-    "cover": "/generated/covers/looney-tunes-131-66d31942.jpg"
+    "cover": "/generated/covers/looney-tunes-131-66d31942-v1.webp"
   },
   {
     "id": "looney-tunes-132-d7065f01",
@@ -1438,7 +1438,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#132",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20132.cbz",
-    "cover": "/generated/covers/looney-tunes-132-d7065f01.jpg"
+    "cover": "/generated/covers/looney-tunes-132-d7065f01-v1.webp"
   },
   {
     "id": "looney-tunes-133-5a385cbc",
@@ -1447,7 +1447,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#133",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20133.cbz",
-    "cover": "/generated/covers/looney-tunes-133-5a385cbc.jpg"
+    "cover": "/generated/covers/looney-tunes-133-5a385cbc-v1.webp"
   },
   {
     "id": "looney-tunes-134-e741b8ba",
@@ -1456,7 +1456,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#134",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20134.cbz",
-    "cover": "/generated/covers/looney-tunes-134-e741b8ba.jpg"
+    "cover": "/generated/covers/looney-tunes-134-e741b8ba-v1.webp"
   },
   {
     "id": "looney-tunes-135-f0906320",
@@ -1465,7 +1465,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#135",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20135.cbz",
-    "cover": "/generated/covers/looney-tunes-135-f0906320.jpg"
+    "cover": "/generated/covers/looney-tunes-135-f0906320-v1.webp"
   },
   {
     "id": "looney-tunes-136-820a70d0",
@@ -1474,7 +1474,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#136",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20136.cbz",
-    "cover": "/generated/covers/looney-tunes-136-820a70d0.jpg"
+    "cover": "/generated/covers/looney-tunes-136-820a70d0-v1.webp"
   },
   {
     "id": "looney-tunes-137-79877e53",
@@ -1483,7 +1483,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#137",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20137.cbr",
-    "cover": "/generated/covers/looney-tunes-137-79877e53.jpg"
+    "cover": "/generated/covers/looney-tunes-137-79877e53-v1.webp"
   },
   {
     "id": "looney-tunes-138-6aa2e25d",
@@ -1492,7 +1492,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#138",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20138.cbz",
-    "cover": "/generated/covers/looney-tunes-138-6aa2e25d.jpg"
+    "cover": "/generated/covers/looney-tunes-138-6aa2e25d-v1.webp"
   },
   {
     "id": "looney-tunes-139-96778582",
@@ -1501,7 +1501,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#139",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20139.cbz",
-    "cover": "/generated/covers/looney-tunes-139-96778582.jpg"
+    "cover": "/generated/covers/looney-tunes-139-96778582-v1.webp"
   },
   {
     "id": "looney-tunes-140-70394cef",
@@ -1510,7 +1510,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#140",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20140.cbz",
-    "cover": "/generated/covers/looney-tunes-140-70394cef.jpg"
+    "cover": "/generated/covers/looney-tunes-140-70394cef-v1.webp"
   },
   {
     "id": "looney-tunes-141-b1b7f32b",
@@ -1519,7 +1519,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#141",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20141.cbz",
-    "cover": "/generated/covers/looney-tunes-141-b1b7f32b.jpg"
+    "cover": "/generated/covers/looney-tunes-141-b1b7f32b-v1.webp"
   },
   {
     "id": "looney-tunes-142-8707d1c2",
@@ -1528,7 +1528,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#142",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20142.cbz",
-    "cover": "/generated/covers/looney-tunes-142-8707d1c2.jpg"
+    "cover": "/generated/covers/looney-tunes-142-8707d1c2-v1.webp"
   },
   {
     "id": "looney-tunes-143-210fda76",
@@ -1537,7 +1537,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#143",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20143.cbz",
-    "cover": "/generated/covers/looney-tunes-143-210fda76.jpg"
+    "cover": "/generated/covers/looney-tunes-143-210fda76-v1.webp"
   },
   {
     "id": "looney-tunes-144-1e37d2f0",
@@ -1546,7 +1546,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#144",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20144.cbz",
-    "cover": "/generated/covers/looney-tunes-144-1e37d2f0.jpg"
+    "cover": "/generated/covers/looney-tunes-144-1e37d2f0-v1.webp"
   },
   {
     "id": "looney-tunes-145-e7138603",
@@ -1555,7 +1555,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#145",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20145.cbz",
-    "cover": "/generated/covers/looney-tunes-145-e7138603.jpg"
+    "cover": "/generated/covers/looney-tunes-145-e7138603-v1.webp"
   },
   {
     "id": "looney-tunes-146-f942d2e9",
@@ -1564,7 +1564,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#146",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20146.cbz",
-    "cover": "/generated/covers/looney-tunes-146-f942d2e9.jpg"
+    "cover": "/generated/covers/looney-tunes-146-f942d2e9-v1.webp"
   },
   {
     "id": "looney-tunes-147-dfe2f936",
@@ -1573,7 +1573,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#147",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20147.cbz",
-    "cover": "/generated/covers/looney-tunes-147-dfe2f936.jpg"
+    "cover": "/generated/covers/looney-tunes-147-dfe2f936-v1.webp"
   },
   {
     "id": "looney-tunes-148-3e24e8c5",
@@ -1582,7 +1582,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#148",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20148.cbr",
-    "cover": "/generated/covers/looney-tunes-148-3e24e8c5.jpg"
+    "cover": "/generated/covers/looney-tunes-148-3e24e8c5-v1.webp"
   },
   {
     "id": "looney-tunes-149-97833e86",
@@ -1591,7 +1591,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#149",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20149.cbr",
-    "cover": "/generated/covers/looney-tunes-149-97833e86.jpg"
+    "cover": "/generated/covers/looney-tunes-149-97833e86-v1.webp"
   },
   {
     "id": "looney-tunes-150-98439118",
@@ -1600,7 +1600,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#150",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20150.cbr",
-    "cover": "/generated/covers/looney-tunes-150-98439118.jpg"
+    "cover": "/generated/covers/looney-tunes-150-98439118-v1.webp"
   },
   {
     "id": "looney-tunes-151-08c46711",
@@ -1609,7 +1609,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#151",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20151.cbr",
-    "cover": "/generated/covers/looney-tunes-151-08c46711.jpg"
+    "cover": "/generated/covers/looney-tunes-151-08c46711-v1.webp"
   },
   {
     "id": "looney-tunes-152-7065193f",
@@ -1618,7 +1618,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#152",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20152.cbr",
-    "cover": "/generated/covers/looney-tunes-152-7065193f.jpg"
+    "cover": "/generated/covers/looney-tunes-152-7065193f-v1.webp"
   },
   {
     "id": "looney-tunes-153-21279447",
@@ -1627,7 +1627,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#153",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20153.cbr",
-    "cover": "/generated/covers/looney-tunes-153-21279447.jpg"
+    "cover": "/generated/covers/looney-tunes-153-21279447-v1.webp"
   },
   {
     "id": "looney-tunes-154-4476e018",
@@ -1636,7 +1636,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#154",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20154.cbr",
-    "cover": "/generated/covers/looney-tunes-154-4476e018.jpg"
+    "cover": "/generated/covers/looney-tunes-154-4476e018-v1.webp"
   },
   {
     "id": "looney-tunes-155-08fddbf3",
@@ -1645,7 +1645,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#155",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20155.cbr",
-    "cover": "/generated/covers/looney-tunes-155-08fddbf3.jpg"
+    "cover": "/generated/covers/looney-tunes-155-08fddbf3-v1.webp"
   },
   {
     "id": "looney-tunes-156-d8fbecea",
@@ -1654,7 +1654,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#156",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20156.cbr",
-    "cover": "/generated/covers/looney-tunes-156-d8fbecea.jpg"
+    "cover": "/generated/covers/looney-tunes-156-d8fbecea-v1.webp"
   },
   {
     "id": "looney-tunes-157-2b107eb4",
@@ -1663,7 +1663,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#157",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20157.cbr",
-    "cover": "/generated/covers/looney-tunes-157-2b107eb4.jpg"
+    "cover": "/generated/covers/looney-tunes-157-2b107eb4-v1.webp"
   },
   {
     "id": "looney-tunes-158-d018ff89",
@@ -1672,7 +1672,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#158",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20158.cbr",
-    "cover": "/generated/covers/looney-tunes-158-d018ff89.jpg"
+    "cover": "/generated/covers/looney-tunes-158-d018ff89-v1.webp"
   },
   {
     "id": "looney-tunes-159-1f4a79d1",
@@ -1681,7 +1681,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#159",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20159.cbr",
-    "cover": "/generated/covers/looney-tunes-159-1f4a79d1.jpg"
+    "cover": "/generated/covers/looney-tunes-159-1f4a79d1-v1.webp"
   },
   {
     "id": "looney-tunes-160-20cb38c8",
@@ -1690,7 +1690,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#160",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20160.cbr",
-    "cover": "/generated/covers/looney-tunes-160-20cb38c8.jpg"
+    "cover": "/generated/covers/looney-tunes-160-20cb38c8-v1.webp"
   },
   {
     "id": "looney-tunes-161-46ffca57",
@@ -1699,7 +1699,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#161",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20161.cbr",
-    "cover": "/generated/covers/looney-tunes-161-46ffca57.jpg"
+    "cover": "/generated/covers/looney-tunes-161-46ffca57-v1.webp"
   },
   {
     "id": "looney-tunes-162-33c4163b",
@@ -1708,7 +1708,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#162",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20162.cbr",
-    "cover": "/generated/covers/looney-tunes-162-33c4163b.jpg"
+    "cover": "/generated/covers/looney-tunes-162-33c4163b-v1.webp"
   },
   {
     "id": "looney-tunes-163-272a7458",
@@ -1717,7 +1717,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#163",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20163.cbr",
-    "cover": "/generated/covers/looney-tunes-163-272a7458.jpg"
+    "cover": "/generated/covers/looney-tunes-163-272a7458-v1.webp"
   },
   {
     "id": "looney-tunes-164-46f900eb",
@@ -1726,7 +1726,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#164",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20164.cbr",
-    "cover": "/generated/covers/looney-tunes-164-46f900eb.jpg"
+    "cover": "/generated/covers/looney-tunes-164-46f900eb-v1.webp"
   },
   {
     "id": "looney-tunes-165-cec93df7",
@@ -1735,7 +1735,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#165",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20165.cbr",
-    "cover": "/generated/covers/looney-tunes-165-cec93df7.jpg"
+    "cover": "/generated/covers/looney-tunes-165-cec93df7-v1.webp"
   },
   {
     "id": "looney-tunes-166-44e5c3b7",
@@ -1744,7 +1744,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#166",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20166.cbr",
-    "cover": "/generated/covers/looney-tunes-166-44e5c3b7.jpg"
+    "cover": "/generated/covers/looney-tunes-166-44e5c3b7-v1.webp"
   },
   {
     "id": "looney-tunes-167-950a8d31",
@@ -1753,7 +1753,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#167",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20167.cbr",
-    "cover": "/generated/covers/looney-tunes-167-950a8d31.jpg"
+    "cover": "/generated/covers/looney-tunes-167-950a8d31-v1.webp"
   },
   {
     "id": "looney-tunes-168-403d3682",
@@ -1762,7 +1762,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#168",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20168.cbr",
-    "cover": "/generated/covers/looney-tunes-168-403d3682.jpg"
+    "cover": "/generated/covers/looney-tunes-168-403d3682-v1.webp"
   },
   {
     "id": "looney-tunes-169-3493ca1f",
@@ -1771,7 +1771,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#169",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20169.cbr",
-    "cover": "/generated/covers/looney-tunes-169-3493ca1f.jpg"
+    "cover": "/generated/covers/looney-tunes-169-3493ca1f-v1.webp"
   },
   {
     "id": "looney-tunes-170-b96b5cc3",
@@ -1780,7 +1780,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#170",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20170.cbr",
-    "cover": "/generated/covers/looney-tunes-170-b96b5cc3.jpg"
+    "cover": "/generated/covers/looney-tunes-170-b96b5cc3-v1.webp"
   },
   {
     "id": "looney-tunes-171-6e6a2fa7",
@@ -1789,7 +1789,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#171",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20171.cbr",
-    "cover": "/generated/covers/looney-tunes-171-6e6a2fa7.jpg"
+    "cover": "/generated/covers/looney-tunes-171-6e6a2fa7-v1.webp"
   },
   {
     "id": "looney-tunes-172-7d68f3c5",
@@ -1798,7 +1798,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#172",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20172.cbr",
-    "cover": "/generated/covers/looney-tunes-172-7d68f3c5.jpg"
+    "cover": "/generated/covers/looney-tunes-172-7d68f3c5-v1.webp"
   },
   {
     "id": "looney-tunes-173-cdc361c3",
@@ -1807,7 +1807,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#173",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20173.cbr",
-    "cover": "/generated/covers/looney-tunes-173-cdc361c3.jpg"
+    "cover": "/generated/covers/looney-tunes-173-cdc361c3-v1.webp"
   },
   {
     "id": "looney-tunes-174-35db4077",
@@ -1816,7 +1816,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#174",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20174.cbr",
-    "cover": "/generated/covers/looney-tunes-174-35db4077.jpg"
+    "cover": "/generated/covers/looney-tunes-174-35db4077-v1.webp"
   },
   {
     "id": "looney-tunes-175-d41062d9",
@@ -1825,7 +1825,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#175",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20175.cbr",
-    "cover": "/generated/covers/looney-tunes-175-d41062d9.jpg"
+    "cover": "/generated/covers/looney-tunes-175-d41062d9-v1.webp"
   },
   {
     "id": "looney-tunes-176-3d9bebac",
@@ -1834,7 +1834,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#176",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20176.cbr",
-    "cover": "/generated/covers/looney-tunes-176-3d9bebac.jpg"
+    "cover": "/generated/covers/looney-tunes-176-3d9bebac-v1.webp"
   },
   {
     "id": "looney-tunes-177-599068c6",
@@ -1843,7 +1843,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#177",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20177.cbr",
-    "cover": "/generated/covers/looney-tunes-177-599068c6.jpg"
+    "cover": "/generated/covers/looney-tunes-177-599068c6-v1.webp"
   },
   {
     "id": "looney-tunes-178-180ccb65",
@@ -1852,7 +1852,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#178",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20178.cbr",
-    "cover": "/generated/covers/looney-tunes-178-180ccb65.jpg"
+    "cover": "/generated/covers/looney-tunes-178-180ccb65-v1.webp"
   },
   {
     "id": "looney-tunes-179-45adb45e",
@@ -1861,7 +1861,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#179",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20179.cbr",
-    "cover": "/generated/covers/looney-tunes-179-45adb45e.jpg"
+    "cover": "/generated/covers/looney-tunes-179-45adb45e-v1.webp"
   },
   {
     "id": "looney-tunes-180-4557314b",
@@ -1870,7 +1870,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#180",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20180.cbr",
-    "cover": "/generated/covers/looney-tunes-180-4557314b.jpg"
+    "cover": "/generated/covers/looney-tunes-180-4557314b-v1.webp"
   },
   {
     "id": "looney-tunes-181-23dcbb75",
@@ -1879,7 +1879,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#181",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20181.cbr",
-    "cover": "/generated/covers/looney-tunes-181-23dcbb75.jpg"
+    "cover": "/generated/covers/looney-tunes-181-23dcbb75-v1.webp"
   },
   {
     "id": "looney-tunes-182-8697dc8f",
@@ -1888,7 +1888,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#182",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20182.cbr",
-    "cover": "/generated/covers/looney-tunes-182-8697dc8f.jpg"
+    "cover": "/generated/covers/looney-tunes-182-8697dc8f-v1.webp"
   },
   {
     "id": "looney-tunes-183-d2245650",
@@ -1897,7 +1897,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#183",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20183.cbr",
-    "cover": "/generated/covers/looney-tunes-183-d2245650.jpg"
+    "cover": "/generated/covers/looney-tunes-183-d2245650-v1.webp"
   },
   {
     "id": "looney-tunes-184-0460277a",
@@ -1906,7 +1906,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#184",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20184.cbr",
-    "cover": "/generated/covers/looney-tunes-184-0460277a.jpg"
+    "cover": "/generated/covers/looney-tunes-184-0460277a-v1.webp"
   },
   {
     "id": "looney-tunes-185-24f28565",
@@ -1915,7 +1915,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#185",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20185.cbr",
-    "cover": "/generated/covers/looney-tunes-185-24f28565.jpg"
+    "cover": "/generated/covers/looney-tunes-185-24f28565-v1.webp"
   },
   {
     "id": "looney-tunes-186-ed10ee59",
@@ -1924,7 +1924,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#186",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20186.cbr",
-    "cover": "/generated/covers/looney-tunes-186-ed10ee59.jpg"
+    "cover": "/generated/covers/looney-tunes-186-ed10ee59-v1.webp"
   },
   {
     "id": "looney-tunes-187-c691c75c",
@@ -1933,7 +1933,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#187",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20187.cbr",
-    "cover": "/generated/covers/looney-tunes-187-c691c75c.jpg"
+    "cover": "/generated/covers/looney-tunes-187-c691c75c-v1.webp"
   },
   {
     "id": "looney-tunes-188-dfbcbebe",
@@ -1942,7 +1942,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#188",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20188.cbr",
-    "cover": "/generated/covers/looney-tunes-188-dfbcbebe.jpg"
+    "cover": "/generated/covers/looney-tunes-188-dfbcbebe-v1.webp"
   },
   {
     "id": "looney-tunes-189-41fa22c5",
@@ -1951,7 +1951,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#189",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20189.cbr",
-    "cover": "/generated/covers/looney-tunes-189-41fa22c5.jpg"
+    "cover": "/generated/covers/looney-tunes-189-41fa22c5-v1.webp"
   },
   {
     "id": "looney-tunes-190-31e9224d",
@@ -1960,7 +1960,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#190",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20190.cbr",
-    "cover": "/generated/covers/looney-tunes-190-31e9224d.jpg"
+    "cover": "/generated/covers/looney-tunes-190-31e9224d-v1.webp"
   },
   {
     "id": "looney-tunes-191-f169a628",
@@ -1969,7 +1969,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#191",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20191.cbr",
-    "cover": "/generated/covers/looney-tunes-191-f169a628.jpg"
+    "cover": "/generated/covers/looney-tunes-191-f169a628-v1.webp"
   },
   {
     "id": "looney-tunes-192-22902c21",
@@ -1978,7 +1978,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#192",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20192.cbr",
-    "cover": "/generated/covers/looney-tunes-192-22902c21.jpg"
+    "cover": "/generated/covers/looney-tunes-192-22902c21-v1.webp"
   },
   {
     "id": "looney-tunes-193-c2081753",
@@ -1987,7 +1987,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#193",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20193.cbr",
-    "cover": "/generated/covers/looney-tunes-193-c2081753.jpg"
+    "cover": "/generated/covers/looney-tunes-193-c2081753-v1.webp"
   },
   {
     "id": "looney-tunes-194-8a51dd98",
@@ -1996,7 +1996,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#194",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20194.cbr",
-    "cover": "/generated/covers/looney-tunes-194-8a51dd98.jpg"
+    "cover": "/generated/covers/looney-tunes-194-8a51dd98-v1.webp"
   },
   {
     "id": "looney-tunes-195-d2d125c8",
@@ -2005,7 +2005,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#195",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20195.cbz",
-    "cover": "/generated/covers/looney-tunes-195-d2d125c8.jpg"
+    "cover": "/generated/covers/looney-tunes-195-d2d125c8-v1.webp"
   },
   {
     "id": "looney-tunes-196-6de85c0a",
@@ -2014,7 +2014,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#196",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20196.cbz",
-    "cover": "/generated/covers/looney-tunes-196-6de85c0a.jpg"
+    "cover": "/generated/covers/looney-tunes-196-6de85c0a-v1.webp"
   },
   {
     "id": "looney-tunes-197-af88bbdd",
@@ -2023,7 +2023,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#197",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20197.cbz",
-    "cover": "/generated/covers/looney-tunes-197-af88bbdd.jpg"
+    "cover": "/generated/covers/looney-tunes-197-af88bbdd-v1.webp"
   },
   {
     "id": "looney-tunes-198-32c778cf",
@@ -2032,7 +2032,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#198",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20198.cbr",
-    "cover": "/generated/covers/looney-tunes-198-32c778cf.jpg"
+    "cover": "/generated/covers/looney-tunes-198-32c778cf-v1.webp"
   },
   {
     "id": "looney-tunes-199-f6904073",
@@ -2041,7 +2041,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#199",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20199.cbr",
-    "cover": "/generated/covers/looney-tunes-199-f6904073.jpg"
+    "cover": "/generated/covers/looney-tunes-199-f6904073-v1.webp"
   },
   {
     "id": "looney-tunes-200-439c9787",
@@ -2050,7 +2050,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#200",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20200.cbr",
-    "cover": "/generated/covers/looney-tunes-200-439c9787.jpg"
+    "cover": "/generated/covers/looney-tunes-200-439c9787-v1.webp"
   },
   {
     "id": "looney-tunes-201-a23a4eca",
@@ -2059,7 +2059,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#201",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20201.cbr",
-    "cover": "/generated/covers/looney-tunes-201-a23a4eca.jpg"
+    "cover": "/generated/covers/looney-tunes-201-a23a4eca-v1.webp"
   },
   {
     "id": "looney-tunes-202-7df34976",
@@ -2068,7 +2068,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#202",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20202.cbr",
-    "cover": "/generated/covers/looney-tunes-202-7df34976.jpg"
+    "cover": "/generated/covers/looney-tunes-202-7df34976-v1.webp"
   },
   {
     "id": "looney-tunes-203-ea894ae1",
@@ -2077,7 +2077,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#203",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20203.cbz",
-    "cover": "/generated/covers/looney-tunes-203-ea894ae1.jpg"
+    "cover": "/generated/covers/looney-tunes-203-ea894ae1-v1.webp"
   },
   {
     "id": "looney-tunes-204-a07a88ee",
@@ -2086,7 +2086,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#204",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20204.cbr",
-    "cover": "/generated/covers/looney-tunes-204-a07a88ee.jpg"
+    "cover": "/generated/covers/looney-tunes-204-a07a88ee-v1.webp"
   },
   {
     "id": "looney-tunes-205-6c2a1f49",
@@ -2095,7 +2095,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#205",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20205.cbr",
-    "cover": "/generated/covers/looney-tunes-205-6c2a1f49.jpg"
+    "cover": "/generated/covers/looney-tunes-205-6c2a1f49-v1.webp"
   },
   {
     "id": "looney-tunes-206-f726261b",
@@ -2104,7 +2104,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#206",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20206.cbr",
-    "cover": "/generated/covers/looney-tunes-206-f726261b.jpg"
+    "cover": "/generated/covers/looney-tunes-206-f726261b-v1.webp"
   },
   {
     "id": "looney-tunes-207-096db598",
@@ -2113,7 +2113,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#207",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20207.cbr",
-    "cover": "/generated/covers/looney-tunes-207-096db598.jpg"
+    "cover": "/generated/covers/looney-tunes-207-096db598-v1.webp"
   },
   {
     "id": "looney-tunes-208-ddc05d96",
@@ -2122,7 +2122,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#208",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20208.cbr",
-    "cover": "/generated/covers/looney-tunes-208-ddc05d96.jpg"
+    "cover": "/generated/covers/looney-tunes-208-ddc05d96-v1.webp"
   },
   {
     "id": "looney-tunes-209-d1e8a99d",
@@ -2131,7 +2131,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#209",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20209.cbr",
-    "cover": "/generated/covers/looney-tunes-209-d1e8a99d.jpg"
+    "cover": "/generated/covers/looney-tunes-209-d1e8a99d-v1.webp"
   },
   {
     "id": "looney-tunes-210-51d36cf5",
@@ -2140,7 +2140,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#210",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20210.cbr",
-    "cover": "/generated/covers/looney-tunes-210-51d36cf5.jpg"
+    "cover": "/generated/covers/looney-tunes-210-51d36cf5-v1.webp"
   },
   {
     "id": "looney-tunes-211-34d16ac7",
@@ -2149,7 +2149,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#211",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20211.cbr",
-    "cover": "/generated/covers/looney-tunes-211-34d16ac7.jpg"
+    "cover": "/generated/covers/looney-tunes-211-34d16ac7-v1.webp"
   },
   {
     "id": "looney-tunes-212-033939c1",
@@ -2158,7 +2158,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#212",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20212.cbr",
-    "cover": "/generated/covers/looney-tunes-212-033939c1.jpg"
+    "cover": "/generated/covers/looney-tunes-212-033939c1-v1.webp"
   },
   {
     "id": "looney-tunes-213-1beacd2f",
@@ -2167,7 +2167,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#213",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20213.cbr",
-    "cover": "/generated/covers/looney-tunes-213-1beacd2f.jpg"
+    "cover": "/generated/covers/looney-tunes-213-1beacd2f-v1.webp"
   },
   {
     "id": "looney-tunes-214-4551b302",
@@ -2176,7 +2176,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#214",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20214.cbr",
-    "cover": "/generated/covers/looney-tunes-214-4551b302.jpg"
+    "cover": "/generated/covers/looney-tunes-214-4551b302-v1.webp"
   },
   {
     "id": "looney-tunes-215-2882c07d",
@@ -2185,7 +2185,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#215",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20215.cbr",
-    "cover": "/generated/covers/looney-tunes-215-2882c07d.jpg"
+    "cover": "/generated/covers/looney-tunes-215-2882c07d-v1.webp"
   },
   {
     "id": "looney-tunes-216-cf2919ed",
@@ -2194,7 +2194,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#216",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20216.cbr",
-    "cover": "/generated/covers/looney-tunes-216-cf2919ed.jpg"
+    "cover": "/generated/covers/looney-tunes-216-cf2919ed-v1.webp"
   },
   {
     "id": "looney-tunes-217-e6c39ee9",
@@ -2203,7 +2203,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#217",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20217.cbr",
-    "cover": "/generated/covers/looney-tunes-217-e6c39ee9.jpg"
+    "cover": "/generated/covers/looney-tunes-217-e6c39ee9-v1.webp"
   },
   {
     "id": "looney-tunes-218-e71a0ef2",
@@ -2212,7 +2212,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#218",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20218.cbr",
-    "cover": "/generated/covers/looney-tunes-218-e71a0ef2.jpg"
+    "cover": "/generated/covers/looney-tunes-218-e71a0ef2-v1.webp"
   },
   {
     "id": "looney-tunes-219-88a413fe",
@@ -2221,7 +2221,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#219",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20219.cbr",
-    "cover": "/generated/covers/looney-tunes-219-88a413fe.jpg"
+    "cover": "/generated/covers/looney-tunes-219-88a413fe-v1.webp"
   },
   {
     "id": "looney-tunes-220-701ccfdd",
@@ -2230,7 +2230,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#220",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20220.cbr",
-    "cover": "/generated/covers/looney-tunes-220-701ccfdd.jpg"
+    "cover": "/generated/covers/looney-tunes-220-701ccfdd-v1.webp"
   },
   {
     "id": "looney-tunes-221-7ea29b13",
@@ -2239,7 +2239,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#221",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20221.cbr",
-    "cover": "/generated/covers/looney-tunes-221-7ea29b13.jpg"
+    "cover": "/generated/covers/looney-tunes-221-7ea29b13-v1.webp"
   },
   {
     "id": "looney-tunes-222-e655e442",
@@ -2248,7 +2248,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#222",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20222.cbr",
-    "cover": "/generated/covers/looney-tunes-222-e655e442.jpg"
+    "cover": "/generated/covers/looney-tunes-222-e655e442-v1.webp"
   },
   {
     "id": "looney-tunes-223-8f56dd97",
@@ -2257,7 +2257,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#223",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20223.cbr",
-    "cover": "/generated/covers/looney-tunes-223-8f56dd97.jpg"
+    "cover": "/generated/covers/looney-tunes-223-8f56dd97-v1.webp"
   },
   {
     "id": "looney-tunes-224-84ab6135",
@@ -2266,7 +2266,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#224",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20224.cbr",
-    "cover": "/generated/covers/looney-tunes-224-84ab6135.jpg"
+    "cover": "/generated/covers/looney-tunes-224-84ab6135-v1.webp"
   },
   {
     "id": "looney-tunes-225-606e2310",
@@ -2275,7 +2275,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#225",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20225.cbr",
-    "cover": "/generated/covers/looney-tunes-225-606e2310.jpg"
+    "cover": "/generated/covers/looney-tunes-225-606e2310-v1.webp"
   },
   {
     "id": "looney-tunes-226-65d5d4d0",
@@ -2284,7 +2284,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#226",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20226.cbr",
-    "cover": "/generated/covers/looney-tunes-226-65d5d4d0.jpg"
+    "cover": "/generated/covers/looney-tunes-226-65d5d4d0-v1.webp"
   },
   {
     "id": "looney-tunes-227-9334405f",
@@ -2293,7 +2293,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#227",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20227.cbr",
-    "cover": "/generated/covers/looney-tunes-227-9334405f.jpg"
+    "cover": "/generated/covers/looney-tunes-227-9334405f-v1.webp"
   },
   {
     "id": "looney-tunes-228-65998def",
@@ -2302,7 +2302,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#228",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20228.cbr",
-    "cover": "/generated/covers/looney-tunes-228-65998def.jpg"
+    "cover": "/generated/covers/looney-tunes-228-65998def-v1.webp"
   },
   {
     "id": "looney-tunes-229-ea2c0459",
@@ -2311,7 +2311,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#229",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20229.cbr",
-    "cover": "/generated/covers/looney-tunes-229-ea2c0459.jpg"
+    "cover": "/generated/covers/looney-tunes-229-ea2c0459-v1.webp"
   },
   {
     "id": "looney-tunes-230-6fbee617",
@@ -2320,7 +2320,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#230",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20230.cbr",
-    "cover": "/generated/covers/looney-tunes-230-6fbee617.jpg"
+    "cover": "/generated/covers/looney-tunes-230-6fbee617-v1.webp"
   },
   {
     "id": "looney-tunes-231-e2efc732",
@@ -2329,7 +2329,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#231",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20231.cbr",
-    "cover": "/generated/covers/looney-tunes-231-e2efc732.jpg"
+    "cover": "/generated/covers/looney-tunes-231-e2efc732-v1.webp"
   },
   {
     "id": "looney-tunes-232-74c34f5b",
@@ -2338,7 +2338,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#232",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20232.cbr",
-    "cover": "/generated/covers/looney-tunes-232-74c34f5b.jpg"
+    "cover": "/generated/covers/looney-tunes-232-74c34f5b-v1.webp"
   },
   {
     "id": "looney-tunes-233-f6771959",
@@ -2347,7 +2347,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#233",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20233.cbr",
-    "cover": "/generated/covers/looney-tunes-233-f6771959.jpg"
+    "cover": "/generated/covers/looney-tunes-233-f6771959-v1.webp"
   },
   {
     "id": "looney-tunes-234-bf556eb4",
@@ -2356,7 +2356,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#234",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20234.cbr",
-    "cover": "/generated/covers/looney-tunes-234-bf556eb4.jpg"
+    "cover": "/generated/covers/looney-tunes-234-bf556eb4-v1.webp"
   },
   {
     "id": "looney-tunes-235-90c19a53",
@@ -2365,7 +2365,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#235",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20235.cbr",
-    "cover": "/generated/covers/looney-tunes-235-90c19a53.jpg"
+    "cover": "/generated/covers/looney-tunes-235-90c19a53-v1.webp"
   },
   {
     "id": "looney-tunes-236-0f4418c8",
@@ -2374,7 +2374,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#236",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20236.cbr",
-    "cover": "/generated/covers/looney-tunes-236-0f4418c8.jpg"
+    "cover": "/generated/covers/looney-tunes-236-0f4418c8-v1.webp"
   },
   {
     "id": "looney-tunes-237-5279e333",
@@ -2383,7 +2383,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#237",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20237.cbr",
-    "cover": "/generated/covers/looney-tunes-237-5279e333.jpg"
+    "cover": "/generated/covers/looney-tunes-237-5279e333-v1.webp"
   },
   {
     "id": "looney-tunes-238-e52942ba",
@@ -2392,7 +2392,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#238",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20238.cbr",
-    "cover": "/generated/covers/looney-tunes-238-e52942ba.jpg"
+    "cover": "/generated/covers/looney-tunes-238-e52942ba-v1.webp"
   },
   {
     "id": "looney-tunes-239-06e6ec64",
@@ -2401,7 +2401,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#239",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20239.cbr",
-    "cover": "/generated/covers/looney-tunes-239-06e6ec64.jpg"
+    "cover": "/generated/covers/looney-tunes-239-06e6ec64-v1.webp"
   },
   {
     "id": "looney-tunes-240-b7fe1824",
@@ -2410,7 +2410,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#240",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20240.cbr",
-    "cover": "/generated/covers/looney-tunes-240-b7fe1824.jpg"
+    "cover": "/generated/covers/looney-tunes-240-b7fe1824-v1.webp"
   },
   {
     "id": "looney-tunes-241-83e28b9b",
@@ -2419,7 +2419,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#241",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20241.cbr",
-    "cover": "/generated/covers/looney-tunes-241-83e28b9b.jpg"
+    "cover": "/generated/covers/looney-tunes-241-83e28b9b-v1.webp"
   },
   {
     "id": "looney-tunes-242-8d24d97f",
@@ -2428,7 +2428,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#242",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20242.cbr",
-    "cover": "/generated/covers/looney-tunes-242-8d24d97f.jpg"
+    "cover": "/generated/covers/looney-tunes-242-8d24d97f-v1.webp"
   },
   {
     "id": "looney-tunes-243-097acbfc",
@@ -2437,7 +2437,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#243",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20243.cbr",
-    "cover": "/generated/covers/looney-tunes-243-097acbfc.jpg"
+    "cover": "/generated/covers/looney-tunes-243-097acbfc-v1.webp"
   },
   {
     "id": "looney-tunes-244-277a158a",
@@ -2446,7 +2446,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#244",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20244.cbr",
-    "cover": "/generated/covers/looney-tunes-244-277a158a.jpg"
+    "cover": "/generated/covers/looney-tunes-244-277a158a-v1.webp"
   },
   {
     "id": "looney-tunes-245-dbaee029",
@@ -2455,7 +2455,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#245",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20245.cbr",
-    "cover": "/generated/covers/looney-tunes-245-dbaee029.jpg"
+    "cover": "/generated/covers/looney-tunes-245-dbaee029-v1.webp"
   },
   {
     "id": "looney-tunes-246-fda4fc4c",
@@ -2464,7 +2464,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#246",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20246.cbr",
-    "cover": "/generated/covers/looney-tunes-246-fda4fc4c.jpg"
+    "cover": "/generated/covers/looney-tunes-246-fda4fc4c-v1.webp"
   },
   {
     "id": "looney-tunes-247-3e492cb1",
@@ -2473,7 +2473,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#247",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20247.cbr",
-    "cover": "/generated/covers/looney-tunes-247-3e492cb1.jpg"
+    "cover": "/generated/covers/looney-tunes-247-3e492cb1-v1.webp"
   },
   {
     "id": "looney-tunes-248-c28b0f49",
@@ -2482,7 +2482,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#248",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20248.cbr",
-    "cover": "/generated/covers/looney-tunes-248-c28b0f49.jpg"
+    "cover": "/generated/covers/looney-tunes-248-c28b0f49-v1.webp"
   },
   {
     "id": "looney-tunes-249-5eb14112",
@@ -2491,7 +2491,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#249",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20249.cbr",
-    "cover": "/generated/covers/looney-tunes-249-5eb14112.jpg"
+    "cover": "/generated/covers/looney-tunes-249-5eb14112-v1.webp"
   },
   {
     "id": "looney-tunes-250-cf9daf7b",
@@ -2500,7 +2500,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#250",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20250.cbr",
-    "cover": "/generated/covers/looney-tunes-250-cf9daf7b.jpg"
+    "cover": "/generated/covers/looney-tunes-250-cf9daf7b-v1.webp"
   },
   {
     "id": "looney-tunes-251-1934bdef",
@@ -2509,7 +2509,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#251",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20251.cbr",
-    "cover": "/generated/covers/looney-tunes-251-1934bdef.jpg"
+    "cover": "/generated/covers/looney-tunes-251-1934bdef-v1.webp"
   },
   {
     "id": "looney-tunes-252-a482c48a",
@@ -2518,7 +2518,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#252",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20252.cbz",
-    "cover": "/generated/covers/looney-tunes-252-a482c48a.jpg"
+    "cover": "/generated/covers/looney-tunes-252-a482c48a-v1.webp"
   },
   {
     "id": "looney-tunes-253-a30454c3",
@@ -2527,7 +2527,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#253",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20253.cbr",
-    "cover": "/generated/covers/looney-tunes-253-a30454c3.jpg"
+    "cover": "/generated/covers/looney-tunes-253-a30454c3-v1.webp"
   },
   {
     "id": "looney-tunes-254-cf7d2114",
@@ -2536,7 +2536,7 @@ export const comics = [
     "seriesId": "looney-tunes-1994",
     "issue": "#254",
     "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20254.cbr",
-    "cover": "/generated/covers/looney-tunes-254-cf7d2114.jpg"
+    "cover": "/generated/covers/looney-tunes-254-cf7d2114-v1.webp"
   },
   {
     "id": "megaman01-fc2f7dc9",
@@ -2545,7 +2545,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#1",
     "archive": "/comics/Mega%20Man/MegaMan01.cbz",
-    "cover": "/generated/covers/megaman01-fc2f7dc9.jpg"
+    "cover": "/generated/covers/megaman01-fc2f7dc9-v1.webp"
   },
   {
     "id": "megaman02-2508883a",
@@ -2554,7 +2554,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#2",
     "archive": "/comics/Mega%20Man/MegaMan02.cbz",
-    "cover": "/generated/covers/megaman02-2508883a.jpg"
+    "cover": "/generated/covers/megaman02-2508883a-v1.webp"
   },
   {
     "id": "megaman03-c89b1427",
@@ -2563,7 +2563,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#3",
     "archive": "/comics/Mega%20Man/MegaMan03.cbr",
-    "cover": "/generated/covers/megaman03-c89b1427.jpg"
+    "cover": "/generated/covers/megaman03-c89b1427-v1.webp"
   },
   {
     "id": "megaman04-5169454d",
@@ -2572,7 +2572,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#4",
     "archive": "/comics/Mega%20Man/MegaMan04.cbz",
-    "cover": "/generated/covers/megaman04-5169454d.jpg"
+    "cover": "/generated/covers/megaman04-5169454d-v1.webp"
   },
   {
     "id": "megaman05-8e204e18",
@@ -2581,7 +2581,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#5",
     "archive": "/comics/Mega%20Man/MegaMan05.cbz",
-    "cover": "/generated/covers/megaman05-8e204e18.jpg"
+    "cover": "/generated/covers/megaman05-8e204e18-v1.webp"
   },
   {
     "id": "megaman06-ee0a92f9",
@@ -2590,7 +2590,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#6",
     "archive": "/comics/Mega%20Man/MegaMan06.cbz",
-    "cover": "/generated/covers/megaman06-ee0a92f9.jpg"
+    "cover": "/generated/covers/megaman06-ee0a92f9-v1.webp"
   },
   {
     "id": "megaman07-5f978730",
@@ -2599,7 +2599,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#7",
     "archive": "/comics/Mega%20Man/MegaMan07.cbz",
-    "cover": "/generated/covers/megaman07-5f978730.jpg"
+    "cover": "/generated/covers/megaman07-5f978730-v1.webp"
   },
   {
     "id": "megaman08-18b086e8",
@@ -2608,7 +2608,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#8",
     "archive": "/comics/Mega%20Man/MegaMan08.cbz",
-    "cover": "/generated/covers/megaman08-18b086e8.jpg"
+    "cover": "/generated/covers/megaman08-18b086e8-v1.webp"
   },
   {
     "id": "megaman09-e39d944c",
@@ -2617,7 +2617,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#9",
     "archive": "/comics/Mega%20Man/MegaMan09.cbz",
-    "cover": "/generated/covers/megaman09-e39d944c.jpg"
+    "cover": "/generated/covers/megaman09-e39d944c-v1.webp"
   },
   {
     "id": "megaman10-12c77861",
@@ -2626,7 +2626,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#10",
     "archive": "/comics/Mega%20Man/MegaMan10.cbz",
-    "cover": "/generated/covers/megaman10-12c77861.jpg"
+    "cover": "/generated/covers/megaman10-12c77861-v1.webp"
   },
   {
     "id": "megaman11-39cd52c2",
@@ -2635,7 +2635,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#11",
     "archive": "/comics/Mega%20Man/MegaMan11.cbz",
-    "cover": "/generated/covers/megaman11-39cd52c2.jpg"
+    "cover": "/generated/covers/megaman11-39cd52c2-v1.webp"
   },
   {
     "id": "megaman12-dc7a3a6a",
@@ -2644,7 +2644,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#12",
     "archive": "/comics/Mega%20Man/MegaMan12.cbz",
-    "cover": "/generated/covers/megaman12-dc7a3a6a.jpg"
+    "cover": "/generated/covers/megaman12-dc7a3a6a-v1.webp"
   },
   {
     "id": "megaman13-4f755521",
@@ -2653,7 +2653,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#13",
     "archive": "/comics/Mega%20Man/MegaMan13.cbz",
-    "cover": "/generated/covers/megaman13-4f755521.jpg"
+    "cover": "/generated/covers/megaman13-4f755521-v1.webp"
   },
   {
     "id": "megaman14-fa739c20",
@@ -2662,7 +2662,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#14",
     "archive": "/comics/Mega%20Man/MegaMan14.cbz",
-    "cover": "/generated/covers/megaman14-fa739c20.jpg"
+    "cover": "/generated/covers/megaman14-fa739c20-v1.webp"
   },
   {
     "id": "megaman15-35471cc1",
@@ -2671,7 +2671,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#15",
     "archive": "/comics/Mega%20Man/MegaMan15.cbz",
-    "cover": "/generated/covers/megaman15-35471cc1.jpg"
+    "cover": "/generated/covers/megaman15-35471cc1-v1.webp"
   },
   {
     "id": "megaman16-6fea3efc",
@@ -2680,7 +2680,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#16",
     "archive": "/comics/Mega%20Man/MegaMan16.cbz",
-    "cover": "/generated/covers/megaman16-6fea3efc.jpg"
+    "cover": "/generated/covers/megaman16-6fea3efc-v1.webp"
   },
   {
     "id": "megaman17-b9f3bb7c",
@@ -2689,7 +2689,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#17",
     "archive": "/comics/Mega%20Man/MegaMan17.cbr",
-    "cover": "/generated/covers/megaman17-b9f3bb7c.jpg"
+    "cover": "/generated/covers/megaman17-b9f3bb7c-v1.webp"
   },
   {
     "id": "megaman18-b476dedd",
@@ -2698,7 +2698,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#18",
     "archive": "/comics/Mega%20Man/MegaMan18.cbz",
-    "cover": "/generated/covers/megaman18-b476dedd.jpg"
+    "cover": "/generated/covers/megaman18-b476dedd-v1.webp"
   },
   {
     "id": "megaman19-f1a59b36",
@@ -2707,7 +2707,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#19",
     "archive": "/comics/Mega%20Man/MegaMan19.cbr",
-    "cover": "/generated/covers/megaman19-f1a59b36.jpg"
+    "cover": "/generated/covers/megaman19-f1a59b36-v1.webp"
   },
   {
     "id": "megaman20-dc6822e7",
@@ -2716,7 +2716,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#20",
     "archive": "/comics/Mega%20Man/MegaMan20.cbr",
-    "cover": "/generated/covers/megaman20-dc6822e7.jpg"
+    "cover": "/generated/covers/megaman20-dc6822e7-v1.webp"
   },
   {
     "id": "megaman21-50185e77",
@@ -2725,7 +2725,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#21",
     "archive": "/comics/Mega%20Man/MegaMan21.cbr",
-    "cover": "/generated/covers/megaman21-50185e77.jpg"
+    "cover": "/generated/covers/megaman21-50185e77-v1.webp"
   },
   {
     "id": "megaman22-19867978",
@@ -2734,7 +2734,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#22",
     "archive": "/comics/Mega%20Man/MegaMan22.cbr",
-    "cover": "/generated/covers/megaman22-19867978.jpg"
+    "cover": "/generated/covers/megaman22-19867978-v1.webp"
   },
   {
     "id": "megaman23-6c4a96d4",
@@ -2743,7 +2743,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#23",
     "archive": "/comics/Mega%20Man/MegaMan23.cbr",
-    "cover": "/generated/covers/megaman23-6c4a96d4.jpg"
+    "cover": "/generated/covers/megaman23-6c4a96d4-v1.webp"
   },
   {
     "id": "megaman24-6f330f08",
@@ -2752,7 +2752,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#24",
     "archive": "/comics/Mega%20Man/MegaMan24.cbr",
-    "cover": "/generated/covers/megaman24-6f330f08.jpg"
+    "cover": "/generated/covers/megaman24-6f330f08-v1.webp"
   },
   {
     "id": "megaman25-a57faf4e",
@@ -2761,7 +2761,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#25",
     "archive": "/comics/Mega%20Man/MegaMan25.cbr",
-    "cover": "/generated/covers/megaman25-a57faf4e.jpg"
+    "cover": "/generated/covers/megaman25-a57faf4e-v1.webp"
   },
   {
     "id": "megaman26-21eb7fc8",
@@ -2770,7 +2770,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#26",
     "archive": "/comics/Mega%20Man/MegaMan26.cbr",
-    "cover": "/generated/covers/megaman26-21eb7fc8.jpg"
+    "cover": "/generated/covers/megaman26-21eb7fc8-v1.webp"
   },
   {
     "id": "megaman27-10f148ca",
@@ -2779,7 +2779,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#27",
     "archive": "/comics/Mega%20Man/MegaMan27.cbr",
-    "cover": "/generated/covers/megaman27-10f148ca.jpg"
+    "cover": "/generated/covers/megaman27-10f148ca-v1.webp"
   },
   {
     "id": "megaman28-0dfdd8c0",
@@ -2788,7 +2788,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#28",
     "archive": "/comics/Mega%20Man/MegaMan28.cbr",
-    "cover": "/generated/covers/megaman28-0dfdd8c0.jpg"
+    "cover": "/generated/covers/megaman28-0dfdd8c0-v1.webp"
   },
   {
     "id": "megaman29-c6800a9e",
@@ -2797,7 +2797,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#29",
     "archive": "/comics/Mega%20Man/MegaMan29.cbr",
-    "cover": "/generated/covers/megaman29-c6800a9e.jpg"
+    "cover": "/generated/covers/megaman29-c6800a9e-v1.webp"
   },
   {
     "id": "megaman30-c5d0735e",
@@ -2806,7 +2806,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#30",
     "archive": "/comics/Mega%20Man/MegaMan30.cbr",
-    "cover": "/generated/covers/megaman30-c5d0735e.jpg"
+    "cover": "/generated/covers/megaman30-c5d0735e-v1.webp"
   },
   {
     "id": "megaman31-8a135015",
@@ -2815,7 +2815,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#31",
     "archive": "/comics/Mega%20Man/MegaMan31.cbr",
-    "cover": "/generated/covers/megaman31-8a135015.jpg"
+    "cover": "/generated/covers/megaman31-8a135015-v1.webp"
   },
   {
     "id": "megaman32-c92bd8c7",
@@ -2824,7 +2824,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#32",
     "archive": "/comics/Mega%20Man/MegaMan32.cbr",
-    "cover": "/generated/covers/megaman32-c92bd8c7.jpg"
+    "cover": "/generated/covers/megaman32-c92bd8c7-v1.webp"
   },
   {
     "id": "megaman33-ffa8720d",
@@ -2833,7 +2833,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#33",
     "archive": "/comics/Mega%20Man/MegaMan33.cbr",
-    "cover": "/generated/covers/megaman33-ffa8720d.jpg"
+    "cover": "/generated/covers/megaman33-ffa8720d-v1.webp"
   },
   {
     "id": "megaman34-9ffefd63",
@@ -2842,7 +2842,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#34",
     "archive": "/comics/Mega%20Man/MegaMan34.cbr",
-    "cover": "/generated/covers/megaman34-9ffefd63.jpg"
+    "cover": "/generated/covers/megaman34-9ffefd63-v1.webp"
   },
   {
     "id": "megaman35-cc92ac64",
@@ -2851,7 +2851,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#35",
     "archive": "/comics/Mega%20Man/MegaMan35.cbr",
-    "cover": "/generated/covers/megaman35-cc92ac64.jpg"
+    "cover": "/generated/covers/megaman35-cc92ac64-v1.webp"
   },
   {
     "id": "megaman36-fecbff10",
@@ -2860,7 +2860,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#36",
     "archive": "/comics/Mega%20Man/MegaMan36.cbr",
-    "cover": "/generated/covers/megaman36-fecbff10.jpg"
+    "cover": "/generated/covers/megaman36-fecbff10-v1.webp"
   },
   {
     "id": "megaman37-61d35b72",
@@ -2869,7 +2869,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#37",
     "archive": "/comics/Mega%20Man/MegaMan37.cbr",
-    "cover": "/generated/covers/megaman37-61d35b72.jpg"
+    "cover": "/generated/covers/megaman37-61d35b72-v1.webp"
   },
   {
     "id": "megaman38-3534b3b9",
@@ -2878,7 +2878,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#38",
     "archive": "/comics/Mega%20Man/MegaMan38.cbr",
-    "cover": "/generated/covers/megaman38-3534b3b9.jpg"
+    "cover": "/generated/covers/megaman38-3534b3b9-v1.webp"
   },
   {
     "id": "megaman39-08776000",
@@ -2887,7 +2887,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#39",
     "archive": "/comics/Mega%20Man/MegaMan39.cbr",
-    "cover": "/generated/covers/megaman39-08776000.jpg"
+    "cover": "/generated/covers/megaman39-08776000-v1.webp"
   },
   {
     "id": "megaman40-23b5b9fc",
@@ -2896,7 +2896,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#40",
     "archive": "/comics/Mega%20Man/MegaMan40.cbr",
-    "cover": "/generated/covers/megaman40-23b5b9fc.jpg"
+    "cover": "/generated/covers/megaman40-23b5b9fc-v1.webp"
   },
   {
     "id": "megaman41-548644cf",
@@ -2905,7 +2905,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#41",
     "archive": "/comics/Mega%20Man/MegaMan41.cbr",
-    "cover": "/generated/covers/megaman41-548644cf.jpg"
+    "cover": "/generated/covers/megaman41-548644cf-v1.webp"
   },
   {
     "id": "megaman42-4a9746b8",
@@ -2914,7 +2914,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#42",
     "archive": "/comics/Mega%20Man/MegaMan42.cbr",
-    "cover": "/generated/covers/megaman42-4a9746b8.jpg"
+    "cover": "/generated/covers/megaman42-4a9746b8-v1.webp"
   },
   {
     "id": "megaman43-f3db05d1",
@@ -2923,7 +2923,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#43",
     "archive": "/comics/Mega%20Man/MegaMan43.cbr",
-    "cover": "/generated/covers/megaman43-f3db05d1.jpg"
+    "cover": "/generated/covers/megaman43-f3db05d1-v1.webp"
   },
   {
     "id": "megaman44-47cd3c56",
@@ -2932,7 +2932,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#44",
     "archive": "/comics/Mega%20Man/MegaMan44.cbr",
-    "cover": "/generated/covers/megaman44-47cd3c56.jpg"
+    "cover": "/generated/covers/megaman44-47cd3c56-v1.webp"
   },
   {
     "id": "megaman45-30dd2d1d",
@@ -2941,7 +2941,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#45",
     "archive": "/comics/Mega%20Man/MegaMan45.cbr",
-    "cover": "/generated/covers/megaman45-30dd2d1d.jpg"
+    "cover": "/generated/covers/megaman45-30dd2d1d-v1.webp"
   },
   {
     "id": "megaman46-66d8bd6f",
@@ -2950,7 +2950,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#46",
     "archive": "/comics/Mega%20Man/MegaMan46.cbr",
-    "cover": "/generated/covers/megaman46-66d8bd6f.jpg"
+    "cover": "/generated/covers/megaman46-66d8bd6f-v1.webp"
   },
   {
     "id": "megaman47-be3d5273",
@@ -2959,7 +2959,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#47",
     "archive": "/comics/Mega%20Man/MegaMan47.cbr",
-    "cover": "/generated/covers/megaman47-be3d5273.jpg"
+    "cover": "/generated/covers/megaman47-be3d5273-v1.webp"
   },
   {
     "id": "megaman48-81f7288c",
@@ -2968,7 +2968,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#48",
     "archive": "/comics/Mega%20Man/MegaMan48.cbr",
-    "cover": "/generated/covers/megaman48-81f7288c.jpg"
+    "cover": "/generated/covers/megaman48-81f7288c-v1.webp"
   },
   {
     "id": "megaman49-87b47805",
@@ -2977,7 +2977,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#49",
     "archive": "/comics/Mega%20Man/MegaMan49.cbr",
-    "cover": "/generated/covers/megaman49-87b47805.jpg"
+    "cover": "/generated/covers/megaman49-87b47805-v1.webp"
   },
   {
     "id": "megaman50-5f5c5b00",
@@ -2986,7 +2986,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#50",
     "archive": "/comics/Mega%20Man/MegaMan50.cbr",
-    "cover": "/generated/covers/megaman50-5f5c5b00.jpg"
+    "cover": "/generated/covers/megaman50-5f5c5b00-v1.webp"
   },
   {
     "id": "megaman51-54247300",
@@ -2995,7 +2995,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#51",
     "archive": "/comics/Mega%20Man/MegaMan51.cbz",
-    "cover": "/generated/covers/megaman51-54247300.jpg"
+    "cover": "/generated/covers/megaman51-54247300-v1.webp"
   },
   {
     "id": "megaman52-de2f5caa",
@@ -3004,7 +3004,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#52",
     "archive": "/comics/Mega%20Man/MegaMan52.cbr",
-    "cover": "/generated/covers/megaman52-de2f5caa.jpg"
+    "cover": "/generated/covers/megaman52-de2f5caa-v1.webp"
   },
   {
     "id": "megaman53-34120ed9",
@@ -3013,7 +3013,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#53",
     "archive": "/comics/Mega%20Man/MegaMan53.cbr",
-    "cover": "/generated/covers/megaman53-34120ed9.jpg"
+    "cover": "/generated/covers/megaman53-34120ed9-v1.webp"
   },
   {
     "id": "megaman54-9494cd0c",
@@ -3022,7 +3022,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#54",
     "archive": "/comics/Mega%20Man/MegaMan54.cbr",
-    "cover": "/generated/covers/megaman54-9494cd0c.jpg"
+    "cover": "/generated/covers/megaman54-9494cd0c-v1.webp"
   },
   {
     "id": "megaman55-f85448c1",
@@ -3031,7 +3031,7 @@ export const comics = [
     "seriesId": "mega-man",
     "issue": "#55",
     "archive": "/comics/Mega%20Man/MegaMan55.cbz",
-    "cover": "/generated/covers/megaman55-f85448c1.jpg"
+    "cover": "/generated/covers/megaman55-f85448c1-v1.webp"
   },
   {
     "id": "mylittleponyfriendshipismagic01-062d1239",
@@ -3040,7 +3040,7 @@ export const comics = [
     "seriesId": "my-little-pony-2013",
     "issue": "#1",
     "archive": "/comics/My%20little%20Pony%20(2013)/MyLittlePonyFriendshipIsMagic01.cbr",
-    "cover": "/generated/covers/mylittleponyfriendshipismagic01-062d1239.jpg"
+    "cover": "/generated/covers/mylittleponyfriendshipismagic01-062d1239-v1.webp"
   },
   {
     "id": "mylittleponyfriendshipismagic02-2016b9ff",
@@ -3049,7 +3049,7 @@ export const comics = [
     "seriesId": "my-little-pony-2013",
     "issue": "#2",
     "archive": "/comics/My%20little%20Pony%20(2013)/MyLittlePonyFriendshipIsMagic02.cbr",
-    "cover": "/generated/covers/mylittleponyfriendshipismagic02-2016b9ff.jpg"
+    "cover": "/generated/covers/mylittleponyfriendshipismagic02-2016b9ff-v1.webp"
   },
   {
     "id": "princesssallyminiseries01-3f158e81",
@@ -3058,7 +3058,7 @@ export const comics = [
     "seriesId": "princess-sally-acorn-miniseries",
     "issue": "#1",
     "archive": "/comics/Princess%20Sally%20Acorn%20Miniseries/PrincessSallyMiniseries01.cbr",
-    "cover": "/generated/covers/princesssallyminiseries01-3f158e81.jpg"
+    "cover": "/generated/covers/princesssallyminiseries01-3f158e81-v1.webp"
   },
   {
     "id": "princesssallyminiseries02-83eb406a",
@@ -3067,7 +3067,7 @@ export const comics = [
     "seriesId": "princess-sally-acorn-miniseries",
     "issue": "#2",
     "archive": "/comics/Princess%20Sally%20Acorn%20Miniseries/PrincessSallyMiniseries02.cbr",
-    "cover": "/generated/covers/princesssallyminiseries02-83eb406a.jpg"
+    "cover": "/generated/covers/princesssallyminiseries02-83eb406a-v1.webp"
   },
   {
     "id": "princesssallyminiseries03-5d25e776",
@@ -3076,7 +3076,7 @@ export const comics = [
     "seriesId": "princess-sally-acorn-miniseries",
     "issue": "#3",
     "archive": "/comics/Princess%20Sally%20Acorn%20Miniseries/PrincessSallyMiniseries03.cbr",
-    "cover": "/generated/covers/princesssallyminiseries03-5d25e776.jpg"
+    "cover": "/generated/covers/princesssallyminiseries03-5d25e776-v1.webp"
   },
   {
     "id": "sonic-quest-the-death-egg-saga-issue-1-87861ad7",
@@ -3085,7 +3085,7 @@ export const comics = [
     "seriesId": "sonic-quest-the-death-egg-saga-1997",
     "issue": "#1",
     "archive": "/comics/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20(1997)/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20Issue%20%231.cbz",
-    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-1-87861ad7.jpg"
+    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-1-87861ad7-v1.webp"
   },
   {
     "id": "sonic-quest-the-death-egg-saga-issue-2-bdc88c46",
@@ -3094,7 +3094,7 @@ export const comics = [
     "seriesId": "sonic-quest-the-death-egg-saga-1997",
     "issue": "#2",
     "archive": "/comics/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20(1997)/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20Issue%20%232.cbz",
-    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-2-bdc88c46.jpg"
+    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-2-bdc88c46-v1.webp"
   },
   {
     "id": "sonic-quest-the-death-egg-saga-issue-3-219f4992",
@@ -3103,7 +3103,7 @@ export const comics = [
     "seriesId": "sonic-quest-the-death-egg-saga-1997",
     "issue": "#3",
     "archive": "/comics/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20(1997)/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20Issue%20%233.cbz",
-    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-3-219f4992.jpg"
+    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-3-219f4992-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-1-sonic-vs-knuckles-battle-royal-1c2b8219",
@@ -3112,7 +3112,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#1",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%231%20-%20Sonic%20Vs.%20Knuckles%20Battle%20Royal.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-1-sonic-vs-knuckles-battle-royal-1c2b8219.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-1-sonic-vs-knuckles-battle-royal-1c2b8219-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-2-brave-new-world-146ecee6",
@@ -3121,7 +3121,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#2",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%232%20-%20Brave%20New%20World.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-2-brave-new-world-146ecee6.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-2-brave-new-world-146ecee6-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-3-sonic-firsts-e19cb950",
@@ -3130,7 +3130,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#3",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%233%20-%20Sonic%20Firsts.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-3-sonic-firsts-e19cb950.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-3-sonic-firsts-e19cb950-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-4-return-of-the-king-b0c46240",
@@ -3139,7 +3139,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#4",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%234%20-%20Return%20of%20the%20King.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-4-return-of-the-king-b0c46240.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-4-return-of-the-king-b0c46240-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-5-sonic-kids-f191800b",
@@ -3148,7 +3148,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#5",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%235%20-%20Sonic%20Kids.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-5-sonic-kids-f191800b.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-5-sonic-kids-f191800b-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-6-the-big-50-083c1c09",
@@ -3157,7 +3157,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#6",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%236%20-%20The%20big%2050.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-6-the-big-50-083c1c09.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-6-the-big-50-083c1c09-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-7-sonic-image-crossover-80c05af7",
@@ -3166,7 +3166,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#7",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%237%20-%20Sonic%20Image%20Crossover.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-7-sonic-image-crossover-80c05af7.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-7-sonic-image-crossover-80c05af7-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-8-giant-special-2ec33a75",
@@ -3175,7 +3175,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#8",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%238%20-%20Giant%20special.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-8-giant-special-2ec33a75.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-8-giant-special-2ec33a75-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-9-sonic-kids-are-back-a5db67cc",
@@ -3184,7 +3184,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#9",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%239%20-%20Sonic%20Kids%20are%20back.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-9-sonic-kids-are-back-a5db67cc.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-9-sonic-kids-are-back-a5db67cc-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-10-chaos-crossover-906f1f9c",
@@ -3193,7 +3193,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#10",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2310%20-%20Chaos%20Crossover.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-10-chaos-crossover-906f1f9c.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-10-chaos-crossover-906f1f9c-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-11-girls-rule-f475a69d",
@@ -3202,7 +3202,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#11",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2311%20-%20Girls%20Rule!.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-11-girls-rule-f475a69d.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-11-girls-rule-f475a69d-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-12-sonic-and-knuckles-visa-versa-fd066b16",
@@ -3211,7 +3211,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#12",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2312%20-%20Sonic%20and%20Knuckles%20visa%20versa.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-12-sonic-and-knuckles-visa-versa-fd066b16.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-12-sonic-and-knuckles-visa-versa-fd066b16-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-13-sonic-adventure-d5398b5b",
@@ -3220,7 +3220,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#13",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2313%20-%20Sonic%20Adventure.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-13-sonic-adventure-d5398b5b.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-13-sonic-adventure-d5398b5b-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-14-best-of-times-f1d5e527",
@@ -3229,7 +3229,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#14",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2314%20-%20best%20of%20times.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-14-best-of-times-f1d5e527.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-14-best-of-times-f1d5e527-v1.webp"
   },
   {
     "id": "sonic-super-special-issue-15-naugus-games-20f4cdca",
@@ -3238,7 +3238,7 @@ export const comics = [
     "seriesId": "sonic-super-specials",
     "issue": "#15",
     "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2315%20-%20Naugus%20games.cbz",
-    "cover": "/generated/covers/sonic-super-special-issue-15-naugus-games-20f4cdca.jpg"
+    "cover": "/generated/covers/sonic-super-special-issue-15-naugus-games-20f4cdca-v1.webp"
   },
   {
     "id": "sonicthehedgehog001-53c79f8f",
@@ -3247,7 +3247,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#1",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog001.cbr",
-    "cover": "/generated/covers/sonicthehedgehog001-53c79f8f.jpg"
+    "cover": "/generated/covers/sonicthehedgehog001-53c79f8f-v1.webp"
   },
   {
     "id": "sonicthehedgehog002-a244f5cf",
@@ -3256,7 +3256,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#2",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog002.cbr",
-    "cover": "/generated/covers/sonicthehedgehog002-a244f5cf.jpg"
+    "cover": "/generated/covers/sonicthehedgehog002-a244f5cf-v1.webp"
   },
   {
     "id": "sonicthehedgehog003-8b519c07",
@@ -3265,7 +3265,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#3",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog003.cbr",
-    "cover": "/generated/covers/sonicthehedgehog003-8b519c07.jpg"
+    "cover": "/generated/covers/sonicthehedgehog003-8b519c07-v1.webp"
   },
   {
     "id": "sonicthehedgehog004-d0e2db1c",
@@ -3274,7 +3274,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#4",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog004.cbr",
-    "cover": "/generated/covers/sonicthehedgehog004-d0e2db1c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog004-d0e2db1c-v1.webp"
   },
   {
     "id": "sonicthehedgehog005-8df1037e",
@@ -3283,7 +3283,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#5",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog005.cbr",
-    "cover": "/generated/covers/sonicthehedgehog005-8df1037e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog005-8df1037e-v1.webp"
   },
   {
     "id": "sonicthehedgehog006-c5d89491",
@@ -3292,7 +3292,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#6",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog006.cbr",
-    "cover": "/generated/covers/sonicthehedgehog006-c5d89491.jpg"
+    "cover": "/generated/covers/sonicthehedgehog006-c5d89491-v1.webp"
   },
   {
     "id": "sonicthehedgehog007-1872f5c3",
@@ -3301,7 +3301,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#7",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog007.cbr",
-    "cover": "/generated/covers/sonicthehedgehog007-1872f5c3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog007-1872f5c3-v1.webp"
   },
   {
     "id": "sonicthehedgehog008-e696bd1a",
@@ -3310,7 +3310,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#8",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog008.cbr",
-    "cover": "/generated/covers/sonicthehedgehog008-e696bd1a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog008-e696bd1a-v1.webp"
   },
   {
     "id": "sonicthehedgehog009-69bcabe0",
@@ -3319,7 +3319,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#9",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog009.cbr",
-    "cover": "/generated/covers/sonicthehedgehog009-69bcabe0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog009-69bcabe0-v1.webp"
   },
   {
     "id": "sonicthehedgehog010-e68c9e96",
@@ -3328,7 +3328,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#10",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog010.cbr",
-    "cover": "/generated/covers/sonicthehedgehog010-e68c9e96.jpg"
+    "cover": "/generated/covers/sonicthehedgehog010-e68c9e96-v1.webp"
   },
   {
     "id": "sonicthehedgehog011-b9873776",
@@ -3337,7 +3337,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#11",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog011.cbr",
-    "cover": "/generated/covers/sonicthehedgehog011-b9873776.jpg"
+    "cover": "/generated/covers/sonicthehedgehog011-b9873776-v1.webp"
   },
   {
     "id": "sonicthehedgehog012-8811a639",
@@ -3346,7 +3346,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#12",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog012.cbr",
-    "cover": "/generated/covers/sonicthehedgehog012-8811a639.jpg"
+    "cover": "/generated/covers/sonicthehedgehog012-8811a639-v1.webp"
   },
   {
     "id": "sonicthehedgehog013-b0516bec",
@@ -3355,7 +3355,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#13",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog013.cbr",
-    "cover": "/generated/covers/sonicthehedgehog013-b0516bec.jpg"
+    "cover": "/generated/covers/sonicthehedgehog013-b0516bec-v1.webp"
   },
   {
     "id": "sonicthehedgehog014-5c4beebb",
@@ -3364,7 +3364,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#14",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog014.cbr",
-    "cover": "/generated/covers/sonicthehedgehog014-5c4beebb.jpg"
+    "cover": "/generated/covers/sonicthehedgehog014-5c4beebb-v1.webp"
   },
   {
     "id": "sonicthehedgehog015-ee06e884",
@@ -3373,7 +3373,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#15",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog015.cbr",
-    "cover": "/generated/covers/sonicthehedgehog015-ee06e884.jpg"
+    "cover": "/generated/covers/sonicthehedgehog015-ee06e884-v1.webp"
   },
   {
     "id": "sonicthehedgehog016-f001982d",
@@ -3382,7 +3382,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#16",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog016.cbr",
-    "cover": "/generated/covers/sonicthehedgehog016-f001982d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog016-f001982d-v1.webp"
   },
   {
     "id": "sonicthehedgehog017-899bf3e4",
@@ -3391,7 +3391,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#17",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog017.cbr",
-    "cover": "/generated/covers/sonicthehedgehog017-899bf3e4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog017-899bf3e4-v1.webp"
   },
   {
     "id": "sonicthehedgehog018-1c213ceb",
@@ -3400,7 +3400,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#18",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog018.cbr",
-    "cover": "/generated/covers/sonicthehedgehog018-1c213ceb.jpg"
+    "cover": "/generated/covers/sonicthehedgehog018-1c213ceb-v1.webp"
   },
   {
     "id": "sonicthehedgehog019-fafa12cc",
@@ -3409,7 +3409,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#19",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog019.cbr",
-    "cover": "/generated/covers/sonicthehedgehog019-fafa12cc.jpg"
+    "cover": "/generated/covers/sonicthehedgehog019-fafa12cc-v1.webp"
   },
   {
     "id": "sonicthehedgehog020-1dfec0e2",
@@ -3418,7 +3418,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#20",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog020.cbr",
-    "cover": "/generated/covers/sonicthehedgehog020-1dfec0e2.jpg"
+    "cover": "/generated/covers/sonicthehedgehog020-1dfec0e2-v1.webp"
   },
   {
     "id": "sonicthehedgehog021-811f5b15",
@@ -3427,7 +3427,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#21",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog021.cbr",
-    "cover": "/generated/covers/sonicthehedgehog021-811f5b15.jpg"
+    "cover": "/generated/covers/sonicthehedgehog021-811f5b15-v1.webp"
   },
   {
     "id": "sonicthehedgehog022-bf7ecdb8",
@@ -3436,7 +3436,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#22",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog022.cbr",
-    "cover": "/generated/covers/sonicthehedgehog022-bf7ecdb8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog022-bf7ecdb8-v1.webp"
   },
   {
     "id": "sonicthehedgehog023-5bf5aaa6",
@@ -3445,7 +3445,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#23",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog023.cbr",
-    "cover": "/generated/covers/sonicthehedgehog023-5bf5aaa6.jpg"
+    "cover": "/generated/covers/sonicthehedgehog023-5bf5aaa6-v1.webp"
   },
   {
     "id": "sonicthehedgehog024-5853568e",
@@ -3454,7 +3454,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#24",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog024.cbr",
-    "cover": "/generated/covers/sonicthehedgehog024-5853568e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog024-5853568e-v1.webp"
   },
   {
     "id": "sonicthehedgehog025-7d7bbb8a",
@@ -3463,7 +3463,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#25",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog025.cbr",
-    "cover": "/generated/covers/sonicthehedgehog025-7d7bbb8a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog025-7d7bbb8a-v1.webp"
   },
   {
     "id": "sonicthehedgehog026-c5328d26",
@@ -3472,7 +3472,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#26",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog026.cbr",
-    "cover": "/generated/covers/sonicthehedgehog026-c5328d26.jpg"
+    "cover": "/generated/covers/sonicthehedgehog026-c5328d26-v1.webp"
   },
   {
     "id": "sonicthehedgehog027-4048e7bd",
@@ -3481,7 +3481,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#27",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog027.cbr",
-    "cover": "/generated/covers/sonicthehedgehog027-4048e7bd.jpg"
+    "cover": "/generated/covers/sonicthehedgehog027-4048e7bd-v1.webp"
   },
   {
     "id": "sonicthehedgehog028-d92ee237",
@@ -3490,7 +3490,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#28",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog028.cbr",
-    "cover": "/generated/covers/sonicthehedgehog028-d92ee237.jpg"
+    "cover": "/generated/covers/sonicthehedgehog028-d92ee237-v1.webp"
   },
   {
     "id": "sonicthehedgehog029-ae6ecbab",
@@ -3499,7 +3499,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#29",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog029.cbr",
-    "cover": "/generated/covers/sonicthehedgehog029-ae6ecbab.jpg"
+    "cover": "/generated/covers/sonicthehedgehog029-ae6ecbab-v1.webp"
   },
   {
     "id": "sonicthehedgehog030-db75ac1b",
@@ -3508,7 +3508,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#30",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog030.cbr",
-    "cover": "/generated/covers/sonicthehedgehog030-db75ac1b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog030-db75ac1b-v1.webp"
   },
   {
     "id": "sonicthehedgehog031-a8879243",
@@ -3517,7 +3517,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#31",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog031.cbr",
-    "cover": "/generated/covers/sonicthehedgehog031-a8879243.jpg"
+    "cover": "/generated/covers/sonicthehedgehog031-a8879243-v1.webp"
   },
   {
     "id": "sonicthehedgehog032-34007869",
@@ -3526,7 +3526,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#32",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog032.cbr",
-    "cover": "/generated/covers/sonicthehedgehog032-34007869.jpg"
+    "cover": "/generated/covers/sonicthehedgehog032-34007869-v1.webp"
   },
   {
     "id": "sonicthehedgehog033-e4b7d732",
@@ -3535,7 +3535,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#33",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog033.cbr",
-    "cover": "/generated/covers/sonicthehedgehog033-e4b7d732.jpg"
+    "cover": "/generated/covers/sonicthehedgehog033-e4b7d732-v1.webp"
   },
   {
     "id": "sonicthehedgehog034-6aaa1ce8",
@@ -3544,7 +3544,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#34",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog034.cbr",
-    "cover": "/generated/covers/sonicthehedgehog034-6aaa1ce8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog034-6aaa1ce8-v1.webp"
   },
   {
     "id": "sonicthehedgehog035-c597a76d",
@@ -3553,7 +3553,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#35",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog035.cbr",
-    "cover": "/generated/covers/sonicthehedgehog035-c597a76d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog035-c597a76d-v1.webp"
   },
   {
     "id": "sonicthehedgehog036-92adb652",
@@ -3562,7 +3562,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#36",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog036.cbr",
-    "cover": "/generated/covers/sonicthehedgehog036-92adb652.jpg"
+    "cover": "/generated/covers/sonicthehedgehog036-92adb652-v1.webp"
   },
   {
     "id": "sonicthehedgehog037-5e56337d",
@@ -3571,7 +3571,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#37",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog037.cbr",
-    "cover": "/generated/covers/sonicthehedgehog037-5e56337d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog037-5e56337d-v1.webp"
   },
   {
     "id": "sonicthehedgehog038-f2d5304c",
@@ -3580,7 +3580,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#38",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog038.cbr",
-    "cover": "/generated/covers/sonicthehedgehog038-f2d5304c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog038-f2d5304c-v1.webp"
   },
   {
     "id": "sonicthehedgehog039-bd89cd01",
@@ -3589,7 +3589,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#39",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog039.cbr",
-    "cover": "/generated/covers/sonicthehedgehog039-bd89cd01.jpg"
+    "cover": "/generated/covers/sonicthehedgehog039-bd89cd01-v1.webp"
   },
   {
     "id": "sonicthehedgehog040-7e12c4ca",
@@ -3598,7 +3598,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#40",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog040.cbr",
-    "cover": "/generated/covers/sonicthehedgehog040-7e12c4ca.jpg"
+    "cover": "/generated/covers/sonicthehedgehog040-7e12c4ca-v1.webp"
   },
   {
     "id": "sonicthehedgehog041-d85b83ae",
@@ -3607,7 +3607,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#41",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog041.cbr",
-    "cover": "/generated/covers/sonicthehedgehog041-d85b83ae.jpg"
+    "cover": "/generated/covers/sonicthehedgehog041-d85b83ae-v1.webp"
   },
   {
     "id": "sonicthehedgehog042-87a0eb1c",
@@ -3616,7 +3616,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#42",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog042.cbr",
-    "cover": "/generated/covers/sonicthehedgehog042-87a0eb1c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog042-87a0eb1c-v1.webp"
   },
   {
     "id": "sonicthehedgehog043-1c71cb02",
@@ -3625,7 +3625,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#43",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog043.cbr",
-    "cover": "/generated/covers/sonicthehedgehog043-1c71cb02.jpg"
+    "cover": "/generated/covers/sonicthehedgehog043-1c71cb02-v1.webp"
   },
   {
     "id": "sonicthehedgehog044-3d9d0155",
@@ -3634,7 +3634,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#44",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog044.cbr",
-    "cover": "/generated/covers/sonicthehedgehog044-3d9d0155.jpg"
+    "cover": "/generated/covers/sonicthehedgehog044-3d9d0155-v1.webp"
   },
   {
     "id": "sonicthehedgehog045-2b981897",
@@ -3643,7 +3643,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#45",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog045.cbr",
-    "cover": "/generated/covers/sonicthehedgehog045-2b981897.jpg"
+    "cover": "/generated/covers/sonicthehedgehog045-2b981897-v1.webp"
   },
   {
     "id": "sonicthehedgehog046-63ed37f1",
@@ -3652,7 +3652,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#46",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog046.cbr",
-    "cover": "/generated/covers/sonicthehedgehog046-63ed37f1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog046-63ed37f1-v1.webp"
   },
   {
     "id": "sonicthehedgehog047-dd229790",
@@ -3661,7 +3661,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#47",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog047.cbr",
-    "cover": "/generated/covers/sonicthehedgehog047-dd229790.jpg"
+    "cover": "/generated/covers/sonicthehedgehog047-dd229790-v1.webp"
   },
   {
     "id": "sonicthehedgehog048-cd122ab3",
@@ -3670,7 +3670,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#48",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog048.cbr",
-    "cover": "/generated/covers/sonicthehedgehog048-cd122ab3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog048-cd122ab3-v1.webp"
   },
   {
     "id": "sonicthehedgehog049-de8294d4",
@@ -3679,7 +3679,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#49",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog049.cbr",
-    "cover": "/generated/covers/sonicthehedgehog049-de8294d4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog049-de8294d4-v1.webp"
   },
   {
     "id": "sonicthehedgehog050-1233209d",
@@ -3688,7 +3688,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#50",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog050.cbr",
-    "cover": "/generated/covers/sonicthehedgehog050-1233209d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog050-1233209d-v1.webp"
   },
   {
     "id": "sonicthehedgehog051-47766492",
@@ -3697,7 +3697,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#51",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog051.cbr",
-    "cover": "/generated/covers/sonicthehedgehog051-47766492.jpg"
+    "cover": "/generated/covers/sonicthehedgehog051-47766492-v1.webp"
   },
   {
     "id": "sonicthehedgehog052-0499a58d",
@@ -3706,7 +3706,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#52",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog052.cbr",
-    "cover": "/generated/covers/sonicthehedgehog052-0499a58d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog052-0499a58d-v1.webp"
   },
   {
     "id": "sonicthehedgehog053-2f4ba9f4",
@@ -3715,7 +3715,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#53",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog053.cbr",
-    "cover": "/generated/covers/sonicthehedgehog053-2f4ba9f4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog053-2f4ba9f4-v1.webp"
   },
   {
     "id": "sonicthehedgehog054-d86aeb56",
@@ -3724,7 +3724,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#54",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog054.cbr",
-    "cover": "/generated/covers/sonicthehedgehog054-d86aeb56.jpg"
+    "cover": "/generated/covers/sonicthehedgehog054-d86aeb56-v1.webp"
   },
   {
     "id": "sonicthehedgehog055-ef188149",
@@ -3733,7 +3733,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#55",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog055.cbr",
-    "cover": "/generated/covers/sonicthehedgehog055-ef188149.jpg"
+    "cover": "/generated/covers/sonicthehedgehog055-ef188149-v1.webp"
   },
   {
     "id": "sonicthehedgehog056-9d92a3d8",
@@ -3742,7 +3742,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#56",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog056.cbr",
-    "cover": "/generated/covers/sonicthehedgehog056-9d92a3d8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog056-9d92a3d8-v1.webp"
   },
   {
     "id": "sonicthehedgehog057-9ee2a862",
@@ -3751,7 +3751,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#57",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog057.cbr",
-    "cover": "/generated/covers/sonicthehedgehog057-9ee2a862.jpg"
+    "cover": "/generated/covers/sonicthehedgehog057-9ee2a862-v1.webp"
   },
   {
     "id": "sonicthehedgehog058-2e2c23fe",
@@ -3760,7 +3760,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#58",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog058.cbr",
-    "cover": "/generated/covers/sonicthehedgehog058-2e2c23fe.jpg"
+    "cover": "/generated/covers/sonicthehedgehog058-2e2c23fe-v1.webp"
   },
   {
     "id": "sonicthehedgehog059-d61d76c1",
@@ -3769,7 +3769,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#59",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog059.cbr",
-    "cover": "/generated/covers/sonicthehedgehog059-d61d76c1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog059-d61d76c1-v1.webp"
   },
   {
     "id": "sonicthehedgehog060-fd0f6c56",
@@ -3778,7 +3778,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#60",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog060.cbr",
-    "cover": "/generated/covers/sonicthehedgehog060-fd0f6c56.jpg"
+    "cover": "/generated/covers/sonicthehedgehog060-fd0f6c56-v1.webp"
   },
   {
     "id": "sonicthehedgehog061-a3053ab1",
@@ -3787,7 +3787,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#61",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog061.cbr",
-    "cover": "/generated/covers/sonicthehedgehog061-a3053ab1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog061-a3053ab1-v1.webp"
   },
   {
     "id": "sonicthehedgehog062-a4c17914",
@@ -3796,7 +3796,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#62",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog062.cbr",
-    "cover": "/generated/covers/sonicthehedgehog062-a4c17914.jpg"
+    "cover": "/generated/covers/sonicthehedgehog062-a4c17914-v1.webp"
   },
   {
     "id": "sonicthehedgehog063-092e57d3",
@@ -3805,7 +3805,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#63",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog063.cbr",
-    "cover": "/generated/covers/sonicthehedgehog063-092e57d3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog063-092e57d3-v1.webp"
   },
   {
     "id": "sonicthehedgehog064-50712f22",
@@ -3814,7 +3814,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#64",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog064.cbr",
-    "cover": "/generated/covers/sonicthehedgehog064-50712f22.jpg"
+    "cover": "/generated/covers/sonicthehedgehog064-50712f22-v1.webp"
   },
   {
     "id": "sonicthehedgehog065-f91734de",
@@ -3823,7 +3823,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#65",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog065.cbr",
-    "cover": "/generated/covers/sonicthehedgehog065-f91734de.jpg"
+    "cover": "/generated/covers/sonicthehedgehog065-f91734de-v1.webp"
   },
   {
     "id": "sonicthehedgehog066-f072f1a8",
@@ -3832,7 +3832,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#66",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog066.cbr",
-    "cover": "/generated/covers/sonicthehedgehog066-f072f1a8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog066-f072f1a8-v1.webp"
   },
   {
     "id": "sonicthehedgehog067-453c5fc5",
@@ -3841,7 +3841,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#67",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog067.cbr",
-    "cover": "/generated/covers/sonicthehedgehog067-453c5fc5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog067-453c5fc5-v1.webp"
   },
   {
     "id": "sonicthehedgehog068-6e96dcd1",
@@ -3850,7 +3850,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#68",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog068.cbr",
-    "cover": "/generated/covers/sonicthehedgehog068-6e96dcd1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog068-6e96dcd1-v1.webp"
   },
   {
     "id": "sonicthehedgehog069-766b5c15",
@@ -3859,7 +3859,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#69",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog069.cbr",
-    "cover": "/generated/covers/sonicthehedgehog069-766b5c15.jpg"
+    "cover": "/generated/covers/sonicthehedgehog069-766b5c15-v1.webp"
   },
   {
     "id": "sonicthehedgehog070-99bbdd59",
@@ -3868,7 +3868,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#70",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog070.cbr",
-    "cover": "/generated/covers/sonicthehedgehog070-99bbdd59.jpg"
+    "cover": "/generated/covers/sonicthehedgehog070-99bbdd59-v1.webp"
   },
   {
     "id": "sonicthehedgehog071-169e03e0",
@@ -3877,7 +3877,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#71",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog071.cbr",
-    "cover": "/generated/covers/sonicthehedgehog071-169e03e0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog071-169e03e0-v1.webp"
   },
   {
     "id": "sonicthehedgehog072-1fc056fb",
@@ -3886,7 +3886,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#72",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog072.cbr",
-    "cover": "/generated/covers/sonicthehedgehog072-1fc056fb.jpg"
+    "cover": "/generated/covers/sonicthehedgehog072-1fc056fb-v1.webp"
   },
   {
     "id": "sonicthehedgehog073-ec5a14dc",
@@ -3895,7 +3895,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#73",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog073.cbr",
-    "cover": "/generated/covers/sonicthehedgehog073-ec5a14dc.jpg"
+    "cover": "/generated/covers/sonicthehedgehog073-ec5a14dc-v1.webp"
   },
   {
     "id": "sonicthehedgehog074-24d1e0e5",
@@ -3904,7 +3904,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#74",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog074.cbr",
-    "cover": "/generated/covers/sonicthehedgehog074-24d1e0e5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog074-24d1e0e5-v1.webp"
   },
   {
     "id": "sonicthehedgehog075-81be9c68",
@@ -3913,7 +3913,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#75",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog075.cbr",
-    "cover": "/generated/covers/sonicthehedgehog075-81be9c68.jpg"
+    "cover": "/generated/covers/sonicthehedgehog075-81be9c68-v1.webp"
   },
   {
     "id": "sonicthehedgehog076-4ce01d62",
@@ -3922,7 +3922,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#76",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog076.cbr",
-    "cover": "/generated/covers/sonicthehedgehog076-4ce01d62.jpg"
+    "cover": "/generated/covers/sonicthehedgehog076-4ce01d62-v1.webp"
   },
   {
     "id": "sonicthehedgehog077-b73b8ab7",
@@ -3931,7 +3931,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#77",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog077.cbr",
-    "cover": "/generated/covers/sonicthehedgehog077-b73b8ab7.jpg"
+    "cover": "/generated/covers/sonicthehedgehog077-b73b8ab7-v1.webp"
   },
   {
     "id": "sonicthehedgehog078-483ad09b",
@@ -3940,7 +3940,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#78",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog078.cbr",
-    "cover": "/generated/covers/sonicthehedgehog078-483ad09b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog078-483ad09b-v1.webp"
   },
   {
     "id": "sonicthehedgehog079-65f8a9ac",
@@ -3949,7 +3949,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#79",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog079.cbr",
-    "cover": "/generated/covers/sonicthehedgehog079-65f8a9ac.jpg"
+    "cover": "/generated/covers/sonicthehedgehog079-65f8a9ac-v1.webp"
   },
   {
     "id": "sonicthehedgehog080-3f938eb6",
@@ -3958,7 +3958,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#80",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog080.cbr",
-    "cover": "/generated/covers/sonicthehedgehog080-3f938eb6.jpg"
+    "cover": "/generated/covers/sonicthehedgehog080-3f938eb6-v1.webp"
   },
   {
     "id": "sonicthehedgehog081-ad2081ff",
@@ -3967,7 +3967,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#81",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog081.cbr",
-    "cover": "/generated/covers/sonicthehedgehog081-ad2081ff.jpg"
+    "cover": "/generated/covers/sonicthehedgehog081-ad2081ff-v1.webp"
   },
   {
     "id": "sonicthehedgehog082-fb57414d",
@@ -3976,7 +3976,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#82",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog082.cbr",
-    "cover": "/generated/covers/sonicthehedgehog082-fb57414d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog082-fb57414d-v1.webp"
   },
   {
     "id": "sonicthehedgehog083-0db98180",
@@ -3985,7 +3985,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#83",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog083.cbr",
-    "cover": "/generated/covers/sonicthehedgehog083-0db98180.jpg"
+    "cover": "/generated/covers/sonicthehedgehog083-0db98180-v1.webp"
   },
   {
     "id": "sonicthehedgehog084-28127afa",
@@ -3994,7 +3994,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#84",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog084.cbr",
-    "cover": "/generated/covers/sonicthehedgehog084-28127afa.jpg"
+    "cover": "/generated/covers/sonicthehedgehog084-28127afa-v1.webp"
   },
   {
     "id": "sonicthehedgehog085-798cdca0",
@@ -4003,7 +4003,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#85",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog085.cbr",
-    "cover": "/generated/covers/sonicthehedgehog085-798cdca0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog085-798cdca0-v1.webp"
   },
   {
     "id": "sonicthehedgehog086-99f73bf3",
@@ -4012,7 +4012,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#86",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog086.cbr",
-    "cover": "/generated/covers/sonicthehedgehog086-99f73bf3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog086-99f73bf3-v1.webp"
   },
   {
     "id": "sonicthehedgehog087-1263e2e4",
@@ -4021,7 +4021,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#87",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog087.cbr",
-    "cover": "/generated/covers/sonicthehedgehog087-1263e2e4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog087-1263e2e4-v1.webp"
   },
   {
     "id": "sonicthehedgehog088-025014a3",
@@ -4030,7 +4030,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#88",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog088.cbr",
-    "cover": "/generated/covers/sonicthehedgehog088-025014a3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog088-025014a3-v1.webp"
   },
   {
     "id": "sonicthehedgehog089-f3b9cd13",
@@ -4039,7 +4039,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#89",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog089.cbr",
-    "cover": "/generated/covers/sonicthehedgehog089-f3b9cd13.jpg"
+    "cover": "/generated/covers/sonicthehedgehog089-f3b9cd13-v1.webp"
   },
   {
     "id": "sonicthehedgehog090-173e72ff",
@@ -4048,7 +4048,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#90",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog090.cbr",
-    "cover": "/generated/covers/sonicthehedgehog090-173e72ff.jpg"
+    "cover": "/generated/covers/sonicthehedgehog090-173e72ff-v1.webp"
   },
   {
     "id": "sonicthehedgehog091-4d6bd273",
@@ -4057,7 +4057,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#91",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog091.cbr",
-    "cover": "/generated/covers/sonicthehedgehog091-4d6bd273.jpg"
+    "cover": "/generated/covers/sonicthehedgehog091-4d6bd273-v1.webp"
   },
   {
     "id": "sonicthehedgehog092-31275a8a",
@@ -4066,7 +4066,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#92",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog092.cbr",
-    "cover": "/generated/covers/sonicthehedgehog092-31275a8a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog092-31275a8a-v1.webp"
   },
   {
     "id": "sonicthehedgehog093-ed3c9b4f",
@@ -4075,7 +4075,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#93",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog093.cbr",
-    "cover": "/generated/covers/sonicthehedgehog093-ed3c9b4f.jpg"
+    "cover": "/generated/covers/sonicthehedgehog093-ed3c9b4f-v1.webp"
   },
   {
     "id": "sonicthehedgehog094-d81fc94d",
@@ -4084,7 +4084,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#94",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog094.cbr",
-    "cover": "/generated/covers/sonicthehedgehog094-d81fc94d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog094-d81fc94d-v1.webp"
   },
   {
     "id": "sonicthehedgehog095-0e20030e",
@@ -4093,7 +4093,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#95",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog095.cbr",
-    "cover": "/generated/covers/sonicthehedgehog095-0e20030e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog095-0e20030e-v1.webp"
   },
   {
     "id": "sonicthehedgehog096-0f92a213",
@@ -4102,7 +4102,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#96",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog096.cbr",
-    "cover": "/generated/covers/sonicthehedgehog096-0f92a213.jpg"
+    "cover": "/generated/covers/sonicthehedgehog096-0f92a213-v1.webp"
   },
   {
     "id": "sonicthehedgehog097-a90dcecc",
@@ -4111,7 +4111,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#97",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog097.cbr",
-    "cover": "/generated/covers/sonicthehedgehog097-a90dcecc.jpg"
+    "cover": "/generated/covers/sonicthehedgehog097-a90dcecc-v1.webp"
   },
   {
     "id": "sonicthehedgehog098-4eedee2c",
@@ -4120,7 +4120,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#98",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog098.cbr",
-    "cover": "/generated/covers/sonicthehedgehog098-4eedee2c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog098-4eedee2c-v1.webp"
   },
   {
     "id": "sonicthehedgehog099-7841e682",
@@ -4129,7 +4129,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#99",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog099.cbr",
-    "cover": "/generated/covers/sonicthehedgehog099-7841e682.jpg"
+    "cover": "/generated/covers/sonicthehedgehog099-7841e682-v1.webp"
   },
   {
     "id": "sonicthehedgehog100-30cdf305",
@@ -4138,7 +4138,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#100",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog100.cbr",
-    "cover": "/generated/covers/sonicthehedgehog100-30cdf305.jpg"
+    "cover": "/generated/covers/sonicthehedgehog100-30cdf305-v1.webp"
   },
   {
     "id": "sonicthehedgehog101-7c7f8a97",
@@ -4147,7 +4147,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#101",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog101.cbr",
-    "cover": "/generated/covers/sonicthehedgehog101-7c7f8a97.jpg"
+    "cover": "/generated/covers/sonicthehedgehog101-7c7f8a97-v1.webp"
   },
   {
     "id": "sonicthehedgehog102-f160df95",
@@ -4156,7 +4156,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#102",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog102.cbr",
-    "cover": "/generated/covers/sonicthehedgehog102-f160df95.jpg"
+    "cover": "/generated/covers/sonicthehedgehog102-f160df95-v1.webp"
   },
   {
     "id": "sonicthehedgehog103-67536b7b",
@@ -4165,7 +4165,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#103",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog103.cbr",
-    "cover": "/generated/covers/sonicthehedgehog103-67536b7b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog103-67536b7b-v1.webp"
   },
   {
     "id": "sonicthehedgehog104-f2fe0ad5",
@@ -4174,7 +4174,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#104",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog104.cbr",
-    "cover": "/generated/covers/sonicthehedgehog104-f2fe0ad5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog104-f2fe0ad5-v1.webp"
   },
   {
     "id": "sonicthehedgehog105-8027143d",
@@ -4183,7 +4183,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#105",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog105.cbr",
-    "cover": "/generated/covers/sonicthehedgehog105-8027143d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog105-8027143d-v1.webp"
   },
   {
     "id": "sonicthehedgehog106-44c95eb3",
@@ -4192,7 +4192,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#106",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog106.cbr",
-    "cover": "/generated/covers/sonicthehedgehog106-44c95eb3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog106-44c95eb3-v1.webp"
   },
   {
     "id": "sonicthehedgehog107-7368b0b1",
@@ -4201,7 +4201,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#107",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog107.cbr",
-    "cover": "/generated/covers/sonicthehedgehog107-7368b0b1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog107-7368b0b1-v1.webp"
   },
   {
     "id": "sonicthehedgehog108-3eebd6bd",
@@ -4210,7 +4210,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#108",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog108.cbr",
-    "cover": "/generated/covers/sonicthehedgehog108-3eebd6bd.jpg"
+    "cover": "/generated/covers/sonicthehedgehog108-3eebd6bd-v1.webp"
   },
   {
     "id": "sonicthehedgehog109-56b20230",
@@ -4219,7 +4219,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#109",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog109.cbr",
-    "cover": "/generated/covers/sonicthehedgehog109-56b20230.jpg"
+    "cover": "/generated/covers/sonicthehedgehog109-56b20230-v1.webp"
   },
   {
     "id": "sonicthehedgehog110-689358bd",
@@ -4228,7 +4228,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#110",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog110.cbr",
-    "cover": "/generated/covers/sonicthehedgehog110-689358bd.jpg"
+    "cover": "/generated/covers/sonicthehedgehog110-689358bd-v1.webp"
   },
   {
     "id": "sonicthehedgehog111-6a6cdf63",
@@ -4237,7 +4237,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#111",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog111.cbr",
-    "cover": "/generated/covers/sonicthehedgehog111-6a6cdf63.jpg"
+    "cover": "/generated/covers/sonicthehedgehog111-6a6cdf63-v1.webp"
   },
   {
     "id": "sonicthehedgehog112-ba9d128b",
@@ -4246,7 +4246,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#112",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog112.cbr",
-    "cover": "/generated/covers/sonicthehedgehog112-ba9d128b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog112-ba9d128b-v1.webp"
   },
   {
     "id": "sonicthehedgehog113-b1d31b19",
@@ -4255,7 +4255,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#113",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog113.cbr",
-    "cover": "/generated/covers/sonicthehedgehog113-b1d31b19.jpg"
+    "cover": "/generated/covers/sonicthehedgehog113-b1d31b19-v1.webp"
   },
   {
     "id": "sonicthehedgehog114-9b6b4efb",
@@ -4264,7 +4264,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#114",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog114.cbr",
-    "cover": "/generated/covers/sonicthehedgehog114-9b6b4efb.jpg"
+    "cover": "/generated/covers/sonicthehedgehog114-9b6b4efb-v1.webp"
   },
   {
     "id": "sonicthehedgehog115-5d62e58c",
@@ -4273,7 +4273,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#115",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog115.cbr",
-    "cover": "/generated/covers/sonicthehedgehog115-5d62e58c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog115-5d62e58c-v1.webp"
   },
   {
     "id": "sonicthehedgehog116-af154d46",
@@ -4282,7 +4282,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#116",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog116.cbr",
-    "cover": "/generated/covers/sonicthehedgehog116-af154d46.jpg"
+    "cover": "/generated/covers/sonicthehedgehog116-af154d46-v1.webp"
   },
   {
     "id": "sonicthehedgehog117-ad4e1997",
@@ -4291,7 +4291,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#117",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog117.cbr",
-    "cover": "/generated/covers/sonicthehedgehog117-ad4e1997.jpg"
+    "cover": "/generated/covers/sonicthehedgehog117-ad4e1997-v1.webp"
   },
   {
     "id": "sonicthehedgehog118-0f5af0fc",
@@ -4300,7 +4300,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#118",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog118.cbr",
-    "cover": "/generated/covers/sonicthehedgehog118-0f5af0fc.jpg"
+    "cover": "/generated/covers/sonicthehedgehog118-0f5af0fc-v1.webp"
   },
   {
     "id": "sonicthehedgehog119-3d5a9e2d",
@@ -4309,7 +4309,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#119",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog119.cbr",
-    "cover": "/generated/covers/sonicthehedgehog119-3d5a9e2d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog119-3d5a9e2d-v1.webp"
   },
   {
     "id": "sonicthehedgehog120-4d6ef5f5",
@@ -4318,7 +4318,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#120",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog120.cbr",
-    "cover": "/generated/covers/sonicthehedgehog120-4d6ef5f5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog120-4d6ef5f5-v1.webp"
   },
   {
     "id": "sonicthehedgehog121-b0f6d40d",
@@ -4327,7 +4327,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#121",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog121.cbr",
-    "cover": "/generated/covers/sonicthehedgehog121-b0f6d40d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog121-b0f6d40d-v1.webp"
   },
   {
     "id": "sonicthehedgehog122-1ef3c8ac",
@@ -4336,7 +4336,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#122",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog122.cbr",
-    "cover": "/generated/covers/sonicthehedgehog122-1ef3c8ac.jpg"
+    "cover": "/generated/covers/sonicthehedgehog122-1ef3c8ac-v1.webp"
   },
   {
     "id": "sonicthehedgehog123-1780cee4",
@@ -4345,7 +4345,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#123",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog123.cbr",
-    "cover": "/generated/covers/sonicthehedgehog123-1780cee4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog123-1780cee4-v1.webp"
   },
   {
     "id": "sonicthehedgehog124-cb9c7682",
@@ -4354,7 +4354,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#124",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog124.cbr",
-    "cover": "/generated/covers/sonicthehedgehog124-cb9c7682.jpg"
+    "cover": "/generated/covers/sonicthehedgehog124-cb9c7682-v1.webp"
   },
   {
     "id": "sonicthehedgehog125-cb76d825",
@@ -4363,7 +4363,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#125",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog125.cbr",
-    "cover": "/generated/covers/sonicthehedgehog125-cb76d825.jpg"
+    "cover": "/generated/covers/sonicthehedgehog125-cb76d825-v1.webp"
   },
   {
     "id": "sonicthehedgehog126-4856cd20",
@@ -4372,7 +4372,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#126",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog126.cbr",
-    "cover": "/generated/covers/sonicthehedgehog126-4856cd20.jpg"
+    "cover": "/generated/covers/sonicthehedgehog126-4856cd20-v1.webp"
   },
   {
     "id": "sonicthehedgehog127-5957eb75",
@@ -4381,7 +4381,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#127",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog127.cbr",
-    "cover": "/generated/covers/sonicthehedgehog127-5957eb75.jpg"
+    "cover": "/generated/covers/sonicthehedgehog127-5957eb75-v1.webp"
   },
   {
     "id": "sonicthehedgehog128-b0ad7ea3",
@@ -4390,7 +4390,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#128",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog128.cbr",
-    "cover": "/generated/covers/sonicthehedgehog128-b0ad7ea3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog128-b0ad7ea3-v1.webp"
   },
   {
     "id": "sonicthehedgehog129-32483db1",
@@ -4399,7 +4399,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#129",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog129.cbr",
-    "cover": "/generated/covers/sonicthehedgehog129-32483db1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog129-32483db1-v1.webp"
   },
   {
     "id": "sonicthehedgehog130-48976e8b",
@@ -4408,7 +4408,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#130",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog130.cbr",
-    "cover": "/generated/covers/sonicthehedgehog130-48976e8b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog130-48976e8b-v1.webp"
   },
   {
     "id": "sonicthehedgehog131-8015168d",
@@ -4417,7 +4417,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#131",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog131.cbr",
-    "cover": "/generated/covers/sonicthehedgehog131-8015168d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog131-8015168d-v1.webp"
   },
   {
     "id": "sonicthehedgehog132-c9692a61",
@@ -4426,7 +4426,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#132",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog132.cbr",
-    "cover": "/generated/covers/sonicthehedgehog132-c9692a61.jpg"
+    "cover": "/generated/covers/sonicthehedgehog132-c9692a61-v1.webp"
   },
   {
     "id": "sonicthehedgehog133-955ce851",
@@ -4435,7 +4435,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#133",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog133.cbr",
-    "cover": "/generated/covers/sonicthehedgehog133-955ce851.jpg"
+    "cover": "/generated/covers/sonicthehedgehog133-955ce851-v1.webp"
   },
   {
     "id": "sonicthehedgehog134-551b3d57",
@@ -4444,7 +4444,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#134",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog134.cbr",
-    "cover": "/generated/covers/sonicthehedgehog134-551b3d57.jpg"
+    "cover": "/generated/covers/sonicthehedgehog134-551b3d57-v1.webp"
   },
   {
     "id": "sonicthehedgehog135-eebfe972",
@@ -4453,7 +4453,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#135",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog135.cbr",
-    "cover": "/generated/covers/sonicthehedgehog135-eebfe972.jpg"
+    "cover": "/generated/covers/sonicthehedgehog135-eebfe972-v1.webp"
   },
   {
     "id": "sonicthehedgehog136-a20c6f29",
@@ -4462,7 +4462,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#136",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog136.cbr",
-    "cover": "/generated/covers/sonicthehedgehog136-a20c6f29.jpg"
+    "cover": "/generated/covers/sonicthehedgehog136-a20c6f29-v1.webp"
   },
   {
     "id": "sonicthehedgehog137-0197e5c0",
@@ -4471,7 +4471,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#137",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog137.cbr",
-    "cover": "/generated/covers/sonicthehedgehog137-0197e5c0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog137-0197e5c0-v1.webp"
   },
   {
     "id": "sonicthehedgehog138-f8a5b0d7",
@@ -4480,7 +4480,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#138",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog138.cbr",
-    "cover": "/generated/covers/sonicthehedgehog138-f8a5b0d7.jpg"
+    "cover": "/generated/covers/sonicthehedgehog138-f8a5b0d7-v1.webp"
   },
   {
     "id": "sonicthehedgehog139-e92dc839",
@@ -4489,7 +4489,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#139",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog139.cbr",
-    "cover": "/generated/covers/sonicthehedgehog139-e92dc839.jpg"
+    "cover": "/generated/covers/sonicthehedgehog139-e92dc839-v1.webp"
   },
   {
     "id": "sonicthehedgehog140-3891b59b",
@@ -4498,7 +4498,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#140",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog140.cbr",
-    "cover": "/generated/covers/sonicthehedgehog140-3891b59b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog140-3891b59b-v1.webp"
   },
   {
     "id": "sonicthehedgehog141-03ae5a7c",
@@ -4507,7 +4507,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#141",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog141.cbr",
-    "cover": "/generated/covers/sonicthehedgehog141-03ae5a7c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog141-03ae5a7c-v1.webp"
   },
   {
     "id": "sonicthehedgehog142-bbfb37a4",
@@ -4516,7 +4516,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#142",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog142.cbr",
-    "cover": "/generated/covers/sonicthehedgehog142-bbfb37a4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog142-bbfb37a4-v1.webp"
   },
   {
     "id": "sonicthehedgehog143-b56e3f15",
@@ -4525,7 +4525,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#143",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog143.cbr",
-    "cover": "/generated/covers/sonicthehedgehog143-b56e3f15.jpg"
+    "cover": "/generated/covers/sonicthehedgehog143-b56e3f15-v1.webp"
   },
   {
     "id": "sonicthehedgehog144-662eb55d",
@@ -4534,7 +4534,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#144",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog144.cbr",
-    "cover": "/generated/covers/sonicthehedgehog144-662eb55d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog144-662eb55d-v1.webp"
   },
   {
     "id": "sonicthehedgehog145-89035d19",
@@ -4543,7 +4543,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#145",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog145.cbr",
-    "cover": "/generated/covers/sonicthehedgehog145-89035d19.jpg"
+    "cover": "/generated/covers/sonicthehedgehog145-89035d19-v1.webp"
   },
   {
     "id": "sonicthehedgehog146-eec54f84",
@@ -4552,7 +4552,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#146",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog146.cbr",
-    "cover": "/generated/covers/sonicthehedgehog146-eec54f84.jpg"
+    "cover": "/generated/covers/sonicthehedgehog146-eec54f84-v1.webp"
   },
   {
     "id": "sonicthehedgehog147-10aa9980",
@@ -4561,7 +4561,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#147",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog147.cbr",
-    "cover": "/generated/covers/sonicthehedgehog147-10aa9980.jpg"
+    "cover": "/generated/covers/sonicthehedgehog147-10aa9980-v1.webp"
   },
   {
     "id": "sonicthehedgehog148-506cbc06",
@@ -4570,7 +4570,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#148",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog148.cbr",
-    "cover": "/generated/covers/sonicthehedgehog148-506cbc06.jpg"
+    "cover": "/generated/covers/sonicthehedgehog148-506cbc06-v1.webp"
   },
   {
     "id": "sonicthehedgehog149-10d85b3a",
@@ -4579,7 +4579,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#149",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog149.cbr",
-    "cover": "/generated/covers/sonicthehedgehog149-10d85b3a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog149-10d85b3a-v1.webp"
   },
   {
     "id": "sonicthehedgehog150-6852a72a",
@@ -4588,7 +4588,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#150",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog150.cbr",
-    "cover": "/generated/covers/sonicthehedgehog150-6852a72a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog150-6852a72a-v1.webp"
   },
   {
     "id": "sonicthehedgehog151-309d7caa",
@@ -4597,7 +4597,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#151",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog151.cbr",
-    "cover": "/generated/covers/sonicthehedgehog151-309d7caa.jpg"
+    "cover": "/generated/covers/sonicthehedgehog151-309d7caa-v1.webp"
   },
   {
     "id": "sonicthehedgehog152-f64a90c2",
@@ -4606,7 +4606,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#152",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog152.cbr",
-    "cover": "/generated/covers/sonicthehedgehog152-f64a90c2.jpg"
+    "cover": "/generated/covers/sonicthehedgehog152-f64a90c2-v1.webp"
   },
   {
     "id": "sonicthehedgehog153-7d422966",
@@ -4615,7 +4615,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#153",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog153.cbr",
-    "cover": "/generated/covers/sonicthehedgehog153-7d422966.jpg"
+    "cover": "/generated/covers/sonicthehedgehog153-7d422966-v1.webp"
   },
   {
     "id": "sonicthehedgehog154-617f09e2",
@@ -4624,7 +4624,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#154",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog154.cbr",
-    "cover": "/generated/covers/sonicthehedgehog154-617f09e2.jpg"
+    "cover": "/generated/covers/sonicthehedgehog154-617f09e2-v1.webp"
   },
   {
     "id": "sonicthehedgehog155-8fa2437c",
@@ -4633,7 +4633,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#155",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog155.cbr",
-    "cover": "/generated/covers/sonicthehedgehog155-8fa2437c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog155-8fa2437c-v1.webp"
   },
   {
     "id": "sonicthehedgehog156-ef2be47d",
@@ -4642,7 +4642,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#156",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog156.cbr",
-    "cover": "/generated/covers/sonicthehedgehog156-ef2be47d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog156-ef2be47d-v1.webp"
   },
   {
     "id": "sonicthehedgehog157-a845869c",
@@ -4651,7 +4651,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#157",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog157.cbr",
-    "cover": "/generated/covers/sonicthehedgehog157-a845869c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog157-a845869c-v1.webp"
   },
   {
     "id": "sonicthehedgehog158-d039f8ed",
@@ -4660,7 +4660,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#158",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog158.cbr",
-    "cover": "/generated/covers/sonicthehedgehog158-d039f8ed.jpg"
+    "cover": "/generated/covers/sonicthehedgehog158-d039f8ed-v1.webp"
   },
   {
     "id": "sonicthehedgehog159-4c366c6e",
@@ -4669,7 +4669,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#159",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog159.cbr",
-    "cover": "/generated/covers/sonicthehedgehog159-4c366c6e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog159-4c366c6e-v1.webp"
   },
   {
     "id": "sonicthehedgehog160-3fd482bf",
@@ -4678,7 +4678,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#160",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog160.cbr",
-    "cover": "/generated/covers/sonicthehedgehog160-3fd482bf.jpg"
+    "cover": "/generated/covers/sonicthehedgehog160-3fd482bf-v1.webp"
   },
   {
     "id": "sonicthehedgehog161-4f2a9af3",
@@ -4687,7 +4687,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#161",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog161.cbr",
-    "cover": "/generated/covers/sonicthehedgehog161-4f2a9af3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog161-4f2a9af3-v1.webp"
   },
   {
     "id": "sonicthehedgehog162-433aa65b",
@@ -4696,7 +4696,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#162",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog162.cbr",
-    "cover": "/generated/covers/sonicthehedgehog162-433aa65b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog162-433aa65b-v1.webp"
   },
   {
     "id": "sonicthehedgehog163-2af40622",
@@ -4705,7 +4705,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#163",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog163.cbr",
-    "cover": "/generated/covers/sonicthehedgehog163-2af40622.jpg"
+    "cover": "/generated/covers/sonicthehedgehog163-2af40622-v1.webp"
   },
   {
     "id": "sonicthehedgehog164-ace4de52",
@@ -4714,7 +4714,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#164",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog164.cbr",
-    "cover": "/generated/covers/sonicthehedgehog164-ace4de52.jpg"
+    "cover": "/generated/covers/sonicthehedgehog164-ace4de52-v1.webp"
   },
   {
     "id": "sonicthehedgehog165-634ab889",
@@ -4723,7 +4723,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#165",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog165.cbr",
-    "cover": "/generated/covers/sonicthehedgehog165-634ab889.jpg"
+    "cover": "/generated/covers/sonicthehedgehog165-634ab889-v1.webp"
   },
   {
     "id": "sonicthehedgehog166-1f055080",
@@ -4732,7 +4732,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#166",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog166.cbr",
-    "cover": "/generated/covers/sonicthehedgehog166-1f055080.jpg"
+    "cover": "/generated/covers/sonicthehedgehog166-1f055080-v1.webp"
   },
   {
     "id": "sonicthehedgehog167-6c999d60",
@@ -4741,7 +4741,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#167",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog167.cbr",
-    "cover": "/generated/covers/sonicthehedgehog167-6c999d60.jpg"
+    "cover": "/generated/covers/sonicthehedgehog167-6c999d60-v1.webp"
   },
   {
     "id": "sonicthehedgehog168-1cf7489d",
@@ -4750,7 +4750,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#168",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog168.cbr",
-    "cover": "/generated/covers/sonicthehedgehog168-1cf7489d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog168-1cf7489d-v1.webp"
   },
   {
     "id": "sonicthehedgehog169-189353c7",
@@ -4759,7 +4759,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#169",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog169.cbr",
-    "cover": "/generated/covers/sonicthehedgehog169-189353c7.jpg"
+    "cover": "/generated/covers/sonicthehedgehog169-189353c7-v1.webp"
   },
   {
     "id": "sonicthehedgehog170-3b7b079f",
@@ -4768,7 +4768,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#170",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog170.cbr",
-    "cover": "/generated/covers/sonicthehedgehog170-3b7b079f.jpg"
+    "cover": "/generated/covers/sonicthehedgehog170-3b7b079f-v1.webp"
   },
   {
     "id": "sonicthehedgehog171-eafaf29e",
@@ -4777,7 +4777,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#171",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog171.cbr",
-    "cover": "/generated/covers/sonicthehedgehog171-eafaf29e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog171-eafaf29e-v1.webp"
   },
   {
     "id": "sonicthehedgehog172-ecc7a8d3",
@@ -4786,7 +4786,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#172",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog172.cbr",
-    "cover": "/generated/covers/sonicthehedgehog172-ecc7a8d3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog172-ecc7a8d3-v1.webp"
   },
   {
     "id": "sonicthehedgehog173-1e1cbcff",
@@ -4795,7 +4795,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#173",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog173.cbr",
-    "cover": "/generated/covers/sonicthehedgehog173-1e1cbcff.jpg"
+    "cover": "/generated/covers/sonicthehedgehog173-1e1cbcff-v1.webp"
   },
   {
     "id": "sonicthehedgehog174-04f96c9b",
@@ -4804,7 +4804,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#174",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog174.cbr",
-    "cover": "/generated/covers/sonicthehedgehog174-04f96c9b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog174-04f96c9b-v1.webp"
   },
   {
     "id": "sonicthehedgehog175-47a734dc",
@@ -4813,7 +4813,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#175",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog175.cbr",
-    "cover": "/generated/covers/sonicthehedgehog175-47a734dc.jpg"
+    "cover": "/generated/covers/sonicthehedgehog175-47a734dc-v1.webp"
   },
   {
     "id": "sonicthehedgehog176-730368f8",
@@ -4822,7 +4822,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#176",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog176.cbr",
-    "cover": "/generated/covers/sonicthehedgehog176-730368f8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog176-730368f8-v1.webp"
   },
   {
     "id": "sonicthehedgehog177-f09eff78",
@@ -4831,7 +4831,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#177",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog177.cbr",
-    "cover": "/generated/covers/sonicthehedgehog177-f09eff78.jpg"
+    "cover": "/generated/covers/sonicthehedgehog177-f09eff78-v1.webp"
   },
   {
     "id": "sonicthehedgehog178-8aad93fe",
@@ -4840,7 +4840,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#178",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog178.cbr",
-    "cover": "/generated/covers/sonicthehedgehog178-8aad93fe.jpg"
+    "cover": "/generated/covers/sonicthehedgehog178-8aad93fe-v1.webp"
   },
   {
     "id": "sonicthehedgehog179-3da75b16",
@@ -4849,7 +4849,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#179",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog179.cbr",
-    "cover": "/generated/covers/sonicthehedgehog179-3da75b16.jpg"
+    "cover": "/generated/covers/sonicthehedgehog179-3da75b16-v1.webp"
   },
   {
     "id": "sonicthehedgehog180-9a728a58",
@@ -4858,7 +4858,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#180",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog180.cbr",
-    "cover": "/generated/covers/sonicthehedgehog180-9a728a58.jpg"
+    "cover": "/generated/covers/sonicthehedgehog180-9a728a58-v1.webp"
   },
   {
     "id": "sonicthehedgehog181-f46f20f6",
@@ -4867,7 +4867,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#181",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog181.cbr",
-    "cover": "/generated/covers/sonicthehedgehog181-f46f20f6.jpg"
+    "cover": "/generated/covers/sonicthehedgehog181-f46f20f6-v1.webp"
   },
   {
     "id": "sonicthehedgehog182-2d3e2d08",
@@ -4876,7 +4876,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#182",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog182.cbr",
-    "cover": "/generated/covers/sonicthehedgehog182-2d3e2d08.jpg"
+    "cover": "/generated/covers/sonicthehedgehog182-2d3e2d08-v1.webp"
   },
   {
     "id": "sonicthehedgehog183-c0258927",
@@ -4885,7 +4885,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#183",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog183.cbr",
-    "cover": "/generated/covers/sonicthehedgehog183-c0258927.jpg"
+    "cover": "/generated/covers/sonicthehedgehog183-c0258927-v1.webp"
   },
   {
     "id": "sonicthehedgehog184-e21fa349",
@@ -4894,7 +4894,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#184",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog184.cbr",
-    "cover": "/generated/covers/sonicthehedgehog184-e21fa349.jpg"
+    "cover": "/generated/covers/sonicthehedgehog184-e21fa349-v1.webp"
   },
   {
     "id": "sonicthehedgehog185-ceef306b",
@@ -4903,7 +4903,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#185",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog185.cbr",
-    "cover": "/generated/covers/sonicthehedgehog185-ceef306b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog185-ceef306b-v1.webp"
   },
   {
     "id": "sonicthehedgehog186-c04f3425",
@@ -4912,7 +4912,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#186",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog186.cbr",
-    "cover": "/generated/covers/sonicthehedgehog186-c04f3425.jpg"
+    "cover": "/generated/covers/sonicthehedgehog186-c04f3425-v1.webp"
   },
   {
     "id": "sonicthehedgehog187-b7338b9a",
@@ -4921,7 +4921,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#187",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog187.cbr",
-    "cover": "/generated/covers/sonicthehedgehog187-b7338b9a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog187-b7338b9a-v1.webp"
   },
   {
     "id": "sonicthehedgehog188-90f029b5",
@@ -4930,7 +4930,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#188",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog188.cbr",
-    "cover": "/generated/covers/sonicthehedgehog188-90f029b5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog188-90f029b5-v1.webp"
   },
   {
     "id": "sonicthehedgehog189-0b0b852c",
@@ -4939,7 +4939,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#189",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog189.cbr",
-    "cover": "/generated/covers/sonicthehedgehog189-0b0b852c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog189-0b0b852c-v1.webp"
   },
   {
     "id": "sonicthehedgehog190-fbcaa9c3",
@@ -4948,7 +4948,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#190",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog190.cbr",
-    "cover": "/generated/covers/sonicthehedgehog190-fbcaa9c3.jpg"
+    "cover": "/generated/covers/sonicthehedgehog190-fbcaa9c3-v1.webp"
   },
   {
     "id": "sonicthehedgehog191-9bd74635",
@@ -4957,7 +4957,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#191",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog191.cbr",
-    "cover": "/generated/covers/sonicthehedgehog191-9bd74635.jpg"
+    "cover": "/generated/covers/sonicthehedgehog191-9bd74635-v1.webp"
   },
   {
     "id": "sonicthehedgehog192-7254f293",
@@ -4966,7 +4966,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#192",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog192.cbr",
-    "cover": "/generated/covers/sonicthehedgehog192-7254f293.jpg"
+    "cover": "/generated/covers/sonicthehedgehog192-7254f293-v1.webp"
   },
   {
     "id": "sonicthehedgehog193-3773d389",
@@ -4975,7 +4975,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#193",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog193.cbr",
-    "cover": "/generated/covers/sonicthehedgehog193-3773d389.jpg"
+    "cover": "/generated/covers/sonicthehedgehog193-3773d389-v1.webp"
   },
   {
     "id": "sonicthehedgehog194-8fc1a23d",
@@ -4984,7 +4984,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#194",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog194.cbr",
-    "cover": "/generated/covers/sonicthehedgehog194-8fc1a23d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog194-8fc1a23d-v1.webp"
   },
   {
     "id": "sonicthehedgehog195-b4640265",
@@ -4993,7 +4993,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#195",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog195.cbr",
-    "cover": "/generated/covers/sonicthehedgehog195-b4640265.jpg"
+    "cover": "/generated/covers/sonicthehedgehog195-b4640265-v1.webp"
   },
   {
     "id": "sonicthehedgehog196-e37beb60",
@@ -5002,7 +5002,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#196",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog196.cbr",
-    "cover": "/generated/covers/sonicthehedgehog196-e37beb60.jpg"
+    "cover": "/generated/covers/sonicthehedgehog196-e37beb60-v1.webp"
   },
   {
     "id": "sonicthehedgehog197-cc784d8a",
@@ -5011,7 +5011,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#197",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog197.cbr",
-    "cover": "/generated/covers/sonicthehedgehog197-cc784d8a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog197-cc784d8a-v1.webp"
   },
   {
     "id": "sonicthehedgehog198-d731bbec",
@@ -5020,7 +5020,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#198",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog198.cbr",
-    "cover": "/generated/covers/sonicthehedgehog198-d731bbec.jpg"
+    "cover": "/generated/covers/sonicthehedgehog198-d731bbec-v1.webp"
   },
   {
     "id": "sonicthehedgehog199-d3446b6f",
@@ -5029,7 +5029,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#199",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog199.cbr",
-    "cover": "/generated/covers/sonicthehedgehog199-d3446b6f.jpg"
+    "cover": "/generated/covers/sonicthehedgehog199-d3446b6f-v1.webp"
   },
   {
     "id": "sonicthehedgehog200-2bd035e5",
@@ -5038,7 +5038,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#200",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog200.cbr",
-    "cover": "/generated/covers/sonicthehedgehog200-2bd035e5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog200-2bd035e5-v1.webp"
   },
   {
     "id": "sonicthehedgehog201-f164c8ef",
@@ -5047,7 +5047,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#201",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog201.cbr",
-    "cover": "/generated/covers/sonicthehedgehog201-f164c8ef.jpg"
+    "cover": "/generated/covers/sonicthehedgehog201-f164c8ef-v1.webp"
   },
   {
     "id": "sonicthehedgehog202-cac16dd8",
@@ -5056,7 +5056,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#202",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog202.cbr",
-    "cover": "/generated/covers/sonicthehedgehog202-cac16dd8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog202-cac16dd8-v1.webp"
   },
   {
     "id": "sonicthehedgehog203-9d0eee22",
@@ -5065,7 +5065,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#203",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog203.cbr",
-    "cover": "/generated/covers/sonicthehedgehog203-9d0eee22.jpg"
+    "cover": "/generated/covers/sonicthehedgehog203-9d0eee22-v1.webp"
   },
   {
     "id": "sonicthehedgehog204-3f6ad78e",
@@ -5074,7 +5074,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#204",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog204.cbr",
-    "cover": "/generated/covers/sonicthehedgehog204-3f6ad78e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog204-3f6ad78e-v1.webp"
   },
   {
     "id": "sonicthehedgehog205-9c21bec8",
@@ -5083,7 +5083,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#205",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog205.cbr",
-    "cover": "/generated/covers/sonicthehedgehog205-9c21bec8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog205-9c21bec8-v1.webp"
   },
   {
     "id": "sonicthehedgehog206-febf144a",
@@ -5092,7 +5092,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#206",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog206.cbr",
-    "cover": "/generated/covers/sonicthehedgehog206-febf144a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog206-febf144a-v1.webp"
   },
   {
     "id": "sonicthehedgehog207-5b6ea860",
@@ -5101,7 +5101,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#207",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog207.cbr",
-    "cover": "/generated/covers/sonicthehedgehog207-5b6ea860.jpg"
+    "cover": "/generated/covers/sonicthehedgehog207-5b6ea860-v1.webp"
   },
   {
     "id": "sonicthehedgehog208-710e4810",
@@ -5110,7 +5110,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#208",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog208.cbr",
-    "cover": "/generated/covers/sonicthehedgehog208-710e4810.jpg"
+    "cover": "/generated/covers/sonicthehedgehog208-710e4810-v1.webp"
   },
   {
     "id": "sonicthehedgehog209-8bfd6741",
@@ -5119,7 +5119,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#209",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog209.cbr",
-    "cover": "/generated/covers/sonicthehedgehog209-8bfd6741.jpg"
+    "cover": "/generated/covers/sonicthehedgehog209-8bfd6741-v1.webp"
   },
   {
     "id": "sonicthehedgehog210-e60cba12",
@@ -5128,7 +5128,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#210",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog210.cbr",
-    "cover": "/generated/covers/sonicthehedgehog210-e60cba12.jpg"
+    "cover": "/generated/covers/sonicthehedgehog210-e60cba12-v1.webp"
   },
   {
     "id": "sonicthehedgehog211-c208c7d4",
@@ -5137,7 +5137,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#211",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog211.cbr",
-    "cover": "/generated/covers/sonicthehedgehog211-c208c7d4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog211-c208c7d4-v1.webp"
   },
   {
     "id": "sonicthehedgehog212-437e1091",
@@ -5146,7 +5146,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#212",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog212.cbr",
-    "cover": "/generated/covers/sonicthehedgehog212-437e1091.jpg"
+    "cover": "/generated/covers/sonicthehedgehog212-437e1091-v1.webp"
   },
   {
     "id": "sonicthehedgehog213-04ed6a84",
@@ -5155,7 +5155,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#213",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog213.cbr",
-    "cover": "/generated/covers/sonicthehedgehog213-04ed6a84.jpg"
+    "cover": "/generated/covers/sonicthehedgehog213-04ed6a84-v1.webp"
   },
   {
     "id": "sonicthehedgehog214-516e4105",
@@ -5164,7 +5164,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#214",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog214.cbr",
-    "cover": "/generated/covers/sonicthehedgehog214-516e4105.jpg"
+    "cover": "/generated/covers/sonicthehedgehog214-516e4105-v1.webp"
   },
   {
     "id": "sonicthehedgehog215-678a6cce",
@@ -5173,7 +5173,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#215",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog215.cbr",
-    "cover": "/generated/covers/sonicthehedgehog215-678a6cce.jpg"
+    "cover": "/generated/covers/sonicthehedgehog215-678a6cce-v1.webp"
   },
   {
     "id": "sonicthehedgehog216-4a0c6ea7",
@@ -5182,7 +5182,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#216",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog216.cbr",
-    "cover": "/generated/covers/sonicthehedgehog216-4a0c6ea7.jpg"
+    "cover": "/generated/covers/sonicthehedgehog216-4a0c6ea7-v1.webp"
   },
   {
     "id": "sonicthehedgehog217-d94c4a35",
@@ -5191,7 +5191,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#217",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog217.cbr",
-    "cover": "/generated/covers/sonicthehedgehog217-d94c4a35.jpg"
+    "cover": "/generated/covers/sonicthehedgehog217-d94c4a35-v1.webp"
   },
   {
     "id": "sonicthehedgehog218-adbbd931",
@@ -5200,7 +5200,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#218",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog218.cbr",
-    "cover": "/generated/covers/sonicthehedgehog218-adbbd931.jpg"
+    "cover": "/generated/covers/sonicthehedgehog218-adbbd931-v1.webp"
   },
   {
     "id": "sonicthehedgehog219-03f0a590",
@@ -5209,7 +5209,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#219",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog219.cbr",
-    "cover": "/generated/covers/sonicthehedgehog219-03f0a590.jpg"
+    "cover": "/generated/covers/sonicthehedgehog219-03f0a590-v1.webp"
   },
   {
     "id": "sonicthehedgehog220-6008def0",
@@ -5218,7 +5218,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#220",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog220.cbr",
-    "cover": "/generated/covers/sonicthehedgehog220-6008def0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog220-6008def0-v1.webp"
   },
   {
     "id": "sonicthehedgehog221-f0a4f652",
@@ -5227,7 +5227,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#221",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog221.cbr",
-    "cover": "/generated/covers/sonicthehedgehog221-f0a4f652.jpg"
+    "cover": "/generated/covers/sonicthehedgehog221-f0a4f652-v1.webp"
   },
   {
     "id": "sonicthehedgehog222-ce4861cf",
@@ -5236,7 +5236,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#222",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog222.cbr",
-    "cover": "/generated/covers/sonicthehedgehog222-ce4861cf.jpg"
+    "cover": "/generated/covers/sonicthehedgehog222-ce4861cf-v1.webp"
   },
   {
     "id": "sonicthehedgehog223-bdc25add",
@@ -5245,7 +5245,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#223",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog223.cbr",
-    "cover": "/generated/covers/sonicthehedgehog223-bdc25add.jpg"
+    "cover": "/generated/covers/sonicthehedgehog223-bdc25add-v1.webp"
   },
   {
     "id": "sonicthehedgehog224-99e56612",
@@ -5254,7 +5254,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#224",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog224.cbr",
-    "cover": "/generated/covers/sonicthehedgehog224-99e56612.jpg"
+    "cover": "/generated/covers/sonicthehedgehog224-99e56612-v1.webp"
   },
   {
     "id": "sonicthehedgehog225-ba734305",
@@ -5263,7 +5263,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#225",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog225.cbr",
-    "cover": "/generated/covers/sonicthehedgehog225-ba734305.jpg"
+    "cover": "/generated/covers/sonicthehedgehog225-ba734305-v1.webp"
   },
   {
     "id": "sonicthehedgehog226-748aaf15",
@@ -5272,7 +5272,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#226",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog226.cbr",
-    "cover": "/generated/covers/sonicthehedgehog226-748aaf15.jpg"
+    "cover": "/generated/covers/sonicthehedgehog226-748aaf15-v1.webp"
   },
   {
     "id": "sonicthehedgehog227-a316e9b0",
@@ -5281,7 +5281,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#227",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog227.cbr",
-    "cover": "/generated/covers/sonicthehedgehog227-a316e9b0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog227-a316e9b0-v1.webp"
   },
   {
     "id": "sonicthehedgehog228-3a36be69",
@@ -5290,7 +5290,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#228",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog228.cbr",
-    "cover": "/generated/covers/sonicthehedgehog228-3a36be69.jpg"
+    "cover": "/generated/covers/sonicthehedgehog228-3a36be69-v1.webp"
   },
   {
     "id": "sonicthehedgehog229-2064f4b5",
@@ -5299,7 +5299,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#229",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog229.cbr",
-    "cover": "/generated/covers/sonicthehedgehog229-2064f4b5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog229-2064f4b5-v1.webp"
   },
   {
     "id": "sonicthehedgehog230-0df98349",
@@ -5308,7 +5308,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#230",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog230.cbr",
-    "cover": "/generated/covers/sonicthehedgehog230-0df98349.jpg"
+    "cover": "/generated/covers/sonicthehedgehog230-0df98349-v1.webp"
   },
   {
     "id": "sonicthehedgehog231-bcc4353c",
@@ -5317,7 +5317,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#231",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog231.cbr",
-    "cover": "/generated/covers/sonicthehedgehog231-bcc4353c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog231-bcc4353c-v1.webp"
   },
   {
     "id": "sonicthehedgehog232-fe60f6d4",
@@ -5326,7 +5326,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#232",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog232.cbr",
-    "cover": "/generated/covers/sonicthehedgehog232-fe60f6d4.jpg"
+    "cover": "/generated/covers/sonicthehedgehog232-fe60f6d4-v1.webp"
   },
   {
     "id": "sonicthehedgehog233-1e9e11bb",
@@ -5335,7 +5335,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#233",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog233.cbr",
-    "cover": "/generated/covers/sonicthehedgehog233-1e9e11bb.jpg"
+    "cover": "/generated/covers/sonicthehedgehog233-1e9e11bb-v1.webp"
   },
   {
     "id": "sonicthehedgehog234-8488dfab",
@@ -5344,7 +5344,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#234",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog234.cbr",
-    "cover": "/generated/covers/sonicthehedgehog234-8488dfab.jpg"
+    "cover": "/generated/covers/sonicthehedgehog234-8488dfab-v1.webp"
   },
   {
     "id": "sonicthehedgehog235-8a6f4f59",
@@ -5353,7 +5353,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#235",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog235.cbr",
-    "cover": "/generated/covers/sonicthehedgehog235-8a6f4f59.jpg"
+    "cover": "/generated/covers/sonicthehedgehog235-8a6f4f59-v1.webp"
   },
   {
     "id": "sonicthehedgehog236-27e0f728",
@@ -5362,7 +5362,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#236",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog236.cbr",
-    "cover": "/generated/covers/sonicthehedgehog236-27e0f728.jpg"
+    "cover": "/generated/covers/sonicthehedgehog236-27e0f728-v1.webp"
   },
   {
     "id": "sonicthehedgehog237-ff3e3708",
@@ -5371,7 +5371,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#237",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog237.cbr",
-    "cover": "/generated/covers/sonicthehedgehog237-ff3e3708.jpg"
+    "cover": "/generated/covers/sonicthehedgehog237-ff3e3708-v1.webp"
   },
   {
     "id": "sonicthehedgehog238-6c146dc8",
@@ -5380,7 +5380,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#238",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog238.cbr",
-    "cover": "/generated/covers/sonicthehedgehog238-6c146dc8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog238-6c146dc8-v1.webp"
   },
   {
     "id": "sonicthehedgehog239-3cfff1ee",
@@ -5389,7 +5389,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#239",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog239.cbr",
-    "cover": "/generated/covers/sonicthehedgehog239-3cfff1ee.jpg"
+    "cover": "/generated/covers/sonicthehedgehog239-3cfff1ee-v1.webp"
   },
   {
     "id": "sonicthehedgehog240-1a6672b7",
@@ -5398,7 +5398,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#240",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog240.cbr",
-    "cover": "/generated/covers/sonicthehedgehog240-1a6672b7.jpg"
+    "cover": "/generated/covers/sonicthehedgehog240-1a6672b7-v1.webp"
   },
   {
     "id": "sonicthehedgehog241-eafc9176",
@@ -5407,7 +5407,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#241",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog241.cbr",
-    "cover": "/generated/covers/sonicthehedgehog241-eafc9176.jpg"
+    "cover": "/generated/covers/sonicthehedgehog241-eafc9176-v1.webp"
   },
   {
     "id": "sonicthehedgehog242-57401bf2",
@@ -5416,7 +5416,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#242",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog242.cbr",
-    "cover": "/generated/covers/sonicthehedgehog242-57401bf2.jpg"
+    "cover": "/generated/covers/sonicthehedgehog242-57401bf2-v1.webp"
   },
   {
     "id": "sonicthehedgehog243-67b6a529",
@@ -5425,7 +5425,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#243",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog243.cbr",
-    "cover": "/generated/covers/sonicthehedgehog243-67b6a529.jpg"
+    "cover": "/generated/covers/sonicthehedgehog243-67b6a529-v1.webp"
   },
   {
     "id": "sonicthehedgehog244-eb07cc9f",
@@ -5434,7 +5434,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#244",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog244.cbr",
-    "cover": "/generated/covers/sonicthehedgehog244-eb07cc9f.jpg"
+    "cover": "/generated/covers/sonicthehedgehog244-eb07cc9f-v1.webp"
   },
   {
     "id": "sonicthehedgehog245-ce1e9165",
@@ -5443,7 +5443,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#245",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog245.cbr",
-    "cover": "/generated/covers/sonicthehedgehog245-ce1e9165.jpg"
+    "cover": "/generated/covers/sonicthehedgehog245-ce1e9165-v1.webp"
   },
   {
     "id": "sonicthehedgehog246-9bf17aee",
@@ -5452,7 +5452,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#246",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog246.cbr",
-    "cover": "/generated/covers/sonicthehedgehog246-9bf17aee.jpg"
+    "cover": "/generated/covers/sonicthehedgehog246-9bf17aee-v1.webp"
   },
   {
     "id": "sonicthehedgehog247-b830f0cb",
@@ -5461,7 +5461,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#247",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog247.cbr",
-    "cover": "/generated/covers/sonicthehedgehog247-b830f0cb.jpg"
+    "cover": "/generated/covers/sonicthehedgehog247-b830f0cb-v1.webp"
   },
   {
     "id": "sonicthehedgehog248-4bfec558",
@@ -5470,7 +5470,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#248",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog248.cbr",
-    "cover": "/generated/covers/sonicthehedgehog248-4bfec558.jpg"
+    "cover": "/generated/covers/sonicthehedgehog248-4bfec558-v1.webp"
   },
   {
     "id": "sonicthehedgehog249-3fdadfd0",
@@ -5479,7 +5479,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#249",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog249.cbr",
-    "cover": "/generated/covers/sonicthehedgehog249-3fdadfd0.jpg"
+    "cover": "/generated/covers/sonicthehedgehog249-3fdadfd0-v1.webp"
   },
   {
     "id": "sonicthehedgehog250-8f9be391",
@@ -5488,7 +5488,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#250",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog250.cbr",
-    "cover": "/generated/covers/sonicthehedgehog250-8f9be391.jpg"
+    "cover": "/generated/covers/sonicthehedgehog250-8f9be391-v1.webp"
   },
   {
     "id": "sonicthehedgehog251-43221e71",
@@ -5497,7 +5497,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#251",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog251.cbr",
-    "cover": "/generated/covers/sonicthehedgehog251-43221e71.jpg"
+    "cover": "/generated/covers/sonicthehedgehog251-43221e71-v1.webp"
   },
   {
     "id": "sonicthehedgehog252-2c33bbff",
@@ -5506,7 +5506,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#252",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog252.cbr",
-    "cover": "/generated/covers/sonicthehedgehog252-2c33bbff.jpg"
+    "cover": "/generated/covers/sonicthehedgehog252-2c33bbff-v1.webp"
   },
   {
     "id": "sonicthehedgehog253-6ff8c33a",
@@ -5515,7 +5515,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#253",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog253.cbr",
-    "cover": "/generated/covers/sonicthehedgehog253-6ff8c33a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog253-6ff8c33a-v1.webp"
   },
   {
     "id": "sonicthehedgehog254-91d7e729",
@@ -5524,7 +5524,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#254",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog254.cbr",
-    "cover": "/generated/covers/sonicthehedgehog254-91d7e729.jpg"
+    "cover": "/generated/covers/sonicthehedgehog254-91d7e729-v1.webp"
   },
   {
     "id": "sonicthehedgehog255-c09a7a89",
@@ -5533,7 +5533,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#255",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog255.cbr",
-    "cover": "/generated/covers/sonicthehedgehog255-c09a7a89.jpg"
+    "cover": "/generated/covers/sonicthehedgehog255-c09a7a89-v1.webp"
   },
   {
     "id": "sonicthehedgehog256-670e8946",
@@ -5542,7 +5542,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#256",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog256.cbr",
-    "cover": "/generated/covers/sonicthehedgehog256-670e8946.jpg"
+    "cover": "/generated/covers/sonicthehedgehog256-670e8946-v1.webp"
   },
   {
     "id": "sonicthehedgehog257-ed047940",
@@ -5551,7 +5551,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#257",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog257.cbr",
-    "cover": "/generated/covers/sonicthehedgehog257-ed047940.jpg"
+    "cover": "/generated/covers/sonicthehedgehog257-ed047940-v1.webp"
   },
   {
     "id": "sonicthehedgehog258-eefc1a67",
@@ -5560,7 +5560,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#258",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog258.cbr",
-    "cover": "/generated/covers/sonicthehedgehog258-eefc1a67.jpg"
+    "cover": "/generated/covers/sonicthehedgehog258-eefc1a67-v1.webp"
   },
   {
     "id": "sonicthehedgehog259-76956018",
@@ -5569,7 +5569,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#259",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog259.cbr",
-    "cover": "/generated/covers/sonicthehedgehog259-76956018.jpg"
+    "cover": "/generated/covers/sonicthehedgehog259-76956018-v1.webp"
   },
   {
     "id": "sonicthehedgehog260-5d9fa3af",
@@ -5578,7 +5578,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#260",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog260.cbr",
-    "cover": "/generated/covers/sonicthehedgehog260-5d9fa3af.jpg"
+    "cover": "/generated/covers/sonicthehedgehog260-5d9fa3af-v1.webp"
   },
   {
     "id": "sonicthehedgehog262-4f8a4cd2",
@@ -5587,7 +5587,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#262",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog262.cbr",
-    "cover": "/generated/covers/sonicthehedgehog262-4f8a4cd2.jpg"
+    "cover": "/generated/covers/sonicthehedgehog262-4f8a4cd2-v1.webp"
   },
   {
     "id": "sonicthehedgehog263-2e723517",
@@ -5596,7 +5596,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#263",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog263.cbr",
-    "cover": "/generated/covers/sonicthehedgehog263-2e723517.jpg"
+    "cover": "/generated/covers/sonicthehedgehog263-2e723517-v1.webp"
   },
   {
     "id": "sonicthehedgehog264-73519ac6",
@@ -5605,7 +5605,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#264",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog264.cbr",
-    "cover": "/generated/covers/sonicthehedgehog264-73519ac6.jpg"
+    "cover": "/generated/covers/sonicthehedgehog264-73519ac6-v1.webp"
   },
   {
     "id": "sonicthehedgehog265-9694bea1",
@@ -5614,7 +5614,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#265",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog265.cbr",
-    "cover": "/generated/covers/sonicthehedgehog265-9694bea1.jpg"
+    "cover": "/generated/covers/sonicthehedgehog265-9694bea1-v1.webp"
   },
   {
     "id": "sonicthehedgehog266-a4b8233c",
@@ -5623,7 +5623,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#266",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog266.cbr",
-    "cover": "/generated/covers/sonicthehedgehog266-a4b8233c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog266-a4b8233c-v1.webp"
   },
   {
     "id": "sonicthehedgehog267-8a81dddc",
@@ -5632,7 +5632,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#267",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog267.cbr",
-    "cover": "/generated/covers/sonicthehedgehog267-8a81dddc.jpg"
+    "cover": "/generated/covers/sonicthehedgehog267-8a81dddc-v1.webp"
   },
   {
     "id": "sonicthehedgehog268-216cad60",
@@ -5641,7 +5641,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#268",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog268.cbr",
-    "cover": "/generated/covers/sonicthehedgehog268-216cad60.jpg"
+    "cover": "/generated/covers/sonicthehedgehog268-216cad60-v1.webp"
   },
   {
     "id": "sonicthehedgehog269-7c3234b5",
@@ -5650,7 +5650,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#269",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog269.cbr",
-    "cover": "/generated/covers/sonicthehedgehog269-7c3234b5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog269-7c3234b5-v1.webp"
   },
   {
     "id": "sonicthehedgehog270-72f73c71",
@@ -5659,7 +5659,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#270",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog270.cbr",
-    "cover": "/generated/covers/sonicthehedgehog270-72f73c71.jpg"
+    "cover": "/generated/covers/sonicthehedgehog270-72f73c71-v1.webp"
   },
   {
     "id": "sonicthehedgehog271-704d7d87",
@@ -5668,7 +5668,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#271",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog271.cbr",
-    "cover": "/generated/covers/sonicthehedgehog271-704d7d87.jpg"
+    "cover": "/generated/covers/sonicthehedgehog271-704d7d87-v1.webp"
   },
   {
     "id": "sonicthehedgehog272-69825565",
@@ -5677,7 +5677,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#272",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog272.cbr",
-    "cover": "/generated/covers/sonicthehedgehog272-69825565.jpg"
+    "cover": "/generated/covers/sonicthehedgehog272-69825565-v1.webp"
   },
   {
     "id": "sonicthehedgehog273-da6c237b",
@@ -5686,7 +5686,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#273",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog273.cbr",
-    "cover": "/generated/covers/sonicthehedgehog273-da6c237b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog273-da6c237b-v1.webp"
   },
   {
     "id": "sonicthehedgehog274-4cc9fb3b",
@@ -5695,7 +5695,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#274",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog274.cbr",
-    "cover": "/generated/covers/sonicthehedgehog274-4cc9fb3b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog274-4cc9fb3b-v1.webp"
   },
   {
     "id": "sonicthehedgehog275-6b07d19c",
@@ -5704,7 +5704,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#275",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog275.cbz",
-    "cover": "/generated/covers/sonicthehedgehog275-6b07d19c.jpg"
+    "cover": "/generated/covers/sonicthehedgehog275-6b07d19c-v1.webp"
   },
   {
     "id": "sonicthehedgehog276-456dfb70",
@@ -5713,7 +5713,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#276",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog276.cbz",
-    "cover": "/generated/covers/sonicthehedgehog276-456dfb70.jpg"
+    "cover": "/generated/covers/sonicthehedgehog276-456dfb70-v1.webp"
   },
   {
     "id": "sonicthehedgehog277-18fd7544",
@@ -5722,7 +5722,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#277",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog277.cbr",
-    "cover": "/generated/covers/sonicthehedgehog277-18fd7544.jpg"
+    "cover": "/generated/covers/sonicthehedgehog277-18fd7544-v1.webp"
   },
   {
     "id": "sonicthehedgehog278-26912795",
@@ -5731,7 +5731,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#278",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog278.cbz",
-    "cover": "/generated/covers/sonicthehedgehog278-26912795.jpg"
+    "cover": "/generated/covers/sonicthehedgehog278-26912795-v1.webp"
   },
   {
     "id": "sonicthehedgehog279-b4ee6d94",
@@ -5740,7 +5740,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#279",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog279.cbz",
-    "cover": "/generated/covers/sonicthehedgehog279-b4ee6d94.jpg"
+    "cover": "/generated/covers/sonicthehedgehog279-b4ee6d94-v1.webp"
   },
   {
     "id": "sonicthehedgehog280-fd3a70b6",
@@ -5749,7 +5749,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#280",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog280.cbr",
-    "cover": "/generated/covers/sonicthehedgehog280-fd3a70b6.jpg"
+    "cover": "/generated/covers/sonicthehedgehog280-fd3a70b6-v1.webp"
   },
   {
     "id": "sonicthehedgehog281-6dfb2a0b",
@@ -5758,7 +5758,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#281",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog281.cbr",
-    "cover": "/generated/covers/sonicthehedgehog281-6dfb2a0b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog281-6dfb2a0b-v1.webp"
   },
   {
     "id": "sonicthehedgehog282-21009f3d",
@@ -5767,7 +5767,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#282",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog282.cbr",
-    "cover": "/generated/covers/sonicthehedgehog282-21009f3d.jpg"
+    "cover": "/generated/covers/sonicthehedgehog282-21009f3d-v1.webp"
   },
   {
     "id": "sonicthehedgehog283-5f849cb5",
@@ -5776,7 +5776,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#283",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog283.cbr",
-    "cover": "/generated/covers/sonicthehedgehog283-5f849cb5.jpg"
+    "cover": "/generated/covers/sonicthehedgehog283-5f849cb5-v1.webp"
   },
   {
     "id": "sonicthehedgehog284-ae63e784",
@@ -5785,7 +5785,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#284",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog284.cbr",
-    "cover": "/generated/covers/sonicthehedgehog284-ae63e784.jpg"
+    "cover": "/generated/covers/sonicthehedgehog284-ae63e784-v1.webp"
   },
   {
     "id": "sonicthehedgehog285-5b5df286",
@@ -5794,7 +5794,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#285",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog285.cbr",
-    "cover": "/generated/covers/sonicthehedgehog285-5b5df286.jpg"
+    "cover": "/generated/covers/sonicthehedgehog285-5b5df286-v1.webp"
   },
   {
     "id": "sonicthehedgehog286-27c04f6a",
@@ -5803,7 +5803,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#286",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog286.cbr",
-    "cover": "/generated/covers/sonicthehedgehog286-27c04f6a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog286-27c04f6a-v1.webp"
   },
   {
     "id": "sonicthehedgehog287-ffc89fd8",
@@ -5812,7 +5812,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#287",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog287.cbr",
-    "cover": "/generated/covers/sonicthehedgehog287-ffc89fd8.jpg"
+    "cover": "/generated/covers/sonicthehedgehog287-ffc89fd8-v1.webp"
   },
   {
     "id": "sonicthehedgehog288-62080b0e",
@@ -5821,7 +5821,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#288",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog288.cbr",
-    "cover": "/generated/covers/sonicthehedgehog288-62080b0e.jpg"
+    "cover": "/generated/covers/sonicthehedgehog288-62080b0e-v1.webp"
   },
   {
     "id": "sonicthehedgehog289-adb0e47a",
@@ -5830,7 +5830,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#289",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog289.cbr",
-    "cover": "/generated/covers/sonicthehedgehog289-adb0e47a.jpg"
+    "cover": "/generated/covers/sonicthehedgehog289-adb0e47a-v1.webp"
   },
   {
     "id": "sonicthehedgehog290-f5cd678b",
@@ -5839,7 +5839,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-1993",
     "issue": "#290",
     "archive": "/comics/Sonic%20The%20Hedgehog%20(1993)/SonicTheHedgehog290.cbr",
-    "cover": "/generated/covers/sonicthehedgehog290-f5cd678b.jpg"
+    "cover": "/generated/covers/sonicthehedgehog290-f5cd678b-v1.webp"
   },
   {
     "id": "sonic-the-hedgehog-miniseries-00-fd6a97b8",
@@ -5848,7 +5848,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-miniseries",
     "issue": "#0",
     "archive": "/comics/Sonic%20the%20Hedgehog%20Miniseries/Sonic%20the%20Hedgehog%20Miniseries%2000.cbr",
-    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-00-fd6a97b8.jpg"
+    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-00-fd6a97b8-v1.webp"
   },
   {
     "id": "sonic-the-hedgehog-miniseries-01-7f70e140",
@@ -5857,7 +5857,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-miniseries",
     "issue": "#1",
     "archive": "/comics/Sonic%20the%20Hedgehog%20Miniseries/Sonic%20the%20Hedgehog%20Miniseries%2001.cbr",
-    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-01-7f70e140.jpg"
+    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-01-7f70e140-v1.webp"
   },
   {
     "id": "sonic-the-hedgehog-miniseries-02-aa969fdc",
@@ -5866,7 +5866,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-miniseries",
     "issue": "#2",
     "archive": "/comics/Sonic%20the%20Hedgehog%20Miniseries/Sonic%20the%20Hedgehog%20Miniseries%2002.cbr",
-    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-02-aa969fdc.jpg"
+    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-02-aa969fdc-v1.webp"
   },
   {
     "id": "sonic-the-hedgehog-miniseries-03-91f3ed49",
@@ -5875,7 +5875,7 @@ export const comics = [
     "seriesId": "sonic-the-hedgehog-miniseries",
     "issue": "#3",
     "archive": "/comics/Sonic%20the%20Hedgehog%20Miniseries/Sonic%20the%20Hedgehog%20Miniseries%2003.cbr",
-    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-03-91f3ed49.jpg"
+    "cover": "/generated/covers/sonic-the-hedgehog-miniseries-03-91f3ed49-v1.webp"
   },
   {
     "id": "spidey-his-amazing-friends-01-be050c92",
@@ -5884,7 +5884,7 @@ export const comics = [
     "seriesId": "spidey-his-amazing-friends-2024",
     "issue": "#1",
     "archive": "/comics/Spidey%20%26%20His%20Amazing%20Friends%20(2024)/Spidey%20%26%20His%20Amazing%20Friends%2001%20.cbz",
-    "cover": "/generated/covers/spidey-his-amazing-friends-01-be050c92.jpg"
+    "cover": "/generated/covers/spidey-his-amazing-friends-01-be050c92-v1.webp"
   },
   {
     "id": "spidey-his-amazing-friends-02-467ea5ce",
@@ -5893,7 +5893,7 @@ export const comics = [
     "seriesId": "spidey-his-amazing-friends-2024",
     "issue": "#2",
     "archive": "/comics/Spidey%20%26%20His%20Amazing%20Friends%20(2024)/Spidey%20%26%20His%20Amazing%20Friends%2002.cbz",
-    "cover": "/generated/covers/spidey-his-amazing-friends-02-467ea5ce.jpg"
+    "cover": "/generated/covers/spidey-his-amazing-friends-02-467ea5ce-v1.webp"
   },
   {
     "id": "tailsminiseries01-de5a4676",
@@ -5902,7 +5902,7 @@ export const comics = [
     "seriesId": "tails-miniseries",
     "issue": "#1",
     "archive": "/comics/Tails%20Miniseries/TailsMiniseries01.cbr",
-    "cover": "/generated/covers/tailsminiseries01-de5a4676.jpg"
+    "cover": "/generated/covers/tailsminiseries01-de5a4676-v1.webp"
   },
   {
     "id": "tailsminiseries02-f18aa311",
@@ -5911,7 +5911,7 @@ export const comics = [
     "seriesId": "tails-miniseries",
     "issue": "#2",
     "archive": "/comics/Tails%20Miniseries/TailsMiniseries02.cbr",
-    "cover": "/generated/covers/tailsminiseries02-f18aa311.jpg"
+    "cover": "/generated/covers/tailsminiseries02-f18aa311-v1.webp"
   },
   {
     "id": "tailsminiseries03-6860dc18",
@@ -5920,7 +5920,7 @@ export const comics = [
     "seriesId": "tails-miniseries",
     "issue": "#3",
     "archive": "/comics/Tails%20Miniseries/TailsMiniseries03.cbr",
-    "cover": "/generated/covers/tailsminiseries03-6860dc18.jpg"
+    "cover": "/generated/covers/tailsminiseries03-6860dc18-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-1-6db58fa0",
@@ -5929,7 +5929,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#1",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%231.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-1-6db58fa0.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-1-6db58fa0-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-2-7f4d92e4",
@@ -5938,7 +5938,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#2",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%232.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-2-7f4d92e4.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-2-7f4d92e4-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-3-e3c38994",
@@ -5947,7 +5947,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#3",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%233.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-3-e3c38994.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-3-e3c38994-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-4-68e76398",
@@ -5956,7 +5956,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#4",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%234.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-4-68e76398.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-4-68e76398-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-5-f8a6446e",
@@ -5965,7 +5965,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#5",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%235.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-5-f8a6446e.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-5-f8a6446e-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-6-e65f76a4",
@@ -5974,7 +5974,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#6",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%236.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-6-e65f76a4.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-6-e65f76a4-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-7-1cb7214a",
@@ -5983,7 +5983,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#7",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%237.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-7-1cb7214a.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-7-1cb7214a-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-9-e6000a96",
@@ -5992,7 +5992,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#9",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%239.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-9-e6000a96.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-9-e6000a96-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-10-1a1b15ff",
@@ -6001,7 +6001,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#10",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2310.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-10-1a1b15ff.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-10-1a1b15ff-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-11-da64a050",
@@ -6010,7 +6010,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#11",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2311.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-11-da64a050.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-11-da64a050-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-12-f107ea53",
@@ -6019,7 +6019,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#12",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2312.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-12-f107ea53.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-12-f107ea53-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-13-2f85c634",
@@ -6028,7 +6028,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#13",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2313.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-13-2f85c634.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-13-2f85c634-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-14-fefce99d",
@@ -6037,7 +6037,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#14",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2314.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-14-fefce99d.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-14-fefce99d-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-15-aaf6b66c",
@@ -6046,7 +6046,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#15",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2315.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-15-aaf6b66c.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-15-aaf6b66c-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-16-69ccf9bc",
@@ -6055,7 +6055,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#16",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2316.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-16-69ccf9bc.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-16-69ccf9bc-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-17-33f7b801",
@@ -6064,7 +6064,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#17",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2317.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-17-33f7b801.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-17-33f7b801-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-19-215f8075",
@@ -6073,7 +6073,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#19",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2319.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-19-215f8075.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-19-215f8075-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-21-1748684d",
@@ -6082,7 +6082,7 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#21",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2321.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-21-1748684d.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-21-1748684d-v1.webp"
   },
   {
     "id": "the-flintstones-1995-issue-22-d47bb5d4",
@@ -6091,6 +6091,6 @@ export const comics = [
     "seriesId": "the-flintstones-1995",
     "issue": "#22",
     "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2322.cbz",
-    "cover": "/generated/covers/the-flintstones-1995-issue-22-d47bb5d4.jpg"
+    "cover": "/generated/covers/the-flintstones-1995-issue-22-d47bb5d4-v1.webp"
   }
 ]
