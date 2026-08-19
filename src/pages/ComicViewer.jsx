@@ -77,6 +77,25 @@ function ComicViewer({ user }) {
   const [error, setError] = useState('')
   const [fit, setFit] = useState('width')
   const [readerMode, setReaderMode] = useState('single')
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  useEffect(() => {
+    function updateFullscreenState() {
+      setIsFullscreen(document.fullscreenElement === viewerRef.current)
+    }
+
+    document.addEventListener('fullscreenchange', updateFullscreenState)
+    updateFullscreenState()
+    return () => document.removeEventListener('fullscreenchange', updateFullscreenState)
+  }, [])
+
+  async function toggleFullscreen() {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen?.()
+    } else {
+      await viewerRef.current?.requestFullscreen?.()
+    }
+  }
 
   useEffect(() => {
     if (!comic) return
@@ -185,7 +204,6 @@ function ComicViewer({ user }) {
   return (
     <section class="comic-viewer" ref={viewerRef}>
       <div class="viewer-toolbar">
-        <a href={sitePath(`/${comic.seriesId}`)} aria-label={`Back to ${comic.series}`}>← Series</a>
         <div class="viewer-comic-nav">
           <strong>{comic.series}</strong>
           <select
@@ -211,7 +229,15 @@ function ComicViewer({ user }) {
           >
             {readerMode === 'single' ? 'All pages' : 'Single page'}
           </button>
-          <button type="button" onClick={() => viewerRef.current?.requestFullscreen?.()}>Fullscreen</button>
+          <button
+            class={isFullscreen ? 'fullscreen-toggle exit-fullscreen' : 'fullscreen-toggle'}
+            type="button"
+            onClick={toggleFullscreen}
+            aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+          >
+            {isFullscreen ? '×' : 'Fullscreen'}
+          </button>
         </div>
       </div>
 

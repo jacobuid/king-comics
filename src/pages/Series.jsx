@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 import { useRoute } from 'preact-iso'
 import { getSeries } from '../data/comics.js'
 import { getProfileProgress, setComicBookmark } from '../utils/progress.js'
@@ -9,6 +9,23 @@ function Series({ user }) {
   const { params } = useRoute()
   const series = getSeries(params.seriesId)
   const [progress, setProgress] = useState(() => getProfileProgress(user.username))
+
+  useEffect(() => {
+    const targetId = window.location.hash.slice(1)
+    if (!targetId.startsWith('comic-')) return
+
+    let secondFrame = null
+    const firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView({ block: 'center' })
+      })
+    })
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame)
+      if (secondFrame !== null) window.cancelAnimationFrame(secondFrame)
+    }
+  }, [series?.id])
 
   function toggleBookmark(comicId) {
     const item = progress[comicId]
@@ -28,7 +45,6 @@ function Series({ user }) {
   return (
     <section class="page series-page">
       <div class="series-heading">
-        <a href={sitePath('/')}>← All series</a>
         <h1>{series.name}</h1>
         <p>{series.comics.length} {series.comics.length === 1 ? 'issue' : 'issues'}</p>
       </div>
@@ -39,7 +55,7 @@ function Series({ user }) {
           const isBookmarked = item?.bookmarked ?? (item?.status === 'saved' || item?.status === 'queue')
 
           return (
-            <article class="comic-card" key={comic.id}>
+            <article class="comic-card" id={`comic-${comic.id}`} key={comic.id}>
               <a class="comic-open" href={sitePath(`/comic/${comic.id}`)}>
                 {comic.cover ? (
                   <img class="comic-cover-image" src={assetPath(comic.cover)} alt={`${comic.title} ${comic.issue} cover`} />

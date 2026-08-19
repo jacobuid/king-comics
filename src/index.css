@@ -21,13 +21,11 @@ body {
 
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 78px;
-  padding: 0.9rem clamp(1rem, 6vw, 5.5rem);
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
   border-bottom: 1px solid rgb(148 163 184 / 30%);
   background: rgb(3 17 39 / 88%);
-  backdrop-filter: blur(12px);
 }
 
 a {
@@ -36,10 +34,55 @@ a {
 }
 
 .brand {
+  display: block;
+  width: 100%;
   color: white;
-  font-size: 1.55rem;
+  line-height: 0;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header-menu-slot {
+  height: 54px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 54px;
+  padding: 0.65rem clamp(1rem, 6vw, 5.5rem);
+  border-top: 1px solid rgb(148 163 184 / 22%);
+  border-bottom: 1px solid rgb(148 163 184 / 30%);
+  background: rgb(3 17 39 / 80%);
+  backdrop-filter: blur(12px);
+  transition: transform 180ms ease-out, box-shadow 180ms ease-out;
+}
+
+.header-menu.fixed-visible,
+.header-menu.fixed-hidden {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 28%);
+}
+
+.header-menu.fixed-hidden {
+  transform: translateY(-100%);
+}
+
+.header-back-link {
+  margin-right: auto;
+  color: #8fd8ff;
+  text-decoration: none;
 }
 
 nav {
@@ -51,6 +94,13 @@ nav a {
   color: #dce9fb;
   text-decoration-color: #2997ff;
   text-underline-offset: 0.35rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-menu,
+  .viewer-toolbar {
+    transition: none;
+  }
 }
 
 main {
@@ -568,14 +618,9 @@ button:disabled {
   text-align: left;
 }
 
-.series-heading > a {
-  color: #8fd8ff;
-  text-decoration: none;
-}
-
 .series-heading h1 {
   max-width: none;
-  margin: 1rem 0 0;
+  margin: 0;
   font-size: clamp(2.5rem, 7vw, 5rem);
 }
 
@@ -585,11 +630,17 @@ button:disabled {
 }
 
 .comic-card {
+  scroll-margin-top: 70px;
   padding: 1rem;
   border: 1px solid #536988;
   border-radius: 0.75rem;
   background: linear-gradient(145deg, #0b2853, #071a38);
   box-shadow: 0 12px 30px rgb(0 0 0 / 25%);
+}
+
+.comic-card:target {
+  border-color: #53b9ff;
+  box-shadow: 0 0 0 3px rgb(83 185 255 / 22%), 0 12px 30px rgb(0 0 0 / 25%);
 }
 
 .comic-card h2 {
@@ -638,14 +689,23 @@ button:disabled {
 }
 
 .viewer-toolbar {
+  position: sticky;
+  z-index: 900;
+  top: 0;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 1rem;
   align-items: center;
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #34435a;
-  background: #071225;
+  background: rgb(7 18 37 / 80%);
+  backdrop-filter: blur(12px);
   text-align: left;
+  transition: top 180ms ease-out;
+}
+
+.site-header.menu-fixed-visible + main .viewer-toolbar {
+  top: 54px;
 }
 
 .viewer-comic-nav {
@@ -684,6 +744,13 @@ button:disabled {
   padding: 0.45rem 0.7rem;
   box-shadow: none;
   font-size: 0.8rem;
+}
+
+.viewer-toolbar .exit-fullscreen {
+  min-width: 2.25rem;
+  padding-inline: 0.65rem;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .viewer-stage {
@@ -915,7 +982,7 @@ input {
 
 @media (max-width: 960px) {
   .viewer-toolbar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
   .viewer-comic-nav strong {
