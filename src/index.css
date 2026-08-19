@@ -753,6 +753,219 @@ button:disabled {
   line-height: 1;
 }
 
+.viewer-toolbar .gesture-help-button {
+  display: grid;
+  width: 2.25rem;
+  padding-inline: 0.6rem;
+  place-items: center;
+}
+
+.gesture-help-button svg {
+  width: 1rem;
+  fill: currentcolor;
+}
+
+.gesture-guide-layer {
+  position: fixed;
+  z-index: 1100;
+  inset: 0;
+  display: grid;
+  padding: 1.25rem;
+  background: rgb(0 5 15 / 20%);
+  place-items: center;
+}
+
+.gesture-guide-wrap {
+  width: min(560px, 100%);
+  animation: gesture-guide-enter 280ms ease-out both;
+}
+
+.gesture-guide-popover {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid rgb(129 184 255 / 65%);
+  border-radius: 1rem;
+  background: rgb(7 18 37 / 80%);
+  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 55%);
+  backdrop-filter: blur(16px);
+  text-align: center;
+}
+
+.gesture-guide-kicker {
+  color: #69bcff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gesture-guide-popover h2 {
+  max-width: none;
+  margin: 0.35rem 0 1.25rem;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+}
+
+.gesture-demos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.gesture-demo {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.8rem;
+  border: 1px solid rgb(113 155 210 / 35%);
+  border-radius: 0.75rem;
+  background: rgb(2 12 30 / 45%);
+}
+
+.gesture-demo > span {
+  color: #a9c4df;
+  font-size: 0.8rem;
+}
+
+.gesture-animation {
+  --arrow-shift: 0.5rem;
+  position: relative;
+  width: 5rem;
+  height: 4rem;
+  margin: 0 auto 0.25rem;
+}
+
+.gesture-demo-left .gesture-animation {
+  --arrow-shift: -0.5rem;
+}
+
+.gesture-hand-icon,
+.gesture-arrow-icon,
+.gesture-swipe-tip svg {
+  fill: currentcolor;
+}
+
+.gesture-hand-icon {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0;
+  width: 1.8rem;
+  color: white;
+  filter: drop-shadow(0 0 0.4rem rgb(64 169 255 / 70%));
+  animation: gesture-hand-double-tap 2.6s ease-in-out infinite;
+}
+
+.gesture-arrow-icon {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.4rem;
+  width: 1.5rem;
+  color: #47adff;
+  animation: gesture-arrow-move 2.6s ease-in-out infinite;
+}
+
+.gesture-demo-right .gesture-arrow-icon {
+  right: 0.4rem;
+  left: auto;
+}
+
+.gesture-demo-right .gesture-hand-icon {
+  right: auto;
+  left: 0.65rem;
+}
+
+.gesture-tap-rings {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 1.55rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.gesture-demo-right .gesture-tap-rings {
+  right: auto;
+  left: 1.1rem;
+}
+
+.gesture-tap-rings i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #69c7ff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: gesture-tap-ring 2.6s ease-out infinite;
+}
+
+.gesture-tap-rings i + i {
+  animation-delay: 320ms;
+}
+
+.gesture-swipe-tip {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #cde8ff;
+  font-size: 0.9rem;
+}
+
+.gesture-swipe-tip svg {
+  width: 1.5rem;
+  flex: 0 0 auto;
+  color: #47adff;
+  animation: gesture-swipe 1.8s ease-in-out infinite alternate;
+}
+
+.gesture-guide-dismiss {
+  width: 100%;
+  margin: 0.75rem 0 0;
+  border: 1px solid rgb(135 195 255 / 70%);
+  background: rgb(8 63 130 / 90%);
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 35%);
+}
+
+@keyframes gesture-guide-enter {
+  from { opacity: 0; transform: translateY(0.75rem) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes gesture-hand-double-tap {
+  0%, 12%, 30%, 100% { transform: translateY(0) scale(1); }
+  18%, 36% { transform: translateY(-0.18rem) scale(0.88); }
+}
+
+@keyframes gesture-tap-ring {
+  0%, 15% { opacity: 0; transform: scale(0.25); }
+  20% { opacity: 1; }
+  38%, 100% { opacity: 0; transform: scale(2.4); }
+}
+
+@keyframes gesture-arrow-move {
+  0%, 35%, 100% { opacity: 0.45; transform: translateX(0); }
+  55%, 75% { opacity: 1; transform: translateX(var(--arrow-shift)); }
+}
+
+@keyframes gesture-swipe {
+  from { transform: translateX(-0.25rem); }
+  to { transform: translateX(0.25rem); }
+}
+
+@media (max-width: 520px) {
+  .gesture-guide-layer { padding: 0.75rem; }
+  .gesture-guide-popover { padding: 1rem; }
+  .gesture-demos { gap: 0.5rem; }
+  .gesture-demo { padding-inline: 0.4rem; }
+  .gesture-demo strong { font-size: 0.85rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gesture-guide-wrap,
+  .gesture-hand-icon,
+  .gesture-arrow-icon,
+  .gesture-tap-rings i,
+  .gesture-swipe-tip svg {
+    animation: none;
+  }
+}
+
 .viewer-stage {
   position: relative;
   display: grid;
@@ -829,16 +1042,30 @@ button:disabled {
 .previous-page { left: 0.5rem; }
 .next-page { right: 0.5rem; }
 
-@media (hover: none) and (pointer: coarse) {
+@media (any-pointer: coarse) {
   .page-arrow {
     top: auto;
-    bottom: calc(1rem + env(safe-area-inset-bottom));
+    bottom: 0;
+    display: grid;
+    width: 6rem;
+    height: 8rem;
+    border-radius: 0;
     opacity: 0.6;
+    font-size: 5rem;
+    line-height: 1;
+    place-items: center;
     transition: opacity 160ms ease-out;
   }
 
-  .previous-page { left: 1rem; }
-  .next-page { right: 1rem; }
+  .previous-page {
+    right: auto;
+    left: 0;
+  }
+
+  .next-page {
+    right: 0;
+    left: auto;
+  }
 
   .touch-controls-active .page-arrow:not(:disabled) {
     opacity: 1;
@@ -1024,7 +1251,7 @@ input {
     min-width: 0;
   }
 
-  .viewer-tools button:first-child {
+  .viewer-fit-button {
     display: none;
   }
 

@@ -1,13 +1,17 @@
 import { Archive } from 'libarchive.js'
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
 import { unzipSync } from 'fflate'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import { useLocation, useRoute } from 'preact-iso'
+import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
+import GestureGuide from '../components/GestureGuide.jsx'
 import { getComic, getSeries } from '../data/comics.js'
 import { getProfileProgress, setComicProgress } from '../utils/progress.js'
 import { assetPath } from '../utils/assetPath.js'
 import { sitePath } from '../utils/sitePath.js'
 
 const imagePattern = /\.(avif|bmp|gif|jpe?g|png|webp)$/i
+const gestureGuideStorageKey = 'king-comics:gesture-guide-v1'
 
 function imageMimeType(path) {
   const extension = path.split('.').pop()?.toLowerCase()
@@ -82,6 +86,17 @@ function ComicViewer({ user }) {
   const [readerMode, setReaderMode] = useState('single')
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [touchControlsActive, setTouchControlsActive] = useState(false)
+  const [showGestureGuide, setShowGestureGuide] = useState(false)
+
+  function dismissGestureGuide() {
+    setShowGestureGuide(false)
+
+    try {
+      localStorage.setItem(gestureGuideStorageKey, 'dismissed')
+    } catch {
+      // Dismissal still works for this visit when storage is unavailable.
+    }
+  }
 
   function activateTouchControls() {
     setTouchControlsActive(true)
@@ -92,6 +107,16 @@ function ComicViewer({ user }) {
   }
 
   useEffect(() => () => window.clearTimeout(touchControlsTimerRef.current), [])
+
+  useEffect(() => {
+    if (readerMode !== 'single' || pages.length === 0) return
+
+    try {
+      if (!localStorage.getItem(gestureGuideStorageKey)) setShowGestureGuide(true)
+    } catch {
+      setShowGestureGuide(true)
+    }
+  }, [pages.length, readerMode])
 
   function startPageDrag(event) {
     if (event.button !== undefined && event.button !== 0) return
@@ -313,7 +338,22 @@ function ComicViewer({ user }) {
           </select>
         </div>
         <div class="viewer-tools">
-          <button type="button" onClick={() => setFit((value) => value === 'width' ? 'page' : 'width')}>
+          {readerMode === 'single' && (
+            <button
+              class="gesture-help-button"
+              type="button"
+              onClick={() => setShowGestureGuide(true)}
+              aria-label="Show gesture controls"
+              title="Gesture controls"
+            >
+              <FontAwesomeIcon icon={faCircleQuestion} />
+            </button>
+          )}
+          <button
+            class="viewer-fit-button"
+            type="button"
+            onClick={() => setFit((value) => value === 'width' ? 'page' : 'width')}
+          >
             Fit {fit === 'width' ? 'page' : 'width'}
           </button>
           <button
@@ -367,6 +407,10 @@ function ComicViewer({ user }) {
             aria-label="Next page"
           >›</button>
         </div>
+      )}
+
+      {pages.length > 0 && readerMode === 'single' && showGestureGuide && (
+        <GestureGuide onDismiss={dismissGestureGuide} />
       )}
 
       {pages.length > 0 && readerMode === 'continuous' && (
