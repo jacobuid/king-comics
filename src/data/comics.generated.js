@@ -5842,6 +5842,843 @@ export const comics = [
     "cover": "/generated/covers/sonicthehedgehog290-f5cd678b-v1.webp"
   },
   {
+    "id": "sonic-the-hedgehog-1-9458cd6e",
+    "title": "Sonic The Hedgehog #1",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#1",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%231.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-1-9458cd6e-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-2-b4e510e6",
+    "title": "Sonic The Hedgehog #2",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#2",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%232.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-2-b4e510e6-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-3-9d10d5a9",
+    "title": "Sonic The Hedgehog #3",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#3",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%233.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-3-9d10d5a9-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-4-74ff02bd",
+    "title": "Sonic The Hedgehog #4",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#4",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%234.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-4-74ff02bd-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-5-4d917f9d",
+    "title": "Sonic The Hedgehog #5",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#5",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%235.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-5-4d917f9d-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-6-35cf2d0d",
+    "title": "Sonic The Hedgehog #6",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#6",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%236.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-6-35cf2d0d-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-7-bd0378d7",
+    "title": "Sonic The Hedgehog #7",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#7",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%237.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-7-bd0378d7-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-8-3f60847b",
+    "title": "Sonic The Hedgehog #8",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#8",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%238.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-8-3f60847b-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-9-c3c42e56",
+    "title": "Sonic The Hedgehog #9",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#9",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%239.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-9-c3c42e56-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-10-6a176de4",
+    "title": "Sonic The Hedgehog #10",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#10",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2310.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-10-6a176de4-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-11-9039b4b6",
+    "title": "Sonic The Hedgehog #11",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#11",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2311.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-11-9039b4b6-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-12-97bfe8b6",
+    "title": "Sonic The Hedgehog #12",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#12",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2312.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-12-97bfe8b6-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-13-a996d9b8",
+    "title": "Sonic The Hedgehog #13",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#13",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2313.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-13-a996d9b8-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-14-541d0446",
+    "title": "Sonic The Hedgehog #14",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#14",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2314.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-14-541d0446-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-15-a547de43",
+    "title": "Sonic The Hedgehog #15",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#15",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2315.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-15-a547de43-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-16-24b4685a",
+    "title": "Sonic The Hedgehog #16",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#16",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2316.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-16-24b4685a-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-17-abacc748",
+    "title": "Sonic The Hedgehog #17",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#17",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2317.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-17-abacc748-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-18-254e0e5e",
+    "title": "Sonic The Hedgehog #18",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#18",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2318.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-18-254e0e5e-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-19-73ed115d",
+    "title": "Sonic The Hedgehog #19",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#19",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2319.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-19-73ed115d-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-20-9df71527",
+    "title": "Sonic The Hedgehog #20",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#20",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2320.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-20-9df71527-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-21-15a3b0d6",
+    "title": "Sonic The Hedgehog #21",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#21",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2321.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-21-15a3b0d6-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-22-de33f937",
+    "title": "Sonic The Hedgehog #22",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#22",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2322.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-22-de33f937-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-23-c80e2db7",
+    "title": "Sonic The Hedgehog #23",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#23",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2323.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-23-c80e2db7-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-24-5576f283",
+    "title": "Sonic The Hedgehog #24",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#24",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2324.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-24-5576f283-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-25-03bd5874",
+    "title": "Sonic The Hedgehog #25",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#25",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2325.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-25-03bd5874-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-26-a18abe3c",
+    "title": "Sonic The Hedgehog #26",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#26",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2326.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-26-a18abe3c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-27-d0c3ed04",
+    "title": "Sonic The Hedgehog #27",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#27",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2327.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-27-d0c3ed04-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-28-16fa76c9",
+    "title": "Sonic The Hedgehog #28",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#28",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2328.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-28-16fa76c9-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-29-76961755",
+    "title": "Sonic The Hedgehog #29",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#29",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2329.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-29-76961755-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-30-19ae3ef8",
+    "title": "Sonic The Hedgehog #30",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#30",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2330.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-30-19ae3ef8-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-31-4fa2ace2",
+    "title": "Sonic The Hedgehog #31",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#31",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2331.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-31-4fa2ace2-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-32-5e49bb04",
+    "title": "Sonic The Hedgehog #32",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#32",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2332.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-32-5e49bb04-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-33-b82acec6",
+    "title": "Sonic The Hedgehog #33",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#33",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2333.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-33-b82acec6-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-34-ec4ec3db",
+    "title": "Sonic The Hedgehog #34",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#34",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2334.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-34-ec4ec3db-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-35-039535b4",
+    "title": "Sonic The Hedgehog #35",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#35",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2335.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-35-039535b4-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-36-39a5cdcb",
+    "title": "Sonic The Hedgehog #36",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#36",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2336.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-36-39a5cdcb-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-37-790a9cc4",
+    "title": "Sonic The Hedgehog #37",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#37",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2337.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-37-790a9cc4-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-38-0f485ec1",
+    "title": "Sonic The Hedgehog #38",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#38",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2338.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-38-0f485ec1-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-39-c4cdc892",
+    "title": "Sonic The Hedgehog #39",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#39",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2339.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-39-c4cdc892-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-40-1eae3dea",
+    "title": "Sonic The Hedgehog #40",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#40",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2340.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-40-1eae3dea-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-41-4dc2afcf",
+    "title": "Sonic The Hedgehog #41",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#41",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2341.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-41-4dc2afcf-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-42-66f5435c",
+    "title": "Sonic The Hedgehog #42",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#42",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2342.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-42-66f5435c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-43-cbb4bc64",
+    "title": "Sonic The Hedgehog #43",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#43",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2343.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-43-cbb4bc64-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-44-2d38956c",
+    "title": "Sonic The Hedgehog #44",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#44",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2344.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-44-2d38956c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-45-e09e4a4c",
+    "title": "Sonic The Hedgehog #45",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#45",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2345.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-45-e09e4a4c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-46-f3419f89",
+    "title": "Sonic The Hedgehog #46",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#46",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2346.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-46-f3419f89-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-47-9d5ac6ee",
+    "title": "Sonic The Hedgehog #47",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#47",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2347.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-47-9d5ac6ee-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-48-a0acb55a",
+    "title": "Sonic The Hedgehog #48",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#48",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2348.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-48-a0acb55a-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-49-01b8b6d3",
+    "title": "Sonic The Hedgehog #49",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#49",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2349.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-49-01b8b6d3-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-50-7b89b635",
+    "title": "Sonic The Hedgehog #50",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#50",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2350.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-50-7b89b635-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-51-4c61a9e1",
+    "title": "Sonic The Hedgehog #51",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#51",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2351.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-51-4c61a9e1-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-52-65d3abce",
+    "title": "Sonic The Hedgehog #52",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#52",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2352.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-52-65d3abce-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-53-b5eb2a10",
+    "title": "Sonic The Hedgehog #53",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#53",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2353.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-53-b5eb2a10-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-54-2eda0c71",
+    "title": "Sonic The Hedgehog #54",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#54",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2354.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-54-2eda0c71-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-55-e4964392",
+    "title": "Sonic The Hedgehog #55",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#55",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2355.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-55-e4964392-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-56-fbb72929",
+    "title": "Sonic The Hedgehog #56",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#56",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2356.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-56-fbb72929-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-57-be1e75c1",
+    "title": "Sonic The Hedgehog #57",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#57",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2357.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-57-be1e75c1-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-58-fb9c6994",
+    "title": "Sonic The Hedgehog #58",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#58",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2358.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-58-fb9c6994-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-59-a99754da",
+    "title": "Sonic The Hedgehog #59",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#59",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2359.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-59-a99754da-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-60-eefad829",
+    "title": "Sonic The Hedgehog #60",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#60",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2360.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-60-eefad829-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-61-1f6e2e1d",
+    "title": "Sonic The Hedgehog #61",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#61",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2361.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-61-1f6e2e1d-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-62-f8138c90",
+    "title": "Sonic The Hedgehog #62",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#62",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2362.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-62-f8138c90-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-63-0e60eabf",
+    "title": "Sonic The Hedgehog #63",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#63",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2363.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-63-0e60eabf-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-64-dd9d5785",
+    "title": "Sonic The Hedgehog #64",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#64",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2364.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-64-dd9d5785-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-65-426c64f3",
+    "title": "Sonic The Hedgehog #65",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#65",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2365.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-65-426c64f3-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-66-efa55bd0",
+    "title": "Sonic The Hedgehog #66",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#66",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2366.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-66-efa55bd0-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-67-e5fff89c",
+    "title": "Sonic The Hedgehog #67",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#67",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2367.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-67-e5fff89c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-68-4a88c0ac",
+    "title": "Sonic The Hedgehog #68",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#68",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2368.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-68-4a88c0ac-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-69-ff88c86d",
+    "title": "Sonic The Hedgehog #69",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#69",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2369.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-69-ff88c86d-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-70-a6dcc16c",
+    "title": "Sonic The Hedgehog #70",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#70",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2370.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-70-a6dcc16c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-71-519b8c86",
+    "title": "Sonic The Hedgehog #71",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#71",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2371.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-71-519b8c86-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-72-8506e9c2",
+    "title": "Sonic The Hedgehog #72",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#72",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2372.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-72-8506e9c2-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-73-970fa5b9",
+    "title": "Sonic The Hedgehog #73",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#73",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2373.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-73-970fa5b9-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-74-ac3e8e07",
+    "title": "Sonic The Hedgehog #74",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#74",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2374.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-74-ac3e8e07-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-75-d0fa6812",
+    "title": "Sonic The Hedgehog #75",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#75",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2375.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-75-d0fa6812-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-76-1e725fe4",
+    "title": "Sonic The Hedgehog #76",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#76",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2376.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-76-1e725fe4-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-77-10b565b6",
+    "title": "Sonic The Hedgehog #77",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#77",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2377.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-77-10b565b6-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-78-2bcab3b2",
+    "title": "Sonic The Hedgehog #78",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#78",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2378.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-78-2bcab3b2-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-79-ea1451ab",
+    "title": "Sonic The Hedgehog #79",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#79",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2379.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-79-ea1451ab-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-80-855776ce",
+    "title": "Sonic The Hedgehog #80",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#80",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2380.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-80-855776ce-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-81-6189831c",
+    "title": "Sonic The Hedgehog #81",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#81",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2381.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-81-6189831c-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-82-4a6ae3fb",
+    "title": "Sonic The Hedgehog #82",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#82",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2382.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-82-4a6ae3fb-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-83-429acf68",
+    "title": "Sonic The Hedgehog #83",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#83",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2383.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-83-429acf68-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-84-32e1daa3",
+    "title": "Sonic The Hedgehog #84",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#84",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2384.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-84-32e1daa3-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-85-3c8ffa46",
+    "title": "Sonic The Hedgehog #85",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#85",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2385.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-85-3c8ffa46-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-86-ba440f97",
+    "title": "Sonic The Hedgehog #86",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#86",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2386.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-86-ba440f97-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-87-3540b3c2",
+    "title": "Sonic The Hedgehog #87",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#87",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2387.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-87-3540b3c2-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-88-80bcefef",
+    "title": "Sonic The Hedgehog #88",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#88",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%2388.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-88-80bcefef-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-annual-2019-3f7b4cc1",
+    "title": "Sonic The Hedgehog #Annual 2019",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#2019",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%23Annual%202019.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-annual-2019-3f7b4cc1-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-annual-2020-a0c8bbda",
+    "title": "Sonic The Hedgehog #Annual 2020",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#2020",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%23Annual%202020.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-annual-2020-a0c8bbda-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-annual-2022-6a2d2c3f",
+    "title": "Sonic The Hedgehog #Annual 2022",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#2022",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%23Annual%202022.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-annual-2022-6a2d2c3f-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-annual-2024-e0bc62d8",
+    "title": "Sonic The Hedgehog #Annual 2024",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "#2024",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%23Annual%202024.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-annual-2024-e0bc62d8-v1.webp"
+  },
+  {
+    "id": "sonic-the-hedgehog-halloween-special-3b37246d",
+    "title": "Sonic The Hedgehog #Halloween Special",
+    "series": "Sonic The Hedgehog (2018-)",
+    "seriesId": "sonic-the-hedgehog-2018",
+    "issue": "",
+    "archive": "/comics/Sonic%20The%20Hedgehog%20(2018-)/Sonic%20The%20Hedgehog%20%23Halloween%20Special.cbz",
+    "cover": "/generated/covers/sonic-the-hedgehog-halloween-special-3b37246d-v1.webp"
+  },
+  {
     "id": "sonic-the-hedgehog-miniseries-00-fd6a97b8",
     "title": "Sonic the Hedgehog Miniseries",
     "series": "Sonic the Hedgehog Miniseries",
