@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Comic Page Collector",
+  "description": "Collect loaded comic-page images and download them as a CBZ archive.",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "debugger", "declarativeNetRequestWithHostAccess", "downloads", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Comic Page Collector",
+    "default_popup": "popup.html"
+  }
+}

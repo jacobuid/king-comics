@@ -3293,5 +3293,14 @@ export const comics = [
     "issue": "#3",
     "archive": "/comics/Tails%20Miniseries/TailsMiniseries03.cbr",
     "cover": "/generated/covers/tailsminiseries03-6860dc18.jpg"
+  },
+  {
+    "id": "theflintstones1-2bbdd943",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#1",
+    "archive": "/comics/The%20Flintstones%20(1995)/TheFlintstones1.cbz",
+    "cover": "/generated/covers/theflintstones1-2bbdd943.webp"
   }
 ]

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comic Page Collector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <div>
+          <p class="eyebrow">COMIC TOOL</p>
+          <h1>Page Collector</h1>
+        </div>
+        <span id="count" class="count">—</span>
+      </div>
+
+      <p class="intro">Collect the large comic images currently loaded on this page.</p>
+
+      <label for="filename">Archive name</label>
+      <div class="filename-row">
+        <input id="filename" type="text" autocomplete="off" spellcheck="false" />
+        <span>.cbz</span>
+      </div>
+
+      <div class="image-list-heading">
+        <span>Images on this page</span>
+        <div>
+          <button id="select-all" class="text-button" type="button">All</button>
+          <button id="select-none" class="text-button" type="button">None</button>
+        </div>
+      </div>
+      <div id="image-list" class="image-list" aria-label="Images found on this page"></div>
+
+      <button id="scan" class="secondary" type="button">Scan again</button>
+      <button id="download" class="primary" type="button" disabled>Download CBZ</button>
+
+      <div class="progress" aria-hidden="true">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="status" class="status" role="status">Scanning this page…</p>
+      <details>
+        <summary>What gets included?</summary>
+        <p>Large supported images start selected. Use the checkboxes to include or exclude any image. Duplicate URLs are removed and page order is preserved. If a host blocks downloads, Chrome briefly attaches its debugger to read the already-loaded image data.</p>
+      </details>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
