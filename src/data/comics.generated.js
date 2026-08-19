@@ -46,6 +46,177 @@ export const comics = [
     "cover": "/generated/covers/special-5-super-sonic-vs-hyper-knuckles-1f9c0d44.jpg"
   },
   {
+    "id": "special-6-sonic-knuckles-mecha-madness-98d45010",
+    "title": "Special 6 - Sonic &_Knuckles Mecha_Madness",
+    "series": "Classic Sonic Specials",
+    "seriesId": "classic-sonic-specials",
+    "issue": "#6",
+    "archive": "/comics/Classic%20Sonic%20Specials/Special%206%20-%20Sonic%20%26_Knuckles%20Mecha_Madness.cbz",
+    "cover": "/generated/covers/special-6-sonic-knuckles-mecha-madness-98d45010.jpg"
+  },
+  {
+    "id": "special-7-sonic-live-96fcf5eb",
+    "title": "Special 7 - Sonic Live!",
+    "series": "Classic Sonic Specials",
+    "seriesId": "classic-sonic-specials",
+    "issue": "#7",
+    "archive": "/comics/Classic%20Sonic%20Specials/Special%207%20-%20Sonic%20Live!.cbz",
+    "cover": "/generated/covers/special-7-sonic-live-96fcf5eb.jpg"
+  },
+  {
+    "id": "special-8-sonic-blast-add24f2d",
+    "title": "Special 8 - Sonic Blast",
+    "series": "Classic Sonic Specials",
+    "seriesId": "classic-sonic-specials",
+    "issue": "#8",
+    "archive": "/comics/Classic%20Sonic%20Specials/Special%208%20-%20Sonic%20Blast.cbz",
+    "cover": "/generated/covers/special-8-sonic-blast-add24f2d.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-1-13a4bdea",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#1",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%231.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-1-13a4bdea.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-2-ccbb8446",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#2",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%232.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-2-ccbb8446.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-3-a4d574f6",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#3",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%233.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-3-a4d574f6.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-4-0c21f102",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#4",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%234.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-4-0c21f102.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-5-ce22bb39",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#5",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%235.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-5-ce22bb39.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-6-9829a3f2",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#6",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%236.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-6-9829a3f2.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-7-5c95867b",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#7",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%237.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-7-5c95867b.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-8-3bfd3840",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#8",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%238.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-8-3bfd3840.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-9-bb500208",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#9",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%239.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-9-bb500208.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-10-78ab731d",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#10",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2310.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-10-78ab731d.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-11-1322a37b",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#11",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2311.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-11-1322a37b.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-12-bfd47182",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#12",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2312.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-12-bfd47182.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-13-7ec7dad0",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#13",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2313.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-13-7ec7dad0.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-14-59e8fde4",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#14",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2314.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-14-59e8fde4.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-15-c78baed9",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#15",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2315.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-15-c78baed9.jpg"
+  },
+  {
+    "id": "disney-comic-hits-issue-16-b3a1465f",
+    "title": "Disney Comic Hits",
+    "series": "Disney Comic Hits",
+    "seriesId": "disney-comic-hits",
+    "issue": "#16",
+    "archive": "/comics/Disney%20Comic%20Hits/Disney_Comic_Hits_Issue_%2316.cbz",
+    "cover": "/generated/covers/disney-comic-hits-issue-16-b3a1465f.jpg"
+  },
+  {
     "id": "knucklesminiseries01-a41d6a41",
     "title": "Knuckles Miniseries",
     "series": "Knuckles Miniseries",
@@ -71,6 +242,2301 @@ export const comics = [
     "issue": "#3",
     "archive": "/comics/Knuckles%20Miniseries/KnucklesMiniseries03.cbr",
     "cover": "/generated/covers/knucklesminiseries03-2f5acfe9.jpg"
+  },
+  {
+    "id": "looney-tunes-001-b9bb7e01",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#1",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20001.cbr",
+    "cover": "/generated/covers/looney-tunes-001-b9bb7e01.jpg"
+  },
+  {
+    "id": "looney-tunes-002-2-9f5867d4",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#2",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20002%20(2).cbr",
+    "cover": "/generated/covers/looney-tunes-002-2-9f5867d4.jpg"
+  },
+  {
+    "id": "looney-tunes-002-a9d42d41",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#2",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20002.cbr",
+    "cover": "/generated/covers/looney-tunes-002-a9d42d41.jpg"
+  },
+  {
+    "id": "looney-tunes-003-9322b07a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#3",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20003.cbr",
+    "cover": "/generated/covers/looney-tunes-003-9322b07a.jpg"
+  },
+  {
+    "id": "looney-tunes-004-4d2f4308",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#4",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20004.cbr",
+    "cover": "/generated/covers/looney-tunes-004-4d2f4308.jpg"
+  },
+  {
+    "id": "looney-tunes-005-ea2683e8",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#5",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20005.cbr",
+    "cover": "/generated/covers/looney-tunes-005-ea2683e8.jpg"
+  },
+  {
+    "id": "looney-tunes-006-a9705af9",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#6",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20006.cbr",
+    "cover": "/generated/covers/looney-tunes-006-a9705af9.jpg"
+  },
+  {
+    "id": "looney-tunes-007-2d931025",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#7",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20007.cbr",
+    "cover": "/generated/covers/looney-tunes-007-2d931025.jpg"
+  },
+  {
+    "id": "looney-tunes-008-c33e1c46",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#8",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20008.cbr",
+    "cover": "/generated/covers/looney-tunes-008-c33e1c46.jpg"
+  },
+  {
+    "id": "looney-tunes-009-d2c750bf",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#9",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20009.cbr",
+    "cover": "/generated/covers/looney-tunes-009-d2c750bf.jpg"
+  },
+  {
+    "id": "looney-tunes-010-d79e610b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#10",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20010.cbr",
+    "cover": "/generated/covers/looney-tunes-010-d79e610b.jpg"
+  },
+  {
+    "id": "looney-tunes-011-8526b84f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#11",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20011.cbr",
+    "cover": "/generated/covers/looney-tunes-011-8526b84f.jpg"
+  },
+  {
+    "id": "looney-tunes-012-fb9d9d97",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#12",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20012.cbr",
+    "cover": "/generated/covers/looney-tunes-012-fb9d9d97.jpg"
+  },
+  {
+    "id": "looney-tunes-013-e949f8d6",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#13",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20013.cbr",
+    "cover": "/generated/covers/looney-tunes-013-e949f8d6.jpg"
+  },
+  {
+    "id": "looney-tunes-014-568b3562",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#14",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20014.cbr",
+    "cover": "/generated/covers/looney-tunes-014-568b3562.jpg"
+  },
+  {
+    "id": "looney-tunes-015-175453b0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#15",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20015.cbz",
+    "cover": "/generated/covers/looney-tunes-015-175453b0.jpg"
+  },
+  {
+    "id": "looney-tunes-016-e0dad811",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#16",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20016.cbz",
+    "cover": "/generated/covers/looney-tunes-016-e0dad811.jpg"
+  },
+  {
+    "id": "looney-tunes-017-258c7ba3",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#17",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20017.cbz",
+    "cover": "/generated/covers/looney-tunes-017-258c7ba3.jpg"
+  },
+  {
+    "id": "looney-tunes-018-c3f29ffb",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#18",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20018.cbr",
+    "cover": "/generated/covers/looney-tunes-018-c3f29ffb.jpg"
+  },
+  {
+    "id": "looney-tunes-019-a746086d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#19",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20019.cbr",
+    "cover": "/generated/covers/looney-tunes-019-a746086d.jpg"
+  },
+  {
+    "id": "looney-tunes-020-26055fba",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#20",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20020.cbz",
+    "cover": "/generated/covers/looney-tunes-020-26055fba.jpg"
+  },
+  {
+    "id": "looney-tunes-021-1ecdbf7d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#21",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20021.cbz",
+    "cover": "/generated/covers/looney-tunes-021-1ecdbf7d.jpg"
+  },
+  {
+    "id": "looney-tunes-022-e048fce6",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#22",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20022.cbz",
+    "cover": "/generated/covers/looney-tunes-022-e048fce6.jpg"
+  },
+  {
+    "id": "looney-tunes-023-99dd34ad",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#23",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20023.cbr",
+    "cover": "/generated/covers/looney-tunes-023-99dd34ad.jpg"
+  },
+  {
+    "id": "looney-tunes-024-0bfffbb5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#24",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20024.cbz",
+    "cover": "/generated/covers/looney-tunes-024-0bfffbb5.jpg"
+  },
+  {
+    "id": "looney-tunes-025-69c13478",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#25",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20025.cbz",
+    "cover": "/generated/covers/looney-tunes-025-69c13478.jpg"
+  },
+  {
+    "id": "looney-tunes-026-700bad11",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#26",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20026.cbz",
+    "cover": "/generated/covers/looney-tunes-026-700bad11.jpg"
+  },
+  {
+    "id": "looney-tunes-027-dedce51c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#27",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20027.cbz",
+    "cover": "/generated/covers/looney-tunes-027-dedce51c.jpg"
+  },
+  {
+    "id": "looney-tunes-028-823efcf0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#28",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20028.cbz",
+    "cover": "/generated/covers/looney-tunes-028-823efcf0.jpg"
+  },
+  {
+    "id": "looney-tunes-029-679b23e4",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#29",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20029.cbz",
+    "cover": "/generated/covers/looney-tunes-029-679b23e4.jpg"
+  },
+  {
+    "id": "looney-tunes-030-9be2205b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#30",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20030.cbz",
+    "cover": "/generated/covers/looney-tunes-030-9be2205b.jpg"
+  },
+  {
+    "id": "looney-tunes-031-6f19b1f7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#31",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20031.cbz",
+    "cover": "/generated/covers/looney-tunes-031-6f19b1f7.jpg"
+  },
+  {
+    "id": "looney-tunes-032-370c0345",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#32",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20032.cbz",
+    "cover": "/generated/covers/looney-tunes-032-370c0345.jpg"
+  },
+  {
+    "id": "looney-tunes-033-b505b294",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#33",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20033.cbz",
+    "cover": "/generated/covers/looney-tunes-033-b505b294.jpg"
+  },
+  {
+    "id": "looney-tunes-034-46e0fe0b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#34",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20034%20.cbr",
+    "cover": "/generated/covers/looney-tunes-034-46e0fe0b.jpg"
+  },
+  {
+    "id": "looney-tunes-035-d3129c9e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#35",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20035.cbz",
+    "cover": "/generated/covers/looney-tunes-035-d3129c9e.jpg"
+  },
+  {
+    "id": "looney-tunes-036-ab546933",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#36",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20036.cbz",
+    "cover": "/generated/covers/looney-tunes-036-ab546933.jpg"
+  },
+  {
+    "id": "looney-tunes-037-38d181a4",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#37",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20037.cbr",
+    "cover": "/generated/covers/looney-tunes-037-38d181a4.jpg"
+  },
+  {
+    "id": "looney-tunes-038-6105d0cc",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#38",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20038.cbz",
+    "cover": "/generated/covers/looney-tunes-038-6105d0cc.jpg"
+  },
+  {
+    "id": "looney-tunes-039-812176ff",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#39",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20039.cbr",
+    "cover": "/generated/covers/looney-tunes-039-812176ff.jpg"
+  },
+  {
+    "id": "looney-tunes-040-c43240cd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#40",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20040.cbz",
+    "cover": "/generated/covers/looney-tunes-040-c43240cd.jpg"
+  },
+  {
+    "id": "looney-tunes-041-b21db4c3",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#41",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20041.cbz",
+    "cover": "/generated/covers/looney-tunes-041-b21db4c3.jpg"
+  },
+  {
+    "id": "looney-tunes-042-1b1ed348",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#42",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20042.cbr",
+    "cover": "/generated/covers/looney-tunes-042-1b1ed348.jpg"
+  },
+  {
+    "id": "looney-tunes-043-6028f3f0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#43",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20043.cbr",
+    "cover": "/generated/covers/looney-tunes-043-6028f3f0.jpg"
+  },
+  {
+    "id": "looney-tunes-044-29754d88",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#44",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20044.cbr",
+    "cover": "/generated/covers/looney-tunes-044-29754d88.jpg"
+  },
+  {
+    "id": "looney-tunes-045-84e494c7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#45",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20045.cbr",
+    "cover": "/generated/covers/looney-tunes-045-84e494c7.jpg"
+  },
+  {
+    "id": "looney-tunes-046-4ae0e61d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#46",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20046.cbz",
+    "cover": "/generated/covers/looney-tunes-046-4ae0e61d.jpg"
+  },
+  {
+    "id": "looney-tunes-047-bc7e0ccb",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#47",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20047.cbz",
+    "cover": "/generated/covers/looney-tunes-047-bc7e0ccb.jpg"
+  },
+  {
+    "id": "looney-tunes-048-2e12b1c7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#48",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20048.cbz",
+    "cover": "/generated/covers/looney-tunes-048-2e12b1c7.jpg"
+  },
+  {
+    "id": "looney-tunes-049-de1daf5f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#49",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20049.cbr",
+    "cover": "/generated/covers/looney-tunes-049-de1daf5f.jpg"
+  },
+  {
+    "id": "looney-tunes-050-46eb7974",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#50",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20050.cbz",
+    "cover": "/generated/covers/looney-tunes-050-46eb7974.jpg"
+  },
+  {
+    "id": "looney-tunes-051-4931121a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#51",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20051.cbz",
+    "cover": "/generated/covers/looney-tunes-051-4931121a.jpg"
+  },
+  {
+    "id": "looney-tunes-052-34353612",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#52",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20052.cbz",
+    "cover": "/generated/covers/looney-tunes-052-34353612.jpg"
+  },
+  {
+    "id": "looney-tunes-053-55bb8e42",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#53",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20053.cbz",
+    "cover": "/generated/covers/looney-tunes-053-55bb8e42.jpg"
+  },
+  {
+    "id": "looney-tunes-054-7fa3251f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#54",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20054.cbz",
+    "cover": "/generated/covers/looney-tunes-054-7fa3251f.jpg"
+  },
+  {
+    "id": "looney-tunes-055-6863e63e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#55",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20055.cbr",
+    "cover": "/generated/covers/looney-tunes-055-6863e63e.jpg"
+  },
+  {
+    "id": "looney-tunes-056-2b3997f7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#56",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20056.cbz",
+    "cover": "/generated/covers/looney-tunes-056-2b3997f7.jpg"
+  },
+  {
+    "id": "looney-tunes-057-118450cd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#57",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20057.cbz",
+    "cover": "/generated/covers/looney-tunes-057-118450cd.jpg"
+  },
+  {
+    "id": "looney-tunes-058-594ffe04",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#58",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20058.cbz",
+    "cover": "/generated/covers/looney-tunes-058-594ffe04.jpg"
+  },
+  {
+    "id": "looney-tunes-059-1cbae864",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#59",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20059.cbz",
+    "cover": "/generated/covers/looney-tunes-059-1cbae864.jpg"
+  },
+  {
+    "id": "looney-tunes-060-69c6bd40",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#60",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20060.cbz",
+    "cover": "/generated/covers/looney-tunes-060-69c6bd40.jpg"
+  },
+  {
+    "id": "looney-tunes-061-52e8417a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#61",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20061.cbr",
+    "cover": "/generated/covers/looney-tunes-061-52e8417a.jpg"
+  },
+  {
+    "id": "looney-tunes-062-39db9d81",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#62",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20062.cbr",
+    "cover": "/generated/covers/looney-tunes-062-39db9d81.jpg"
+  },
+  {
+    "id": "looney-tunes-063-bd7b1d2e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#63",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20063.cbr",
+    "cover": "/generated/covers/looney-tunes-063-bd7b1d2e.jpg"
+  },
+  {
+    "id": "looney-tunes-064-eb7e8426",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#64",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20064.cbr",
+    "cover": "/generated/covers/looney-tunes-064-eb7e8426.jpg"
+  },
+  {
+    "id": "looney-tunes-065-fb0fc2a5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#65",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20065.cbr",
+    "cover": "/generated/covers/looney-tunes-065-fb0fc2a5.jpg"
+  },
+  {
+    "id": "looney-tunes-066-abee9213",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#66",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20066.cbr",
+    "cover": "/generated/covers/looney-tunes-066-abee9213.jpg"
+  },
+  {
+    "id": "looney-tunes-067-c78a3e6a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#67",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20067.cbr",
+    "cover": "/generated/covers/looney-tunes-067-c78a3e6a.jpg"
+  },
+  {
+    "id": "looney-tunes-068-2448c53f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#68",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20068.cbr",
+    "cover": "/generated/covers/looney-tunes-068-2448c53f.jpg"
+  },
+  {
+    "id": "looney-tunes-069-b650a19c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#69",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20069.cbr",
+    "cover": "/generated/covers/looney-tunes-069-b650a19c.jpg"
+  },
+  {
+    "id": "looney-tunes-070-c88627c5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#70",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20070.cbr",
+    "cover": "/generated/covers/looney-tunes-070-c88627c5.jpg"
+  },
+  {
+    "id": "looney-tunes-071-a75dbb23",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#71",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20071.cbr",
+    "cover": "/generated/covers/looney-tunes-071-a75dbb23.jpg"
+  },
+  {
+    "id": "looney-tunes-072-479c04c7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#72",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20072.cbr",
+    "cover": "/generated/covers/looney-tunes-072-479c04c7.jpg"
+  },
+  {
+    "id": "looney-tunes-073-802f749a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#73",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20073.cbr",
+    "cover": "/generated/covers/looney-tunes-073-802f749a.jpg"
+  },
+  {
+    "id": "looney-tunes-074-4e15ffdd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#74",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20074.cbr",
+    "cover": "/generated/covers/looney-tunes-074-4e15ffdd.jpg"
+  },
+  {
+    "id": "looney-tunes-075-e2ea1fca",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#75",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20075.cbr",
+    "cover": "/generated/covers/looney-tunes-075-e2ea1fca.jpg"
+  },
+  {
+    "id": "looney-tunes-076-7ee2c1ee",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#76",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20076.cbr",
+    "cover": "/generated/covers/looney-tunes-076-7ee2c1ee.jpg"
+  },
+  {
+    "id": "looney-tunes-077-6b936844",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#77",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20077.cbr",
+    "cover": "/generated/covers/looney-tunes-077-6b936844.jpg"
+  },
+  {
+    "id": "looney-tunes-078-3c258bbb",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#78",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20078.cbr",
+    "cover": "/generated/covers/looney-tunes-078-3c258bbb.jpg"
+  },
+  {
+    "id": "looney-tunes-079-bbab9713",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#79",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20079.cbr",
+    "cover": "/generated/covers/looney-tunes-079-bbab9713.jpg"
+  },
+  {
+    "id": "looney-tunes-080-2bbbeca1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#80",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20080.cbr",
+    "cover": "/generated/covers/looney-tunes-080-2bbbeca1.jpg"
+  },
+  {
+    "id": "looney-tunes-081-a764bcb0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#81",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20081.cbr",
+    "cover": "/generated/covers/looney-tunes-081-a764bcb0.jpg"
+  },
+  {
+    "id": "looney-tunes-082-da16d7a1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#82",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20082.cbr",
+    "cover": "/generated/covers/looney-tunes-082-da16d7a1.jpg"
+  },
+  {
+    "id": "looney-tunes-083-df909b64",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#83",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20083.cbr",
+    "cover": "/generated/covers/looney-tunes-083-df909b64.jpg"
+  },
+  {
+    "id": "looney-tunes-084-42616531",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#84",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20084.cbr",
+    "cover": "/generated/covers/looney-tunes-084-42616531.jpg"
+  },
+  {
+    "id": "looney-tunes-085-fc22c823",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#85",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20085.cbr",
+    "cover": "/generated/covers/looney-tunes-085-fc22c823.jpg"
+  },
+  {
+    "id": "looney-tunes-086-78ef8d37",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#86",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20086.cbr",
+    "cover": "/generated/covers/looney-tunes-086-78ef8d37.jpg"
+  },
+  {
+    "id": "looney-tunes-087-e1e3635a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#87",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20087.cbr",
+    "cover": "/generated/covers/looney-tunes-087-e1e3635a.jpg"
+  },
+  {
+    "id": "looney-tunes-088-a82b9df7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#88",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20088.cbr",
+    "cover": "/generated/covers/looney-tunes-088-a82b9df7.jpg"
+  },
+  {
+    "id": "looney-tunes-089-d5695937",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#89",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20089.cbr",
+    "cover": "/generated/covers/looney-tunes-089-d5695937.jpg"
+  },
+  {
+    "id": "looney-tunes-090-74be2b1e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#90",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20090.cbr",
+    "cover": "/generated/covers/looney-tunes-090-74be2b1e.jpg"
+  },
+  {
+    "id": "looney-tunes-091-a86349e4",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#91",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20091.cbr",
+    "cover": "/generated/covers/looney-tunes-091-a86349e4.jpg"
+  },
+  {
+    "id": "looney-tunes-092-c3111f13",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#92",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20092.cbr",
+    "cover": "/generated/covers/looney-tunes-092-c3111f13.jpg"
+  },
+  {
+    "id": "looney-tunes-093-580b0c49",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#93",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20093.cbr",
+    "cover": "/generated/covers/looney-tunes-093-580b0c49.jpg"
+  },
+  {
+    "id": "looney-tunes-094-6c38ecc6",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#94",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20094.cbr",
+    "cover": "/generated/covers/looney-tunes-094-6c38ecc6.jpg"
+  },
+  {
+    "id": "looney-tunes-095-60833cd0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#95",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20095.cbr",
+    "cover": "/generated/covers/looney-tunes-095-60833cd0.jpg"
+  },
+  {
+    "id": "looney-tunes-096-2f42896c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#96",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20096.cbr",
+    "cover": "/generated/covers/looney-tunes-096-2f42896c.jpg"
+  },
+  {
+    "id": "looney-tunes-097-71029e60",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#97",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20097.cbr",
+    "cover": "/generated/covers/looney-tunes-097-71029e60.jpg"
+  },
+  {
+    "id": "looney-tunes-098-1280db0b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#98",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20098.cbr",
+    "cover": "/generated/covers/looney-tunes-098-1280db0b.jpg"
+  },
+  {
+    "id": "looney-tunes-099-8a58eb9c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#99",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20099.cbr",
+    "cover": "/generated/covers/looney-tunes-099-8a58eb9c.jpg"
+  },
+  {
+    "id": "looney-tunes-100-00246537",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#100",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20100.cbr",
+    "cover": "/generated/covers/looney-tunes-100-00246537.jpg"
+  },
+  {
+    "id": "looney-tunes-101-fd28e8bf",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#101",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20101.cbr",
+    "cover": "/generated/covers/looney-tunes-101-fd28e8bf.jpg"
+  },
+  {
+    "id": "looney-tunes-102-810d6ff2",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#102",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20102.cbr",
+    "cover": "/generated/covers/looney-tunes-102-810d6ff2.jpg"
+  },
+  {
+    "id": "looney-tunes-103-9d2dc188",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#103",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20103.cbr",
+    "cover": "/generated/covers/looney-tunes-103-9d2dc188.jpg"
+  },
+  {
+    "id": "looney-tunes-104-d5b1398a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#104",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20104.cbr",
+    "cover": "/generated/covers/looney-tunes-104-d5b1398a.jpg"
+  },
+  {
+    "id": "looney-tunes-105-d2887047",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#105",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20105.cbr",
+    "cover": "/generated/covers/looney-tunes-105-d2887047.jpg"
+  },
+  {
+    "id": "looney-tunes-106-33eec712",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#106",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20106.cbr",
+    "cover": "/generated/covers/looney-tunes-106-33eec712.jpg"
+  },
+  {
+    "id": "looney-tunes-107-33d6fcbf",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#107",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20107.cbr",
+    "cover": "/generated/covers/looney-tunes-107-33d6fcbf.jpg"
+  },
+  {
+    "id": "looney-tunes-108-1ee997d2",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#108",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20108.cbr",
+    "cover": "/generated/covers/looney-tunes-108-1ee997d2.jpg"
+  },
+  {
+    "id": "looney-tunes-109-1331c5bd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#109",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20109.cbr",
+    "cover": "/generated/covers/looney-tunes-109-1331c5bd.jpg"
+  },
+  {
+    "id": "looney-tunes-110-8cd480e1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#110",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20110.cbr",
+    "cover": "/generated/covers/looney-tunes-110-8cd480e1.jpg"
+  },
+  {
+    "id": "looney-tunes-111-6cbe018c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#111",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20111.cbr",
+    "cover": "/generated/covers/looney-tunes-111-6cbe018c.jpg"
+  },
+  {
+    "id": "looney-tunes-112-415f4f5b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#112",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20112.cbr",
+    "cover": "/generated/covers/looney-tunes-112-415f4f5b.jpg"
+  },
+  {
+    "id": "looney-tunes-113-e8d5d76c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#113",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20113.cbz",
+    "cover": "/generated/covers/looney-tunes-113-e8d5d76c.jpg"
+  },
+  {
+    "id": "looney-tunes-114-a2595cb1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#114",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20114.cbr",
+    "cover": "/generated/covers/looney-tunes-114-a2595cb1.jpg"
+  },
+  {
+    "id": "looney-tunes-115-02e9b8e1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#115",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20115.cbr",
+    "cover": "/generated/covers/looney-tunes-115-02e9b8e1.jpg"
+  },
+  {
+    "id": "looney-tunes-116-c21b235e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#116",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20116.cbr",
+    "cover": "/generated/covers/looney-tunes-116-c21b235e.jpg"
+  },
+  {
+    "id": "looney-tunes-117-1d695a92",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#117",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20117.cbr",
+    "cover": "/generated/covers/looney-tunes-117-1d695a92.jpg"
+  },
+  {
+    "id": "looney-tunes-118-a7e1edef",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#118",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20118.cbr",
+    "cover": "/generated/covers/looney-tunes-118-a7e1edef.jpg"
+  },
+  {
+    "id": "looney-tunes-119-b4e1b1ec",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#119",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20119.cbr",
+    "cover": "/generated/covers/looney-tunes-119-b4e1b1ec.jpg"
+  },
+  {
+    "id": "looney-tunes-120-aa8e0f60",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#120",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20120.cbr",
+    "cover": "/generated/covers/looney-tunes-120-aa8e0f60.jpg"
+  },
+  {
+    "id": "looney-tunes-121-1bb21e41",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#121",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20121.cbr",
+    "cover": "/generated/covers/looney-tunes-121-1bb21e41.jpg"
+  },
+  {
+    "id": "looney-tunes-122-1ab9e7b1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#122",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20122.cbr",
+    "cover": "/generated/covers/looney-tunes-122-1ab9e7b1.jpg"
+  },
+  {
+    "id": "looney-tunes-123-35b223fd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#123",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20123.cbr",
+    "cover": "/generated/covers/looney-tunes-123-35b223fd.jpg"
+  },
+  {
+    "id": "looney-tunes-124-d2b7aa4e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#124",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20124.cbr",
+    "cover": "/generated/covers/looney-tunes-124-d2b7aa4e.jpg"
+  },
+  {
+    "id": "looney-tunes-125-2d89a0d6",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#125",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20125.cbr",
+    "cover": "/generated/covers/looney-tunes-125-2d89a0d6.jpg"
+  },
+  {
+    "id": "looney-tunes-126-ee476c07",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#126",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20126.cbz",
+    "cover": "/generated/covers/looney-tunes-126-ee476c07.jpg"
+  },
+  {
+    "id": "looney-tunes-127-0f288dbc",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#127",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20127.cbr",
+    "cover": "/generated/covers/looney-tunes-127-0f288dbc.jpg"
+  },
+  {
+    "id": "looney-tunes-128-cdcf6af8",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#128",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20128.cbr",
+    "cover": "/generated/covers/looney-tunes-128-cdcf6af8.jpg"
+  },
+  {
+    "id": "looney-tunes-129-1d906721",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#129",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20129.cbr",
+    "cover": "/generated/covers/looney-tunes-129-1d906721.jpg"
+  },
+  {
+    "id": "looney-tunes-130-66a0e3ca",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#130",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20130.cbr",
+    "cover": "/generated/covers/looney-tunes-130-66a0e3ca.jpg"
+  },
+  {
+    "id": "looney-tunes-131-66d31942",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#131",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20131.cbz",
+    "cover": "/generated/covers/looney-tunes-131-66d31942.jpg"
+  },
+  {
+    "id": "looney-tunes-132-d7065f01",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#132",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20132.cbz",
+    "cover": "/generated/covers/looney-tunes-132-d7065f01.jpg"
+  },
+  {
+    "id": "looney-tunes-133-5a385cbc",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#133",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20133.cbz",
+    "cover": "/generated/covers/looney-tunes-133-5a385cbc.jpg"
+  },
+  {
+    "id": "looney-tunes-134-e741b8ba",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#134",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20134.cbz",
+    "cover": "/generated/covers/looney-tunes-134-e741b8ba.jpg"
+  },
+  {
+    "id": "looney-tunes-135-f0906320",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#135",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20135.cbz",
+    "cover": "/generated/covers/looney-tunes-135-f0906320.jpg"
+  },
+  {
+    "id": "looney-tunes-136-820a70d0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#136",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20136.cbz",
+    "cover": "/generated/covers/looney-tunes-136-820a70d0.jpg"
+  },
+  {
+    "id": "looney-tunes-137-79877e53",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#137",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20137.cbr",
+    "cover": "/generated/covers/looney-tunes-137-79877e53.jpg"
+  },
+  {
+    "id": "looney-tunes-138-6aa2e25d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#138",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20138.cbz",
+    "cover": "/generated/covers/looney-tunes-138-6aa2e25d.jpg"
+  },
+  {
+    "id": "looney-tunes-139-96778582",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#139",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20139.cbz",
+    "cover": "/generated/covers/looney-tunes-139-96778582.jpg"
+  },
+  {
+    "id": "looney-tunes-140-70394cef",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#140",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20140.cbz",
+    "cover": "/generated/covers/looney-tunes-140-70394cef.jpg"
+  },
+  {
+    "id": "looney-tunes-141-b1b7f32b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#141",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20141.cbz",
+    "cover": "/generated/covers/looney-tunes-141-b1b7f32b.jpg"
+  },
+  {
+    "id": "looney-tunes-142-8707d1c2",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#142",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20142.cbz",
+    "cover": "/generated/covers/looney-tunes-142-8707d1c2.jpg"
+  },
+  {
+    "id": "looney-tunes-143-210fda76",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#143",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20143.cbz",
+    "cover": "/generated/covers/looney-tunes-143-210fda76.jpg"
+  },
+  {
+    "id": "looney-tunes-144-1e37d2f0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#144",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20144.cbz",
+    "cover": "/generated/covers/looney-tunes-144-1e37d2f0.jpg"
+  },
+  {
+    "id": "looney-tunes-145-e7138603",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#145",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20145.cbz",
+    "cover": "/generated/covers/looney-tunes-145-e7138603.jpg"
+  },
+  {
+    "id": "looney-tunes-146-f942d2e9",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#146",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20146.cbz",
+    "cover": "/generated/covers/looney-tunes-146-f942d2e9.jpg"
+  },
+  {
+    "id": "looney-tunes-147-dfe2f936",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#147",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20147.cbz",
+    "cover": "/generated/covers/looney-tunes-147-dfe2f936.jpg"
+  },
+  {
+    "id": "looney-tunes-148-3e24e8c5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#148",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20148.cbr",
+    "cover": "/generated/covers/looney-tunes-148-3e24e8c5.jpg"
+  },
+  {
+    "id": "looney-tunes-149-97833e86",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#149",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20149.cbr",
+    "cover": "/generated/covers/looney-tunes-149-97833e86.jpg"
+  },
+  {
+    "id": "looney-tunes-150-98439118",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#150",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20150.cbr",
+    "cover": "/generated/covers/looney-tunes-150-98439118.jpg"
+  },
+  {
+    "id": "looney-tunes-151-08c46711",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#151",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20151.cbr",
+    "cover": "/generated/covers/looney-tunes-151-08c46711.jpg"
+  },
+  {
+    "id": "looney-tunes-152-7065193f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#152",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20152.cbr",
+    "cover": "/generated/covers/looney-tunes-152-7065193f.jpg"
+  },
+  {
+    "id": "looney-tunes-153-21279447",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#153",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20153.cbr",
+    "cover": "/generated/covers/looney-tunes-153-21279447.jpg"
+  },
+  {
+    "id": "looney-tunes-154-4476e018",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#154",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20154.cbr",
+    "cover": "/generated/covers/looney-tunes-154-4476e018.jpg"
+  },
+  {
+    "id": "looney-tunes-155-08fddbf3",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#155",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20155.cbr",
+    "cover": "/generated/covers/looney-tunes-155-08fddbf3.jpg"
+  },
+  {
+    "id": "looney-tunes-156-d8fbecea",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#156",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20156.cbr",
+    "cover": "/generated/covers/looney-tunes-156-d8fbecea.jpg"
+  },
+  {
+    "id": "looney-tunes-157-2b107eb4",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#157",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20157.cbr",
+    "cover": "/generated/covers/looney-tunes-157-2b107eb4.jpg"
+  },
+  {
+    "id": "looney-tunes-158-d018ff89",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#158",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20158.cbr",
+    "cover": "/generated/covers/looney-tunes-158-d018ff89.jpg"
+  },
+  {
+    "id": "looney-tunes-159-1f4a79d1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#159",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20159.cbr",
+    "cover": "/generated/covers/looney-tunes-159-1f4a79d1.jpg"
+  },
+  {
+    "id": "looney-tunes-160-20cb38c8",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#160",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20160.cbr",
+    "cover": "/generated/covers/looney-tunes-160-20cb38c8.jpg"
+  },
+  {
+    "id": "looney-tunes-161-46ffca57",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#161",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20161.cbr",
+    "cover": "/generated/covers/looney-tunes-161-46ffca57.jpg"
+  },
+  {
+    "id": "looney-tunes-162-33c4163b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#162",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20162.cbr",
+    "cover": "/generated/covers/looney-tunes-162-33c4163b.jpg"
+  },
+  {
+    "id": "looney-tunes-163-272a7458",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#163",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20163.cbr",
+    "cover": "/generated/covers/looney-tunes-163-272a7458.jpg"
+  },
+  {
+    "id": "looney-tunes-164-46f900eb",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#164",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20164.cbr",
+    "cover": "/generated/covers/looney-tunes-164-46f900eb.jpg"
+  },
+  {
+    "id": "looney-tunes-165-cec93df7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#165",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20165.cbr",
+    "cover": "/generated/covers/looney-tunes-165-cec93df7.jpg"
+  },
+  {
+    "id": "looney-tunes-166-44e5c3b7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#166",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20166.cbr",
+    "cover": "/generated/covers/looney-tunes-166-44e5c3b7.jpg"
+  },
+  {
+    "id": "looney-tunes-167-950a8d31",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#167",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20167.cbr",
+    "cover": "/generated/covers/looney-tunes-167-950a8d31.jpg"
+  },
+  {
+    "id": "looney-tunes-168-403d3682",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#168",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20168.cbr",
+    "cover": "/generated/covers/looney-tunes-168-403d3682.jpg"
+  },
+  {
+    "id": "looney-tunes-169-3493ca1f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#169",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20169.cbr",
+    "cover": "/generated/covers/looney-tunes-169-3493ca1f.jpg"
+  },
+  {
+    "id": "looney-tunes-170-b96b5cc3",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#170",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20170.cbr",
+    "cover": "/generated/covers/looney-tunes-170-b96b5cc3.jpg"
+  },
+  {
+    "id": "looney-tunes-171-6e6a2fa7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#171",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20171.cbr",
+    "cover": "/generated/covers/looney-tunes-171-6e6a2fa7.jpg"
+  },
+  {
+    "id": "looney-tunes-172-7d68f3c5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#172",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20172.cbr",
+    "cover": "/generated/covers/looney-tunes-172-7d68f3c5.jpg"
+  },
+  {
+    "id": "looney-tunes-173-cdc361c3",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#173",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20173.cbr",
+    "cover": "/generated/covers/looney-tunes-173-cdc361c3.jpg"
+  },
+  {
+    "id": "looney-tunes-174-35db4077",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#174",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20174.cbr",
+    "cover": "/generated/covers/looney-tunes-174-35db4077.jpg"
+  },
+  {
+    "id": "looney-tunes-175-d41062d9",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#175",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20175.cbr",
+    "cover": "/generated/covers/looney-tunes-175-d41062d9.jpg"
+  },
+  {
+    "id": "looney-tunes-176-3d9bebac",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#176",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20176.cbr",
+    "cover": "/generated/covers/looney-tunes-176-3d9bebac.jpg"
+  },
+  {
+    "id": "looney-tunes-177-599068c6",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#177",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20177.cbr",
+    "cover": "/generated/covers/looney-tunes-177-599068c6.jpg"
+  },
+  {
+    "id": "looney-tunes-178-180ccb65",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#178",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20178.cbr",
+    "cover": "/generated/covers/looney-tunes-178-180ccb65.jpg"
+  },
+  {
+    "id": "looney-tunes-179-45adb45e",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#179",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20179.cbr",
+    "cover": "/generated/covers/looney-tunes-179-45adb45e.jpg"
+  },
+  {
+    "id": "looney-tunes-180-4557314b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#180",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20180.cbr",
+    "cover": "/generated/covers/looney-tunes-180-4557314b.jpg"
+  },
+  {
+    "id": "looney-tunes-181-23dcbb75",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#181",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20181.cbr",
+    "cover": "/generated/covers/looney-tunes-181-23dcbb75.jpg"
+  },
+  {
+    "id": "looney-tunes-182-8697dc8f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#182",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20182.cbr",
+    "cover": "/generated/covers/looney-tunes-182-8697dc8f.jpg"
+  },
+  {
+    "id": "looney-tunes-183-d2245650",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#183",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20183.cbr",
+    "cover": "/generated/covers/looney-tunes-183-d2245650.jpg"
+  },
+  {
+    "id": "looney-tunes-184-0460277a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#184",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20184.cbr",
+    "cover": "/generated/covers/looney-tunes-184-0460277a.jpg"
+  },
+  {
+    "id": "looney-tunes-185-24f28565",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#185",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20185.cbr",
+    "cover": "/generated/covers/looney-tunes-185-24f28565.jpg"
+  },
+  {
+    "id": "looney-tunes-186-ed10ee59",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#186",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20186.cbr",
+    "cover": "/generated/covers/looney-tunes-186-ed10ee59.jpg"
+  },
+  {
+    "id": "looney-tunes-187-c691c75c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#187",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20187.cbr",
+    "cover": "/generated/covers/looney-tunes-187-c691c75c.jpg"
+  },
+  {
+    "id": "looney-tunes-188-dfbcbebe",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#188",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20188.cbr",
+    "cover": "/generated/covers/looney-tunes-188-dfbcbebe.jpg"
+  },
+  {
+    "id": "looney-tunes-189-41fa22c5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#189",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20189.cbr",
+    "cover": "/generated/covers/looney-tunes-189-41fa22c5.jpg"
+  },
+  {
+    "id": "looney-tunes-190-31e9224d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#190",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20190.cbr",
+    "cover": "/generated/covers/looney-tunes-190-31e9224d.jpg"
+  },
+  {
+    "id": "looney-tunes-191-f169a628",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#191",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20191.cbr",
+    "cover": "/generated/covers/looney-tunes-191-f169a628.jpg"
+  },
+  {
+    "id": "looney-tunes-192-22902c21",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#192",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20192.cbr",
+    "cover": "/generated/covers/looney-tunes-192-22902c21.jpg"
+  },
+  {
+    "id": "looney-tunes-193-c2081753",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#193",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20193.cbr",
+    "cover": "/generated/covers/looney-tunes-193-c2081753.jpg"
+  },
+  {
+    "id": "looney-tunes-194-8a51dd98",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#194",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20194.cbr",
+    "cover": "/generated/covers/looney-tunes-194-8a51dd98.jpg"
+  },
+  {
+    "id": "looney-tunes-195-d2d125c8",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#195",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20195.cbz",
+    "cover": "/generated/covers/looney-tunes-195-d2d125c8.jpg"
+  },
+  {
+    "id": "looney-tunes-196-6de85c0a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#196",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20196.cbz",
+    "cover": "/generated/covers/looney-tunes-196-6de85c0a.jpg"
+  },
+  {
+    "id": "looney-tunes-197-af88bbdd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#197",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20197.cbz",
+    "cover": "/generated/covers/looney-tunes-197-af88bbdd.jpg"
+  },
+  {
+    "id": "looney-tunes-198-32c778cf",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#198",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20198.cbr",
+    "cover": "/generated/covers/looney-tunes-198-32c778cf.jpg"
+  },
+  {
+    "id": "looney-tunes-199-f6904073",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#199",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20199.cbr",
+    "cover": "/generated/covers/looney-tunes-199-f6904073.jpg"
+  },
+  {
+    "id": "looney-tunes-200-439c9787",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#200",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20200.cbr",
+    "cover": "/generated/covers/looney-tunes-200-439c9787.jpg"
+  },
+  {
+    "id": "looney-tunes-201-a23a4eca",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#201",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20201.cbr",
+    "cover": "/generated/covers/looney-tunes-201-a23a4eca.jpg"
+  },
+  {
+    "id": "looney-tunes-202-7df34976",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#202",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20202.cbr",
+    "cover": "/generated/covers/looney-tunes-202-7df34976.jpg"
+  },
+  {
+    "id": "looney-tunes-203-ea894ae1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#203",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20203.cbz",
+    "cover": "/generated/covers/looney-tunes-203-ea894ae1.jpg"
+  },
+  {
+    "id": "looney-tunes-204-a07a88ee",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#204",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20204.cbr",
+    "cover": "/generated/covers/looney-tunes-204-a07a88ee.jpg"
+  },
+  {
+    "id": "looney-tunes-205-6c2a1f49",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#205",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20205.cbr",
+    "cover": "/generated/covers/looney-tunes-205-6c2a1f49.jpg"
+  },
+  {
+    "id": "looney-tunes-206-f726261b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#206",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20206.cbr",
+    "cover": "/generated/covers/looney-tunes-206-f726261b.jpg"
+  },
+  {
+    "id": "looney-tunes-207-096db598",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#207",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20207.cbr",
+    "cover": "/generated/covers/looney-tunes-207-096db598.jpg"
+  },
+  {
+    "id": "looney-tunes-208-ddc05d96",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#208",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20208.cbr",
+    "cover": "/generated/covers/looney-tunes-208-ddc05d96.jpg"
+  },
+  {
+    "id": "looney-tunes-209-d1e8a99d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#209",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20209.cbr",
+    "cover": "/generated/covers/looney-tunes-209-d1e8a99d.jpg"
+  },
+  {
+    "id": "looney-tunes-210-51d36cf5",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#210",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20210.cbr",
+    "cover": "/generated/covers/looney-tunes-210-51d36cf5.jpg"
+  },
+  {
+    "id": "looney-tunes-211-34d16ac7",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#211",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20211.cbr",
+    "cover": "/generated/covers/looney-tunes-211-34d16ac7.jpg"
+  },
+  {
+    "id": "looney-tunes-212-033939c1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#212",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20212.cbr",
+    "cover": "/generated/covers/looney-tunes-212-033939c1.jpg"
+  },
+  {
+    "id": "looney-tunes-213-1beacd2f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#213",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20213.cbr",
+    "cover": "/generated/covers/looney-tunes-213-1beacd2f.jpg"
+  },
+  {
+    "id": "looney-tunes-214-4551b302",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#214",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20214.cbr",
+    "cover": "/generated/covers/looney-tunes-214-4551b302.jpg"
+  },
+  {
+    "id": "looney-tunes-215-2882c07d",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#215",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20215.cbr",
+    "cover": "/generated/covers/looney-tunes-215-2882c07d.jpg"
+  },
+  {
+    "id": "looney-tunes-216-cf2919ed",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#216",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20216.cbr",
+    "cover": "/generated/covers/looney-tunes-216-cf2919ed.jpg"
+  },
+  {
+    "id": "looney-tunes-217-e6c39ee9",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#217",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20217.cbr",
+    "cover": "/generated/covers/looney-tunes-217-e6c39ee9.jpg"
+  },
+  {
+    "id": "looney-tunes-218-e71a0ef2",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#218",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20218.cbr",
+    "cover": "/generated/covers/looney-tunes-218-e71a0ef2.jpg"
+  },
+  {
+    "id": "looney-tunes-219-88a413fe",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#219",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20219.cbr",
+    "cover": "/generated/covers/looney-tunes-219-88a413fe.jpg"
+  },
+  {
+    "id": "looney-tunes-220-701ccfdd",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#220",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20220.cbr",
+    "cover": "/generated/covers/looney-tunes-220-701ccfdd.jpg"
+  },
+  {
+    "id": "looney-tunes-221-7ea29b13",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#221",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20221.cbr",
+    "cover": "/generated/covers/looney-tunes-221-7ea29b13.jpg"
+  },
+  {
+    "id": "looney-tunes-222-e655e442",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#222",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20222.cbr",
+    "cover": "/generated/covers/looney-tunes-222-e655e442.jpg"
+  },
+  {
+    "id": "looney-tunes-223-8f56dd97",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#223",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20223.cbr",
+    "cover": "/generated/covers/looney-tunes-223-8f56dd97.jpg"
+  },
+  {
+    "id": "looney-tunes-224-84ab6135",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#224",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20224.cbr",
+    "cover": "/generated/covers/looney-tunes-224-84ab6135.jpg"
+  },
+  {
+    "id": "looney-tunes-225-606e2310",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#225",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20225.cbr",
+    "cover": "/generated/covers/looney-tunes-225-606e2310.jpg"
+  },
+  {
+    "id": "looney-tunes-226-65d5d4d0",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#226",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20226.cbr",
+    "cover": "/generated/covers/looney-tunes-226-65d5d4d0.jpg"
+  },
+  {
+    "id": "looney-tunes-227-9334405f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#227",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20227.cbr",
+    "cover": "/generated/covers/looney-tunes-227-9334405f.jpg"
+  },
+  {
+    "id": "looney-tunes-228-65998def",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#228",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20228.cbr",
+    "cover": "/generated/covers/looney-tunes-228-65998def.jpg"
+  },
+  {
+    "id": "looney-tunes-229-ea2c0459",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#229",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20229.cbr",
+    "cover": "/generated/covers/looney-tunes-229-ea2c0459.jpg"
+  },
+  {
+    "id": "looney-tunes-230-6fbee617",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#230",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20230.cbr",
+    "cover": "/generated/covers/looney-tunes-230-6fbee617.jpg"
+  },
+  {
+    "id": "looney-tunes-231-e2efc732",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#231",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20231.cbr",
+    "cover": "/generated/covers/looney-tunes-231-e2efc732.jpg"
+  },
+  {
+    "id": "looney-tunes-232-74c34f5b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#232",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20232.cbr",
+    "cover": "/generated/covers/looney-tunes-232-74c34f5b.jpg"
+  },
+  {
+    "id": "looney-tunes-233-f6771959",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#233",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20233.cbr",
+    "cover": "/generated/covers/looney-tunes-233-f6771959.jpg"
+  },
+  {
+    "id": "looney-tunes-234-bf556eb4",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#234",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20234.cbr",
+    "cover": "/generated/covers/looney-tunes-234-bf556eb4.jpg"
+  },
+  {
+    "id": "looney-tunes-235-90c19a53",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#235",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20235.cbr",
+    "cover": "/generated/covers/looney-tunes-235-90c19a53.jpg"
+  },
+  {
+    "id": "looney-tunes-236-0f4418c8",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#236",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20236.cbr",
+    "cover": "/generated/covers/looney-tunes-236-0f4418c8.jpg"
+  },
+  {
+    "id": "looney-tunes-237-5279e333",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#237",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20237.cbr",
+    "cover": "/generated/covers/looney-tunes-237-5279e333.jpg"
+  },
+  {
+    "id": "looney-tunes-238-e52942ba",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#238",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20238.cbr",
+    "cover": "/generated/covers/looney-tunes-238-e52942ba.jpg"
+  },
+  {
+    "id": "looney-tunes-239-06e6ec64",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#239",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20239.cbr",
+    "cover": "/generated/covers/looney-tunes-239-06e6ec64.jpg"
+  },
+  {
+    "id": "looney-tunes-240-b7fe1824",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#240",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20240.cbr",
+    "cover": "/generated/covers/looney-tunes-240-b7fe1824.jpg"
+  },
+  {
+    "id": "looney-tunes-241-83e28b9b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#241",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20241.cbr",
+    "cover": "/generated/covers/looney-tunes-241-83e28b9b.jpg"
+  },
+  {
+    "id": "looney-tunes-242-8d24d97f",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#242",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20242.cbr",
+    "cover": "/generated/covers/looney-tunes-242-8d24d97f.jpg"
+  },
+  {
+    "id": "looney-tunes-243-097acbfc",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#243",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20243.cbr",
+    "cover": "/generated/covers/looney-tunes-243-097acbfc.jpg"
+  },
+  {
+    "id": "looney-tunes-244-277a158a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#244",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20244.cbr",
+    "cover": "/generated/covers/looney-tunes-244-277a158a.jpg"
+  },
+  {
+    "id": "looney-tunes-245-dbaee029",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#245",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20245.cbr",
+    "cover": "/generated/covers/looney-tunes-245-dbaee029.jpg"
+  },
+  {
+    "id": "looney-tunes-246-fda4fc4c",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#246",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20246.cbr",
+    "cover": "/generated/covers/looney-tunes-246-fda4fc4c.jpg"
+  },
+  {
+    "id": "looney-tunes-247-3e492cb1",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#247",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20247.cbr",
+    "cover": "/generated/covers/looney-tunes-247-3e492cb1.jpg"
+  },
+  {
+    "id": "looney-tunes-248-c28b0f49",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#248",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20248.cbr",
+    "cover": "/generated/covers/looney-tunes-248-c28b0f49.jpg"
+  },
+  {
+    "id": "looney-tunes-249-5eb14112",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#249",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20249.cbr",
+    "cover": "/generated/covers/looney-tunes-249-5eb14112.jpg"
+  },
+  {
+    "id": "looney-tunes-250-cf9daf7b",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#250",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20250.cbr",
+    "cover": "/generated/covers/looney-tunes-250-cf9daf7b.jpg"
+  },
+  {
+    "id": "looney-tunes-251-1934bdef",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#251",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20251.cbr",
+    "cover": "/generated/covers/looney-tunes-251-1934bdef.jpg"
+  },
+  {
+    "id": "looney-tunes-252-a482c48a",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#252",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20252.cbz",
+    "cover": "/generated/covers/looney-tunes-252-a482c48a.jpg"
+  },
+  {
+    "id": "looney-tunes-253-a30454c3",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#253",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20253.cbr",
+    "cover": "/generated/covers/looney-tunes-253-a30454c3.jpg"
+  },
+  {
+    "id": "looney-tunes-254-cf7d2114",
+    "title": "Looney Tunes",
+    "series": "Looney Tunes (1994)",
+    "seriesId": "looney-tunes-1994",
+    "issue": "#254",
+    "archive": "/comics/Looney%20Tunes%20(1994)/Looney%20Tunes%20254.cbr",
+    "cover": "/generated/covers/looney-tunes-254-cf7d2114.jpg"
   },
   {
     "id": "megaman01-fc2f7dc9",
@@ -611,6 +3077,159 @@ export const comics = [
     "issue": "#3",
     "archive": "/comics/Princess%20Sally%20Acorn%20Miniseries/PrincessSallyMiniseries03.cbr",
     "cover": "/generated/covers/princesssallyminiseries03-5d25e776.jpg"
+  },
+  {
+    "id": "sonic-quest-the-death-egg-saga-issue-1-87861ad7",
+    "title": "Sonic Quest - The Death Egg Saga",
+    "series": "Sonic Quest - The Death Egg Saga (1997)",
+    "seriesId": "sonic-quest-the-death-egg-saga-1997",
+    "issue": "#1",
+    "archive": "/comics/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20(1997)/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20Issue%20%231.cbz",
+    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-1-87861ad7.jpg"
+  },
+  {
+    "id": "sonic-quest-the-death-egg-saga-issue-2-bdc88c46",
+    "title": "Sonic Quest - The Death Egg Saga",
+    "series": "Sonic Quest - The Death Egg Saga (1997)",
+    "seriesId": "sonic-quest-the-death-egg-saga-1997",
+    "issue": "#2",
+    "archive": "/comics/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20(1997)/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20Issue%20%232.cbz",
+    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-2-bdc88c46.jpg"
+  },
+  {
+    "id": "sonic-quest-the-death-egg-saga-issue-3-219f4992",
+    "title": "Sonic Quest - The Death Egg Saga",
+    "series": "Sonic Quest - The Death Egg Saga (1997)",
+    "seriesId": "sonic-quest-the-death-egg-saga-1997",
+    "issue": "#3",
+    "archive": "/comics/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20(1997)/Sonic%20Quest%20-%20The%20Death%20Egg%20Saga%20Issue%20%233.cbz",
+    "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-3-219f4992.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-2-brave-new-world-146ecee6",
+    "title": "Sonic Super Special Issue #2 - Brave New World",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#2",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%232%20-%20Brave%20New%20World.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-2-brave-new-world-146ecee6.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-3-sonic-firsts-e19cb950",
+    "title": "Sonic Super Special Issue #3 - Sonic Firsts",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#3",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%233%20-%20Sonic%20Firsts.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-3-sonic-firsts-e19cb950.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-4-return-of-the-king-b0c46240",
+    "title": "Sonic Super Special Issue #4 - Return of the King",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#4",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%234%20-%20Return%20of%20the%20King.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-4-return-of-the-king-b0c46240.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-5-sonic-kids-f191800b",
+    "title": "Sonic Super Special Issue #5 - Sonic Kids",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#5",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%235%20-%20Sonic%20Kids.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-5-sonic-kids-f191800b.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-6-the-big-50-083c1c09",
+    "title": "Sonic Super Special Issue #6 - The big 50",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#6",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%236%20-%20The%20big%2050.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-6-the-big-50-083c1c09.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-7-sonic-image-crossover-80c05af7",
+    "title": "Sonic Super Special Issue #7 - Sonic Image Crossover",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#7",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%237%20-%20Sonic%20Image%20Crossover.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-7-sonic-image-crossover-80c05af7.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-8-giant-special-2ec33a75",
+    "title": "Sonic Super Special Issue #8 - Giant special",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#8",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%238%20-%20Giant%20special.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-8-giant-special-2ec33a75.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-9-sonic-kids-are-back-a5db67cc",
+    "title": "Sonic Super Special Issue #9 - Sonic Kids are back",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#9",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%239%20-%20Sonic%20Kids%20are%20back.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-9-sonic-kids-are-back-a5db67cc.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-10-chaos-crossover-906f1f9c",
+    "title": "Sonic Super Special Issue #10 - Chaos Crossover",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#10",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2310%20-%20Chaos%20Crossover.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-10-chaos-crossover-906f1f9c.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-11-girls-rule-f475a69d",
+    "title": "Sonic Super Special Issue #11 - Girls Rule!",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#11",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2311%20-%20Girls%20Rule!.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-11-girls-rule-f475a69d.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-12-sonic-and-knuckles-visa-versa-fd066b16",
+    "title": "Sonic Super Special Issue #12 - Sonic and Knuckles visa versa",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#12",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2312%20-%20Sonic%20and%20Knuckles%20visa%20versa.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-12-sonic-and-knuckles-visa-versa-fd066b16.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-13-sonic-adventure-d5398b5b",
+    "title": "Sonic Super Special Issue #13 - Sonic Adventure",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#13",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2313%20-%20Sonic%20Adventure.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-13-sonic-adventure-d5398b5b.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-14-best-of-times-f1d5e527",
+    "title": "Sonic Super Special Issue #14 - best of times",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#14",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2314%20-%20best%20of%20times.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-14-best-of-times-f1d5e527.jpg"
+  },
+  {
+    "id": "sonic-super-special-issue-15-naugus-games-20f4cdca",
+    "title": "Sonic Super Special Issue #15 - Naugus games",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#15",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%2315%20-%20Naugus%20games.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-15-naugus-games-20f4cdca.jpg"
   },
   {
     "id": "sonicthehedgehog001-53c79f8f",
@@ -3295,12 +5914,174 @@ export const comics = [
     "cover": "/generated/covers/tailsminiseries03-6860dc18.jpg"
   },
   {
-    "id": "theflintstones1-2bbdd943",
+    "id": "the-flintstones-1995-issue-1-6db58fa0",
     "title": "The Flintstones",
     "series": "The Flintstones (1995)",
     "seriesId": "the-flintstones-1995",
     "issue": "#1",
-    "archive": "/comics/The%20Flintstones%20(1995)/TheFlintstones1.cbz",
-    "cover": "/generated/covers/theflintstones1-2bbdd943.webp"
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%231.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-1-6db58fa0.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-2-7f4d92e4",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#2",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%232.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-2-7f4d92e4.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-3-e3c38994",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#3",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%233.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-3-e3c38994.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-4-68e76398",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#4",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%234.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-4-68e76398.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-5-f8a6446e",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#5",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%235.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-5-f8a6446e.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-6-e65f76a4",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#6",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%236.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-6-e65f76a4.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-7-1cb7214a",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#7",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%237.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-7-1cb7214a.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-9-e6000a96",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#9",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%239.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-9-e6000a96.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-10-1a1b15ff",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#10",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2310.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-10-1a1b15ff.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-11-da64a050",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#11",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2311.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-11-da64a050.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-12-f107ea53",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#12",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2312.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-12-f107ea53.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-13-2f85c634",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#13",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2313.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-13-2f85c634.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-14-fefce99d",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#14",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2314.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-14-fefce99d.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-15-aaf6b66c",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#15",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2315.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-15-aaf6b66c.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-16-69ccf9bc",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#16",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2316.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-16-69ccf9bc.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-17-33f7b801",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#17",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2317.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-17-33f7b801.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-19-215f8075",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#19",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2319.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-19-215f8075.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-21-1748684d",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#21",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2321.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-21-1748684d.jpg"
+  },
+  {
+    "id": "the-flintstones-1995-issue-22-d47bb5d4",
+    "title": "The Flintstones",
+    "series": "The Flintstones (1995)",
+    "seriesId": "the-flintstones-1995",
+    "issue": "#22",
+    "archive": "/comics/The%20Flintstones%20(1995)/The%20Flintstones%20(1995)%20Issue%20%2322.cbz",
+    "cover": "/generated/covers/the-flintstones-1995-issue-22-d47bb5d4.jpg"
   }
 ]
