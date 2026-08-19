@@ -3106,6 +3106,15 @@ export const comics = [
     "cover": "/generated/covers/sonic-quest-the-death-egg-saga-issue-3-219f4992.jpg"
   },
   {
+    "id": "sonic-super-special-issue-1-sonic-vs-knuckles-battle-royal-1c2b8219",
+    "title": "Sonic Super Special Issue #1 - Sonic Vs. Knuckles Battle Royal",
+    "series": "Sonic Super Specials",
+    "seriesId": "sonic-super-specials",
+    "issue": "#1",
+    "archive": "/comics/Sonic%20Super%20Specials/Sonic%20Super%20Special%20Issue%20%231%20-%20Sonic%20Vs.%20Knuckles%20Battle%20Royal.cbz",
+    "cover": "/generated/covers/sonic-super-special-issue-1-sonic-vs-knuckles-battle-royal-1c2b8219.jpg"
+  },
+  {
     "id": "sonic-super-special-issue-2-brave-new-world-146ecee6",
     "title": "Sonic Super Special Issue #2 - Brave New World",
     "series": "Sonic Super Specials",
