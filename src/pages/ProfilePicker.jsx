@@ -2,7 +2,12 @@ import { useEffect, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import Modal from '../components/Modal.jsx'
 import { avatarPath } from '../data/avatars.js'
-import { createSession, deleteAccount, listAccounts } from '../utils/auth.js'
+import {
+  createLocalAccount,
+  createSession,
+  deleteAccount,
+  listAccounts,
+} from '../utils/auth.js'
 import { deleteProfileProgress } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
 import {
@@ -98,6 +103,21 @@ function ProfilePicker() {
     } catch (error) {
       setCreateError(error.message)
       setCreating(false)
+    }
+  }
+
+  function createLocalProfile() {
+    setCreateError('')
+
+    try {
+      createLocalAccount(createName)
+      setProfiles(listAccounts())
+      setShowCreate(false)
+      setCreateName('')
+      setCreatePin('')
+      setConfirmPin('')
+    } catch (error) {
+      setCreateError(error.message)
     }
   }
 
@@ -212,7 +232,9 @@ function ProfilePicker() {
         title="Create your hero"
         content={(
           <form class="profile-modal-form" onSubmit={createProfile}>
-            <p>Create a profile that can be used on all your devices.</p>
+            <p>
+              Add a PIN to sync this profile across devices, or choose “Use only this device.”
+            </p>
             <label for="create-profile-name">Profile name</label>
             <input
               id="create-profile-name"
@@ -257,7 +279,14 @@ function ProfilePicker() {
           </form>
         )}
         onClose={closeCreate}
-        actions={[{ label: 'Cancel', disabled: creating, onClick: closeCreate }]}
+        actions={[
+          { label: 'Cancel', disabled: creating, onClick: closeCreate },
+          {
+            label: 'Use only this device',
+            disabled: creating || !createName.trim(),
+            onClick: createLocalProfile,
+          },
+        ]}
       />
 
       <Modal

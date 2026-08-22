@@ -28,7 +28,8 @@ function Modal({ open, title, content, actions = [], onClose }) {
           {actions.map((action) => (
             <button
               class={`modal-action ${action.tone ?? ''}`.trim()}
-              type="button"
+              type={action.type ?? 'button'}
+              form={action.form}
               key={action.label}
               disabled={action.disabled}
               onClick={action.onClick}

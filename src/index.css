@@ -316,6 +316,17 @@ nav a {
   .viewer-toolbar {
     transition: none;
   }
+
+  .sync-device > span,
+  .sync-transfer-path i,
+  .sync-transfer-path > span {
+    animation: none;
+  }
+
+  .sync-transfer-path > span {
+    left: calc(50% - 1rem);
+    opacity: 1;
+  }
 }
 
 main {
@@ -925,6 +936,135 @@ button:disabled {
   font-size: 1.45rem;
   text-shadow: 0 2px 4px rgb(0 0 0 / 65%);
   transform: translate(-50%, -50%);
+}
+
+.sync-migration-illustration {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(6rem, 1fr) 3.5rem;
+  gap: 0.75rem;
+  align-items: center;
+  width: min(100%, 390px);
+  min-height: 7rem;
+  margin: 1.25rem auto 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--theme-border);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, var(--theme-surface), var(--theme-surface-deep));
+  overflow: hidden;
+}
+
+.sync-device {
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: var(--theme-accent-soft);
+}
+
+.sync-device > svg {
+  width: 100%;
+  max-height: 4.75rem;
+  fill: currentcolor;
+}
+
+.sync-device > span {
+  position: absolute;
+  display: grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--theme-accent);
+  box-shadow: 0 0 0.85rem var(--theme-accent-light);
+  animation: sync-device-user-pulse 2.4s ease-in-out infinite;
+}
+
+.sync-device > span svg {
+  width: 0.7rem;
+  fill: currentcolor;
+}
+
+.laptop-device > span {
+  top: 1.25rem;
+}
+
+.phone-device > span {
+  top: 1.7rem;
+}
+
+.sync-transfer-path {
+  position: relative;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sync-transfer-path::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--theme-accent-dark), var(--theme-accent-light));
+  content: '';
+  opacity: 0.65;
+}
+
+.sync-transfer-path i {
+  z-index: 1;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--theme-accent-soft);
+  box-shadow: 0 0 0.55rem var(--theme-accent-light);
+  animation: sync-transfer-dot 1.2s ease-in-out infinite;
+}
+
+.sync-transfer-path i:nth-child(2) { animation-delay: 180ms; }
+.sync-transfer-path i:nth-child(3) { animation-delay: 360ms; }
+
+.sync-transfer-path > span {
+  position: absolute;
+  z-index: 2;
+  left: -0.5rem;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--theme-accent);
+  box-shadow: 0 0 1rem var(--theme-accent-light);
+  animation: sync-user-between-devices 3s ease-in-out infinite;
+}
+
+.sync-transfer-path > span svg {
+  width: 0.85rem;
+  fill: currentcolor;
+}
+
+.sync-migration-note {
+  color: var(--theme-text-soft);
+  font-size: 0.95rem;
+}
+
+@keyframes sync-user-between-devices {
+  0%, 8% { left: -0.5rem; opacity: 0; transform: scale(0.75); }
+  18% { opacity: 1; transform: scale(1); }
+  45%, 55% { left: calc(100% - 1.5rem); opacity: 1; transform: scale(1); }
+  72% { opacity: 1; }
+  92%, 100% { left: -0.5rem; opacity: 0; transform: scale(0.75); }
+}
+
+@keyframes sync-transfer-dot {
+  0%, 100% { opacity: 0.3; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes sync-device-user-pulse {
+  0%, 100% { transform: scale(0.88); }
+  50% { transform: scale(1.05); }
 }
 
 .profile-picture-setting > img,
@@ -1964,6 +2104,12 @@ input {
 .modal-action {
   margin: 0;
   box-shadow: none;
+}
+
+.modal-action.secondary {
+  color: var(--theme-text);
+  background: transparent;
+  border-color: var(--theme-border-strong);
 }
 
 .modal-action.danger {

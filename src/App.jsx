@@ -1,5 +1,6 @@
 import { ErrorBoundary, LocationProvider, Route, Router } from 'preact-iso'
 import Header from './components/Header.jsx'
+import ProfileMigration from './components/ProfileMigration.jsx'
 import RequireAuth from './components/RequireAuth.jsx'
 import Home from './pages/Home.jsx'
 import ComicViewer from './pages/ComicViewer.jsx'
@@ -12,6 +13,7 @@ import { routerPath } from './utils/sitePath.js'
 function App() {
   return (
     <LocationProvider scope={import.meta.env.BASE_URL}>
+      <ProfileMigration />
       <Header />
       <main>
         <ErrorBoundary>

@@ -145,6 +145,7 @@ function applySyncedPayload(username, credentials, payload) {
     username: nextUsername,
     avatar: payload.avatar ?? '',
     theme: payload.theme ?? 'blue',
+    syncOptOut: false,
   })
   const progress = replaceProfileProgress(nextUsername, payload.progress ?? {}, false)
   return { account, progress, username: nextUsername }
@@ -180,6 +181,36 @@ export async function registerSyncedAccount(name, pin) {
   }
   emitStatus('synced', 'Profile is synced.')
   return account
+}
+
+export async function migrateLocalProfile(username, pin) {
+  validatePin(pin)
+  const localAccount = listAccounts().find((account) => account.username === username)
+  if (!localAccount) throw new Error('This profile is not stored on this device.')
+  if (localAccount.synced) return syncProfile(username)
+
+  emitStatus('syncing', 'Moving this profile to device sync…')
+  const progress = getProfileProgress(username)
+  const credentials = { name: localAccount.name, pin }
+  let payload
+  let resolvedCredentials = credentials
+
+  try {
+    payload = await request('POST', credentials, progress, {
+      avatar: localAccount.avatar ?? '',
+      theme: localAccount.theme ?? 'blue',
+    })
+  } catch (error) {
+    if (error.status !== 409) throw error
+
+    const result = await requestFollowingMoves('PUT', credentials, progress)
+    payload = result.payload
+    resolvedCredentials = result.credentials
+  }
+
+  const result = applySyncedPayload(username, resolvedCredentials, payload)
+  emitStatus('synced', 'Your profile now syncs across devices.')
+  return result
 }
 
 export async function connectSyncedAccount(name, pin) {

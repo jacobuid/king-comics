@@ -41,8 +41,30 @@ export function upsertAccount(name, options = {}) {
     synced: options.synced ?? existing?.synced ?? false,
     avatar: options.avatar ?? existing?.avatar ?? '',
     theme: options.theme ?? existing?.theme ?? 'blue',
+    syncOptOut: options.syncOptOut ?? existing?.syncOptOut ?? false,
   }
 
+  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  notifyProfilesChanged()
+  return accounts[username]
+}
+
+export function createLocalAccount(name) {
+  const displayName = name.trim().normalize('NFKC')
+  const username = normalizeName(displayName)
+  if (!username) throw new Error('Enter a name for this profile.')
+
+  const accounts = readAccounts()
+  if (accounts[username]) throw new Error('That local profile already exists.')
+
+  return upsertAccount(displayName, { username, synced: false, syncOptOut: true })
+}
+
+export function setAccountSyncOptOut(username, syncOptOut) {
+  const accounts = readAccounts()
+  if (!accounts[username]) throw new Error('This profile is not stored on this device.')
+
+  accounts[username] = { ...accounts[username], syncOptOut: Boolean(syncOptOut) }
   localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
   notifyProfilesChanged()
   return accounts[username]

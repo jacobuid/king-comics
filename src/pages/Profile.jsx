@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import Modal from '../components/Modal.jsx'
+import { openProfileMigration } from '../components/ProfileMigration.jsx'
 import { avatarPath, avatars } from '../data/avatars.js'
 import { themes } from '../data/themes.js'
 import { comics } from '../data/comics.js'
@@ -348,7 +349,7 @@ function Profile({ user }) {
                 <strong>Device sync is off</strong>
                 <p class="sync-message">Add a PIN to use this profile on another device.</p>
               </div>
-              <a class="button" href={sitePath('/profiles')}>Set up sync</a>
+              <button type="button" onClick={openProfileMigration}>Set up sync</button>
             </div>
           )
         )}
