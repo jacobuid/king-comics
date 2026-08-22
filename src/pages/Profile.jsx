@@ -4,8 +4,8 @@ import { useLocation } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import { comics } from '../data/comics.js'
 import { assetPath } from '../utils/assetPath.js'
-import { clearSession, renameAccount } from '../utils/auth.js'
-import { getProfileProgress, renameProfileProgress, setComicBookmark } from '../utils/progress.js'
+import { clearSession } from '../utils/auth.js'
+import { getProfileProgress, setComicBookmark } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
 import { isSyncConfigured, SYNC_STATUS_EVENT, syncProfile } from '../utils/sync.js'
 
@@ -34,10 +34,7 @@ function historyTimestamp(item) {
 
 function Profile({ user }) {
   const { route } = useLocation()
-  const [currentUser, setCurrentUser] = useState(user)
-  const [name, setName] = useState(user.name)
   const [progress, setProgress] = useState(() => getProfileProgress(user.username))
-  const [message, setMessage] = useState('')
   const [error, setError] = useState('')
   const [syncStatus, setSyncStatus] = useState({ status: 'idle', message: '' })
 
@@ -81,25 +78,6 @@ function Profile({ user }) {
     ? Math.round((lastReadProgress.page / lastReadProgress.pageCount) * 100)
     : null
 
-  function handleRename(event) {
-    event.preventDefault()
-    setError('')
-    setMessage('')
-
-    try {
-      const previousUsername = currentUser.username
-      const updatedUser = renameAccount(previousUsername, name)
-      const updatedProgress = renameProfileProgress(previousUsername, updatedUser.username)
-
-      setCurrentUser(updatedUser)
-      setName(updatedUser.name)
-      setProgress(updatedProgress)
-      setMessage('Profile name updated.')
-    } catch (renameError) {
-      setError(renameError.message)
-    }
-  }
-
   function switchProfile() {
     clearSession()
     route(sitePath('/profiles'), true)
@@ -111,14 +89,14 @@ function Profile({ user }) {
   }
 
   function removeBookmark(comicId) {
-    const updatedProgress = setComicBookmark(currentUser.username, comicId, false)
+    const updatedProgress = setComicBookmark(user.username, comicId, false)
     setProgress({ ...updatedProgress })
   }
 
   async function syncNow() {
     setError('')
     try {
-      const updatedProgress = await syncProfile(currentUser.username)
+      const updatedProgress = await syncProfile(user.username)
       setProgress({ ...updatedProgress })
     } catch (syncError) {
       setError(syncError.message)
@@ -206,33 +184,29 @@ function Profile({ user }) {
 
       <div class="profile-settings">
         <h2>Profile settings</h2>
-        {isSyncConfigured() && currentUser.synced && (
-          <div class="sync-setting">
-            <div>
-              <strong>Device sync</strong>
-              <p class={syncStatus.status === 'error' ? 'error' : 'sync-message'}>
-                {syncStatus.message || 'Bookmarks and history sync automatically.'}
-              </p>
+        {isSyncConfigured() && (
+          user.synced ? (
+            <div class="sync-setting">
+              <div>
+                <strong>Device sync</strong>
+                <p class={syncStatus.status === 'error' ? 'error' : 'sync-message'}>
+                  {syncStatus.message || 'Bookmarks and history sync automatically.'}
+                </p>
+              </div>
+              <button type="button" onClick={syncNow} disabled={syncStatus.status === 'syncing'}>
+                Sync now
+              </button>
             </div>
-            <button type="button" onClick={syncNow} disabled={syncStatus.status === 'syncing'}>
-              Sync now
-            </button>
-          </div>
+          ) : (
+            <div class="sync-setting">
+              <div>
+                <strong>Device sync is off</strong>
+                <p class="sync-message">Add a PIN to use this profile on another device.</p>
+              </div>
+              <a class="button" href={sitePath('/signup')}>Set up sync</a>
+            </div>
+          )
         )}
-        <form class="rename-form" onSubmit={handleRename}>
-          <label for="profile-name">Profile name</label>
-          <div class="inline-form">
-            <input
-              id="profile-name"
-              value={name}
-              onInput={(event) => setName(event.currentTarget.value)}
-              maxLength="40"
-              required
-            />
-            <button type="submit">Save name</button>
-          </div>
-        </form>
-        {message && <p class="success" role="status">{message}</p>}
         {error && <p class="error" role="alert">{error}</p>}
       </div>
 

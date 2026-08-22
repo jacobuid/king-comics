@@ -13,6 +13,8 @@ test('accepts only four digit PINs', () => {
   assert.equal(_test.validPin('0427'), true)
   assert.equal(_test.validPin('427'), false)
   assert.equal(_test.validPin('12a4'), false)
+  assert.equal(_test.pinHash('superman', '1234'), _test.pinHash('superman', '1234'))
+  assert.notEqual(_test.pinHash('superman', '1234'), _test.pinHash('superman', '5678'))
 })
 
 test('keeps the newest per-comic change when two devices sync', () => {

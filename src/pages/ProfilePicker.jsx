@@ -6,6 +6,7 @@ import { deleteProfileProgress } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
 import {
   connectSyncedAccount,
+  deleteSyncedProfile,
   forgetSyncCredentials,
   isSyncConfigured,
   syncProfile,
@@ -20,6 +21,9 @@ function ProfilePicker() {
   const [pin, setPin] = useState('')
   const [error, setError] = useState('')
   const [connecting, setConnecting] = useState(false)
+  const [deletePin, setDeletePin] = useState('')
+  const [deleteError, setDeleteError] = useState('')
+  const [deleting, setDeleting] = useState(false)
 
   async function chooseProfile(profile) {
     setSelecting(profile.username)
@@ -43,14 +47,40 @@ function ProfilePicker() {
     }
   }
 
-  function confirmDelete() {
+  function openDelete(profile) {
+    setProfileToDelete(profile)
+    setDeletePin('')
+    setDeleteError('')
+  }
+
+  function closeDelete() {
+    if (deleting) return
+    setProfileToDelete(null)
+    setDeletePin('')
+    setDeleteError('')
+  }
+
+  async function confirmDelete() {
     if (!profileToDelete) return
 
-    deleteAccount(profileToDelete.username)
-    deleteProfileProgress(profileToDelete.username)
-    forgetSyncCredentials(profileToDelete.username)
-    setProfiles(listAccounts())
-    setProfileToDelete(null)
+    setDeleteError('')
+    setDeleting(true)
+
+    try {
+      if (profileToDelete.synced) {
+        await deleteSyncedProfile(profileToDelete.username, deletePin)
+      }
+      deleteAccount(profileToDelete.username)
+      deleteProfileProgress(profileToDelete.username)
+      forgetSyncCredentials(profileToDelete.username)
+      setProfiles(listAccounts())
+      setProfileToDelete(null)
+      setDeletePin('')
+    } catch (deleteProfileError) {
+      setDeleteError(deleteProfileError.message)
+    } finally {
+      setDeleting(false)
+    }
   }
 
   return (
@@ -78,7 +108,7 @@ function ProfilePicker() {
                 type="button"
                 aria-label={`Delete ${profile.name}`}
                 title={`Delete ${profile.name}`}
-                onClick={() => setProfileToDelete(profile)}
+                onClick={() => openDelete(profile)}
               >
                 ×
               </button>
@@ -89,7 +119,7 @@ function ProfilePicker() {
         <p>No profiles live on this browser yet.</p>
       )}
 
-      <a class="button" href={sitePath('/signup')}>Create a profile</a>
+      <a class="button" href={sitePath('/signup')}>Create or sync a profile</a>
 
       {isSyncConfigured() && (
         <section class="profile-connect">
@@ -129,20 +159,47 @@ function ProfilePicker() {
         open={Boolean(profileToDelete)}
         title="Delete profile?"
         content={(
-          <p>
-            Are you sure you want to delete <strong>{profileToDelete?.name}</strong>?
-            Their local reading progress will also be removed from this device.
-          </p>
+          <>
+            <p>
+              Are you sure you want to delete <strong>{profileToDelete?.name}</strong>?
+              {profileToDelete?.synced
+                ? ' Their synced profile and reading progress will be permanently deleted.'
+                : ' Their local reading progress will also be removed from this device.'}
+            </p>
+            {profileToDelete?.synced && (
+              <>
+                <label for="delete-profile-pin">Enter the four-digit PIN to confirm</label>
+                <input
+                  id="delete-profile-pin"
+                  type="password"
+                  value={deletePin}
+                  onInput={(event) => {
+                    setDeletePin(event.currentTarget.value.replace(/\D/g, '').slice(0, 4))
+                    setDeleteError('')
+                  }}
+                  inputMode="numeric"
+                  autoComplete="current-password"
+                  pattern="[0-9]{4}"
+                  maxLength="4"
+                  disabled={deleting}
+                  autofocus
+                />
+              </>
+            )}
+            {deleteError && <p class="error" role="alert">{deleteError}</p>}
+          </>
         )}
-        onClose={() => setProfileToDelete(null)}
+        onClose={closeDelete}
         actions={[
           {
             label: 'Cancel',
-            onClick: () => setProfileToDelete(null),
+            disabled: deleting,
+            onClick: closeDelete,
           },
           {
-            label: 'Delete profile',
+            label: deleting ? 'Deleting…' : 'Delete profile',
             tone: 'danger',
+            disabled: deleting || (profileToDelete?.synced && deletePin.length !== 4),
             onClick: confirmDelete,
           },
         ]}

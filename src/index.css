@@ -554,10 +554,6 @@ button:disabled {
   margin-top: 0;
 }
 
-.profile-settings input {
-  border-color: #7184a3;
-}
-
 .sync-setting {
   display: flex;
   gap: 1rem;
@@ -577,22 +573,13 @@ button:disabled {
   margin: 0;
 }
 
-.sync-message {
-  color: #9fc8ec;
-}
-
-.rename-form {
-  gap: 0.5rem;
-}
-
-.inline-form {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.inline-form button {
+.sync-setting > .button {
   flex: 0 0 auto;
   margin: 0;
+}
+
+.sync-message {
+  color: #9fc8ec;
 }
 
 .empty-list {
@@ -1605,7 +1592,6 @@ input {
   font: inherit;
 }
 
-.success,
 .error,
 .status {
   font-weight: 800;
@@ -1719,10 +1705,6 @@ input {
 
   .profile-grid {
     grid-template-columns: 200px;
-  }
-
-  .inline-form {
-    display: grid;
   }
 
   .profile-actions {

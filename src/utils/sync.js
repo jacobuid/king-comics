@@ -1,5 +1,6 @@
-import { getCurrentUser, upsertAccount } from './auth.js'
+import { deleteAccount, getCurrentUser, getCurrentUserSync, upsertAccount } from './auth.js'
 import {
+  deleteProfileProgress,
   getProfileProgress,
   PROGRESS_CHANGED_EVENT,
   replaceProfileProgress,
@@ -13,6 +14,7 @@ export const SYNC_STATUS_EVENT = 'king-comics:sync-status'
 let syncTimer = null
 let activeSync = null
 let queuedUsername = ''
+let lastExitSave = 0
 
 export function isSyncConfigured() {
   return Boolean(apiUrl)
@@ -44,14 +46,30 @@ function emitStatus(status, message = '') {
   }))
 }
 
-async function request(path, body) {
+async function request(method, credentials, progress, options = {}) {
   if (!apiUrl) throw new Error('Profile sync has not been configured yet.')
 
-  const response = await fetch(`${apiUrl}${path}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+  const headers = method === 'DELETE'
+    ? { 'X-Profile-Id': options.profileId, 'X-Profile-Pin': options.pin }
+    : method === 'POST'
+    ? { 'Content-Type': 'application/json' }
+    : {
+        ...(method === 'PUT' ? { 'Content-Type': 'application/json' } : {}),
+        'X-Profile-Name': credentials.name,
+        'X-Profile-Pin': credentials.pin,
+      }
+  const body = method === 'POST'
+    ? JSON.stringify({ ...credentials, progress: progress ?? {} })
+    : method === 'PUT'
+      ? JSON.stringify({ progress: progress ?? {} })
+      : undefined
+
+  const response = await fetch(`${apiUrl}/profiles`, {
+    method,
+    headers,
+    body,
     cache: 'no-store',
+    keepalive: options.keepalive,
   })
 
   let payload = {}
@@ -77,17 +95,17 @@ export async function registerSyncedAccount(name, pin) {
   emitStatus('syncing', 'Creating synced profile…')
 
   const username = name.trim().normalize('NFKC').toLowerCase()
-  const payload = await request('/register', {
-    name,
-    pin,
-    progress: getProfileProgress(username),
-  })
+  const payload = await request('POST', { name, pin }, getProfileProgress(username))
   const account = upsertAccount(payload.name ?? name, {
     synced: true,
     username: `cloud:${payload.profileId}`,
   })
   saveCredentials(account.username, name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
+  if (username !== account.username) {
+    deleteAccount(username)
+    deleteProfileProgress(username)
+  }
   emitStatus('synced', 'Profile is synced.')
   return account
 }
@@ -97,18 +115,17 @@ export async function connectSyncedAccount(name, pin) {
   emitStatus('syncing', 'Getting profile…')
 
   const username = name.trim().normalize('NFKC').toLowerCase()
-  const localProgress = getProfileProgress(username)
-  const payload = await request('/sync', {
-    name,
-    pin,
-    progress: localProgress,
-  })
+  const payload = await request('GET', { name, pin })
   const account = upsertAccount(payload.name ?? name, {
     synced: true,
     username: `cloud:${payload.profileId}`,
   })
   saveCredentials(account.username, name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
+  if (username !== account.username) {
+    deleteAccount(username)
+    deleteProfileProgress(username)
+  }
   emitStatus('synced', 'Profile is up to date.')
   return account
 }
@@ -121,11 +138,7 @@ export async function syncProfile(username) {
   if (activeSync) return activeSync
 
   emitStatus('syncing', 'Syncing…')
-  activeSync = request('/sync', {
-    name: credentials.name,
-    pin: credentials.pin,
-    progress: getProfileProgress(username),
-  }).then((payload) => {
+  activeSync = request('PUT', credentials, getProfileProgress(username)).then((payload) => {
     const progress = replaceProfileProgress(username, payload.progress ?? {}, false)
     emitStatus('synced', 'Synced just now.')
     return progress
@@ -141,6 +154,26 @@ export async function syncProfile(username) {
 
 export function forgetSyncCredentials(username) {
   removePin(username)
+}
+
+export function validateProfilePin(username, pin) {
+  const savedPin = readCredentials()[username]?.pin
+  return Boolean(savedPin) && savedPin === pin
+}
+
+export async function deleteSyncedProfile(username, pin) {
+  validatePin(pin)
+  if (!validateProfilePin(username, pin)) throw new Error('That PIN is not correct.')
+
+  const profileId = username.startsWith('cloud:') ? username.slice('cloud:'.length) : ''
+  await request('DELETE', null, null, { profileId, pin })
+}
+
+function saveProfileOnExit(username) {
+  if (!apiUrl || !navigator.onLine) return
+  const credentials = readCredentials()[username]
+  if (!credentials?.pin || !credentials?.name) return
+  request('PUT', credentials, getProfileProgress(username), { keepalive: true }).catch(() => {})
 }
 
 export function queueProfileSync(username) {
@@ -174,9 +207,20 @@ export function startProfileSync() {
     if (user) syncProfile(user.username).catch(() => {})
   }
 
+  function saveCurrentProfileOnExit() {
+    const now = Date.now()
+    if (now - lastExitSave < 500) return
+    lastExitSave = now
+    const user = getCurrentUserSync()
+    if (user) saveProfileOnExit(user.username)
+  }
+
   window.addEventListener('online', syncCurrentProfile)
+  window.addEventListener('pagehide', saveCurrentProfileOnExit)
+  window.addEventListener('beforeunload', saveCurrentProfileOnExit)
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') syncCurrentProfile()
+    if (document.visibilityState === 'hidden') saveCurrentProfileOnExit()
+    else syncCurrentProfile()
   })
 
   setTimeout(syncCurrentProfile, 0)

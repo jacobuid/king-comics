@@ -70,20 +70,6 @@ export function deleteProfileProgress(username) {
   notifyProgressChanged(username)
 }
 
-export function renameProfileProgress(currentUsername, nextUsername) {
-  const allProgress = readAllProgress()
-  const profileProgress = allProgress[currentUsername] ?? {}
-
-  if (currentUsername !== nextUsername) {
-    delete allProgress[currentUsername]
-    allProgress[nextUsername] = profileProgress
-    localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
-    notifyProgressChanged(nextUsername)
-  }
-
-  return profileProgress
-}
-
 export function replaceProfileProgress(username, profileProgress, notify = true) {
   const allProgress = readAllProgress()
   allProgress[username] = profileProgress ?? {}
