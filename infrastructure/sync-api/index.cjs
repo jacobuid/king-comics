@@ -224,7 +224,7 @@ async function updateProfile(client, commands, body) {
     return response(400, { error: 'Enter a profile name and four-digit PIN.' })
   }
   if (body.avatar !== undefined && !validAvatar(body.avatar)) {
-    return response(400, { error: 'That profile picture was not valid.' })
+    return response(400, { error: 'That avatar was not valid.' })
   }
   if (body.theme !== undefined && !validTheme(body.theme)) {
     return response(400, { error: 'That theme was not valid.' })

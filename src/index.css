@@ -855,22 +855,20 @@ button:disabled {
   object-fit: cover;
 }
 
-.profile-picture-setting {
+.profile-setting-copy {
   display: flex;
   gap: 0.8rem;
   align-items: center;
 }
 
-.theme-setting-copy {
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
+.profile-setting-copy > div {
+  min-width: 0;
 }
 
 .theme-swatch {
   display: block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
   flex: 0 0 auto;
   border: 2px solid rgb(255 255 255 / 65%);
   border-radius: 50%;
@@ -1080,6 +1078,25 @@ button:disabled {
   font-size: 1.5rem;
   font-weight: 950;
   object-fit: cover;
+}
+
+.profile-setting-icon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  place-content: center;
+  border: 2px solid var(--theme-accent-light);
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(145deg, var(--theme-accent), var(--theme-accent-deep));
+  box-shadow: inset 0 0 0 2px rgb(0 0 0 / 12%), 0 0.25rem 0.75rem rgb(0 0 0 / 24%);
+}
+
+.profile-setting-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: #fff;
 }
 
 .avatar-picker {

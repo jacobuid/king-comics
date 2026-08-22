@@ -127,7 +127,7 @@ function ProfileMigration() {
             You can now sync your reading progress between multiple devices—all you need is a PIN.
           </p>
           <p class="sync-migration-note">
-            Your history, bookmarks, profile picture, and theme will all come with you.
+            Your history, bookmarks, avatar, and theme will all come with you.
           </p>
           <form id="profile-migration-form" class="profile-modal-form" onSubmit={migrate}>
             <label for="migration-pin">Choose a four-digit PIN</label>
@@ -164,7 +164,7 @@ function ProfileMigration() {
       onClose={keepLocal}
       actions={[
         {
-          label: 'Keep on this device',
+          label: 'Opt Out',
           tone: 'secondary',
           disabled: migrating,
           onClick: keepLocal,

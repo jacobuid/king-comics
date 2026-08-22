@@ -333,7 +333,7 @@ export async function updateProfileAvatar(username, avatar) {
     throw new Error('This profile is not connected to device sync.')
   }
 
-  emitStatus('syncing', 'Updating profile picture…')
+  emitStatus('syncing', 'Updating avatar picture…')
   const { payload, credentials: resolvedCredentials } = await requestFollowingMoves(
     'PUT',
     credentials,
@@ -341,7 +341,7 @@ export async function updateProfileAvatar(username, avatar) {
     { avatar },
   )
   const { account } = applySyncedPayload(username, resolvedCredentials, payload)
-  emitStatus('synced', 'Profile picture updated.')
+  emitStatus('synced', 'Avatar updated.')
   return account
 }
 

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'preact/hooks'
 import FontAwesomeIcon from './FontAwesomeIcon.jsx'
 import { avatarPath } from '../data/avatars.js'
 import { getComic, getSeries } from '../data/comics.js'
+import { validTheme } from '../data/themes.js'
 import {
   getCurrentUser,
   PROFILES_CHANGED_EVENT,
@@ -23,6 +24,7 @@ function Header() {
   const currentComic = pathParts.length === 2 && pathParts[0] === 'comic'
     ? getComic(decodeURIComponent(pathParts[1]))
     : null
+  const headerTheme = validTheme(activeProfile?.theme) ? activeProfile.theme : 'blue'
   const backLink = currentComic
     ? {
         href: sitePath(`/${currentComic.seriesId}#comic-${currentComic.id}`),
@@ -101,7 +103,7 @@ function Header() {
   return (
     <header class={`site-header menu-${menuMode}`}>
       <a class="brand" href={sitePath('/')} aria-label="King Comics home">
-        <img src={sitePath('/king-comics-logo.png')} alt="King Comics" />
+        <img src={sitePath(`/header-${headerTheme}.jpg`)} alt="King Comics" />
       </a>
       <div class="header-menu-slot" ref={menuSlotRef}>
         <div class={`header-menu ${menuMode}`}>

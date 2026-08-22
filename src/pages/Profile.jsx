@@ -1,4 +1,8 @@
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import {
+  faCloudArrowUp,
+  faUserPen,
+  faXmark,
+} from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useMemo, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
@@ -171,7 +175,7 @@ function Profile({ user }) {
 
   async function saveAvatar() {
     if (!selectedAvatar) {
-      setAvatarError('Choose a profile picture first.')
+      setAvatarError('Choose an avatar first.')
       return
     }
 
@@ -296,21 +300,21 @@ function Profile({ user }) {
         {user.synced && (
           <>
             <div class="sync-setting">
-              <div class="profile-picture-setting">
+              <div class="profile-setting-copy profile-picture-setting">
                 {user.avatar ? (
                   <img src={avatarPath(user.avatar)} alt="" />
                 ) : (
                   <span aria-hidden="true">{user.name.charAt(0).toUpperCase()}</span>
                 )}
                 <div>
-                  <strong>Profile picture</strong>
+                  <strong>Avatar</strong>
                   <p class="sync-message">Choose your hero.</p>
                 </div>
               </div>
-              <button type="button" onClick={openAvatarPicker}>Select profile picture</button>
+              <button type="button" onClick={openAvatarPicker}>Choose avatar</button>
             </div>
             <div class="sync-setting">
-              <div class="theme-setting-copy">
+              <div class="profile-setting-copy theme-setting-copy">
                 <span class={`theme-swatch ${user.theme ?? 'blue'}`} aria-hidden="true" />
                 <div>
                   <strong>Theme</strong>
@@ -322,9 +326,14 @@ function Profile({ user }) {
               <button type="button" onClick={openThemePicker}>Select theme</button>
             </div>
             <div class="sync-setting">
-              <div>
-                <strong>Profile name</strong>
-                <p class="sync-message">{user.name}</p>
+              <div class="profile-setting-copy">
+                <span class="profile-setting-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faUserPen} />
+                </span>
+                <div>
+                  <strong>Profile name</strong>
+                  <p class="sync-message">{user.name}</p>
+                </div>
               </div>
               <button type="button" onClick={openNameEditor}>Edit profile</button>
             </div>
@@ -333,11 +342,16 @@ function Profile({ user }) {
         {isSyncConfigured() && (
           user.synced ? (
             <div class="sync-setting">
-              <div>
-                <strong>Device sync</strong>
-                <p class={syncStatus.status === 'error' ? 'error' : 'sync-message'}>
-                  {syncStatus.message || 'Bookmarks and history sync automatically.'}
-                </p>
+              <div class="profile-setting-copy">
+                <span class="profile-setting-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faCloudArrowUp} />
+                </span>
+                <div>
+                  <strong>Device sync</strong>
+                  <p class={syncStatus.status === 'error' ? 'error' : 'sync-message'}>
+                    {syncStatus.message || 'Bookmarks and history sync automatically.'}
+                  </p>
+                </div>
               </div>
               <button type="button" onClick={syncNow} disabled={syncStatus.status === 'syncing'}>
                 Sync now
@@ -345,9 +359,14 @@ function Profile({ user }) {
             </div>
           ) : (
             <div class="sync-setting">
-              <div>
-                <strong>Device sync is off</strong>
-                <p class="sync-message">Add a PIN to use this profile on another device.</p>
+              <div class="profile-setting-copy">
+                <span class="profile-setting-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faCloudArrowUp} />
+                </span>
+                <div>
+                  <strong>Device sync is off</strong>
+                  <p class="sync-message">Add a PIN to use this profile on another device.</p>
+                </div>
               </div>
               <button type="button" onClick={openProfileMigration}>Set up sync</button>
             </div>
@@ -400,10 +419,10 @@ function Profile({ user }) {
 
       <Modal
         open={selectingAvatar}
-        title="Select profile picture"
+        title="Choose avatar"
         content={(
           <>
-            <div class="avatar-picker" role="radiogroup" aria-label="Profile pictures">
+            <div class="avatar-picker" role="radiogroup" aria-label="avatar">
               {avatars.map((avatar) => (
                 <button
                   class={selectedAvatar === avatar ? 'avatar-option selected' : 'avatar-option'}
@@ -429,7 +448,7 @@ function Profile({ user }) {
         actions={[
           { label: 'Cancel', disabled: savingAvatar, onClick: closeAvatarPicker },
           {
-            label: savingAvatar ? 'Savingâ€¦' : 'Save picture',
+            label: savingAvatar ? 'Savingâ€¦' : 'Save avatar',
             disabled: savingAvatar || !selectedAvatar,
             onClick: saveAvatar,
           },
