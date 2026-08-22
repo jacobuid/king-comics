@@ -60,12 +60,32 @@ function mergeProgress(savedProgress, deviceProgress) {
 
 function renamedProfile(savedProfile, displayName, pin, deviceProgress) {
   const username = normalizeName(displayName)
+  const previousProfileIds = username === savedProfile.username
+    ? (savedProfile.previousProfileIds ?? [])
+    : [
+        ...(Array.isArray(savedProfile.previousProfileIds) ? savedProfile.previousProfileIds : []),
+        profileId(savedProfile.username, pin),
+      ].filter((id, index, ids) => ids.indexOf(id) === index).slice(-50)
   return {
     ...savedProfile,
     name: displayName,
     username,
     pinHash: pinHash(username, pin),
+    previousProfileIds,
     progress: mergeProgress(savedProfile.progress, deviceProgress),
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+function movedMarker(savedProfile, movedProfile, pin) {
+  return {
+    version: 1,
+    type: 'profile-moved',
+    name: savedProfile.name,
+    username: savedProfile.username,
+    pinHash: savedProfile.pinHash,
+    movedToName: movedProfile.name,
+    movedToProfileId: profileId(movedProfile.username, pin),
     updatedAt: new Date().toISOString(),
   }
 }
@@ -76,6 +96,15 @@ function response(statusCode, body) {
     headers: { 'content-type': 'application/json; charset=utf-8' },
     body: JSON.stringify(body),
   }
+}
+
+function movedResponse(profile) {
+  return response(409, {
+    code: 'PROFILE_MOVED',
+    error: 'This profile was renamed on another device.',
+    movedToName: profile.movedToName,
+    movedToProfileId: profile.movedToProfileId,
+  })
 }
 
 function requestBody(event) {
@@ -171,6 +200,7 @@ async function loadProfile(client, commands, credentials) {
   if (!safeEqual(saved.profile.pinHash, pinHash(username, credentials.pin))) {
     return response(401, { error: 'That PIN is not correct.' })
   }
+  if (saved.profile.type === 'profile-moved') return movedResponse(saved.profile)
 
   return response(200, {
     name: saved.profile.name,
@@ -195,6 +225,7 @@ async function updateProfile(client, commands, body) {
     if (!safeEqual(saved.profile.pinHash, pinHash(username, body.pin))) {
       return response(401, { error: 'That PIN is not correct.' })
     }
+    if (saved.profile.type === 'profile-moved') return movedResponse(saved.profile)
 
     const progress = mergeProgress(saved.profile.progress, body.progress)
     const profile = {
@@ -240,6 +271,7 @@ async function renameProfile(client, commands, body) {
   if (!safeEqual(saved.profile.pinHash, pinHash(username, body.pin))) {
     return response(401, { error: 'That PIN is not correct.' })
   }
+  if (saved.profile.type === 'profile-moved') return movedResponse(saved.profile)
 
   const currentKey = profileKey(username, body.pin)
   const nextKey = profileKey(nextUsername, body.pin)
@@ -265,7 +297,21 @@ async function renameProfile(client, commands, body) {
   }
 
   if (currentKey !== nextKey) {
-    await client.send(new commands.DeleteObjectCommand({ Bucket: bucket, Key: currentKey }))
+    const marker = movedMarker(saved.profile, profile, body.pin)
+    try {
+      await client.send(new commands.PutObjectCommand({
+        Bucket: bucket,
+        Key: currentKey,
+        Body: JSON.stringify(marker),
+        ContentType: 'application/json',
+        IfMatch: saved.etag,
+      }))
+    } catch (error) {
+      if (error.name === 'PreconditionFailed' || error.$metadata?.httpStatusCode === 412) {
+        return response(409, { error: 'This profile changed on another device. Please try again.' })
+      }
+      throw error
+    }
   }
 
   return response(200, {
@@ -282,16 +328,47 @@ async function deleteProfile(client, commands, id, pin) {
   }
   if (!validPin(pin)) return response(400, { error: 'Enter a four-digit PIN.' })
 
-  const profile = await readProfileById(client, commands.GetObjectCommand, id)
-  if (!profile) return response(404, { error: 'That profile no longer exists.' })
-  if (!safeEqual(profile.pinHash, pinHash(profile.username, pin))) {
-    return response(401, { error: 'That PIN is not correct.' })
+  const idsToDelete = []
+  const visited = new Set()
+  let currentId = id
+
+  for (let depth = 0; depth < 8; depth += 1) {
+    if (visited.has(currentId)) return response(409, { error: 'This profile move could not be resolved.' })
+    visited.add(currentId)
+
+    const profile = await readProfileById(client, commands.GetObjectCommand, currentId)
+    if (!profile) return response(404, { error: 'That profile no longer exists.' })
+    if (!safeEqual(profile.pinHash, pinHash(profile.username, pin))) {
+      return response(401, { error: 'That PIN is not correct.' })
+    }
+
+    idsToDelete.push(currentId)
+    if (profile.type !== 'profile-moved') break
+    currentId = profile.movedToProfileId
   }
 
-  await client.send(new commands.DeleteObjectCommand({
-    Bucket: bucket,
-    Key: `profiles/${id}.json`,
-  }))
+  if (idsToDelete.length === 8) {
+    const lastProfile = await readProfileById(
+      client,
+      commands.GetObjectCommand,
+      idsToDelete[idsToDelete.length - 1],
+    )
+    if (lastProfile?.type === 'profile-moved') {
+      return response(409, { error: 'This profile has been renamed too many times.' })
+    }
+  }
+
+  const finalProfile = await readProfileById(client, commands.GetObjectCommand, currentId)
+  for (const previousId of finalProfile?.previousProfileIds ?? []) {
+    if (/^[a-f0-9]{64}$/.test(previousId)) idsToDelete.push(previousId)
+  }
+
+  for (const profileIdToDelete of new Set(idsToDelete)) {
+    await client.send(new commands.DeleteObjectCommand({
+      Bucket: bucket,
+      Key: `profiles/${profileIdToDelete}.json`,
+    }))
+  }
   return response(200, { deleted: true })
 }
 
@@ -349,6 +426,7 @@ exports.handler = async (event) => {
 exports._test = {
   cleanProgress,
   mergeProgress,
+  movedMarker,
   normalizeName,
   pinHash,
   profileId,

@@ -113,8 +113,8 @@ function Profile({ user }) {
   async function syncNow() {
     setError('')
     try {
-      const updatedProgress = await syncProfile(user.username)
-      setProgress({ ...updatedProgress })
+      const result = await syncProfile(user.username)
+      setProgress({ ...result.progress })
     } catch (syncError) {
       setError(syncError.message)
     }

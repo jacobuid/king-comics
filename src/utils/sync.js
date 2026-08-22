@@ -2,6 +2,7 @@ import {
   deleteAccount,
   getCurrentUser,
   getCurrentUserSync,
+  listAccounts,
   replaceAccountIdentity,
   upsertAccount,
 } from './auth.js'
@@ -59,12 +60,12 @@ async function request(method, credentials, progress, options = {}) {
   const headers = method === 'DELETE'
     ? { 'X-Profile-Id': options.profileId, 'X-Profile-Pin': options.pin }
     : method === 'POST'
-    ? { 'Content-Type': 'application/json' }
-    : {
-        ...(['PUT', 'PATCH'].includes(method) ? { 'Content-Type': 'application/json' } : {}),
-        'X-Profile-Name': credentials.name,
-        'X-Profile-Pin': credentials.pin,
-      }
+      ? { 'Content-Type': 'application/json' }
+      : {
+          ...(['PUT', 'PATCH'].includes(method) ? { 'Content-Type': 'application/json' } : {}),
+          'X-Profile-Name': credentials.name,
+          'X-Profile-Pin': credentials.pin,
+        }
   const body = method === 'POST'
     ? JSON.stringify({ ...credentials, avatar: options.avatar ?? '', progress: progress ?? {} })
     : method === 'PUT'
@@ -76,7 +77,7 @@ async function request(method, credentials, progress, options = {}) {
         })
       : method === 'PATCH'
         ? JSON.stringify({ name: options.newName, progress: progress ?? {} })
-      : undefined
+        : undefined
 
   const response = await fetch(`${apiUrl}/profiles`, {
     method,
@@ -94,10 +95,56 @@ async function request(method, credentials, progress, options = {}) {
   }
 
   if (!response.ok) {
-    throw new Error(payload.error || 'Could not sync this profile right now.')
+    const error = new Error(payload.error || 'Could not sync this profile right now.')
+    error.status = response.status
+    error.code = payload.code || (response.status === 404 ? 'PROFILE_DELETED' : '')
+    error.movedToName = payload.movedToName
+    error.movedToProfileId = payload.movedToProfileId
+    throw error
   }
 
   return payload
+}
+
+async function requestFollowingMoves(method, credentials, progress, options = {}) {
+  let resolvedCredentials = { ...credentials }
+
+  for (let depth = 0; depth < 8; depth += 1) {
+    try {
+      const payload = await request(method, resolvedCredentials, progress, options)
+      return { payload, credentials: resolvedCredentials }
+    } catch (error) {
+      if (error.code !== 'PROFILE_MOVED' || !error.movedToName) throw error
+      resolvedCredentials = { ...resolvedCredentials, name: error.movedToName }
+    }
+  }
+
+  throw new Error('This profile has been renamed too many times to follow automatically.')
+}
+
+function applySyncedPayload(username, credentials, payload) {
+  const nextUsername = `cloud:${payload.profileId}`
+
+  if (nextUsername !== username) {
+    moveProfileProgress(username, nextUsername)
+    saveCredentials(nextUsername, payload.name ?? credentials.name, credentials.pin)
+    removePin(username)
+    replaceAccountIdentity(username, payload.name ?? credentials.name, nextUsername)
+  }
+
+  const account = upsertAccount(payload.name ?? credentials.name, {
+    synced: true,
+    username: nextUsername,
+    avatar: payload.avatar ?? '',
+  })
+  const progress = replaceProfileProgress(nextUsername, payload.progress ?? {}, false)
+  return { account, progress, username: nextUsername }
+}
+
+function removeDeletedProfile(username) {
+  deleteAccount(username)
+  deleteProfileProgress(username)
+  removePin(username)
 }
 
 function validatePin(pin) {
@@ -130,13 +177,13 @@ export async function connectSyncedAccount(name, pin) {
   emitStatus('syncing', 'Getting profile…')
 
   const username = name.trim().normalize('NFKC').toLowerCase()
-  const payload = await request('GET', { name, pin })
-  const account = upsertAccount(payload.name ?? name, {
+  const { payload, credentials } = await requestFollowingMoves('GET', { name, pin })
+  const account = upsertAccount(payload.name ?? credentials.name, {
     synced: true,
     username: `cloud:${payload.profileId}`,
     avatar: payload.avatar ?? '',
   })
-  saveCredentials(account.username, name, pin)
+  saveCredentials(account.username, credentials.name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
   if (username !== account.username) {
     deleteAccount(username)
@@ -147,23 +194,35 @@ export async function connectSyncedAccount(name, pin) {
 }
 
 export async function syncProfile(username) {
-  if (!apiUrl || !navigator.onLine) return getProfileProgress(username)
+  if (!apiUrl || !navigator.onLine) {
+    return { progress: getProfileProgress(username), username }
+  }
 
   const credentials = readCredentials()[username]
-  if (!credentials?.pin || !credentials?.name) return getProfileProgress(username)
-  if (activeSync) return activeSync
+  if (!credentials?.pin || !credentials?.name) {
+    return { progress: getProfileProgress(username), username }
+  }
+  if (activeSync) {
+    await activeSync.catch(() => {})
+    return syncProfile(username)
+  }
 
   emitStatus('syncing', 'Syncing…')
-  activeSync = request('PUT', credentials, getProfileProgress(username)).then((payload) => {
-    upsertAccount(payload.name ?? credentials.name, {
-      synced: true,
-      username,
-      avatar: payload.avatar ?? '',
-    })
-    const progress = replaceProfileProgress(username, payload.progress ?? {}, false)
+  activeSync = requestFollowingMoves(
+    'PUT',
+    credentials,
+    getProfileProgress(username),
+  ).then(({ payload, credentials: resolvedCredentials }) => {
+    const result = applySyncedPayload(username, resolvedCredentials, payload)
     emitStatus('synced', 'Synced just now.')
-    return progress
+    return result
   }).catch((error) => {
+    if (error.code === 'PROFILE_DELETED') {
+      removeDeletedProfile(username)
+      error.message = 'This profile was deleted on another device.'
+      emitStatus('deleted', error.message)
+      throw error
+    }
     emitStatus('error', error.message)
     throw error
   }).finally(() => {
@@ -171,6 +230,17 @@ export async function syncProfile(username) {
   })
 
   return activeSync
+}
+
+export async function reconcileStoredProfiles() {
+  if (!apiUrl || !navigator.onLine) return listAccounts()
+
+  for (const profile of listAccounts()) {
+    if (!profile.synced) continue
+    await syncProfile(profile.username).catch(() => {})
+  }
+
+  return listAccounts()
 }
 
 export function forgetSyncCredentials(username) {
@@ -203,21 +273,16 @@ export async function renameSyncedProfile(username, name, pin) {
     throw new Error('Enter a profile name with 40 characters or fewer.')
   }
 
-  emitStatus('syncing', 'Updating profile nameâ€¦')
-  const payload = await request(
+  emitStatus('syncing', 'Updating profile name…')
+  const { payload, credentials: resolvedCredentials } = await requestFollowingMoves(
     'PATCH',
     { name: credentials.name, pin },
     getProfileProgress(username),
     { newName: displayName },
   )
-  const nextUsername = `cloud:${payload.profileId}`
-  const progress = moveProfileProgress(username, nextUsername)
-
-  saveCredentials(nextUsername, payload.name ?? displayName, pin)
-  if (nextUsername !== username) removePin(username)
-  const account = replaceAccountIdentity(username, payload.name ?? displayName, nextUsername)
+  const result = applySyncedPayload(username, resolvedCredentials, payload)
   emitStatus('synced', 'Profile name updated.')
-  return { account, progress }
+  return { account: result.account, progress: result.progress }
 }
 
 export async function updateProfileAvatar(username, avatar) {
@@ -226,18 +291,14 @@ export async function updateProfileAvatar(username, avatar) {
     throw new Error('This profile is not connected to device sync.')
   }
 
-  emitStatus('syncing', 'Updating profile pictureâ€¦')
-  const payload = await request(
+  emitStatus('syncing', 'Updating profile picture…')
+  const { payload, credentials: resolvedCredentials } = await requestFollowingMoves(
     'PUT',
     credentials,
     getProfileProgress(username),
     { avatar },
   )
-  const account = upsertAccount(payload.name ?? credentials.name, {
-    synced: true,
-    username,
-    avatar: payload.avatar ?? avatar,
-  })
+  const { account } = applySyncedPayload(username, resolvedCredentials, payload)
   emitStatus('synced', 'Profile picture updated.')
   return account
 }

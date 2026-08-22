@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import Modal from '../components/Modal.jsx'
 import { avatarPath } from '../data/avatars.js'
@@ -9,6 +9,7 @@ import {
   connectSyncedAccount,
   deleteSyncedProfile,
   forgetSyncCredentials,
+  reconcileStoredProfiles,
   registerSyncedAccount,
   syncProfile,
 } from '../utils/sync.js'
@@ -21,6 +22,7 @@ function ProfilePicker() {
   const { route } = useLocation()
   const [profiles, setProfiles] = useState(() => listAccounts())
   const [selecting, setSelecting] = useState('')
+  const [selectionError, setSelectionError] = useState('')
   const [profileToDelete, setProfileToDelete] = useState(null)
 
   const [showCreate, setShowCreate] = useState(false)
@@ -40,6 +42,18 @@ function ProfilePicker() {
   const [deleteError, setDeleteError] = useState('')
   const [deleting, setDeleting] = useState(false)
 
+  useEffect(() => {
+    let active = true
+
+    reconcileStoredProfiles().then((storedProfiles) => {
+      if (active) setProfiles(storedProfiles)
+    })
+
+    return () => {
+      active = false
+    }
+  }, [])
+
   async function openProfile(profile) {
     await createSession(profile.username)
     route(sitePath('/profile'), true)
@@ -47,8 +61,18 @@ function ProfilePicker() {
 
   async function chooseProfile(profile) {
     setSelecting(profile.username)
-    await syncProfile(profile.username).catch(() => {})
-    await openProfile(profile)
+    setSelectionError('')
+
+    try {
+      const result = await syncProfile(profile.username)
+      const syncedProfile = listAccounts().find((account) => account.username === result.username)
+      if (!syncedProfile) throw new Error('This profile is no longer available.')
+      await openProfile(syncedProfile)
+    } catch (error) {
+      setProfiles(listAccounts())
+      setSelectionError(error.message)
+      setSelecting('')
+    }
   }
 
   function closeCreate() {
@@ -176,6 +200,7 @@ function ProfilePicker() {
       ) : (
         <p>No profiles live on this browser yet.</p>
       )}
+      {selectionError && <p class="error" role="alert">{selectionError}</p>}
 
       <div class="profile-gate-actions">
         <button type="button" onClick={() => setShowCreate(true)}>Create a profile</button>
