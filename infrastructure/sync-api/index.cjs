@@ -26,6 +26,11 @@ function validAvatar(avatar) {
   return avatar === '' || /^[a-z0-9]+(?:-[a-z0-9]+)*\.jpg$/.test(String(avatar ?? ''))
 }
 
+function validTheme(theme) {
+  return ['blue', 'red', 'green', 'orange', 'purple', 'pink', 'yellow']
+    .includes(String(theme ?? ''))
+}
+
 function safeEqual(first, second) {
   const firstBuffer = Buffer.from(String(first))
   const secondBuffer = Buffer.from(String(second))
@@ -161,6 +166,7 @@ async function createProfile(client, commands, body) {
     username,
     pinHash: pinHash(username, body.pin),
     avatar: validAvatar(body.avatar) ? body.avatar : '',
+    theme: validTheme(body.theme) ? body.theme : 'blue',
     progress: cleanProgress(body.progress),
     createdAt: now,
     updatedAt: now,
@@ -185,6 +191,7 @@ async function createProfile(client, commands, body) {
     name: profile.name,
     profileId: profileId(username, body.pin),
     avatar: profile.avatar,
+    theme: profile.theme,
     progress: profile.progress,
   })
 }
@@ -206,6 +213,7 @@ async function loadProfile(client, commands, credentials) {
     name: saved.profile.name,
     profileId: profileId(username, credentials.pin),
     avatar: saved.profile.avatar ?? '',
+    theme: saved.profile.theme ?? 'blue',
     progress: saved.profile.progress,
   })
 }
@@ -217,6 +225,9 @@ async function updateProfile(client, commands, body) {
   }
   if (body.avatar !== undefined && !validAvatar(body.avatar)) {
     return response(400, { error: 'That profile picture was not valid.' })
+  }
+  if (body.theme !== undefined && !validTheme(body.theme)) {
+    return response(400, { error: 'That theme was not valid.' })
   }
 
   for (let attempt = 0; attempt < 3; attempt += 1) {
@@ -231,6 +242,7 @@ async function updateProfile(client, commands, body) {
     const profile = {
       ...saved.profile,
       avatar: body.avatar === undefined ? (saved.profile.avatar ?? '') : body.avatar,
+      theme: body.theme === undefined ? (saved.profile.theme ?? 'blue') : body.theme,
       progress,
       updatedAt: new Date().toISOString(),
     }
@@ -247,6 +259,7 @@ async function updateProfile(client, commands, body) {
         name: profile.name,
         profileId: profileId(username, body.pin),
         avatar: profile.avatar,
+        theme: profile.theme,
         progress,
       })
     } catch (error) {
@@ -318,6 +331,7 @@ async function renameProfile(client, commands, body) {
     name: profile.name,
     profileId: profileId(nextUsername, body.pin),
     avatar: profile.avatar ?? '',
+    theme: profile.theme ?? 'blue',
     progress: profile.progress,
   })
 }
@@ -434,4 +448,5 @@ exports._test = {
   renamedProfile,
   validAvatar,
   validPin,
+  validTheme,
 }

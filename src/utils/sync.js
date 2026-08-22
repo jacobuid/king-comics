@@ -67,12 +67,20 @@ async function request(method, credentials, progress, options = {}) {
           'X-Profile-Pin': credentials.pin,
         }
   const body = method === 'POST'
-    ? JSON.stringify({ ...credentials, avatar: options.avatar ?? '', progress: progress ?? {} })
+    ? JSON.stringify({
+        ...credentials,
+        avatar: options.avatar ?? '',
+        theme: options.theme ?? 'blue',
+        progress: progress ?? {},
+      })
     : method === 'PUT'
       ? JSON.stringify({
           progress: progress ?? {},
           ...(Object.prototype.hasOwnProperty.call(options, 'avatar')
             ? { avatar: options.avatar }
+            : {}),
+          ...(Object.prototype.hasOwnProperty.call(options, 'theme')
+            ? { theme: options.theme }
             : {}),
         })
       : method === 'PATCH'
@@ -136,6 +144,7 @@ function applySyncedPayload(username, credentials, payload) {
     synced: true,
     username: nextUsername,
     avatar: payload.avatar ?? '',
+    theme: payload.theme ?? 'blue',
   })
   const progress = replaceProfileProgress(nextUsername, payload.progress ?? {}, false)
   return { account, progress, username: nextUsername }
@@ -161,6 +170,7 @@ export async function registerSyncedAccount(name, pin) {
     synced: true,
     username: `cloud:${payload.profileId}`,
     avatar: payload.avatar ?? '',
+    theme: payload.theme ?? 'blue',
   })
   saveCredentials(account.username, name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
@@ -182,6 +192,7 @@ export async function connectSyncedAccount(name, pin) {
     synced: true,
     username: `cloud:${payload.profileId}`,
     avatar: payload.avatar ?? '',
+    theme: payload.theme ?? 'blue',
   })
   saveCredentials(account.username, credentials.name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
@@ -300,6 +311,24 @@ export async function updateProfileAvatar(username, avatar) {
   )
   const { account } = applySyncedPayload(username, resolvedCredentials, payload)
   emitStatus('synced', 'Profile picture updated.')
+  return account
+}
+
+export async function updateProfileTheme(username, theme) {
+  const credentials = readCredentials()[username]
+  if (!credentials?.name || !credentials?.pin) {
+    throw new Error('This profile is not connected to device sync.')
+  }
+
+  emitStatus('syncing', 'Updating theme…')
+  const { payload, credentials: resolvedCredentials } = await requestFollowingMoves(
+    'PUT',
+    credentials,
+    getProfileProgress(username),
+    { theme },
+  )
+  const { account } = applySyncedPayload(username, resolvedCredentials, payload)
+  emitStatus('synced', 'Theme updated.')
   return account
 }
 

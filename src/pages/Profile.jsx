@@ -4,6 +4,7 @@ import { useLocation } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import Modal from '../components/Modal.jsx'
 import { avatarPath, avatars } from '../data/avatars.js'
+import { themes } from '../data/themes.js'
 import { comics } from '../data/comics.js'
 import { assetPath } from '../utils/assetPath.js'
 import { clearSession } from '../utils/auth.js'
@@ -15,6 +16,7 @@ import {
   SYNC_STATUS_EVENT,
   syncProfile,
   updateProfileAvatar,
+  updateProfileTheme,
 } from '../utils/sync.js'
 
 const shelves = [
@@ -54,6 +56,10 @@ function Profile({ user }) {
   const [selectedAvatar, setSelectedAvatar] = useState(user.avatar ?? '')
   const [avatarError, setAvatarError] = useState('')
   const [savingAvatar, setSavingAvatar] = useState(false)
+  const [selectingTheme, setSelectingTheme] = useState(false)
+  const [selectedTheme, setSelectedTheme] = useState(user.theme ?? 'blue')
+  const [themeError, setThemeError] = useState('')
+  const [savingTheme, setSavingTheme] = useState(false)
 
   useEffect(() => {
     function updateSyncStatus(event) {
@@ -180,6 +186,31 @@ function Profile({ user }) {
     }
   }
 
+  function openThemePicker() {
+    setSelectedTheme(user.theme ?? 'blue')
+    setThemeError('')
+    setSelectingTheme(true)
+  }
+
+  function closeThemePicker() {
+    if (savingTheme) return
+    setSelectingTheme(false)
+    setThemeError('')
+  }
+
+  async function saveTheme() {
+    setThemeError('')
+    setSavingTheme(true)
+    try {
+      await updateProfileTheme(user.username, selectedTheme)
+      setSelectingTheme(false)
+    } catch (updateError) {
+      setThemeError(updateError.message)
+    } finally {
+      setSavingTheme(false)
+    }
+  }
+
   return (
     <section class="page profile-page">
       <section class="reading-hero">
@@ -278,6 +309,18 @@ function Profile({ user }) {
               <button type="button" onClick={openAvatarPicker}>Select profile picture</button>
             </div>
             <div class="sync-setting">
+              <div class="theme-setting-copy">
+                <span class={`theme-swatch ${user.theme ?? 'blue'}`} aria-hidden="true" />
+                <div>
+                  <strong>Theme</strong>
+                  <p class="sync-message">
+                    {themes.find((theme) => theme.id === (user.theme ?? 'blue'))?.label ?? 'Blue'}
+                  </p>
+                </div>
+              </div>
+              <button type="button" onClick={openThemePicker}>Select theme</button>
+            </div>
+            <div class="sync-setting">
               <div>
                 <strong>Profile name</strong>
                 <p class="sync-message">{user.name}</p>
@@ -316,6 +359,43 @@ function Profile({ user }) {
         <button type="button" onClick={switchProfile}>Switch profile</button>
         <button class="sign-out-button" type="button" onClick={signOut}>Sign out</button>
       </div>
+
+      <Modal
+        open={selectingTheme}
+        title="Select theme"
+        content={(
+          <>
+            <div class="theme-picker" role="radiogroup" aria-label="Color themes">
+              {themes.map((theme) => (
+                <button
+                  class={`theme-option ${theme.id}${selectedTheme === theme.id ? ' selected' : ''}`}
+                  type="button"
+                  role="radio"
+                  aria-checked={selectedTheme === theme.id}
+                  aria-label={`Select ${theme.label} theme`}
+                  title={theme.label}
+                  key={theme.id}
+                  disabled={savingTheme}
+                  onClick={() => {
+                    setSelectedTheme(theme.id)
+                    setThemeError('')
+                  }}
+                />
+              ))}
+            </div>
+            {themeError && <p class="error" role="alert">{themeError}</p>}
+          </>
+        )}
+        onClose={closeThemePicker}
+        actions={[
+          { label: 'Cancel', disabled: savingTheme, onClick: closeThemePicker },
+          {
+            label: savingTheme ? 'Saving…' : 'Save theme',
+            disabled: savingTheme,
+            onClick: saveTheme,
+          },
+        ]}
+      />
 
       <Modal
         open={selectingAvatar}

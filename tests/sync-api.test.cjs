@@ -25,6 +25,17 @@ test('accepts only bundled-style JPEG avatar filenames', () => {
   assert.equal(_test.validAvatar('sonic-1.png'), false)
 })
 
+test('accepts the available profile themes', () => {
+  assert.equal(_test.validTheme('blue'), true)
+  assert.equal(_test.validTheme('red'), true)
+  assert.equal(_test.validTheme('green'), true)
+  assert.equal(_test.validTheme('orange'), true)
+  assert.equal(_test.validTheme('purple'), true)
+  assert.equal(_test.validTheme('pink'), true)
+  assert.equal(_test.validTheme('yellow'), true)
+  assert.equal(_test.validTheme('black'), false)
+})
+
 test('keeps the newest per-comic change when two devices sync', () => {
   const saved = {
     comicA: { page: 3, updatedAt: '2026-08-20T12:00:00.000Z' },
