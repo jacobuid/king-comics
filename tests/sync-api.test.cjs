@@ -17,6 +17,14 @@ test('accepts only four digit PINs', () => {
   assert.notEqual(_test.pinHash('superman', '1234'), _test.pinHash('superman', '5678'))
 })
 
+test('accepts only bundled-style JPEG avatar filenames', () => {
+  assert.equal(_test.validAvatar('sonic-1.jpg'), true)
+  assert.equal(_test.validAvatar('rainbow-dash-1.jpg'), true)
+  assert.equal(_test.validAvatar(''), true)
+  assert.equal(_test.validAvatar('../sonic-1.jpg'), false)
+  assert.equal(_test.validAvatar('sonic-1.png'), false)
+})
+
 test('keeps the newest per-comic change when two devices sync', () => {
   const saved = {
     comicA: { page: 3, updatedAt: '2026-08-20T12:00:00.000Z' },

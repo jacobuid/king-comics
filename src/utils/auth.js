@@ -39,6 +39,7 @@ export function upsertAccount(name, options = {}) {
     username,
     createdAt: existing?.createdAt ?? new Date().toISOString(),
     synced: options.synced ?? existing?.synced ?? false,
+    avatar: options.avatar ?? existing?.avatar ?? '',
   }
 
   localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))

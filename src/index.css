@@ -130,6 +130,15 @@ nav a {
   fill: currentcolor;
 }
 
+.header-profile-avatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: 0 0 auto;
+  border: 2px solid #5dc8ff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .header-menu,
   .viewer-toolbar {
@@ -660,6 +669,66 @@ button:disabled {
   background: linear-gradient(145deg, #1c8cff, #06449e);
   font-size: 2rem;
   font-weight: 950;
+  object-fit: cover;
+}
+
+.profile-picture-setting {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.profile-picture-setting > img,
+.profile-picture-setting > span {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  place-content: center;
+  border: 2px solid #5dc8ff;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1c8cff, #06449e);
+  font-size: 1.5rem;
+  font-weight: 950;
+  object-fit: cover;
+}
+
+.avatar-picker {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-height: min(58vh, 520px);
+  margin-top: 1.25rem;
+  padding: 0.25rem;
+  overflow-y: auto;
+}
+
+.avatar-option {
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0.2rem;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+}
+
+.avatar-option:hover,
+.avatar-option:focus-visible {
+  border-color: #8fd8ff;
+}
+
+.avatar-option.selected {
+  border-color: #ffad32;
+  box-shadow: 0 0 0 3px rgb(255 173 50 / 28%);
+}
+
+.avatar-option img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .text-button {
@@ -1702,6 +1771,15 @@ input {
   .header-profile-link svg {
     width: 1.3rem;
     height: 1.3rem;
+  }
+
+  .header-profile-avatar {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .avatar-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .profile-grid {

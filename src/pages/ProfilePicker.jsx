@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import Modal from '../components/Modal.jsx'
+import { avatarPath } from '../data/avatars.js'
 import { createSession, deleteAccount, listAccounts } from '../utils/auth.js'
 import { deleteProfileProgress } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
@@ -151,9 +152,13 @@ function ProfilePicker() {
                 disabled={Boolean(selecting)}
                 onClick={() => chooseProfile(profile)}
               >
-                <span class="profile-avatar" aria-hidden="true">
-                  {profile.name.charAt(0).toUpperCase()}
-                </span>
+                {profile.avatar ? (
+                  <img class="profile-avatar" src={avatarPath(profile.avatar)} alt="" />
+                ) : (
+                  <span class="profile-avatar" aria-hidden="true">
+                    {profile.name.charAt(0).toUpperCase()}
+                  </span>
+                )}
                 <span>{selecting === profile.username ? 'Opening…' : profile.name}</span>
               </button>
               <button

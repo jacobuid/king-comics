@@ -22,6 +22,10 @@ function validPin(pin) {
   return /^\d{4}$/.test(String(pin ?? ''))
 }
 
+function validAvatar(avatar) {
+  return avatar === '' || /^[a-z0-9]+(?:-[a-z0-9]+)*\.jpg$/.test(String(avatar ?? ''))
+}
+
 function safeEqual(first, second) {
   const firstBuffer = Buffer.from(String(first))
   const secondBuffer = Buffer.from(String(second))
@@ -127,6 +131,7 @@ async function createProfile(client, commands, body) {
     name: displayName,
     username,
     pinHash: pinHash(username, body.pin),
+    avatar: validAvatar(body.avatar) ? body.avatar : '',
     progress: cleanProgress(body.progress),
     createdAt: now,
     updatedAt: now,
@@ -150,6 +155,7 @@ async function createProfile(client, commands, body) {
   return response(201, {
     name: profile.name,
     profileId: profileId(username, body.pin),
+    avatar: profile.avatar,
     progress: profile.progress,
   })
 }
@@ -169,6 +175,7 @@ async function loadProfile(client, commands, credentials) {
   return response(200, {
     name: saved.profile.name,
     profileId: profileId(username, credentials.pin),
+    avatar: saved.profile.avatar ?? '',
     progress: saved.profile.progress,
   })
 }
@@ -177,6 +184,9 @@ async function updateProfile(client, commands, body) {
   const username = normalizeName(body.name)
   if (!username || !validPin(body.pin)) {
     return response(400, { error: 'Enter a profile name and four-digit PIN.' })
+  }
+  if (body.avatar !== undefined && !validAvatar(body.avatar)) {
+    return response(400, { error: 'That profile picture was not valid.' })
   }
 
   for (let attempt = 0; attempt < 3; attempt += 1) {
@@ -189,6 +199,7 @@ async function updateProfile(client, commands, body) {
     const progress = mergeProgress(saved.profile.progress, body.progress)
     const profile = {
       ...saved.profile,
+      avatar: body.avatar === undefined ? (saved.profile.avatar ?? '') : body.avatar,
       progress,
       updatedAt: new Date().toISOString(),
     }
@@ -204,6 +215,7 @@ async function updateProfile(client, commands, body) {
       return response(200, {
         name: profile.name,
         profileId: profileId(username, body.pin),
+        avatar: profile.avatar,
         progress,
       })
     } catch (error) {
@@ -259,6 +271,7 @@ async function renameProfile(client, commands, body) {
   return response(200, {
     name: profile.name,
     profileId: profileId(nextUsername, body.pin),
+    avatar: profile.avatar ?? '',
     progress: profile.progress,
   })
 }
@@ -341,5 +354,6 @@ exports._test = {
   profileId,
   profileKey,
   renamedProfile,
+  validAvatar,
   validPin,
 }

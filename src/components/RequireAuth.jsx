@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
-import { getCurrentUser, SESSION_CHANGED_EVENT } from '../utils/auth.js'
+import {
+  getCurrentUser,
+  PROFILES_CHANGED_EVENT,
+  SESSION_CHANGED_EVENT,
+} from '../utils/auth.js'
 import { sitePath } from '../utils/sitePath.js'
 
 function RequireAuth({ page: Page, ...props }) {
@@ -27,10 +31,12 @@ function RequireAuth({ page: Page, ...props }) {
 
     refreshUser()
     window.addEventListener(SESSION_CHANGED_EVENT, refreshUser)
+    window.addEventListener(PROFILES_CHANGED_EVENT, refreshUser)
 
     return () => {
       active = false
       window.removeEventListener(SESSION_CHANGED_EVENT, refreshUser)
+      window.removeEventListener(PROFILES_CHANGED_EVENT, refreshUser)
     }
   }, [route])
 

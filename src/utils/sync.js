@@ -66,9 +66,14 @@ async function request(method, credentials, progress, options = {}) {
         'X-Profile-Pin': credentials.pin,
       }
   const body = method === 'POST'
-    ? JSON.stringify({ ...credentials, progress: progress ?? {} })
+    ? JSON.stringify({ ...credentials, avatar: options.avatar ?? '', progress: progress ?? {} })
     : method === 'PUT'
-      ? JSON.stringify({ progress: progress ?? {} })
+      ? JSON.stringify({
+          progress: progress ?? {},
+          ...(Object.prototype.hasOwnProperty.call(options, 'avatar')
+            ? { avatar: options.avatar }
+            : {}),
+        })
       : method === 'PATCH'
         ? JSON.stringify({ name: options.newName, progress: progress ?? {} })
       : undefined
@@ -108,6 +113,7 @@ export async function registerSyncedAccount(name, pin) {
   const account = upsertAccount(payload.name ?? name, {
     synced: true,
     username: `cloud:${payload.profileId}`,
+    avatar: payload.avatar ?? '',
   })
   saveCredentials(account.username, name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
@@ -128,6 +134,7 @@ export async function connectSyncedAccount(name, pin) {
   const account = upsertAccount(payload.name ?? name, {
     synced: true,
     username: `cloud:${payload.profileId}`,
+    avatar: payload.avatar ?? '',
   })
   saveCredentials(account.username, name, pin)
   replaceProfileProgress(account.username, payload.progress ?? {}, false)
@@ -148,6 +155,11 @@ export async function syncProfile(username) {
 
   emitStatus('syncing', 'Syncing…')
   activeSync = request('PUT', credentials, getProfileProgress(username)).then((payload) => {
+    upsertAccount(payload.name ?? credentials.name, {
+      synced: true,
+      username,
+      avatar: payload.avatar ?? '',
+    })
     const progress = replaceProfileProgress(username, payload.progress ?? {}, false)
     emitStatus('synced', 'Synced just now.')
     return progress
@@ -206,6 +218,28 @@ export async function renameSyncedProfile(username, name, pin) {
   const account = replaceAccountIdentity(username, payload.name ?? displayName, nextUsername)
   emitStatus('synced', 'Profile name updated.')
   return { account, progress }
+}
+
+export async function updateProfileAvatar(username, avatar) {
+  const credentials = readCredentials()[username]
+  if (!credentials?.name || !credentials?.pin) {
+    throw new Error('This profile is not connected to device sync.')
+  }
+
+  emitStatus('syncing', 'Updating profile pictureâ€¦')
+  const payload = await request(
+    'PUT',
+    credentials,
+    getProfileProgress(username),
+    { avatar },
+  )
+  const account = upsertAccount(payload.name ?? credentials.name, {
+    synced: true,
+    username,
+    avatar: payload.avatar ?? avatar,
+  })
+  emitStatus('synced', 'Profile picture updated.')
+  return account
 }
 
 function saveProfileOnExit(username) {

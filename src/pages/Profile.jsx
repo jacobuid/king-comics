@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import Modal from '../components/Modal.jsx'
+import { avatarPath, avatars } from '../data/avatars.js'
 import { comics } from '../data/comics.js'
 import { assetPath } from '../utils/assetPath.js'
 import { clearSession } from '../utils/auth.js'
@@ -13,6 +14,7 @@ import {
   renameSyncedProfile,
   SYNC_STATUS_EVENT,
   syncProfile,
+  updateProfileAvatar,
 } from '../utils/sync.js'
 
 const shelves = [
@@ -48,6 +50,10 @@ function Profile({ user }) {
   const [profilePin, setProfilePin] = useState('')
   const [nameError, setNameError] = useState('')
   const [savingName, setSavingName] = useState(false)
+  const [selectingAvatar, setSelectingAvatar] = useState(false)
+  const [selectedAvatar, setSelectedAvatar] = useState(user.avatar ?? '')
+  const [avatarError, setAvatarError] = useState('')
+  const [savingAvatar, setSavingAvatar] = useState(false)
 
   useEffect(() => {
     function updateSyncStatus(event) {
@@ -144,6 +150,36 @@ function Profile({ user }) {
     }
   }
 
+  function openAvatarPicker() {
+    setSelectedAvatar(user.avatar ?? '')
+    setAvatarError('')
+    setSelectingAvatar(true)
+  }
+
+  function closeAvatarPicker() {
+    if (savingAvatar) return
+    setSelectingAvatar(false)
+    setAvatarError('')
+  }
+
+  async function saveAvatar() {
+    if (!selectedAvatar) {
+      setAvatarError('Choose a profile picture first.')
+      return
+    }
+
+    setAvatarError('')
+    setSavingAvatar(true)
+    try {
+      await updateProfileAvatar(user.username, selectedAvatar)
+      setSelectingAvatar(false)
+    } catch (updateError) {
+      setAvatarError(updateError.message)
+    } finally {
+      setSavingAvatar(false)
+    }
+  }
+
   return (
     <section class="page profile-page">
       <section class="reading-hero">
@@ -226,13 +262,29 @@ function Profile({ user }) {
       <div class="profile-settings">
         <h2>Profile settings</h2>
         {user.synced && (
-          <div class="sync-setting">
-            <div>
-              <strong>Profile name</strong>
-              <p class="sync-message">{user.name}</p>
+          <>
+            <div class="sync-setting">
+              <div class="profile-picture-setting">
+                {user.avatar ? (
+                  <img src={avatarPath(user.avatar)} alt="" />
+                ) : (
+                  <span aria-hidden="true">{user.name.charAt(0).toUpperCase()}</span>
+                )}
+                <div>
+                  <strong>Profile picture</strong>
+                  <p class="sync-message">Choose your hero.</p>
+                </div>
+              </div>
+              <button type="button" onClick={openAvatarPicker}>Select profile picture</button>
             </div>
-            <button type="button" onClick={openNameEditor}>Edit profile</button>
-          </div>
+            <div class="sync-setting">
+              <div>
+                <strong>Profile name</strong>
+                <p class="sync-message">{user.name}</p>
+              </div>
+              <button type="button" onClick={openNameEditor}>Edit profile</button>
+            </div>
+          </>
         )}
         {isSyncConfigured() && (
           user.synced ? (
@@ -264,6 +316,44 @@ function Profile({ user }) {
         <button type="button" onClick={switchProfile}>Switch profile</button>
         <button class="sign-out-button" type="button" onClick={signOut}>Sign out</button>
       </div>
+
+      <Modal
+        open={selectingAvatar}
+        title="Select profile picture"
+        content={(
+          <>
+            <div class="avatar-picker" role="radiogroup" aria-label="Profile pictures">
+              {avatars.map((avatar) => (
+                <button
+                  class={selectedAvatar === avatar ? 'avatar-option selected' : 'avatar-option'}
+                  type="button"
+                  role="radio"
+                  aria-checked={selectedAvatar === avatar}
+                  aria-label={`Select ${avatar.replace(/\.jpg$/, '').replaceAll('-', ' ')}`}
+                  key={avatar}
+                  disabled={savingAvatar}
+                  onClick={() => {
+                    setSelectedAvatar(avatar)
+                    setAvatarError('')
+                  }}
+                >
+                  <img src={avatarPath(avatar)} alt="" loading="lazy" />
+                </button>
+              ))}
+            </div>
+            {avatarError && <p class="error" role="alert">{avatarError}</p>}
+          </>
+        )}
+        onClose={closeAvatarPicker}
+        actions={[
+          { label: 'Cancel', disabled: savingAvatar, onClick: closeAvatarPicker },
+          {
+            label: savingAvatar ? 'Savingâ€¦' : 'Save picture',
+            disabled: savingAvatar || !selectedAvatar,
+            onClick: saveAvatar,
+          },
+        ]}
+      />
 
       <Modal
         open={editingName}

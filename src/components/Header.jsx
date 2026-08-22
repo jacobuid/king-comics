@@ -2,9 +2,11 @@ import { faBookOpen, faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from 'preact-iso'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import FontAwesomeIcon from './FontAwesomeIcon.jsx'
+import { avatarPath } from '../data/avatars.js'
 import { getComic, getSeries } from '../data/comics.js'
 import {
   getCurrentUser,
+  PROFILES_CHANGED_EVENT,
   SESSION_CHANGED_EVENT,
 } from '../utils/auth.js'
 import { sitePath } from '../utils/sitePath.js'
@@ -42,9 +44,11 @@ function Header() {
 
     refreshNavigation()
     window.addEventListener(SESSION_CHANGED_EVENT, refreshNavigation)
+    window.addEventListener(PROFILES_CHANGED_EVENT, refreshNavigation)
 
     return () => {
       window.removeEventListener(SESSION_CHANGED_EVENT, refreshNavigation)
+      window.removeEventListener(PROFILES_CHANGED_EVENT, refreshNavigation)
     }
   }, [])
 
@@ -117,7 +121,15 @@ function Header() {
                 href={sitePath('/profile')}
                 aria-label={`Open ${activeProfile.name}'s profile`}
               >
-                <FontAwesomeIcon icon={faCircleUser} />
+                {activeProfile.avatar ? (
+                  <img
+                    class="header-profile-avatar"
+                    src={avatarPath(activeProfile.avatar)}
+                    alt=""
+                  />
+                ) : (
+                  <FontAwesomeIcon icon={faCircleUser} />
+                )}
                 <span>{activeProfile.name}</span>
               </a>
             </nav>
