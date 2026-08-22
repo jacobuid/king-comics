@@ -2,10 +2,13 @@ import { useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import { createAccount } from '../utils/auth.js'
 import { sitePath } from '../utils/sitePath.js'
+import { isSyncConfigured, registerSyncedAccount } from '../utils/sync.js'
 
 function SignUp() {
   const { route } = useLocation()
   const [name, setName] = useState('')
+  const [pin, setPin] = useState('')
+  const [confirmPin, setConfirmPin] = useState('')
   const [error, setError] = useState('')
   const [saving, setSaving] = useState(false)
 
@@ -15,7 +18,12 @@ function SignUp() {
     setSaving(true)
 
     try {
-      createAccount(name)
+      if (isSyncConfigured()) {
+        if (pin !== confirmPin) throw new Error('The PINs do not match.')
+        await registerSyncedAccount(name, pin)
+      } else {
+        createAccount(name)
+      }
       route(sitePath('/profiles'), true)
     } catch (accountError) {
       setError(accountError.message)
@@ -27,7 +35,11 @@ function SignUp() {
     <section class="page narrow">
       <p class="eyebrow">Create a local hero</p>
       <h1>Sign up</h1>
-      <p>This profile stays on this browser.</p>
+      <p>
+        {isSyncConfigured()
+          ? 'Use the same name and PIN to bring bookmarks and history to another device.'
+          : 'This profile stays on this browser until cloud sync is configured.'}
+      </p>
       <form onSubmit={handleSubmit}>
         <label for="signup-name">Name</label>
         <input
@@ -40,12 +52,44 @@ function SignUp() {
           required
         />
 
+        {isSyncConfigured() && (
+          <>
+            <label for="signup-pin">Four-digit PIN</label>
+            <input
+              id="signup-pin"
+              name="pin"
+              type="password"
+              value={pin}
+              onInput={(event) => setPin(event.currentTarget.value.replace(/\D/g, '').slice(0, 4))}
+              inputMode="numeric"
+              autoComplete="new-password"
+              pattern="[0-9]{4}"
+              maxLength="4"
+              required
+            />
+
+            <label for="signup-pin-confirm">Confirm PIN</label>
+            <input
+              id="signup-pin-confirm"
+              name="pin-confirm"
+              type="password"
+              value={confirmPin}
+              onInput={(event) => setConfirmPin(event.currentTarget.value.replace(/\D/g, '').slice(0, 4))}
+              inputMode="numeric"
+              autoComplete="new-password"
+              pattern="[0-9]{4}"
+              maxLength="4"
+              required
+            />
+          </>
+        )}
+
         <button type="submit" disabled={saving}>
           {saving ? 'Creating profile…' : 'Create profile'}
         </button>
       </form>
       {error && <p class="error" role="alert">{error}</p>}
-      <p class="form-footer">Already have a profile? <a href={sitePath('/profiles')}>Choose it</a>.</p>
+      <p class="form-footer">Already have a profile? <a href={sitePath('/profiles')}>Open it</a>.</p>
     </section>
   )
 }

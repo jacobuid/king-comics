@@ -216,6 +216,20 @@ button:disabled {
   max-width: 900px;
 }
 
+.profile-connect {
+  width: min(100%, 430px);
+  margin: 3rem auto 0;
+  padding: 1.25rem;
+  border: 1px solid #536988;
+  border-radius: 0.75rem;
+  background: rgb(8 29 61 / 80%);
+  text-align: left;
+}
+
+.profile-connect h2 {
+  margin-top: 0;
+}
+
 .profile-page {
   width: min(1120px, 100%);
   max-width: 1120px;
@@ -542,6 +556,29 @@ button:disabled {
 
 .profile-settings input {
   border-color: #7184a3;
+}
+
+.sync-setting {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #536988;
+}
+
+.sync-setting p {
+  margin: 0.35rem 0 0;
+}
+
+.sync-setting button {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.sync-message {
+  color: #9fc8ec;
 }
 
 .rename-form {

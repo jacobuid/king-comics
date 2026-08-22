@@ -9,11 +9,13 @@
     "publish:comics": "node scripts/publish-comics.mjs",
     "upload:comics": "node scripts/publish-comics.mjs",
     "deploy:comic": "node scripts/deploy-comic.mjs",
+    "deploy:sync": "node scripts/deploy-sync.mjs",
     "predev": "npm run catalog",
     "dev": "vite",
     "prebuild": "node scripts/prepare-libarchive.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.6",

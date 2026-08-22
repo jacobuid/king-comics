@@ -73,7 +73,7 @@ function cookiePath() {
   return import.meta.env.BASE_URL || '/'
 }
 
-export function createAccount(name) {
+export function createAccount(name, options = {}) {
   const displayName = name.trim().normalize('NFKC')
   const username = normalizeName(name)
 
@@ -87,6 +87,29 @@ export function createAccount(name) {
     name: displayName,
     username,
     createdAt: new Date().toISOString(),
+    synced: Boolean(options.synced),
+  }
+
+  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  notifyProfilesChanged()
+  return accounts[username]
+}
+
+export function upsertAccount(name, options = {}) {
+  const displayName = name.trim().normalize('NFKC')
+  const username = options.username ?? normalizeName(name)
+
+  if (!username) throw new Error('Enter a name for this profile.')
+
+  const accounts = readAccounts()
+  const existing = accounts[username]
+
+  accounts[username] = {
+    ...existing,
+    name: displayName,
+    username,
+    createdAt: existing?.createdAt ?? new Date().toISOString(),
+    synced: options.synced ?? existing?.synced ?? false,
   }
 
   localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
@@ -129,6 +152,17 @@ export function renameAccount(currentUsername, newName) {
   const account = accounts[currentUsername]
 
   if (!account) throw new Error('This profile could not be found.')
+  if (account.synced) {
+    const updatedAccount = {
+      ...account,
+      name: displayName,
+    }
+
+    accounts[currentUsername] = updatedAccount
+    localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+    notifyProfilesChanged()
+    return updatedAccount
+  }
   if (nextUsername !== currentUsername && accounts[nextUsername]) {
     throw new Error('A profile with that name already exists.')
   }

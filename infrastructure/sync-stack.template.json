@@ -1,0 +1,107 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Private, local-first profile sync for King Comics.",
+  "Parameters": {
+    "DataBucketName": {
+      "Type": "String",
+      "Default": "king-comics-jacobuid",
+      "Description": "Existing private S3 bucket where profiles/*.json will be stored."
+    }
+  },
+  "Resources": {
+    "SyncFunctionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": { "Service": ["lambda.amazonaws.com"] },
+              "Action": ["sts:AssumeRole"]
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "ReadWriteProfileJson",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetObject", "s3:PutObject"],
+                  "Resource": { "Fn::Sub": "arn:${AWS::Partition}:s3:::${DataBucketName}/profiles/*" }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"],
+                  "Resource": "arn:aws:logs:*:*:*"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "SyncFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Architectures": ["arm64"],
+        "Code": {
+          "ZipFile": "// scripts/deploy-sync.mjs replaces this string with infrastructure/sync-api/index.cjs"
+        },
+        "Environment": {
+          "Variables": { "DATA_BUCKET": { "Ref": "DataBucketName" } }
+        },
+        "Handler": "index.handler",
+        "MemorySize": 128,
+        "Role": { "Fn::GetAtt": ["SyncFunctionRole", "Arn"] },
+        "Runtime": "nodejs24.x",
+        "Timeout": 10
+      }
+    },
+    "SyncFunctionUrl": {
+      "Type": "AWS::Lambda::Url",
+      "Properties": {
+        "AuthType": "NONE",
+        "Cors": {
+          "AllowHeaders": ["content-type"],
+          "AllowMethods": ["POST"],
+          "AllowOrigins": ["https://jacobuid.github.io", "http://localhost:5173", "http://localhost:4173"],
+          "MaxAge": 86400
+        },
+        "InvokeMode": "BUFFERED",
+        "TargetFunctionArn": { "Ref": "SyncFunction" }
+      }
+    },
+    "SyncFunctionUrlPermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunctionUrl",
+        "FunctionName": { "Ref": "SyncFunction" },
+        "FunctionUrlAuthType": "NONE",
+        "Principal": "*"
+      }
+    },
+    "SyncFunctionInvokePermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": { "Ref": "SyncFunction" },
+        "InvokedViaFunctionUrl": true,
+        "Principal": "*"
+      }
+    }
+  },
+  "Outputs": {
+    "DataBucketName": {
+      "Description": "Existing bucket containing the private profiles/ folder.",
+      "Value": { "Ref": "DataBucketName" }
+    },
+    "SyncApiUrl": {
+      "Description": "Set this as VITE_SYNC_API_URL when building the PWA.",
+      "Value": { "Fn::GetAtt": ["SyncFunctionUrl", "FunctionUrl"] }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { useMemo, useState } from 'preact/hooks'
+import { useEffect, useMemo, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import { comics } from '../data/comics.js'
@@ -7,6 +7,7 @@ import { assetPath } from '../utils/assetPath.js'
 import { clearSession, renameAccount } from '../utils/auth.js'
 import { getProfileProgress, renameProfileProgress, setComicBookmark } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
+import { isSyncConfigured, SYNC_STATUS_EVENT, syncProfile } from '../utils/sync.js'
 
 const shelves = [
   { status: 'read', title: 'History' },
@@ -38,6 +39,16 @@ function Profile({ user }) {
   const [progress, setProgress] = useState(() => getProfileProgress(user.username))
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  const [syncStatus, setSyncStatus] = useState({ status: 'idle', message: '' })
+
+  useEffect(() => {
+    function updateSyncStatus(event) {
+      setSyncStatus(event.detail)
+    }
+
+    window.addEventListener(SYNC_STATUS_EVENT, updateSyncStatus)
+    return () => window.removeEventListener(SYNC_STATUS_EVENT, updateSyncStatus)
+  }, [])
 
   const comicsByStatus = useMemo(() => {
     const grouped = Object.fromEntries(shelves.map((shelf) => [shelf.status, []]))
@@ -102,6 +113,16 @@ function Profile({ user }) {
   function removeBookmark(comicId) {
     const updatedProgress = setComicBookmark(currentUser.username, comicId, false)
     setProgress({ ...updatedProgress })
+  }
+
+  async function syncNow() {
+    setError('')
+    try {
+      const updatedProgress = await syncProfile(currentUser.username)
+      setProgress({ ...updatedProgress })
+    } catch (syncError) {
+      setError(syncError.message)
+    }
   }
 
   return (
@@ -185,6 +206,19 @@ function Profile({ user }) {
 
       <div class="profile-settings">
         <h2>Profile settings</h2>
+        {isSyncConfigured() && currentUser.synced && (
+          <div class="sync-setting">
+            <div>
+              <strong>Device sync</strong>
+              <p class={syncStatus.status === 'error' ? 'error' : 'sync-message'}>
+                {syncStatus.message || 'Bookmarks and history sync automatically.'}
+              </p>
+            </div>
+            <button type="button" onClick={syncNow} disabled={syncStatus.status === 'syncing'}>
+              Sync now
+            </button>
+          </div>
+        )}
         <form class="rename-form" onSubmit={handleRename}>
           <label for="profile-name">Profile name</label>
           <div class="inline-form">

@@ -1,9 +1,11 @@
 import { hydrate, prerender as renderToString } from 'preact-iso'
 import App from './App.jsx'
+import { startProfileSync } from './utils/sync.js'
 import './index.css'
 
 if (typeof window !== 'undefined') {
   hydrate(<App />, document.getElementById('root'))
+  startProfileSync()
 
   if ('serviceWorker' in navigator) {
     if (import.meta.env.PROD) {

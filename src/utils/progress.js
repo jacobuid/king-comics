@@ -1,5 +1,11 @@
 const PROGRESS_KEY = 'king-comics.progress.v1'
 
+export const PROGRESS_CHANGED_EVENT = 'king-comics:progress-changed'
+
+function notifyProgressChanged(username) {
+  window.dispatchEvent(new CustomEvent(PROGRESS_CHANGED_EVENT, { detail: { username } }))
+}
+
 function readAllProgress() {
   try {
     return JSON.parse(localStorage.getItem(PROGRESS_KEY)) ?? {}
@@ -31,6 +37,7 @@ export function setComicProgress(username, comicId, status, details = {}) {
 
   allProgress[username] = profileProgress
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  notifyProgressChanged(username)
 
   return profileProgress
 }
@@ -48,6 +55,7 @@ export function setComicBookmark(username, comicId, bookmarked) {
 
   allProgress[username] = profileProgress
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  notifyProgressChanged(username)
 
   return profileProgress
 }
@@ -59,6 +67,7 @@ export function deleteProfileProgress(username) {
 
   delete allProgress[username]
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  notifyProgressChanged(username)
 }
 
 export function renameProfileProgress(currentUsername, nextUsername) {
@@ -69,7 +78,16 @@ export function renameProfileProgress(currentUsername, nextUsername) {
     delete allProgress[currentUsername]
     allProgress[nextUsername] = profileProgress
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+    notifyProgressChanged(nextUsername)
   }
 
   return profileProgress
+}
+
+export function replaceProfileProgress(username, profileProgress, notify = true) {
+  const allProgress = readAllProgress()
+  allProgress[username] = profileProgress ?? {}
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  if (notify) notifyProgressChanged(username)
+  return allProgress[username]
 }
