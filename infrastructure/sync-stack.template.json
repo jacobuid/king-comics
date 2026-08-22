@@ -67,7 +67,7 @@
         "AuthType": "NONE",
         "Cors": {
           "AllowHeaders": ["content-type", "x-profile-id", "x-profile-name", "x-profile-pin"],
-          "AllowMethods": ["GET", "POST", "PUT", "DELETE"],
+          "AllowMethods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
           "AllowOrigins": ["https://jacobuid.github.io", "http://localhost:5173", "http://localhost:4173"],
           "MaxAge": 86400
         },

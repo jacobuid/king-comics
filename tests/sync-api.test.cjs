@@ -32,3 +32,20 @@ test('keeps the newest per-comic change when two devices sync', () => {
     comicB: saved.comicB,
   })
 })
+
+test('renames a profile while preserving its progress and PIN validation data', () => {
+  const saved = {
+    name: 'Superman',
+    username: 'superman',
+    pinHash: _test.pinHash('superman', '1234'),
+    progress: { comicA: { page: 3, updatedAt: '2026-08-20T12:00:00.000Z' } },
+    createdAt: '2026-08-20T10:00:00.000Z',
+  }
+  const renamed = _test.renamedProfile(saved, 'Clark Kent', '1234', {})
+
+  assert.equal(renamed.name, 'Clark Kent')
+  assert.equal(renamed.username, 'clark kent')
+  assert.equal(renamed.pinHash, _test.pinHash('clark kent', '1234'))
+  assert.deepEqual(renamed.progress, saved.progress)
+  assert.equal(renamed.createdAt, saved.createdAt)
+})

@@ -1,7 +1,14 @@
-import { deleteAccount, getCurrentUser, getCurrentUserSync, upsertAccount } from './auth.js'
+import {
+  deleteAccount,
+  getCurrentUser,
+  getCurrentUserSync,
+  replaceAccountIdentity,
+  upsertAccount,
+} from './auth.js'
 import {
   deleteProfileProgress,
   getProfileProgress,
+  moveProfileProgress,
   PROGRESS_CHANGED_EVENT,
   replaceProfileProgress,
 } from './progress.js'
@@ -54,7 +61,7 @@ async function request(method, credentials, progress, options = {}) {
     : method === 'POST'
     ? { 'Content-Type': 'application/json' }
     : {
-        ...(method === 'PUT' ? { 'Content-Type': 'application/json' } : {}),
+        ...(['PUT', 'PATCH'].includes(method) ? { 'Content-Type': 'application/json' } : {}),
         'X-Profile-Name': credentials.name,
         'X-Profile-Pin': credentials.pin,
       }
@@ -62,6 +69,8 @@ async function request(method, credentials, progress, options = {}) {
     ? JSON.stringify({ ...credentials, progress: progress ?? {} })
     : method === 'PUT'
       ? JSON.stringify({ progress: progress ?? {} })
+      : method === 'PATCH'
+        ? JSON.stringify({ name: options.newName, progress: progress ?? {} })
       : undefined
 
   const response = await fetch(`${apiUrl}/profiles`, {
@@ -167,6 +176,36 @@ export async function deleteSyncedProfile(username, pin) {
 
   const profileId = username.startsWith('cloud:') ? username.slice('cloud:'.length) : ''
   await request('DELETE', null, null, { profileId, pin })
+}
+
+export async function renameSyncedProfile(username, name, pin) {
+  validatePin(pin)
+  const credentials = readCredentials()[username]
+  if (!credentials?.name || !credentials?.pin) {
+    throw new Error('This profile is not connected to device sync.')
+  }
+  if (credentials.pin !== pin) throw new Error('That PIN is not correct.')
+
+  const displayName = name.trim().normalize('NFKC')
+  if (!displayName || displayName.length > 40) {
+    throw new Error('Enter a profile name with 40 characters or fewer.')
+  }
+
+  emitStatus('syncing', 'Updating profile nameâ€¦')
+  const payload = await request(
+    'PATCH',
+    { name: credentials.name, pin },
+    getProfileProgress(username),
+    { newName: displayName },
+  )
+  const nextUsername = `cloud:${payload.profileId}`
+  const progress = moveProfileProgress(username, nextUsername)
+
+  saveCredentials(nextUsername, payload.name ?? displayName, pin)
+  if (nextUsername !== username) removePin(username)
+  const account = replaceAccountIdentity(username, payload.name ?? displayName, nextUsername)
+  emitStatus('synced', 'Profile name updated.')
+  return { account, progress }
 }
 
 function saveProfileOnExit(username) {

@@ -54,6 +54,18 @@ function mergeProgress(savedProgress, deviceProgress) {
   return merged
 }
 
+function renamedProfile(savedProfile, displayName, pin, deviceProgress) {
+  const username = normalizeName(displayName)
+  return {
+    ...savedProfile,
+    name: displayName,
+    username,
+    pinHash: pinHash(username, pin),
+    progress: mergeProgress(savedProfile.progress, deviceProgress),
+    updatedAt: new Date().toISOString(),
+  }
+}
+
 function response(statusCode, body) {
   return {
     statusCode,
@@ -202,6 +214,55 @@ async function updateProfile(client, commands, body) {
   return response(409, { error: 'Two devices synced at once. Please try again.' })
 }
 
+async function renameProfile(client, commands, body) {
+  const username = normalizeName(body.currentName)
+  const displayName = String(body.name ?? '').trim().normalize('NFKC')
+  const nextUsername = normalizeName(displayName)
+
+  if (!username || !nextUsername || displayName.length > 40 || !validPin(body.pin)) {
+    return response(400, { error: 'Enter a profile name and four-digit PIN.' })
+  }
+
+  const saved = await readProfile(client, commands.GetObjectCommand, username, body.pin)
+  if (!saved) return response(404, { error: 'No synced profile was found with that name.' })
+  if (!safeEqual(saved.profile.pinHash, pinHash(username, body.pin))) {
+    return response(401, { error: 'That PIN is not correct.' })
+  }
+
+  const currentKey = profileKey(username, body.pin)
+  const nextKey = profileKey(nextUsername, body.pin)
+  const profile = renamedProfile(saved.profile, displayName, body.pin, body.progress)
+
+  try {
+    await client.send(new commands.PutObjectCommand({
+      Bucket: bucket,
+      Key: nextKey,
+      Body: JSON.stringify(profile),
+      ContentType: 'application/json',
+      ...(currentKey === nextKey ? { IfMatch: saved.etag } : { IfNoneMatch: '*' }),
+    }))
+  } catch (error) {
+    if (error.name === 'PreconditionFailed' || error.$metadata?.httpStatusCode === 412) {
+      return response(409, {
+        error: currentKey === nextKey
+          ? 'This profile changed on another device. Please try again.'
+          : 'That profile name is already being used with this PIN.',
+      })
+    }
+    throw error
+  }
+
+  if (currentKey !== nextKey) {
+    await client.send(new commands.DeleteObjectCommand({ Bucket: bucket, Key: currentKey }))
+  }
+
+  return response(200, {
+    name: profile.name,
+    profileId: profileId(nextUsername, body.pin),
+    progress: profile.progress,
+  })
+}
+
 async function deleteProfile(client, commands, id, pin) {
   if (!/^[a-f0-9]{64}$/.test(String(id ?? ''))) {
     return response(400, { error: 'The profile ID was not valid.' })
@@ -253,6 +314,14 @@ exports.handler = async (event) => {
     if (event.rawPath === '/profiles' && method === 'PUT') {
       return await updateProfile(client, commands, { ...body, ...requestCredentials(event, body) })
     }
+    if (event.rawPath === '/profiles' && method === 'PATCH') {
+      const credentials = requestCredentials(event, body)
+      return await renameProfile(client, commands, {
+        ...body,
+        currentName: credentials.name,
+        pin: credentials.pin,
+      })
+    }
 
     return response(404, { error: 'Not found.' })
   } catch (error) {
@@ -271,5 +340,6 @@ exports._test = {
   pinHash,
   profileId,
   profileKey,
+  renamedProfile,
   validPin,
 }

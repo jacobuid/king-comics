@@ -71,6 +71,36 @@ export function deleteAccount(username) {
   }
 }
 
+export function replaceAccountIdentity(username, name, nextUsername) {
+  const accounts = readAccounts()
+  const existing = accounts[username]
+
+  if (!existing) throw new Error('This profile is not stored on this device.')
+
+  const updated = {
+    ...existing,
+    name: name.trim().normalize('NFKC'),
+    username: nextUsername,
+  }
+
+  if (nextUsername !== username) delete accounts[username]
+  accounts[nextUsername] = updated
+  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  notifyProfilesChanged()
+
+  try {
+    const session = JSON.parse(localStorage.getItem(SESSION_KEY))
+    if (session?.username === username) {
+      localStorage.setItem(SESSION_KEY, JSON.stringify({ username: nextUsername }))
+      notifySessionChanged()
+    }
+  } catch {
+    clearSession()
+  }
+
+  return updated
+}
+
 export async function createSession(username) {
   localStorage.setItem(SESSION_KEY, JSON.stringify({ username }))
   notifySessionChanged()

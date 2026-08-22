@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
-import { getCurrentUser } from '../utils/auth.js'
+import { getCurrentUser, SESSION_CHANGED_EVENT } from '../utils/auth.js'
 import { sitePath } from '../utils/sitePath.js'
 
 function RequireAuth({ page: Page, ...props }) {
@@ -11,20 +11,26 @@ function RequireAuth({ page: Page, ...props }) {
   useEffect(() => {
     let active = true
 
-    getCurrentUser().then((currentUser) => {
-      if (!active) return
+    function refreshUser() {
+      getCurrentUser().then((currentUser) => {
+        if (!active) return
 
-      if (!currentUser) {
-        route(sitePath('/profiles'), true)
-        return
-      }
+        if (!currentUser) {
+          route(sitePath('/profiles'), true)
+          return
+        }
 
-      setUser(currentUser)
-      setChecking(false)
-    })
+        setUser(currentUser)
+        setChecking(false)
+      })
+    }
+
+    refreshUser()
+    window.addEventListener(SESSION_CHANGED_EVENT, refreshUser)
 
     return () => {
       active = false
+      window.removeEventListener(SESSION_CHANGED_EVENT, refreshUser)
     }
   }, [route])
 
