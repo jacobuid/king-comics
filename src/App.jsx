@@ -6,7 +6,6 @@ import ComicViewer from './pages/ComicViewer.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Profile from './pages/Profile.jsx'
 import ProfilePicker from './pages/ProfilePicker.jsx'
-import SignUp from './pages/SignUp.jsx'
 import Series from './pages/Series.jsx'
 import { routerPath } from './utils/sitePath.js'
 
@@ -18,7 +17,6 @@ function App() {
         <ErrorBoundary>
           <Router>
             <Route path={routerPath('/')} component={RequireAuth} page={Home} />
-            <Route path={routerPath('/signup')} component={SignUp} />
             <Route path={routerPath('/profiles')} component={ProfilePicker} />
             <Route path={routerPath('/profile')} component={RequireAuth} page={Profile} />
             <Route path={routerPath('/comic/:comicId')} component={RequireAuth} page={ComicViewer} />

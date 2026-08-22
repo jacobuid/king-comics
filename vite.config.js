@@ -16,7 +16,6 @@ export default defineConfig({
         renderTarget: '#root',
         additionalPrerenderRoutes: [
           '/',
-          '/signup',
           '/profiles',
           '/profile',
           ...seriesRoutes,

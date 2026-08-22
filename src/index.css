@@ -216,17 +216,18 @@ button:disabled {
   max-width: 900px;
 }
 
-.profile-connect {
-  width: min(100%, 430px);
-  margin: 3rem auto 0;
-  padding: 1.25rem;
-  border: 1px solid #536988;
-  border-radius: 0.75rem;
-  background: rgb(8 29 61 / 80%);
-  text-align: left;
+.profile-gate-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.profile-connect h2 {
+.profile-gate-actions button {
+  margin: 0;
+}
+
+.profile-modal-form p {
   margin-top: 0;
 }
 

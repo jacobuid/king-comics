@@ -8,42 +8,95 @@ import {
   connectSyncedAccount,
   deleteSyncedProfile,
   forgetSyncCredentials,
-  isSyncConfigured,
+  registerSyncedAccount,
   syncProfile,
 } from '../utils/sync.js'
+
+function pinInputValue(event) {
+  return event.currentTarget.value.replace(/\D/g, '').slice(0, 4)
+}
 
 function ProfilePicker() {
   const { route } = useLocation()
   const [profiles, setProfiles] = useState(() => listAccounts())
   const [selecting, setSelecting] = useState('')
   const [profileToDelete, setProfileToDelete] = useState(null)
-  const [name, setName] = useState('')
-  const [pin, setPin] = useState('')
-  const [error, setError] = useState('')
-  const [connecting, setConnecting] = useState(false)
+
+  const [showCreate, setShowCreate] = useState(false)
+  const [createName, setCreateName] = useState('')
+  const [createPin, setCreatePin] = useState('')
+  const [confirmPin, setConfirmPin] = useState('')
+  const [createError, setCreateError] = useState('')
+  const [creating, setCreating] = useState(false)
+
+  const [showImport, setShowImport] = useState(false)
+  const [importName, setImportName] = useState('')
+  const [importPin, setImportPin] = useState('')
+  const [importError, setImportError] = useState('')
+  const [importing, setImporting] = useState(false)
+
   const [deletePin, setDeletePin] = useState('')
   const [deleteError, setDeleteError] = useState('')
   const [deleting, setDeleting] = useState(false)
 
-  async function chooseProfile(profile) {
-    setSelecting(profile.username)
-    await syncProfile(profile.username).catch(() => {})
+  async function openProfile(profile) {
     await createSession(profile.username)
     route(sitePath('/profile'), true)
   }
 
-  async function connectProfile(event) {
+  async function chooseProfile(profile) {
+    setSelecting(profile.username)
+    await syncProfile(profile.username).catch(() => {})
+    await openProfile(profile)
+  }
+
+  function closeCreate() {
+    if (creating) return
+    setShowCreate(false)
+    setCreateError('')
+  }
+
+  async function createProfile(event) {
     event.preventDefault()
-    setError('')
-    setConnecting(true)
+    setCreateError('')
+    setCreating(true)
 
     try {
-      const profile = await connectSyncedAccount(name, pin)
-      await createSession(profile.username)
-      route(sitePath('/profile'), true)
-    } catch (connectError) {
-      setError(connectError.message)
-      setConnecting(false)
+      if (createPin !== confirmPin) throw new Error('The PINs do not match.')
+      await registerSyncedAccount(createName, createPin)
+      setProfiles(listAccounts())
+      setShowCreate(false)
+      setCreateName('')
+      setCreatePin('')
+      setConfirmPin('')
+      setCreating(false)
+    } catch (error) {
+      setCreateError(error.message)
+      setCreating(false)
+    }
+  }
+
+  function closeImport() {
+    if (importing) return
+    setShowImport(false)
+    setImportError('')
+  }
+
+  async function importProfile(event) {
+    event.preventDefault()
+    setImportError('')
+    setImporting(true)
+
+    try {
+      await connectSyncedAccount(importName, importPin)
+      setProfiles(listAccounts())
+      setShowImport(false)
+      setImportName('')
+      setImportPin('')
+      setImporting(false)
+    } catch (error) {
+      setImportError(error.message)
+      setImporting(false)
     }
   }
 
@@ -76,8 +129,8 @@ function ProfilePicker() {
       setProfiles(listAccounts())
       setProfileToDelete(null)
       setDeletePin('')
-    } catch (deleteProfileError) {
-      setDeleteError(deleteProfileError.message)
+    } catch (error) {
+      setDeleteError(error.message)
     } finally {
       setDeleting(false)
     }
@@ -119,41 +172,103 @@ function ProfilePicker() {
         <p>No profiles live on this browser yet.</p>
       )}
 
-      <a class="button" href={sitePath('/signup')}>Create or sync a profile</a>
+      <div class="profile-gate-actions">
+        <button type="button" onClick={() => setShowCreate(true)}>Create a profile</button>
+        <button type="button" onClick={() => setShowImport(true)}>Import a profile</button>
+      </div>
 
-      {isSyncConfigured() && (
-        <section class="profile-connect">
-          <h2>Open a profile from another device</h2>
-          <p>Enter the same profile name and four-digit PIN.</p>
-          <form onSubmit={connectProfile}>
-            <label for="connect-name">Name</label>
+      <Modal
+        open={showCreate}
+        title="Create your hero"
+        content={(
+          <form class="profile-modal-form" onSubmit={createProfile}>
+            <p>Create a profile that can be used on all your devices.</p>
+            <label for="create-profile-name">Profile name</label>
             <input
-              id="connect-name"
-              value={name}
-              onInput={(event) => setName(event.currentTarget.value)}
+              id="create-profile-name"
+              value={createName}
+              onInput={(event) => setCreateName(event.currentTarget.value)}
               autoComplete="username"
               maxLength="40"
+              disabled={creating}
+              required
+              autofocus
+            />
+            <label for="create-profile-pin">Four-digit PIN</label>
+            <input
+              id="create-profile-pin"
+              type="password"
+              value={createPin}
+              onInput={(event) => setCreatePin(pinInputValue(event))}
+              inputMode="numeric"
+              autoComplete="new-password"
+              pattern="[0-9]{4}"
+              maxLength="4"
+              disabled={creating}
               required
             />
-            <label for="connect-pin">PIN</label>
+            <label for="confirm-profile-pin">Confirm PIN</label>
             <input
-              id="connect-pin"
+              id="confirm-profile-pin"
               type="password"
-              value={pin}
-              onInput={(event) => setPin(event.currentTarget.value.replace(/\D/g, '').slice(0, 4))}
+              value={confirmPin}
+              onInput={(event) => setConfirmPin(pinInputValue(event))}
+              inputMode="numeric"
+              autoComplete="new-password"
+              pattern="[0-9]{4}"
+              maxLength="4"
+              disabled={creating}
+              required
+            />
+            {createError && <p class="error" role="alert">{createError}</p>}
+            <button type="submit" disabled={creating}>
+              {creating ? 'Creating…' : 'Create profile'}
+            </button>
+          </form>
+        )}
+        onClose={closeCreate}
+        actions={[{ label: 'Cancel', disabled: creating, onClick: closeCreate }]}
+      />
+
+      <Modal
+        open={showImport}
+        title="Import a profile"
+        content={(
+          <form class="profile-modal-form" onSubmit={importProfile}>
+            <p>Enter the profile name and PIN used on the other device.</p>
+            <label for="import-profile-name">Profile name</label>
+            <input
+              id="import-profile-name"
+              value={importName}
+              onInput={(event) => setImportName(event.currentTarget.value)}
+              autoComplete="username"
+              maxLength="40"
+              disabled={importing}
+              required
+              autofocus
+            />
+            <label for="import-profile-pin">Four-digit PIN</label>
+            <input
+              id="import-profile-pin"
+              type="password"
+              value={importPin}
+              onInput={(event) => setImportPin(pinInputValue(event))}
               inputMode="numeric"
               autoComplete="current-password"
               pattern="[0-9]{4}"
               maxLength="4"
+              disabled={importing}
               required
             />
-            <button type="submit" disabled={connecting}>
-              {connecting ? 'Opening…' : 'Open synced profile'}
+            {importError && <p class="error" role="alert">{importError}</p>}
+            <button type="submit" disabled={importing}>
+              {importing ? 'Importing…' : 'Import profile'}
             </button>
           </form>
-          {error && <p class="error" role="alert">{error}</p>}
-        </section>
-      )}
+        )}
+        onClose={closeImport}
+        actions={[{ label: 'Cancel', disabled: importing, onClick: closeImport }]}
+      />
 
       <Modal
         open={Boolean(profileToDelete)}
@@ -174,7 +289,7 @@ function ProfilePicker() {
                   type="password"
                   value={deletePin}
                   onInput={(event) => {
-                    setDeletePin(event.currentTarget.value.replace(/\D/g, '').slice(0, 4))
+                    setDeletePin(pinInputValue(event))
                     setDeleteError('')
                   }}
                   inputMode="numeric"
@@ -191,11 +306,7 @@ function ProfilePicker() {
         )}
         onClose={closeDelete}
         actions={[
-          {
-            label: 'Cancel',
-            disabled: deleting,
-            onClick: closeDelete,
-          },
+          { label: 'Cancel', disabled: deleting, onClick: closeDelete },
           {
             label: deleting ? 'Deleting…' : 'Delete profile',
             tone: 'danger',

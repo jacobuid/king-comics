@@ -203,7 +203,7 @@ function Profile({ user }) {
                 <strong>Device sync is off</strong>
                 <p class="sync-message">Add a PIN to use this profile on another device.</p>
               </div>
-              <a class="button" href={sitePath('/signup')}>Set up sync</a>
+              <a class="button" href={sitePath('/profiles')}>Set up sync</a>
             </div>
           )
         )}

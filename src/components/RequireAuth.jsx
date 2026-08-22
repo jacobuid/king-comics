@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
-import { getCurrentUser, listAccounts } from '../utils/auth.js'
+import { getCurrentUser } from '../utils/auth.js'
 import { sitePath } from '../utils/sitePath.js'
 
 function RequireAuth({ page: Page, ...props }) {
@@ -15,8 +15,7 @@ function RequireAuth({ page: Page, ...props }) {
       if (!active) return
 
       if (!currentUser) {
-        const destination = listAccounts().length > 0 ? '/profiles' : '/signup'
-        route(sitePath(destination), true)
+        route(sitePath('/profiles'), true)
         return
       }
 
