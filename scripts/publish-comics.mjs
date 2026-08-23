@@ -5,7 +5,8 @@ import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 
 const bucket = 'king-comics-jacobuid'
-const profile = 'king-comics'
+const profileArguments = process.env.AWS_PROFILE ? ['--profile', process.env.AWS_PROFILE] : []
+const region = process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION || 'us-east-2'
 const cloudFrontBaseUrl = 'https://d1ktco3tjlf7cv.cloudfront.net'
 const siteBaseUrl = 'https://jacobuid.github.io/king-comics'
 const projectRoot = process.cwd()
@@ -119,7 +120,8 @@ async function main() {
   run(awsCommand, [
     's3', 'sync', comicSource, comicDestination,
     '--exclude', '*.gitkeep',
-    '--profile', profile,
+    ...profileArguments,
+    '--region', region,
     ...dryRunArguments,
   ])
 
@@ -127,7 +129,8 @@ async function main() {
   run(awsCommand, [
     's3', 'sync', coversRoot, `s3://${bucket}/generated/covers`,
     '--delete',
-    '--profile', profile,
+    ...profileArguments,
+    '--region', region,
     ...dryRunArguments,
   ])
 
