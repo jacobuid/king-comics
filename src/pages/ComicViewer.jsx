@@ -165,6 +165,7 @@ function ComicViewer({ user }) {
   const touchControlsTimerRef = useRef(null)
   const pageDragRef = useRef(null)
   const lastPageTapRef = useRef(null)
+  const lastContinuousTapRef = useRef(null)
   const [pages, setPages] = useState([])
   const [pageIndex, setPageIndex] = useState(0)
   const [loadedComicId, setLoadedComicId] = useState(null)
@@ -297,6 +298,27 @@ function ComicViewer({ user }) {
   function cancelPageDrag() {
     pageDragRef.current = null
     lastPageTapRef.current = null
+  }
+
+  function handleContinuousPageTap(event, index) {
+    const now = performance.now()
+    const previousTap = lastContinuousTapRef.current
+    const isDoubleTap = previousTap
+      && previousTap.index === index
+      && now - previousTap.time <= 350
+
+    if (!isDoubleTap) {
+      lastContinuousTapRef.current = { index, time: now }
+      return
+    }
+
+    event.preventDefault()
+    lastContinuousTapRef.current = null
+    const nextIndex = Math.min(pages.length - 1, index + 1)
+    continuousPageRefs.current[nextIndex]?.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    })
   }
 
   useEffect(() => {
@@ -502,23 +524,22 @@ function ComicViewer({ user }) {
           </button>
         </div>
         <div class="viewer-tools">
-          {readerMode === 'single' && (
-            <button
-              class="gesture-help-button"
-              type="button"
-              onClick={() => setShowGestureGuide(true)}
-              aria-label="Show gesture controls"
-              title="Gesture controls"
-            >
-              <FontAwesomeIcon icon={faCircleQuestion} />
-            </button>
-          )}
+          <button
+            class="gesture-help-button"
+            type="button"
+            onClick={() => setShowGestureGuide(true)}
+            aria-label="Show reader controls"
+            title="Reader controls"
+          >
+            <FontAwesomeIcon icon={faCircleQuestion} />
+          </button>
           <div class="viewer-fit-control" role="group" aria-label="Fit comic page">
             {fitOptions.map((option) => (
               <button
                 class={fit === option.value ? 'active' : ''}
                 type="button"
                 aria-pressed={fit === option.value}
+                aria-label={`Fit page to ${option.label.toLowerCase()}`}
                 title={`Fit ${option.label.toLowerCase()}`}
                 onClick={() => setFit(option.value)}
                 key={option.value}
@@ -532,6 +553,8 @@ function ComicViewer({ user }) {
             class="viewer-mode-button"
             type="button"
             aria-pressed={readerMode === 'continuous'}
+            aria-label={readerMode === 'single' ? 'Show all pages' : 'Show one page at a time'}
+            title={readerMode === 'single' ? 'Show all pages' : 'Show one page at a time'}
             onClick={() => setReaderMode((mode) => mode === 'single' ? 'continuous' : 'single')}
           >
             <FontAwesomeIcon icon={readerMode === 'single' ? faImages : faFileImage} />
@@ -602,9 +625,10 @@ function ComicViewer({ user }) {
         </div>
       )}
 
-      {pages.length > 0 && readerMode === 'single' && showGestureGuide && (
+      {pages.length > 0 && showGestureGuide && (
         <GestureGuide
           isTouchDevice={usesTouchInput}
+          readerMode={readerMode}
           onClose={() => setShowGestureGuide(false)}
           onDismiss={dismissGestureGuide}
         />
@@ -620,6 +644,7 @@ function ComicViewer({ user }) {
               data-page-index={index}
               key={page.path}
               ref={(element) => { continuousPageRefs.current[index] = element }}
+              onClick={(event) => handleContinuousPageTap(event, index)}
             />
           ))}
         </div>

@@ -15,6 +15,7 @@ import {
 } from './progress.js'
 
 const CREDENTIALS_KEY = 'king-comics.sync-credentials.v1'
+const BACKGROUND_SYNC_INTERVAL = 30_000
 const apiUrl = (import.meta.env.VITE_SYNC_API_URL ?? '').replace(/\/+$/, '')
 
 export const SYNC_STATUS_EVENT = 'king-comics:sync-status'
@@ -418,4 +419,7 @@ export function startProfileSync() {
   })
 
   setTimeout(syncCurrentProfile, 0)
+  setInterval(() => {
+    if (document.visibilityState === 'visible' && navigator.onLine) syncCurrentProfile()
+  }, BACKGROUND_SYNC_INTERVAL)
 }

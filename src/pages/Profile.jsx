@@ -19,7 +19,6 @@ import {
   isSyncConfigured,
   renameSyncedProfile,
   SYNC_STATUS_EVENT,
-  syncProfile,
   updateProfileAvatar,
   updateProfileTheme,
 } from '../utils/sync.js'
@@ -50,7 +49,6 @@ function historyTimestamp(item) {
 function Profile({ user }) {
   const { route } = useLocation()
   const [progress, setProgress] = useState(() => getProfileProgress(user.username))
-  const [error, setError] = useState('')
   const [syncStatus, setSyncStatus] = useState({ status: 'idle', message: '' })
   const [editingName, setEditingName] = useState(false)
   const [profileName, setProfileName] = useState(user.name)
@@ -69,11 +67,14 @@ function Profile({ user }) {
   useEffect(() => {
     function updateSyncStatus(event) {
       setSyncStatus(event.detail)
+      if (event.detail?.status === 'synced') {
+        setProgress({ ...getProfileProgress(user.username) })
+      }
     }
 
     window.addEventListener(SYNC_STATUS_EVENT, updateSyncStatus)
     return () => window.removeEventListener(SYNC_STATUS_EVENT, updateSyncStatus)
-  }, [])
+  }, [user.username])
 
   const comicsByStatus = useMemo(() => {
     const grouped = Object.fromEntries(shelves.map((shelf) => [shelf.status, []]))
@@ -119,16 +120,6 @@ function Profile({ user }) {
   function removeBookmark(comicId) {
     const updatedProgress = setComicBookmark(user.username, comicId, false)
     setProgress({ ...updatedProgress })
-  }
-
-  async function syncNow() {
-    setError('')
-    try {
-      const result = await syncProfile(user.username)
-      setProgress({ ...result.progress })
-    } catch (syncError) {
-      setError(syncError.message)
-    }
   }
 
   function openNameEditor() {
@@ -353,9 +344,6 @@ function Profile({ user }) {
                   </p>
                 </div>
               </div>
-              <button type="button" onClick={syncNow} disabled={syncStatus.status === 'syncing'}>
-                Sync now
-              </button>
             </div>
           ) : (
             <div class="sync-setting">
@@ -372,7 +360,6 @@ function Profile({ user }) {
             </div>
           )
         )}
-        {error && <p class="error" role="alert">{error}</p>}
       </div>
 
       <div class="profile-actions">
@@ -408,7 +395,12 @@ function Profile({ user }) {
         )}
         onClose={closeThemePicker}
         actions={[
-          { label: 'Cancel', disabled: savingTheme, onClick: closeThemePicker },
+          {
+            label: 'Cancel',
+            tone: 'secondary',
+            disabled: savingTheme,
+            onClick: closeThemePicker,
+          },
           {
             label: savingTheme ? 'Saving…' : 'Save theme',
             disabled: savingTheme,
@@ -446,7 +438,12 @@ function Profile({ user }) {
         )}
         onClose={closeAvatarPicker}
         actions={[
-          { label: 'Cancel', disabled: savingAvatar, onClick: closeAvatarPicker },
+          {
+            label: 'Cancel',
+            tone: 'secondary',
+            disabled: savingAvatar,
+            onClick: closeAvatarPicker,
+          },
           {
             label: savingAvatar ? 'Savingâ€¦' : 'Save avatar',
             disabled: savingAvatar || !selectedAvatar,
@@ -459,7 +456,7 @@ function Profile({ user }) {
         open={editingName}
         title="Edit profile"
         content={(
-          <form class="profile-modal-form" onSubmit={saveProfileName}>
+          <form id="edit-profile-form" class="profile-modal-form" onSubmit={saveProfileName}>
             <label for="edit-profile-name">Profile name</label>
             <input
               id="edit-profile-name"
@@ -485,13 +482,23 @@ function Profile({ user }) {
               required
             />
             {nameError && <p class="error" role="alert">{nameError}</p>}
-            <button type="submit" disabled={savingName}>
-              {savingName ? 'Savingâ€¦' : 'Save profile name'}
-            </button>
           </form>
         )}
         onClose={closeNameEditor}
-        actions={[{ label: 'Cancel', disabled: savingName, onClick: closeNameEditor }]}
+        actions={[
+          {
+            label: 'Cancel',
+            tone: 'secondary',
+            disabled: savingName,
+            onClick: closeNameEditor,
+          },
+          {
+            label: savingName ? 'Saving…' : 'Save',
+            type: 'submit',
+            form: 'edit-profile-form',
+            disabled: savingName,
+          },
+        ]}
       />
     </section>
   )
