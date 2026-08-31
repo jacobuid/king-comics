@@ -1334,11 +1334,15 @@ button:disabled {
   background: var(--theme-header);
   backdrop-filter: blur(12px);
   text-align: left;
-  transition: top 180ms ease-out;
+  transition: top 180ms ease-out, transform 180ms ease-out;
 }
 
 .site-header.menu-fixed-visible + main .viewer-toolbar {
   top: 74px;
+}
+
+.site-header.menu-fixed-hidden + main .reader-continuous:not(:fullscreen) .viewer-toolbar {
+  transform: translateY(-100%);
 }
 
 .viewer-comic-nav {
