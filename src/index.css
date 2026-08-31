@@ -1341,7 +1341,7 @@ button:disabled {
   top: 74px;
 }
 
-.site-header.menu-fixed-hidden + main .reader-continuous:not(:fullscreen) .viewer-toolbar {
+.site-header.menu-fixed-hidden + main .reader-continuous:not(.is-fullscreen) .viewer-toolbar {
   transform: translateY(-100%);
 }
 

@@ -483,7 +483,7 @@ function ComicViewer({ user }) {
 
   return (
     <section
-      class={`comic-viewer reader-${readerMode}${touchControlsActive ? ' touch-controls-active' : ''}`}
+      class={`comic-viewer reader-${readerMode}${isFullscreen ? ' is-fullscreen' : ''}${touchControlsActive ? ' touch-controls-active' : ''}`}
       ref={viewerRef}
     >
       <div class="viewer-toolbar">
