@@ -34,10 +34,16 @@ function Gate({ children }) {
           <img src={sitePath('/header-blue.jpg')} alt="King Comics" />
         </a>
       </header>
-      <main>
-        <section class="page auth-page">
-          <p class="eyebrow">Your hero pass</p>
-          <h1>Welcome to King Comics</h1>
+      <main class="auth-main">
+        <section class="page auth-page" aria-labelledby="auth-title">
+          <nav class="auth-tabs" aria-label="Account access">
+            <button type="button" aria-pressed={view === 'signin'} onClick={() => setView('signin')}>Sign in</button>
+            <button type="button" aria-pressed={view === 'signup'} onClick={() => setView('signup')}>Create account</button>
+          </nav>
+          <div class="auth-intro">
+            <h1 id="auth-title">{view === 'signup' ? 'Create your account.' : view === 'reset' ? 'Let’s get you back in.' : 'Welcome back.'}</h1>
+            <p>{view === 'signup' ? 'One King Auth account. A hero profile for every reader.' : view === 'reset' ? 'Reset your King Auth password to return to your library.' : 'Sign in to your King Auth account.'}</p>
+          </div>
           {isLoading ? <p role="status">Checking your account…</p> : error ? (
             <>
               <p class="error" role="alert">Could not check your account. Please try again.</p>
@@ -45,17 +51,20 @@ function Gate({ children }) {
             </>
           ) : (
             <>
-              <p>Sign in with King Auth to open your reader profiles.</p>
-              {view === 'signin' && <SignIn />}
-              {view === 'signup' && <><p>New accounts require email verification and owner approval.</p><SignUp /></>}
-              {view === 'reset' && <ForgotPassword />}
-              <nav class="auth-links" aria-label="Account access">
-                {view !== 'signin' && <button type="button" onClick={() => setView('signin')}>Sign in</button>}
-                {view !== 'signup' && <button type="button" onClick={() => setView('signup')}>Create account</button>}
-                {view !== 'reset' && <button type="button" onClick={() => setView('reset')}>Forgot password?</button>}
-              </nav>
+              {view === 'signin' && <SignIn className="auth-card-form" />}
+              {view === 'signup' && <><SignUp className="auth-card-form" /><p class="auth-approval-note">New accounts require email verification and owner approval.</p></>}
+              {view === 'reset' && <ForgotPassword className="auth-card-form" />}
+              <div class="auth-links">
+                <button type="button" onClick={() => setView(view === 'signin' ? 'reset' : 'signin')}>
+                  {view === 'signin' ? 'Forgot your password?' : 'Back to sign in'}
+                </button>
+              </div>
             </>
           )}
+          <footer class="auth-footer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6z" /><path d="m8.5 12 2.5 2.5 4.5-5" /></svg>
+            <span>Secure sign-in by King Auth</span>
+          </footer>
         </section>
       </main>
     </>
