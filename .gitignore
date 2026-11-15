@@ -1,4 +1,5 @@
 node_modules/
+.npm-cache/
 dist/
 public/libarchive/
 public/generated/covers/

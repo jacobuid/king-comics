@@ -1,3 +1,4 @@
+import { accountStorageKey, getAuthOwner, getAuthToken } from './kingAuth.js'
 import {
   deleteAccount,
   getCurrentUser,
@@ -31,7 +32,7 @@ export function isSyncConfigured() {
 
 function readCredentials() {
   try {
-    return JSON.parse(localStorage.getItem(CREDENTIALS_KEY)) ?? {}
+    return JSON.parse(localStorage.getItem(accountStorageKey(CREDENTIALS_KEY))) ?? {}
   } catch {
     return {}
   }
@@ -40,13 +41,13 @@ function readCredentials() {
 function saveCredentials(username, name, pin) {
   const credentials = readCredentials()
   credentials[username] = { name, pin }
-  localStorage.setItem(CREDENTIALS_KEY, JSON.stringify(credentials))
+  localStorage.setItem(accountStorageKey(CREDENTIALS_KEY), JSON.stringify(credentials))
 }
 
 function removePin(username) {
   const credentials = readCredentials()
   delete credentials[username]
-  localStorage.setItem(CREDENTIALS_KEY, JSON.stringify(credentials))
+  localStorage.setItem(accountStorageKey(CREDENTIALS_KEY), JSON.stringify(credentials))
 }
 
 function emitStatus(status, message = '') {
@@ -57,6 +58,9 @@ function emitStatus(status, message = '') {
 
 async function request(method, credentials, progress, options = {}) {
   if (!apiUrl) throw new Error('Profile sync has not been configured yet.')
+  const owner = getAuthOwner()
+  const token = getAuthToken()
+  if (!owner || !token) throw new Error('Sign in to sync your profiles.')
 
   const headers = method === 'DELETE'
     ? { 'X-Profile-Id': options.profileId, 'X-Profile-Pin': options.pin }
@@ -64,8 +68,10 @@ async function request(method, credentials, progress, options = {}) {
       ? { 'Content-Type': 'application/json' }
       : {
           ...(['PUT', 'PATCH'].includes(method) ? { 'Content-Type': 'application/json' } : {}),
-          'X-Profile-Name': credentials.name,
-          'X-Profile-Pin': credentials.pin,
+          ...(credentials ? {
+            'X-Profile-Name': credentials.name,
+            'X-Profile-Pin': credentials.pin,
+          } : {}),
         }
   const body = method === 'POST'
     ? JSON.stringify({
@@ -90,11 +96,13 @@ async function request(method, credentials, progress, options = {}) {
 
   const response = await fetch(`${apiUrl}/profiles`, {
     method,
-    headers,
+    headers: { ...headers, Authorization: `Bearer ${token}` },
     body,
     cache: 'no-store',
     keepalive: options.keepalive,
   })
+
+  if (getAuthOwner() !== owner) throw new Error('The signed-in account changed. Please try again.')
 
   let payload = {}
   try {
@@ -102,6 +110,7 @@ async function request(method, credentials, progress, options = {}) {
   } catch {
     // The friendly fallback below covers an empty or invalid response.
   }
+  if (getAuthOwner() !== owner) throw new Error('The signed-in account changed. Please try again.')
 
   if (!response.ok) {
     const error = new Error(payload.error || 'Could not sync this profile right now.')
@@ -237,6 +246,7 @@ export async function connectSyncedAccount(name, pin) {
 }
 
 export async function syncProfile(username) {
+  const owner = getAuthOwner()
   if (!apiUrl || !navigator.onLine) {
     return { progress: getProfileProgress(username), username }
   }
@@ -247,6 +257,7 @@ export async function syncProfile(username) {
   }
   if (activeSync) {
     await activeSync.catch(() => {})
+    if (getAuthOwner() !== owner) throw new Error('The signed-in account changed.')
     return syncProfile(username)
   }
 
@@ -277,8 +288,18 @@ export async function syncProfile(username) {
 
 export async function reconcileStoredProfiles() {
   if (!apiUrl || !navigator.onLine) return listAccounts()
+  const owner = getAuthOwner()
+
+  const { profiles } = await request('GET', null)
+  for (const profile of profiles ?? []) {
+    upsertAccount(profile.name, {
+      username: `cloud:${profile.profileId}`, synced: true,
+      avatar: profile.avatar, theme: profile.theme,
+    })
+  }
 
   for (const profile of listAccounts()) {
+    if (getAuthOwner() !== owner) throw new Error('The signed-in account changed.')
     if (!profile.synced) continue
     await syncProfile(profile.username).catch(() => {})
   }
@@ -290,6 +311,10 @@ export function forgetSyncCredentials(username) {
   removePin(username)
 }
 
+export function hasSyncCredentials(username) {
+  return Boolean(readCredentials()[username]?.pin)
+}
+
 export function validateProfilePin(username, pin) {
   const savedPin = readCredentials()[username]?.pin
   return Boolean(savedPin) && savedPin === pin
@@ -297,7 +322,6 @@ export function validateProfilePin(username, pin) {
 
 export async function deleteSyncedProfile(username, pin) {
   validatePin(pin)
-  if (!validateProfilePin(username, pin)) throw new Error('That PIN is not correct.')
 
   const profileId = username.startsWith('cloud:') ? username.slice('cloud:'.length) : ''
   await request('DELETE', null, null, { profileId, pin })
@@ -373,9 +397,11 @@ function saveProfileOnExit(username) {
 
 export function queueProfileSync(username) {
   if (!apiUrl) return
+  const owner = getAuthOwner()
   queuedUsername = username
   clearTimeout(syncTimer)
   syncTimer = setTimeout(async () => {
+    if (getAuthOwner() !== owner) return
     if (activeSync) {
       activeSync.finally(() => {
         if (queuedUsername) queueProfileSync(queuedUsername)

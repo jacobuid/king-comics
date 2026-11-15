@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test account and profile isolation
+        run: npm test
+
       - name: Build site
         run: npm run build
 

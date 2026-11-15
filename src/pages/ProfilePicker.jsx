@@ -10,10 +10,12 @@ import {
 } from '../utils/auth.js'
 import { deleteProfileProgress } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
+import { importLegacyBrowserProfiles } from '../utils/legacyProfiles.js'
 import {
   connectSyncedAccount,
   deleteSyncedProfile,
   forgetSyncCredentials,
+  hasSyncCredentials,
   reconcileStoredProfiles,
   registerSyncedAccount,
   syncProfile,
@@ -52,6 +54,8 @@ function ProfilePicker() {
 
     reconcileStoredProfiles().then((storedProfiles) => {
       if (active) setProfiles(storedProfiles)
+    }).catch((error) => {
+      if (active) setSelectionError(error.message)
     })
 
     return () => {
@@ -65,6 +69,13 @@ function ProfilePicker() {
   }
 
   async function chooseProfile(profile) {
+    if (profile.synced && !hasSyncCredentials(profile.username)) {
+      setImportName(profile.name)
+      setImportPin('')
+      setImportError('')
+      setShowImport(true)
+      return
+    }
     setSelecting(profile.username)
     setSelectionError('')
 
@@ -185,6 +196,7 @@ function ProfilePicker() {
     <section class="page profiles-page">
       <p class="eyebrow">Choose your hero</p>
       <h1>Who is reading?</h1>
+      <p>Reader profiles for your King Auth account.</p>
 
       {profiles.length > 0 ? (
         <div class="profile-grid">
@@ -225,6 +237,14 @@ function ProfilePicker() {
       <div class="profile-gate-actions">
         <button type="button" onClick={() => setShowCreate(true)}>Create a profile</button>
         <button type="button" onClick={() => setShowImport(true)}>Import a profile</button>
+        <button type="button" onClick={() => {
+          try {
+            importLegacyBrowserProfiles()
+            setProfiles(listAccounts())
+          } catch {
+            setSelectionError('Could not import the profiles stored in this browser.')
+          }
+        }}>Copy previous browser profiles</button>
       </div>
 
       <Modal

@@ -1,4 +1,5 @@
 import { faBookOpen, faCircleUser } from '@fortawesome/free-solid-svg-icons'
+import { ProfileMenu } from '@jacobuid/king-auth'
 import { useLocation } from 'preact-iso'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import FontAwesomeIcon from './FontAwesomeIcon.jsx'
@@ -136,6 +137,7 @@ function Header() {
               </a>
             </nav>
           ) : null}
+          <ProfileMenu triggerLabel="Open King Auth account menu" />
         </div>
       </div>
     </header>

@@ -5,6 +5,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useMemo, useState } from 'preact/hooks'
 import { useLocation } from 'preact-iso'
+import { useAuth } from '@jacobuid/king-auth'
 import FontAwesomeIcon from '../components/FontAwesomeIcon.jsx'
 import Modal from '../components/Modal.jsx'
 import { openProfileMigration } from '../components/ProfileMigration.jsx'
@@ -47,6 +48,8 @@ function historyTimestamp(item) {
 }
 
 function Profile({ user }) {
+  const { signOut: signOutAccount } = useAuth()
+  const [signOutError, setSignOutError] = useState('')
   const { route } = useLocation()
   const [progress, setProgress] = useState(() => getProfileProgress(user.username))
   const [syncStatus, setSyncStatus] = useState({ status: 'idle', message: '' })
@@ -112,9 +115,14 @@ function Profile({ user }) {
     route(sitePath('/profiles'), true)
   }
 
-  function signOut() {
-    clearSession()
-    route(sitePath('/profiles'), true)
+  async function signOut() {
+    setSignOutError('')
+    try {
+      await signOutAccount()
+      clearSession()
+    } catch {
+      setSignOutError('Could not sign out. Please try again.')
+    }
   }
 
   function removeBookmark(comicId) {
@@ -366,6 +374,7 @@ function Profile({ user }) {
         <button type="button" onClick={switchProfile}>Switch profile</button>
         <button class="sign-out-button" type="button" onClick={signOut}>Sign out</button>
       </div>
+      {signOutError && <p class="error" role="alert">{signOutError}</p>}
 
       <Modal
         open={selectingTheme}

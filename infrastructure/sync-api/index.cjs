@@ -2,6 +2,58 @@ const { createHash, timingSafeEqual } = require('node:crypto')
 
 const bucket = process.env.DATA_BUCKET
 
+// Match the SDK verifier protocol without packaging dependencies into inline Lambda code.
+async function authenticatedOwner(event, send = fetch) {
+  const origin = event.headers?.origin
+  const allowed = (process.env.AUTH_ALLOWED_ORIGINS ?? 'https://jacobuid.github.io,http://localhost:5173,http://localhost:4173').split(',')
+  const authorization = event.headers?.authorization
+  if (!allowed.includes(origin) || !/^Bearer [^\s]+$/i.test(authorization ?? '')) return null
+  const result = await send('https://kingauth.app/api/browser/get-session', {
+    headers: { Origin: origin, Authorization: authorization },
+    redirect: 'error',
+    signal: AbortSignal.timeout(5000),
+  })
+  if (result.status === 401) return null
+  if (!result.ok) throw new Error('Authentication service unavailable')
+  const session = await result.json()
+  const id = session?.user?.id
+  return typeof id === 'string' && /^[a-zA-Z0-9-]{1,128}$/.test(id) ? id : null
+}
+
+function ownerClient(client, ownerId) {
+  if (!/^[a-zA-Z0-9-]{1,128}$/.test(ownerId)) throw new Error('Invalid account ID')
+  return {
+    send(command) {
+      for (const field of ['Key', 'Prefix']) {
+        if (command.input[field] !== undefined) {
+          if (!command.input[field].startsWith('profiles/')) throw new Error('Invalid profile path')
+          command.input[field] = command.input[field].replace(/^profiles\//, `profiles/users/${ownerId}/`)
+        }
+      }
+      return client.send(command)
+    },
+  }
+}
+
+async function listProfiles(client, commands) {
+  const profiles = []
+  let continuation
+  do {
+    const page = await client.send(new commands.ListObjectsV2Command({
+      Bucket: bucket, Prefix: 'profiles/', ContinuationToken: continuation,
+    }))
+    for (const item of page.Contents ?? []) {
+      const id = item.Key.split('/').pop().replace(/\.json$/, '')
+      if (!/^[a-f0-9]{64}$/.test(id)) continue
+      const profile = await readProfileById(client, commands.GetObjectCommand, id)
+      if (!profile || profile.type === 'profile-moved') continue
+      profiles.push({ profileId: id, name: profile.name, avatar: profile.avatar ?? '', theme: profile.theme ?? 'blue' })
+    }
+    continuation = page.IsTruncated ? page.NextContinuationToken : undefined
+  } while (continuation)
+  return response(200, { profiles })
+}
+
 function normalizeName(name) {
   return String(name ?? '').trim().normalize('NFKC').toLowerCase()
 }
@@ -98,7 +150,7 @@ function movedMarker(savedProfile, movedProfile, pin) {
 function response(statusCode, body) {
   return {
     statusCode,
-    headers: { 'content-type': 'application/json; charset=utf-8' },
+    headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
     body: JSON.stringify(body),
   }
 }
@@ -395,11 +447,14 @@ function requestCredentials(event, body = {}) {
 
 exports.handler = async (event) => {
   try {
+    const ownerId = await authenticatedOwner(event)
+    if (!ownerId) return response(401, { error: 'Sign in to access your profiles.' })
     const commands = require('@aws-sdk/client-s3')
-    const client = new commands.S3Client({})
+    const client = ownerClient(new commands.S3Client({}), ownerId)
     const method = event.requestContext?.http?.method ?? event.httpMethod
 
     if (event.rawPath === '/profiles' && method === 'GET') {
+      if (!event.headers?.['x-profile-name']) return await listProfiles(client, commands)
       return await loadProfile(client, commands, requestCredentials(event))
     }
     if (event.rawPath === '/profiles' && method === 'DELETE') {
@@ -438,6 +493,14 @@ exports.handler = async (event) => {
 }
 
 exports._test = {
+  createProfile,
+  loadProfile,
+  updateProfile,
+  renameProfile,
+  deleteProfile,
+  authenticatedOwner,
+  ownerClient,
+  listProfiles,
   cleanProgress,
   mergeProgress,
   movedMarker,

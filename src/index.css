@@ -2353,3 +2353,32 @@ input {
     grid-template-columns: 1fr;
   }
 }
+.auth-page { max-width: 540px; }
+.auth-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.king-auth-fields { border: 0; padding: 0; min-width: 0; }
+.king-auth-field { margin-block: 1rem; }
+.king-auth-field label { display: block; margin-bottom: .4rem; }
+.king-auth-field input:not([type='checkbox']), .king-auth-field select {
+  box-sizing: border-box; width: 100%; padding: .8rem; border: 1px solid var(--theme-border);
+  border-radius: .5rem; background: var(--theme-surface-deep); color: inherit; font: inherit;
+}
+.king-auth-field input[type='checkbox'] { accent-color: var(--theme-accent); }
+.king-auth-error { color: #fda4af; }
+.king-auth-status { color: var(--theme-text-soft); }
+.king-auth-profile { position: relative; margin-left: auto; }
+.king-auth-profile-trigger { margin: 0; }
+.king-auth-profile-dropdown {
+  position: absolute; right: 0; top: calc(100% + .5rem); z-index: 50;
+  min-width: min(280px, 85vw); padding: 1rem; border: 1px solid var(--theme-border);
+  border-radius: .75rem; background: var(--theme-surface-deep); box-shadow: 0 10px 35px #0008;
+}
+.king-auth-profile-identity { overflow-wrap: anywhere; }
+.king-auth-profile-dropdown button { display: block; width: 100%; }
+.king-auth-account-dialog {
+  box-sizing: border-box; width: min(620px, calc(100% - 2rem)); max-height: 85dvh;
+  padding: 1.5rem; border: 1px solid var(--theme-border); border-radius: 1rem;
+  color: #f8fafc; background: var(--theme-surface-deep); overflow: auto;
+}
+.king-auth-account-dialog::backdrop { background: #000b; }
+.king-auth-account-dialog button { margin-right: .5rem; }
+.king-auth-account-dialog :is(p, li) { overflow-wrap: anywhere; }

@@ -1,3 +1,4 @@
+import { accountStorageKey } from './kingAuth.js'
 const ACCOUNTS_KEY = 'king-comics.accounts.v1'
 const SESSION_KEY = 'king-comics.session.v1'
 
@@ -18,7 +19,7 @@ function normalizeName(name) {
 
 function readAccounts() {
   try {
-    return JSON.parse(localStorage.getItem(ACCOUNTS_KEY)) ?? {}
+    return JSON.parse(localStorage.getItem(accountStorageKey(ACCOUNTS_KEY))) ?? {}
   } catch {
     return {}
   }
@@ -44,7 +45,7 @@ export function upsertAccount(name, options = {}) {
     syncOptOut: options.syncOptOut ?? existing?.syncOptOut ?? false,
   }
 
-  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  localStorage.setItem(accountStorageKey(ACCOUNTS_KEY), JSON.stringify(accounts))
   notifyProfilesChanged()
   return accounts[username]
 }
@@ -65,7 +66,7 @@ export function setAccountSyncOptOut(username, syncOptOut) {
   if (!accounts[username]) throw new Error('This profile is not stored on this device.')
 
   accounts[username] = { ...accounts[username], syncOptOut: Boolean(syncOptOut) }
-  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  localStorage.setItem(accountStorageKey(ACCOUNTS_KEY), JSON.stringify(accounts))
   notifyProfilesChanged()
   return accounts[username]
 }
@@ -84,11 +85,11 @@ export function deleteAccount(username) {
   if (!accounts[username]) return
 
   delete accounts[username]
-  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  localStorage.setItem(accountStorageKey(ACCOUNTS_KEY), JSON.stringify(accounts))
   notifyProfilesChanged()
 
   try {
-    const session = JSON.parse(localStorage.getItem(SESSION_KEY))
+    const session = JSON.parse(localStorage.getItem(accountStorageKey(SESSION_KEY)))
     if (session?.username === username) clearSession()
   } catch {
     clearSession()
@@ -109,13 +110,13 @@ export function replaceAccountIdentity(username, name, nextUsername) {
 
   if (nextUsername !== username) delete accounts[username]
   accounts[nextUsername] = updated
-  localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts))
+  localStorage.setItem(accountStorageKey(ACCOUNTS_KEY), JSON.stringify(accounts))
   notifyProfilesChanged()
 
   try {
-    const session = JSON.parse(localStorage.getItem(SESSION_KEY))
+    const session = JSON.parse(localStorage.getItem(accountStorageKey(SESSION_KEY)))
     if (session?.username === username) {
-      localStorage.setItem(SESSION_KEY, JSON.stringify({ username: nextUsername }))
+      localStorage.setItem(accountStorageKey(SESSION_KEY), JSON.stringify({ username: nextUsername }))
       notifySessionChanged()
     }
   } catch {
@@ -126,7 +127,7 @@ export function replaceAccountIdentity(username, name, nextUsername) {
 }
 
 export async function createSession(username) {
-  localStorage.setItem(SESSION_KEY, JSON.stringify({ username }))
+  localStorage.setItem(accountStorageKey(SESSION_KEY), JSON.stringify({ username }))
   notifySessionChanged()
 }
 
@@ -136,7 +137,7 @@ export function getCurrentUserSync() {
   let session
 
   try {
-    session = JSON.parse(localStorage.getItem(SESSION_KEY))
+    session = JSON.parse(localStorage.getItem(accountStorageKey(SESSION_KEY)))
   } catch {
     session = null
   }
@@ -151,7 +152,7 @@ export async function getCurrentUser() {
 export function clearSession() {
   if (typeof window === 'undefined') return
 
-  const hadSession = Boolean(localStorage.getItem(SESSION_KEY))
-  localStorage.removeItem(SESSION_KEY)
+  const hadSession = Boolean(localStorage.getItem(accountStorageKey(SESSION_KEY)))
+  localStorage.removeItem(accountStorageKey(SESSION_KEY))
   if (hadSession) notifySessionChanged()
 }

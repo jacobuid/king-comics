@@ -1,3 +1,4 @@
+import { accountStorageKey } from './kingAuth.js'
 const PROGRESS_KEY = 'king-comics.progress.v1'
 
 export const PROGRESS_CHANGED_EVENT = 'king-comics:progress-changed'
@@ -8,7 +9,7 @@ function notifyProgressChanged(username) {
 
 function readAllProgress() {
   try {
-    return JSON.parse(localStorage.getItem(PROGRESS_KEY)) ?? {}
+    return JSON.parse(localStorage.getItem(accountStorageKey(PROGRESS_KEY))) ?? {}
   } catch {
     return {}
   }
@@ -36,7 +37,7 @@ export function setComicProgress(username, comicId, status, details = {}) {
   }
 
   allProgress[username] = profileProgress
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  localStorage.setItem(accountStorageKey(PROGRESS_KEY), JSON.stringify(allProgress))
   notifyProgressChanged(username)
 
   return profileProgress
@@ -54,7 +55,7 @@ export function setComicBookmark(username, comicId, bookmarked) {
   }
 
   allProgress[username] = profileProgress
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  localStorage.setItem(accountStorageKey(PROGRESS_KEY), JSON.stringify(allProgress))
   notifyProgressChanged(username)
 
   return profileProgress
@@ -66,7 +67,7 @@ export function deleteProfileProgress(username) {
   if (!(username in allProgress)) return
 
   delete allProgress[username]
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  localStorage.setItem(accountStorageKey(PROGRESS_KEY), JSON.stringify(allProgress))
   notifyProgressChanged(username)
 }
 
@@ -77,7 +78,7 @@ export function moveProfileProgress(username, nextUsername) {
   const profileProgress = allProgress[username] ?? {}
   allProgress[nextUsername] = profileProgress
   delete allProgress[username]
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  localStorage.setItem(accountStorageKey(PROGRESS_KEY), JSON.stringify(allProgress))
   notifyProgressChanged(nextUsername)
   return profileProgress
 }
@@ -85,7 +86,7 @@ export function moveProfileProgress(username, nextUsername) {
 export function replaceProfileProgress(username, profileProgress, notify = true) {
   const allProgress = readAllProgress()
   allProgress[username] = profileProgress ?? {}
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(allProgress))
+  localStorage.setItem(accountStorageKey(PROGRESS_KEY), JSON.stringify(allProgress))
   if (notify) notifyProgressChanged(username)
   return allProgress[username]
 }

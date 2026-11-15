@@ -2,8 +2,9 @@
 
 A family comic archive built with Preact and Vite.
 
-Profiles, bookmarks, history, and reading progress are stored in the browser.
-They do not sync between devices.
+Sign in with King Auth, then choose a reader profile. Each King Auth account
+can own multiple profiles with separate bookmarks, history, avatars, and themes.
+Reading data stays local-first and can sync between devices.
 
 Live site: <https://jacobuid.github.io/king-comics/>
 
@@ -55,10 +56,44 @@ CloudFront. Do not put AWS credentials in this repository.
 
 ## Profile sync
 
-Profiles remain local-first, so reading and bookmarking work offline. When sync
+King Auth uses the browser SDK from `jacobuid/king-auth#sdk`, pinned by the
+lockfile. Preact's React compatibility layer runs its embedded sign-in,
+signup, password recovery, and account management components. No client
+secret or consuming-site registration is needed. New accounts require email
+verification and owner approval. Use Node.js 24+ and Git for installation.
+
+Browser profiles, active reader sessions, progress, and saved PINs are scoped
+to the permanent King Auth `user.id`. The sync Lambda verifies the bearer
+credential centrally on every request and stores data under
+`profiles/users/<user-id>/`. Another account cannot read or change these
+profiles even if it knows a profile's name, ID, and PIN. The account menu
+manages King Auth settings; switching reader profiles keeps the account signed in.
+
+The profile picker discovers your synced profiles on another device. Enter
+the profile's PIN once to connect its reading data on that device. Local-only
+profiles stay on the browser where they were created.
+
+To bring forward profiles from before King Auth, sign in on the original
+browser and choose **Copy previous browser profiles**. This copies the
+browser's profiles and cached reading progress into your account as local
+profiles; open each profile and set up sync to upload it into your account.
+Original browser records and legacy S3 objects are preserved. Legacy S3-only
+profiles are not automatically assigned to an account.
+
+Deploy the updated sync backend **before** publishing the frontend; the new
+frontend requires the authenticated API and its Authorization CORS header.
+The allowed origins in the Lambda and CORS configuration must match the site
+origin (GitHub Pages uses `https://jacobuid.github.io`). This authentication
+protects profile API data; the existing CloudFront comic asset URLs remain
+accessible independently of the frontend sign-in gate.
+
+Profiles remain local-first after authentication, so reading and bookmarking
+can use cached data. Signing in or revalidating a session requires a connection;
+the sign-in gate does not grant access from an unverified offline session. When sync
 is configured, each profile's history and bookmarks are merged into one private
 JSON object under `s3://king-comics-jacobuid/profiles/`. A profile can be opened
-on another device with the same name and four-digit PIN.
+on another device by signing in to the owning King Auth account and entering
+the profile's four-digit PIN.
 
 Deploy or update the sync Lambda and its access policy with:
 
