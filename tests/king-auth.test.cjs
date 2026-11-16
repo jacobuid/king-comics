@@ -55,6 +55,17 @@ test('each account owns multiple profiles and cannot read, list, modify, rename 
   assert.equal((await _test.createProfile(a, commands, first)).statusCode, 201)
   assert.equal((await _test.createProfile(a, commands, { name: 'Sidekick', pin: '5678' })).statusCode, 201)
   const id = _test.profileId('hero', '1234')
+  assert.equal((await _test.syncOwnedProfile(b, commands, id, { progress: {} })).statusCode, 404)
+  assert.equal((await _test.syncOwnedProfile(a, commands, '../escape', {})).statusCode, 400)
+  const synced = await _test.syncOwnedProfile(a, commands, id, {
+    progress: { anotherComic: { page: 3, updatedAt: '2026-11-16T00:00:00.000Z' } },
+    avatar: 'sonic-1.jpg', theme: 'green',
+  })
+  assert.equal(synced.statusCode, 200, 'the owner can sync without a profile PIN')
+  assert.equal(JSON.parse(synced.body).progress.comic.page, 8, 'sync keeps existing remote progress')
+  assert.equal(JSON.parse(synced.body).progress.anotherComic.page, 3)
+  assert.equal(JSON.parse(synced.body).theme, 'green')
+  assert.equal((await _test.syncOwnedProfile(a, commands, id, { avatar: '../bad' })).statusCode, 400)
   assert.equal((await _test.loadProfile(b, commands, first)).statusCode, 404)
   assert.equal((await _test.updateProfile(b, commands, first)).statusCode, 404)
   assert.equal((await _test.renameProfile(b, commands, { currentName: 'Hero', name: 'Villain', pin: '1234' })).statusCode, 404)
@@ -64,4 +75,8 @@ test('each account owns multiple profiles and cannot read, list, modify, rename 
   assert.equal((await _test.createProfile(b, commands, first)).statusCode, 201)
   assert.equal((await _test.deleteProfile(b, commands, id, '1234')).statusCode, 200)
   assert.equal((await _test.loadProfile(a, commands, first)).statusCode, 200)
+  await _test.renameProfile(a, commands, { currentName: 'Hero', name: 'New Hero', pin: '1234' })
+  const moved = await _test.syncOwnedProfile(a, commands, id, {})
+  assert.equal(JSON.parse(moved.body).code, 'PROFILE_MOVED')
+  assert.equal((await _test.syncOwnedProfile(a, commands, JSON.parse(moved.body).movedToProfileId, {})).statusCode, 200)
 })

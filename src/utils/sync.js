@@ -68,7 +68,7 @@ async function request(method, credentials, progress, options = {}) {
       ? { 'Content-Type': 'application/json' }
       : {
           ...(['PUT', 'PATCH'].includes(method) ? { 'Content-Type': 'application/json' } : {}),
-          ...(credentials ? {
+          ...(credentials && !options.profileId ? {
             'X-Profile-Name': credentials.name,
             'X-Profile-Pin': credentials.pin,
           } : {}),
@@ -96,7 +96,7 @@ async function request(method, credentials, progress, options = {}) {
 
   const response = await fetch(`${apiUrl}/profiles`, {
     method,
-    headers: { ...headers, Authorization: `Bearer ${token}` },
+    headers: { ...headers, ...(options.profileId ? { 'X-Profile-Id': options.profileId } : {}), Authorization: `Bearer ${token}` },
     body,
     cache: 'no-store',
     keepalive: options.keepalive,
@@ -126,14 +126,16 @@ async function request(method, credentials, progress, options = {}) {
 
 async function requestFollowingMoves(method, credentials, progress, options = {}) {
   let resolvedCredentials = { ...credentials }
+  let resolvedOptions = { ...options }
 
   for (let depth = 0; depth < 8; depth += 1) {
     try {
-      const payload = await request(method, resolvedCredentials, progress, options)
+      const payload = await request(method, resolvedCredentials, progress, resolvedOptions)
       return { payload, credentials: resolvedCredentials }
     } catch (error) {
       if (error.code !== 'PROFILE_MOVED' || !error.movedToName) throw error
       resolvedCredentials = { ...resolvedCredentials, name: error.movedToName }
+      if (resolvedOptions.profileId && error.movedToProfileId) resolvedOptions.profileId = error.movedToProfileId
     }
   }
 
@@ -145,7 +147,7 @@ function applySyncedPayload(username, credentials, payload) {
 
   if (nextUsername !== username) {
     moveProfileProgress(username, nextUsername)
-    saveCredentials(nextUsername, payload.name ?? credentials.name, credentials.pin)
+    if (credentials.pin) saveCredentials(nextUsername, payload.name ?? credentials.name, credentials.pin)
     removePin(username)
     replaceAccountIdentity(username, payload.name ?? credentials.name, nextUsername)
   }
@@ -251,8 +253,9 @@ export async function syncProfile(username) {
     return { progress: getProfileProgress(username), username }
   }
 
-  const credentials = readCredentials()[username]
-  if (!credentials?.pin || !credentials?.name) {
+  const account = listAccounts().find(profile => profile.username === username)
+  const credentials = { ...readCredentials()[username], name: account?.name }
+  if (!account?.synced || !username.startsWith('cloud:')) {
     return { progress: getProfileProgress(username), username }
   }
   if (activeSync) {
@@ -266,6 +269,7 @@ export async function syncProfile(username) {
     'PUT',
     credentials,
     getProfileProgress(username),
+    { profileId: username.slice('cloud:'.length) },
   ).then(({ payload, credentials: resolvedCredentials }) => {
     const result = applySyncedPayload(username, resolvedCredentials, payload)
     emitStatus('synced', 'Synced just now.')
@@ -329,11 +333,10 @@ export async function deleteSyncedProfile(username, pin) {
 
 export async function renameSyncedProfile(username, name, pin) {
   validatePin(pin)
-  const credentials = readCredentials()[username]
-  if (!credentials?.name || !credentials?.pin) {
+  const credentials = { ...readCredentials()[username], name: listAccounts().find(profile => profile.username === username)?.name }
+  if (!credentials.name) {
     throw new Error('This profile is not connected to device sync.')
   }
-  if (credentials.pin !== pin) throw new Error('That PIN is not correct.')
 
   const displayName = name.trim().normalize('NFKC')
   if (!displayName || displayName.length > 40) {
@@ -353,8 +356,8 @@ export async function renameSyncedProfile(username, name, pin) {
 }
 
 export async function updateProfileAvatar(username, avatar) {
-  const credentials = readCredentials()[username]
-  if (!credentials?.name || !credentials?.pin) {
+  const credentials = { name: listAccounts().find(profile => profile.username === username)?.name }
+  if (!credentials.name || !username.startsWith('cloud:')) {
     throw new Error('This profile is not connected to device sync.')
   }
 
@@ -363,7 +366,7 @@ export async function updateProfileAvatar(username, avatar) {
     'PUT',
     credentials,
     getProfileProgress(username),
-    { avatar },
+    { avatar, profileId: username.slice('cloud:'.length) },
   )
   const { account } = applySyncedPayload(username, resolvedCredentials, payload)
   emitStatus('synced', 'Avatar updated.')
@@ -371,8 +374,8 @@ export async function updateProfileAvatar(username, avatar) {
 }
 
 export async function updateProfileTheme(username, theme) {
-  const credentials = readCredentials()[username]
-  if (!credentials?.name || !credentials?.pin) {
+  const credentials = { name: listAccounts().find(profile => profile.username === username)?.name }
+  if (!credentials.name || !username.startsWith('cloud:')) {
     throw new Error('This profile is not connected to device sync.')
   }
 
@@ -381,7 +384,7 @@ export async function updateProfileTheme(username, theme) {
     'PUT',
     credentials,
     getProfileProgress(username),
-    { theme },
+    { theme, profileId: username.slice('cloud:'.length) },
   )
   const { account } = applySyncedPayload(username, resolvedCredentials, payload)
   emitStatus('synced', 'Theme updated.')
@@ -390,9 +393,9 @@ export async function updateProfileTheme(username, theme) {
 
 function saveProfileOnExit(username) {
   if (!apiUrl || !navigator.onLine) return
-  const credentials = readCredentials()[username]
-  if (!credentials?.pin || !credentials?.name) return
-  request('PUT', credentials, getProfileProgress(username), { keepalive: true }).catch(() => {})
+  const account = listAccounts().find(profile => profile.username === username)
+  if (!account?.synced || !username.startsWith('cloud:')) return
+  request('PUT', null, getProfileProgress(username), { keepalive: true, profileId: username.slice('cloud:'.length) }).catch(() => {})
 }
 
 export function queueProfileSync(username) {

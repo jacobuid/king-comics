@@ -203,6 +203,42 @@ async function readProfileById(client, GetObjectCommand, id) {
   }
 }
 
+// Account ownership is enforced by ownerClient before every storage operation.
+// Reading progress must not depend on a PIN saved on a particular device.
+async function syncOwnedProfile(client, commands, id, body) {
+  if (!/^[a-f0-9]{64}$/.test(String(id ?? ''))) return response(400, { error: 'The profile ID was not valid.' })
+  if (body.avatar !== undefined && !validAvatar(body.avatar)) return response(400, { error: 'That avatar was not valid.' })
+  if (body.theme !== undefined && !validTheme(body.theme)) return response(400, { error: 'That theme was not valid.' })
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    let saved
+    try {
+      saved = await client.send(new commands.GetObjectCommand({ Bucket: bucket, Key: `profiles/${id}.json` }))
+    } catch (error) {
+      if (error.name === 'NoSuchKey' || error.$metadata?.httpStatusCode === 404) return response(404, { error: 'That profile no longer exists.' })
+      throw error
+    }
+    const original = JSON.parse(await saved.Body.transformToString())
+    if (original.type === 'profile-moved') return movedResponse(original)
+    const profile = {
+      ...original,
+      progress: mergeProgress(original.progress, body.progress),
+      avatar: body.avatar === undefined ? (original.avatar ?? '') : body.avatar,
+      theme: body.theme === undefined ? (original.theme ?? 'blue') : body.theme,
+      updatedAt: new Date().toISOString(),
+    }
+    try {
+      await client.send(new commands.PutObjectCommand({
+        Bucket: bucket, Key: `profiles/${id}.json`, Body: JSON.stringify(profile),
+        ContentType: 'application/json', IfMatch: saved.ETag,
+      }))
+      return response(200, { profileId: id, name: profile.name, avatar: profile.avatar, theme: profile.theme, progress: profile.progress })
+    } catch (error) {
+      if (error.name !== 'PreconditionFailed' && error.$metadata?.httpStatusCode !== 412) throw error
+    }
+  }
+  return response(409, { error: 'Two devices synced at once. Please try again.' })
+}
+
 async function createProfile(client, commands, body) {
   const displayName = String(body.name ?? '').trim().normalize('NFKC')
   const username = normalizeName(displayName)
@@ -471,6 +507,7 @@ exports.handler = async (event) => {
       return await createProfile(client, commands, body)
     }
     if (event.rawPath === '/profiles' && method === 'PUT') {
+      if (event.headers?.['x-profile-id']) return await syncOwnedProfile(client, commands, event.headers['x-profile-id'], body)
       return await updateProfile(client, commands, { ...body, ...requestCredentials(event, body) })
     }
     if (event.rawPath === '/profiles' && method === 'PATCH') {
@@ -493,6 +530,7 @@ exports.handler = async (event) => {
 }
 
 exports._test = {
+  syncOwnedProfile,
   createProfile,
   loadProfile,
   updateProfile,

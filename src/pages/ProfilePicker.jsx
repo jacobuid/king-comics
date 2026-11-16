@@ -10,12 +10,9 @@ import {
 } from '../utils/auth.js'
 import { deleteProfileProgress } from '../utils/progress.js'
 import { sitePath } from '../utils/sitePath.js'
-import { importLegacyBrowserProfiles } from '../utils/legacyProfiles.js'
 import {
-  connectSyncedAccount,
   deleteSyncedProfile,
   forgetSyncCredentials,
-  hasSyncCredentials,
   reconcileStoredProfiles,
   registerSyncedAccount,
   syncProfile,
@@ -39,12 +36,6 @@ function ProfilePicker() {
   const [createError, setCreateError] = useState('')
   const [creating, setCreating] = useState(false)
 
-  const [showImport, setShowImport] = useState(false)
-  const [importName, setImportName] = useState('')
-  const [importPin, setImportPin] = useState('')
-  const [importError, setImportError] = useState('')
-  const [importing, setImporting] = useState(false)
-
   const [deletePin, setDeletePin] = useState('')
   const [deleteError, setDeleteError] = useState('')
   const [deleting, setDeleting] = useState(false)
@@ -52,14 +43,27 @@ function ProfilePicker() {
   useEffect(() => {
     let active = true
 
-    reconcileStoredProfiles().then((storedProfiles) => {
-      if (active) setProfiles(storedProfiles)
-    }).catch((error) => {
-      if (active) setSelectionError(error.message)
-    })
+    let refreshing = false
+    async function refreshProfiles() {
+      if (refreshing) return
+      refreshing = true
+      try {
+        const storedProfiles = await reconcileStoredProfiles()
+        if (active) { setProfiles(storedProfiles); setSelectionError('') }
+      } catch (error) {
+        if (active) setSelectionError(error.message)
+      } finally { refreshing = false }
+    }
+    refreshProfiles()
+    window.addEventListener('focus', refreshProfiles)
+    window.addEventListener('online', refreshProfiles)
+    const timer = setInterval(refreshProfiles, 30_000)
 
     return () => {
       active = false
+      clearInterval(timer)
+      window.removeEventListener('focus', refreshProfiles)
+      window.removeEventListener('online', refreshProfiles)
     }
   }, [])
 
@@ -69,13 +73,6 @@ function ProfilePicker() {
   }
 
   async function chooseProfile(profile) {
-    if (profile.synced && !hasSyncCredentials(profile.username)) {
-      setImportName(profile.name)
-      setImportPin('')
-      setImportError('')
-      setShowImport(true)
-      return
-    }
     setSelecting(profile.username)
     setSelectionError('')
 
@@ -129,30 +126,6 @@ function ProfilePicker() {
       setConfirmPin('')
     } catch (error) {
       setCreateError(error.message)
-    }
-  }
-
-  function closeImport() {
-    if (importing) return
-    setShowImport(false)
-    setImportError('')
-  }
-
-  async function importProfile(event) {
-    event.preventDefault()
-    setImportError('')
-    setImporting(true)
-
-    try {
-      await connectSyncedAccount(importName, importPin)
-      setProfiles(listAccounts())
-      setShowImport(false)
-      setImportName('')
-      setImportPin('')
-      setImporting(false)
-    } catch (error) {
-      setImportError(error.message)
-      setImporting(false)
     }
   }
 
@@ -229,21 +202,12 @@ function ProfilePicker() {
           ))}
         </div>
       ) : (
-        <p>No profiles live on this browser yet.</p>
+        <p>No profiles yet. Create one to get started.</p>
       )}
       {selectionError && <p class="error" role="alert">{selectionError}</p>}
 
       <div class="profile-gate-actions">
         <button type="button" onClick={() => setShowCreate(true)}>Create a profile</button>
-        <button type="button" onClick={() => setShowImport(true)}>Import a profile</button>
-        <button type="button" onClick={() => {
-          try {
-            importLegacyBrowserProfiles()
-            setProfiles(listAccounts())
-          } catch {
-            setSelectionError('Could not import the profiles stored in this browser.')
-          }
-        }}>Copy previous browser profiles</button>
       </div>
 
       <Modal
@@ -308,45 +272,6 @@ function ProfilePicker() {
         ]}
       />
 
-      <Modal
-        open={showImport}
-        title="Import a profile"
-        content={(
-          <form class="profile-modal-form" onSubmit={importProfile}>
-            <p>Enter the profile name and PIN used on the other device.</p>
-            <label for="import-profile-name">Profile name</label>
-            <input
-              id="import-profile-name"
-              value={importName}
-              onInput={(event) => setImportName(event.currentTarget.value)}
-              autoComplete="username"
-              maxLength="40"
-              disabled={importing}
-              required
-              autofocus
-            />
-            <label for="import-profile-pin">Four-digit PIN</label>
-            <input
-              id="import-profile-pin"
-              type="password"
-              value={importPin}
-              onInput={(event) => setImportPin(pinInputValue(event))}
-              inputMode="numeric"
-              autoComplete="current-password"
-              pattern="[0-9]{4}"
-              maxLength="4"
-              disabled={importing}
-              required
-            />
-            {importError && <p class="error" role="alert">{importError}</p>}
-            <button type="submit" disabled={importing}>
-              {importing ? 'Importing…' : 'Import profile'}
-            </button>
-          </form>
-        )}
-        onClose={closeImport}
-        actions={[{ label: 'Cancel', disabled: importing, onClick: closeImport }]}
-      />
 
       <Modal
         open={Boolean(profileToDelete)}

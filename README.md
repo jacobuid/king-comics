@@ -69,16 +69,16 @@ credential centrally on every request and stores data under
 profiles even if it knows a profile's name, ID, and PIN. The account menu
 manages King Auth settings; switching reader profiles keeps the account signed in.
 
-The profile picker discovers your synced profiles on another device. Enter
-the profile's PIN once to connect its reading data on that device. Local-only
-profiles stay on the browser where they were created.
+The profile picker discovers and syncs profiles automatically after signing
+in on another device. Reading progress, avatars, and themes sync using the
+authenticated account and profile ID; no saved PIN or manual import is needed.
+PIN confirmation remains for profile renaming and deletion. The picker refreshes
+on focus, reconnect, and every 30 seconds. Local-only profiles remain on their
+original browser until sync is enabled.
 
-To bring forward profiles from before King Auth, sign in on the original
-browser and choose **Copy previous browser profiles**. This copies the
-browser's profiles and cached reading progress into your account as local
-profiles; open each profile and set up sync to upload it into your account.
-Original browser records and legacy S3 objects are preserved. Legacy S3-only
-profiles are not automatically assigned to an account.
+Original browser records and legacy S3 objects are preserved. Legacy profiles
+can be restored into a verified account using an administrator's JSON backup;
+the removed migration button does not assign browser data to arbitrary accounts.
 
 Deploy the updated sync backend **before** publishing the frontend; the new
 frontend requires the authenticated API and its Authorization CORS header.
@@ -92,8 +92,7 @@ can use cached data. Signing in or revalidating a session requires a connection;
 the sign-in gate does not grant access from an unverified offline session. When sync
 is configured, each profile's history and bookmarks are merged into one private
 JSON object under `s3://king-comics-jacobuid/profiles/`. A profile can be opened
-on another device by signing in to the owning King Auth account and entering
-the profile's four-digit PIN.
+on another device by signing in to the owning account.
 
 Deploy or update the sync Lambda and its access policy with:
 
