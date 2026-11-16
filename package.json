@@ -9,7 +9,9 @@
     "publish:comics": "node scripts/publish-comics.mjs",
     "upload:comics": "node scripts/publish-comics.mjs",
     "deploy:comic": "node scripts/deploy-comic.mjs",
-    "deploy:sync": "node scripts/deploy-sync.mjs",
+    "deploy:sync": "node scripts/deploy-api.mjs",
+    "deploy:api": "node scripts/deploy-api.mjs",
+    "provision:b2": "node scripts/provision-b2.mjs",
     "predev": "npm run catalog",
     "dev": "vite",
     "prebuild": "node scripts/prepare-libarchive.mjs",
@@ -19,7 +21,8 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.6",
-    "vite": "^8.2.1"
+    "vite": "^8.2.1",
+    "wrangler": "^4.162.0"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^7.3.1",

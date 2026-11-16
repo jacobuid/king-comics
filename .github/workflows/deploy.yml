@@ -17,8 +17,9 @@ concurrency:
 jobs:
   deploy:
     env:
-      VITE_COMICS_BASE_URL: https://d1ktco3tjlf7cv.cloudfront.net
+      VITE_COMICS_BASE_URL: ${{ vars.VITE_COMICS_BASE_URL }}
       VITE_SYNC_API_URL: ${{ vars.VITE_SYNC_API_URL }}
+      VITE_MEDIA_API_URL: ${{ vars.VITE_MEDIA_API_URL }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

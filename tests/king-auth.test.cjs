@@ -19,7 +19,7 @@ test('verifies centrally and fails closed for revoked sessions and service failu
     assert.equal(url, 'https://kingauth.app/api/browser/get-session')
     assert.equal(options.headers.Origin, event.headers.origin)
     assert.equal(options.headers.Authorization, event.headers.authorization)
-    assert.equal(options.redirect, 'error')
+    assert.equal(options.redirect, 'manual')
     return { ok: true, json: async () => ({ user: { id: 'owner-a' } }) }
   })
   assert.equal(owner, 'owner-a')

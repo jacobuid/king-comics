@@ -3,20 +3,36 @@ import { useEffect, useState } from 'preact/hooks'
 import { clearSession } from '../utils/auth.js'
 import { setAuthOwner } from '../utils/kingAuth.js'
 import { sitePath } from '../utils/sitePath.js'
+import { clearMediaAccess, refreshMediaAccess } from '../utils/mediaAccess.js'
 
 function ReaderAccount({ children, userId }) {
   const { getToken } = useAuth()
   const [ready, setReady] = useState(false)
+  const [mediaError, setMediaError] = useState('')
 
   useEffect(() => {
     setAuthOwner(userId, getToken)
-    setReady(true)
+    let active = true
+    async function openLibrary() {
+      try {
+        await refreshMediaAccess(getToken)
+        if (active) { setMediaError(''); setReady(true) }
+      } catch (error) { if (active) { setReady(false); setMediaError(error.message) } }
+    }
+    openLibrary()
+    const timer = setInterval(openLibrary, 3600_000)
+    window.addEventListener('online', openLibrary)
     return () => {
+      active = false
+      clearInterval(timer)
+      window.removeEventListener('online', openLibrary)
       clearSession()
       setAuthOwner(null)
+      clearMediaAccess()
     }
   }, [userId])
 
+  if (mediaError) return <main><p class="error" role="alert">{mediaError}</p><button type="button" onClick={() => window.location.reload()}>Try again</button></main>
   return ready ? children : <p class="status" role="status">Opening your profiles…</p>
 }
 

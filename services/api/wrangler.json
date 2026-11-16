@@ -1,0 +1,21 @@
+{
+  "name": "king-comics-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-16",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "B2_BUCKET": "king-comics-jacobuid",
+    "WEB_ORIGINS": "https://jacobuid.github.io,http://localhost:5173,http://localhost:4173,http://127.0.0.1:5175"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "king-comics-prod",
+      "database_id": "8c46db7c-1216-4f61-b3ea-fdb8c2696c80",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "account_id": "32097cf71a4dc22f666dc6cf4bac21ab"
+}

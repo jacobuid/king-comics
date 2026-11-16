@@ -1,106 +1,68 @@
 # King Comics
 
-A family comic archive built with Preact and Vite.
-
-Sign in with King Auth, then choose a reader profile. Each King Auth account
-can own multiple profiles with separate bookmarks, history, avatars, and themes.
-Reading data stays local-first and can sync between devices.
+A family comic archive built with Preact and Vite. Each account has multiple reader profiles with separate progress, bookmarks, avatars, and themes.
 
 Live site: <https://jacobuid.github.io/king-comics/>
 
-## Local development
+## Storage and delivery
 
-```bash
-npm install
-npm run dev
-```
+- Comic archives and covers: private Backblaze B2 bucket `king-comics-jacobuid`.
+- API: Cloudflare Worker at `https://king-comics-api.jacobuid-king-videos.workers.dev`.
+- Profile documents: Cloudflare D1 database `king-comics-prod`.
+- Website: GitHub Pages. The live app has no AWS dependency.
 
-## Adding comics
+The Worker verifies King Auth sessions and issues limited-lifetime media tickets, streams B2 archives with byte-range support, and caches covers after checking access. Media tickets are separate from authentication credentials; auth credentials never appear in URLs. Only `comics/` and `generated/covers/` are exposed by the media gateway. Profile documents and backups stay private. D1 conditional updates protect against concurrent device writes, and account UUIDs scope every profile operation.
 
-1. Put each CBZ or CBR file in its series folder:
+## Development
 
-   ```text
-   public/comics/
-     Series Name/
-       Comic 001.cbz
-       Comic 002.cbr
-   ```
-
-2. Generate the catalog and covers, then upload the new files to S3:
-
-   ```bash
-   npm run publish:comic
-   ```
-
-3. Build, commit the generated catalog, and trigger the GitHub Pages deploy:
-
-   ```bash
-   npm run deploy:comic
-   ```
-
-To publish only one series or preview an upload:
-
-```bash
-npm run publish:comic -- --series "Series Name"
-npm run publish:comic -- --dry-run
-```
-
-The publish command requires the local AWS CLI profile `king-comics`. The
-deploy command requires Git access to `jacobuid/king-comics`.
-
-## Storage
-
-Comic archives and generated covers are excluded from Git. Production assets
-are stored in the private `king-comics-jacobuid` S3 bucket and served through
-CloudFront. Do not put AWS credentials in this repository.
-
-## Profile sync
-
-King Auth uses the browser SDK from `jacobuid/king-auth#sdk`, pinned by the
-lockfile. Preact's React compatibility layer runs its embedded sign-in,
-signup, password recovery, and account management components. No client
-secret or consuming-site registration is needed. New accounts require email
-verification and owner approval. Use Node.js 24+ and Git for installation.
-
-Browser profiles, active reader sessions, progress, and saved PINs are scoped
-to the permanent King Auth `user.id`. The sync Lambda verifies the bearer
-credential centrally on every request and stores data under
-`profiles/users/<user-id>/`. Another account cannot read or change these
-profiles even if it knows a profile's name, ID, and PIN. The account menu
-manages King Auth settings; switching reader profiles keeps the account signed in.
-
-The profile picker discovers and syncs profiles automatically after signing
-in on another device. Reading progress, avatars, and themes sync using the
-authenticated account and profile ID; no saved PIN or manual import is needed.
-PIN confirmation remains for profile renaming and deletion. The picker refreshes
-on focus, reconnect, and every 30 seconds. Local-only profiles remain on their
-original browser until sync is enabled.
-
-Original browser records and legacy S3 objects are preserved. Legacy profiles
-can be restored into a verified account using an administrator's JSON backup;
-the removed migration button does not assign browser data to arbitrary accounts.
-
-Deploy the updated sync backend **before** publishing the frontend; the new
-frontend requires the authenticated API and its Authorization CORS header.
-The allowed origins in the Lambda and CORS configuration must match the site
-origin (GitHub Pages uses `https://jacobuid.github.io`). This authentication
-protects profile API data; the existing CloudFront comic asset URLs remain
-accessible independently of the frontend sign-in gate.
-
-Profiles remain local-first after authentication, so reading and bookmarking
-can use cached data. Signing in or revalidating a session requires a connection;
-the sign-in gate does not grant access from an unverified offline session. When sync
-is configured, each profile's history and bookmarks are merged into one private
-JSON object under `s3://king-comics-jacobuid/profiles/`. A profile can be opened
-on another device by signing in to the owning account.
-
-Deploy or update the sync Lambda and its access policy with:
+Use Node.js 24+ and Git:
 
 ```sh
-npm run deploy:sync
+npm ci
+npm run dev
+npm test
+npm run build
 ```
 
-The deployment script restricts the comics CloudFront distribution to the
-`comics/` and `generated/` folders, deploys the `king-comics-sync` CloudFormation
-stack in `us-east-2`, and sets the repository's `VITE_SYNC_API_URL` Actions
-variable. Push the site changes to `main` afterward to publish the sync UI.
+With empty media/sync variables, assets come from `public/`. For the deployed backend, set `VITE_MEDIA_API_URL` and `VITE_SYNC_API_URL` to the Worker URL in ignored `.env.local`. Browser sessions are origin-bound; sign in separately on localhost.
+
+## Publishing comics
+
+Place CBZ/CBR files under `public/comics/<Series Name>/`, then run:
+
+```sh
+npm run publish:comic
+npm run publish:comic -- --series "Series Name" --dry-run
+npm run deploy:comic
+```
+
+Publishing regenerates the catalog and covers, compares SHA-1 checksums, uploads changed assets to B2, and verifies uploaded bytes. It never deletes remote files. Catalog deployment builds the site and pushes the generated catalog. Archive and cover files remain excluded from Git.
+
+## Backend deployment
+
+Bootstrap credentials must be supplied through environment variables, following the King-videos setup:
+
+```sh
+npm run provision:b2
+npm run deploy:api
+```
+
+Provisioning creates the private bucket, a bucket-scoped read-only Worker key, a publishing key, and a D1 database. Secrets are saved only in ignored `.env.b2.local`; public resource IDs are recorded in `services/api/wrangler.json`. Provisioning refuses to rotate an existing local configuration. `npm run deploy:sync` is a backwards-compatible Cloudflare deployment command.
+
+The API workflow requires GitHub secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `B2_READ_KEY_ID`, `B2_READ_APPLICATION_KEY`, and `MEDIA_SIGNING_SECRET`. Preserve the signing secret across deployments. The frontend workflow uses repository variables `VITE_MEDIA_API_URL` and `VITE_SYNC_API_URL`. Never put storage credentials in `VITE_*` variables.
+
+## Profile sync and backups
+
+Profiles and reading data sync automatically after sign-in. The picker refreshes on focus, reconnect, and every 30 seconds. Background sync merges the newest per-comic changes. PINs remain confirmation for renaming and deletion; ordinary sync needs no PIN. Explicit local-only profiles stay on the original browser until sync is enabled.
+
+Authentication requires a connection. Cached reading data can be used after authentication; unverified offline sessions cannot open the library. Media tickets refresh hourly and expire after three hours.
+
+Export all profile documents from D1 into an ignored local JSON backup:
+
+```sh
+node scripts/backup-profiles.mjs
+```
+
+## AWS migration tools
+
+`migrate-assets-b2.mjs` verifies local source files against AWS ETags, downloads authoritative copies if necessary, and verifies B2 SHA-1 and size for each object. Reports and source backups are under ignored `.archive-backups/b2-migration/`. `migrate-profiles-d1.mjs` preserves IDs, rename markers, and newer progress. `bridge-legacy-sync.mjs` forwards old clients to Cloudflare during cutover. `backup-profiles-aws.mjs` reads only the legacy source. Original AWS infrastructure files are retained as migration/rollback references and are not used by deployment workflows.

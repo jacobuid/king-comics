@@ -7,6 +7,7 @@ public/comics/*
 !public/comics/.gitkeep
 .archive-backups/
 .vite/
+.wrangler/
 .env
 .env.local
 *.local

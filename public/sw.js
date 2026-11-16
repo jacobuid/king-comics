@@ -1,4 +1,4 @@
-const cacheName = 'king-comics-shell-v2'
+const cacheName = 'king-comics-shell-v3-b2'
 const scopeUrl = new URL(self.registration.scope)
 const appRoot = scopeUrl.pathname
 const isLocalDevelopment = ['localhost', '127.0.0.1'].includes(scopeUrl.hostname)

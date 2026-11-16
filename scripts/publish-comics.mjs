@@ -1,166 +1,42 @@
-import { spawnSync } from 'node:child_process'
-import { existsSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
+import { resolve, sep } from 'node:path'
 import { stat } from 'node:fs/promises'
-import path from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { authorize, findBucket, listFiles, loadConfig } from './lib/b2.mjs'
+import { uploadFile } from './lib/upload-b2.mjs'
 
-const bucket = 'king-comics-jacobuid'
-const profileArguments = process.env.AWS_PROFILE ? ['--profile', process.env.AWS_PROFILE] : []
-const region = process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION || 'us-east-2'
-const cloudFrontBaseUrl = 'https://d1ktco3tjlf7cv.cloudfront.net'
-const siteBaseUrl = 'https://jacobuid.github.io/king-comics'
-const projectRoot = process.cwd()
-const comicsRoot = path.join(projectRoot, 'public', 'comics')
-const coversRoot = path.join(projectRoot, 'public', 'generated', 'covers')
-const catalogScript = path.join(projectRoot, 'scripts', 'generate-comic-catalog.mjs')
-const catalogFile = path.join(projectRoot, 'src', 'data', 'comics.generated.js')
-const windowsAwsPath = 'C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe'
-const awsCommand = process.platform === 'win32' && existsSync(windowsAwsPath)
-  ? windowsAwsPath
-  : 'aws'
-
-function usage() {
-  console.log(`Usage:
-  npm run publish:comic
-  npm run publish:comic -- --series "Series Folder"
-  npm run publish:comic -- --series "Series Folder" --dry-run
-
-Without --series, every changed comic archive is synchronized. AWS sync uploads
-only new or changed comic archives. Generated covers are synchronized separately,
-and obsolete files are deleted only from the generated/covers prefix.`)
-}
-
-function parseArguments(args) {
-  let series = ''
-  let dryRun = false
-
-  for (let index = 0; index < args.length; index += 1) {
-    const argument = args[index]
-
-    if (argument === '--help' || argument === '-h') return { help: true }
-    if (argument === '--dry-run') {
-      dryRun = true
-      continue
+const args = process.argv.slice(2)
+if (args.includes('--help') || args.includes('-h')) {
+  console.log('Usage: npm run publish:comic -- [--series "Series Folder"] [--dry-run]\nUploads changed archives and covers to the private Backblaze B2 bucket.')
+} else {
+  let series = '', dryRun = false
+  for (let index = 0; index < args.length; index++) {
+    if (args[index] === '--series') { series = args[++index]; if (!series) throw new Error('--series requires a folder name.') }
+    else if (args[index] === '--dry-run') dryRun = true
+    else throw new Error('Unknown argument: ' + args[index])
+  }
+  const comicsRoot = resolve('public/comics')
+  if (series) {
+    const directory = resolve(comicsRoot, series)
+    if (!directory.startsWith(comicsRoot + sep) || !(await stat(directory)).isDirectory()) throw new Error('Series must be a directory inside public/comics.')
+  }
+  execFileSync(process.execPath, ['scripts/generate-comic-catalog.mjs'], { stdio: 'inherit' })
+  const { comics } = await import(pathToFileURL(resolve('src/data/comics.generated.js')).href + '?updated=' + Date.now())
+  const name = series.split(/[\\/]+/).join(' / ')
+  const selected = series ? comics.filter(comic => comic.series === name) : comics
+  if (!selected.length) throw new Error('No comic archives found.')
+  loadConfig()
+  const auth = await authorize(), bucket = await findBucket(auth)
+  const remote = new Map((await listFiles(auth, bucket.bucketId)).map(file => [file.fileName, file]))
+  const keys = [...new Set(selected.flatMap(comic => [comic.archive, comic.cover].filter(Boolean)).map(url => decodeURIComponent(url).replace(/^\//, '')))]
+  let next = 0, changed = 0
+  await Promise.all(Array.from({ length: 4 }, async () => {
+    while (next < keys.length) {
+      const key = keys[next++], path = resolve('public', key)
+      if (!path.startsWith(resolve('public') + sep)) throw new Error('Invalid catalog asset path.')
+      if (await uploadFile(auth, bucket.bucketId, key, path, remote.get(key), dryRun)) changed++
     }
-    if (argument === '--series') {
-      series = args[index + 1] ?? ''
-      index += 1
-      if (!series) throw new Error('--series requires a folder name.')
-      continue
-    }
-
-    throw new Error(`Unknown argument: ${argument}`)
-  }
-
-  return { dryRun, help: false, series }
+  }))
+  console.log((dryRun ? 'Dry run: ' : 'Publish complete: ') + changed + ' changed assets; ' + keys.length + ' checked. No remote objects deleted.')
+  if (!dryRun) console.log('Deploy the updated catalog with npm run deploy:comic.')
 }
-
-function run(command, args) {
-  const result = spawnSync(command, args, {
-    cwd: projectRoot,
-    stdio: 'inherit',
-  })
-
-  if (result.error) {
-    if (result.error.code === 'ENOENT') {
-      throw new Error(`${command} was not found. Install it or add it to PATH.`)
-    }
-    throw result.error
-  }
-
-  if (result.status !== 0) {
-    throw new Error(`${command} exited with status ${result.status}.`)
-  }
-}
-
-async function resolveSeriesDirectory(series) {
-  if (!series) return comicsRoot
-
-  const directory = path.resolve(comicsRoot, series)
-  const comicsPrefix = `${path.resolve(comicsRoot)}${path.sep}`
-
-  if (!directory.startsWith(comicsPrefix)) {
-    throw new Error('The series folder must be inside public/comics.')
-  }
-
-  const details = await stat(directory).catch(() => null)
-  if (!details?.isDirectory()) throw new Error(`Series folder not found: ${series}`)
-
-  return directory
-}
-
-async function main() {
-  const options = parseArguments(process.argv.slice(2))
-  if (options.help) {
-    usage()
-    return
-  }
-
-  const comicSource = await resolveSeriesDirectory(options.series)
-  const comicDestination = options.series
-    ? `s3://${bucket}/comics/${options.series.split(/[\\/]+/).join('/')}`
-    : `s3://${bucket}/comics`
-  const dryRunArguments = options.dryRun ? ['--dryrun'] : []
-
-  console.log('Generating the comic catalog and covers...')
-  run(process.execPath, [catalogScript])
-
-  const catalogUrl = `${pathToFileURL(catalogFile).href}?updated=${Date.now()}`
-  const { comics } = await import(catalogUrl)
-  const catalogSeriesName = options.series.split(/[\\/]+/).join(' / ')
-  const selectedComics = options.series
-    ? comics.filter((comic) => comic.series === catalogSeriesName)
-    : comics
-
-  if (options.series && selectedComics.length === 0) {
-    throw new Error(`No supported CBZ or CBR files were found in ${options.series}.`)
-  }
-
-  console.log(`${options.dryRun ? 'Checking' : 'Uploading'} comic archives...`)
-  run(awsCommand, [
-    's3', 'sync', comicSource, comicDestination,
-    '--exclude', '*.gitkeep',
-    ...profileArguments,
-    '--region', region,
-    ...dryRunArguments,
-  ])
-
-  console.log(`${options.dryRun ? 'Checking' : 'Uploading'} generated covers...`)
-  run(awsCommand, [
-    's3', 'sync', coversRoot, `s3://${bucket}/generated/covers`,
-    '--delete',
-    ...profileArguments,
-    '--region', region,
-    ...dryRunArguments,
-  ])
-
-  const selectedSeries = new Map()
-  for (const comic of selectedComics) selectedSeries.set(comic.seriesId, comic.series)
-
-  console.log(`\n${options.dryRun ? 'Dry run complete.' : 'Publish complete.'}`)
-  console.log(`Catalog: ${comics.length} comics across ${new Set(comics.map((comic) => comic.seriesId)).size} series`)
-  console.log('\nSeries pages:')
-  for (const [seriesId, seriesName] of selectedSeries) {
-    console.log(`  ${seriesName}: ${siteBaseUrl}/${seriesId}/`)
-  }
-
-  if (options.series) {
-    console.log('\nComic asset URLs:')
-    for (const comic of selectedComics) {
-      console.log(`  ${`${comic.title} ${comic.issue}`.trim()}`)
-      console.log(`    Archive: ${cloudFrontBaseUrl}${comic.archive}`)
-      if (comic.cover) console.log(`    Cover:   ${cloudFrontBaseUrl}${comic.cover}`)
-    }
-  }
-
-  if (!options.dryRun) {
-    console.log('\nThe assets are live on CloudFront and the local catalog is updated.')
-    console.log('Deploy the catalog to GitHub Pages with:')
-    console.log('  npm run deploy:comic')
-  }
-}
-
-main().catch((error) => {
-  console.error(`\nPublish failed: ${error.message}`)
-  process.exitCode = 1
-})
