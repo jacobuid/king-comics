@@ -2495,7 +2495,8 @@ input {
 .king-auth-error { color: #fda4af; }
 .king-auth-status { color: var(--theme-text-soft); }
 .king-auth-profile { position: relative; margin-left: auto; }
-.king-auth-profile-trigger { margin: 0; }
+.king-auth-profile-trigger { display: flex; align-items: center; justify-content: center; margin: 0; padding: .35rem; }
+.king-auth-avatar { display: block; width: 2.5rem; height: 2.5rem; border-radius: 50%; object-fit: cover; }
 .king-auth-profile-dropdown {
   position: absolute; right: 0; top: calc(100% + .5rem); z-index: 50;
   min-width: min(280px, 85vw); padding: 1rem; border: 1px solid var(--theme-border);
