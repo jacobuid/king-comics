@@ -79,7 +79,7 @@ export default function PasswordFeedback({ children }) {
         </div>, fields.password,
       )}
       {fields.confirmation && createPortal(
-        <div class="password-match" aria-live="polite"><Check met={matches}>Passwords match</Check></div>, fields.confirmation,
+        <div class="password-match" aria-live="polite"><Check met={matches}>match</Check></div>, fields.confirmation,
       )}
     </div>
   )
