@@ -196,7 +196,6 @@ function ProfilePicker() {
     <section class="page profiles-page">
       <p class="eyebrow">Choose your hero</p>
       <h1>Who is reading?</h1>
-      <p>Reader profiles for your King Auth account.</p>
 
       {profiles.length > 0 ? (
         <div class="profile-grid">
