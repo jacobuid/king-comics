@@ -3,6 +3,7 @@ import { useEffect, useState } from 'preact/hooks'
 import { clearSession } from '../utils/auth.js'
 import { setAuthOwner } from '../utils/kingAuth.js'
 import { sitePath } from '../utils/sitePath.js'
+import PasswordFeedback from './PasswordFeedback.jsx'
 
 function ReaderAccount({ children, userId }) {
   const { getToken } = useAuth()
@@ -52,8 +53,8 @@ function Gate({ children }) {
           ) : (
             <>
               {view === 'signin' && <SignIn className="auth-card-form" />}
-              {view === 'signup' && <><SignUp className="auth-card-form" /><p class="auth-approval-note">New accounts require email verification and owner approval.</p></>}
-              {view === 'reset' && <ForgotPassword className="auth-card-form" />}
+              {view === 'signup' && <><PasswordFeedback><SignUp className="auth-card-form" /></PasswordFeedback><p class="auth-approval-note">New accounts require email verification and owner approval.</p></>}
+              {view === 'reset' && <PasswordFeedback><ForgotPassword className="auth-card-form" /></PasswordFeedback>}
               <div class="auth-links">
                 <button type="button" onClick={() => setView(view === 'signin' ? 'reset' : 'signin')}>
                   {view === 'signin' ? 'Forgot your password?' : 'Back to sign in'}
