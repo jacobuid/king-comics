@@ -2480,6 +2480,18 @@ input {
   border-radius: .5rem; background: var(--theme-surface-deep); color: inherit; font: inherit;
 }
 .king-auth-field input[type='checkbox'] { accent-color: var(--theme-accent); }
+.king-auth-password { display: block; position: relative; }
+.king-auth-field .king-auth-password input,
+.auth-page .king-auth-field .king-auth-password input { padding-right: 3.5rem; }
+.king-auth-password .king-auth-password-toggle {
+  position: absolute; top: 50%; right: .35rem; transform: translateY(-50%);
+  display: flex; justify-content: center; align-items: center; width: 44px; height: 44px;
+  padding: .75rem; margin: 0; border: 0; border-radius: .4rem;
+  color: var(--theme-text-soft); background: transparent; box-shadow: none;
+}
+.king-auth-password-toggle:hover { color: white; background: var(--theme-surface); }
+.king-auth-password-toggle:focus-visible { outline: 2px solid var(--theme-accent-light); outline-offset: -2px; }
+.king-auth-password-icon { width: 1.1rem; height: 1.1rem; pointer-events: none; }
 .king-auth-error { color: #fda4af; }
 .king-auth-status { color: var(--theme-text-soft); }
 .king-auth-profile { position: relative; margin-left: auto; }
