@@ -65,4 +65,10 @@ node scripts/backup-profiles.mjs
 
 ## AWS migration tools
 
+The migration is complete: all 2,292 source objects (about 24.5 GB) were copied
+and checksum-verified in B2, including 14 private profile/rename backup records.
+Live profiles are in D1. After production browser checks, the old S3 bucket,
+CloudFront distribution, Lambda sync stack, and old Lambda logs were deleted
+with explicit approval. Local migration backups and verification reports remain.
+
 `migrate-assets-b2.mjs` verifies local source files against AWS ETags, downloads authoritative copies if necessary, and verifies B2 SHA-1 and size for each object. Reports and source backups are under ignored `.archive-backups/b2-migration/`. `migrate-profiles-d1.mjs` preserves IDs, rename markers, and newer progress. `bridge-legacy-sync.mjs` forwards old clients to Cloudflare during cutover. `backup-profiles-aws.mjs` reads only the legacy source. Original AWS infrastructure files are retained as migration/rollback references and are not used by deployment workflows.
