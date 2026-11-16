@@ -2,11 +2,11 @@ import { createPortal } from 'preact/compat'
 import { useId, useLayoutEffect, useRef, useState } from 'preact/hooks'
 
 const requirements = [
-  { label: '8+ characters', test: value => Array.from(value).length >= 8 },
-  { label: 'Uppercase', test: value => /[A-Z]/.test(value) },
-  { label: 'Lowercase', test: value => /[a-z]/.test(value) },
-  { label: 'Number', test: value => /[0-9]/.test(value) },
-  { label: 'Special character', test: value => /[\p{P}\p{S}]/u.test(value) },
+  { label: '8+', test: value => Array.from(value).length >= 8 },
+  { label: 'upper', test: value => /[A-Z]/.test(value) },
+  { label: 'lower', test: value => /[a-z]/.test(value) },
+  { label: 'number', test: value => /[0-9]/.test(value) },
+  { label: 'character', test: value => /[\p{P}\p{S}]/u.test(value) },
 ]
 
 function Check({ met, children }) {
