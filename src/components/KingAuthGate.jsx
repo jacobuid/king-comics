@@ -24,6 +24,7 @@ function ReaderAccount({ children, userId }) {
 function Gate({ children }) {
   const { user, isSignedIn, isLoading, error, refresh } = useAuth()
   const [view, setView] = useState('signin')
+  const [signupResult, setSignupResult] = useState(null)
   if (isSignedIn && !isLoading) {
     return <ReaderAccount key={user.id} userId={user.id}>{children}</ReaderAccount>
   }
@@ -42,8 +43,8 @@ function Gate({ children }) {
             <button type="button" aria-pressed={view === 'signup'} onClick={() => setView('signup')}>Create account</button>
           </nav>
           <div class="auth-intro">
-            <h1 id="auth-title">{view === 'signup' ? 'Create your account.' : view === 'reset' ? 'Let’s get you back in.' : 'Welcome back.'}</h1>
-            <p>{view === 'signup' ? 'One King Auth account. A hero profile for every reader.' : view === 'reset' ? 'Reset your King Auth password to return to your library.' : 'Sign in to your King Auth account.'}</p>
+            <h1 id="auth-title">{view === 'signup' ? signupResult ? 'Email verified.' : 'Create your account.' : view === 'reset' ? 'Let’s get you back in.' : 'Welcome back.'}</h1>
+            {!(view === 'signup' && signupResult) && <p>{view === 'signup' ? 'One King Auth account. A hero profile for every reader.' : view === 'reset' ? 'Reset your King Auth password to return to your library.' : 'Sign in to your King Auth account.'}</p>}
           </div>
           {isLoading ? <p role="status">Checking your account…</p> : error ? (
             <>
@@ -53,7 +54,13 @@ function Gate({ children }) {
           ) : (
             <>
               {view === 'signin' && <SignIn className="auth-card-form" />}
-              {view === 'signup' && <><PasswordFeedback><SignUp className="auth-card-form" /></PasswordFeedback><p class="auth-approval-note">New accounts require email verification and owner approval.</p></>}
+              {view === 'signup' && (signupResult ? (
+                <p class="king-auth-status" role="status">
+                  {signupResult === 'pending'
+                    ? 'Your account is awaiting owner approval. You can sign in once approved.'
+                    : 'Your email has been verified. You can now sign in.'}
+                </p>
+              ) : <><PasswordFeedback><SignUp className="auth-card-form" onSuccess={data => setSignupResult(data?.user?.approvalStatus === 'pending' ? 'pending' : 'verified')} /></PasswordFeedback><p class="auth-approval-note">New accounts require email verification and owner approval.</p></>)}
               {view === 'reset' && <PasswordFeedback><ForgotPassword className="auth-card-form" /></PasswordFeedback>}
               <div class="auth-links">
                 <button type="button" onClick={() => setView(view === 'signin' ? 'reset' : 'signin')}>
