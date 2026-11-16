@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process'
-import { writeFileSync, unlinkSync } from 'node:fs'
+import { mkdirSync, writeFileSync, unlinkSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { loadConfig } from './lib/b2.mjs'
 
@@ -11,6 +11,7 @@ function run(args) { execFileSync(process.execPath, [cli, ...args, '--config', c
 run(['d1', 'migrations', 'apply', 'king-comics-prod', '--remote'])
 run(['deploy'])
 try {
+  mkdirSync(resolve('.npm-cache'), { recursive: true })
   writeFileSync(file, JSON.stringify({
     B2_KEY_ID: process.env.B2_READ_KEY_ID,
     B2_APPLICATION_KEY: process.env.B2_READ_APPLICATION_KEY,
