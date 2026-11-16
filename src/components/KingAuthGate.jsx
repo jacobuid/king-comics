@@ -4,6 +4,7 @@ import { clearSession } from '../utils/auth.js'
 import { setAuthOwner } from '../utils/kingAuth.js'
 import { sitePath } from '../utils/sitePath.js'
 import PasswordFeedback from './PasswordFeedback.jsx'
+import PasswordVisibility from './PasswordVisibility.jsx'
 
 function ReaderAccount({ children, userId }) {
   const { getToken } = useAuth()
@@ -80,5 +81,5 @@ function Gate({ children }) {
 }
 
 export default function KingAuthGate({ children }) {
-  return <AuthProvider><Gate>{children}</Gate></AuthProvider>
+  return <AuthProvider><PasswordVisibility><Gate>{children}</Gate></PasswordVisibility></AuthProvider>
 }
