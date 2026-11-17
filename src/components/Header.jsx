@@ -137,7 +137,10 @@ function Header() {
               </a>
             </nav>
           ) : null}
-          <ProfileMenu triggerLabel="Open King Auth account menu" />
+          <ProfileMenu
+            triggerLabel="Open King Auth account menu"
+            accountClassName="account-settings"
+          />
         </div>
       </div>
     </header>

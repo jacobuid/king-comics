@@ -2512,3 +2512,30 @@ input {
 .king-auth-account-dialog::backdrop { background: #000b; }
 .king-auth-account-dialog button { margin-right: .5rem; }
 .king-auth-account-dialog :is(p, li) { overflow-wrap: anywhere; }
+.king-auth-account-dialog > h2 { margin-top: 0; padding-right: 5rem; }
+.king-auth-account-close { position: absolute; top: 1rem; right: 1rem; }
+.account-settings { display: grid; gap: 1rem; min-width: 0; }
+.account-settings > p { margin: 0; color: var(--theme-text-soft); }
+.account-settings > .king-auth-form,
+.account-settings > section {
+  min-width: 0; padding: 1rem; border: 1px solid var(--theme-border);
+  border-radius: .75rem; background: var(--theme-surface);
+}
+.account-settings h2 { margin-top: 0; font-size: 1.1rem; }
+.account-settings ul { display: grid; gap: .75rem; padding: 0; list-style: none; }
+.account-settings li {
+  padding: 1rem; border: 1px solid var(--theme-border); border-radius: .5rem;
+  background: var(--theme-surface-deep); line-height: 1.6;
+}
+.account-settings li > span:first-child { font-weight: 700; color: var(--theme-accent-light); }
+.account-settings li > button { display: block; margin-top: .75rem; }
+.account-settings > button { justify-self: start; }
+.account-settings :is(button, input, select):focus-visible {
+  outline: 2px solid var(--theme-accent-light); outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .king-auth-account-dialog { padding: 1rem; }
+  .account-settings > .king-auth-form,
+  .account-settings > section,
+  .account-settings li { padding: .75rem; }
+}
