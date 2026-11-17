@@ -2529,6 +2529,16 @@ input {
 }
 .account-settings li > span:first-child { font-weight: 700; color: var(--theme-accent-light); }
 .account-settings li > button { display: block; margin-top: .75rem; }
+.king-auth-session-heading { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
+.king-auth-session-icon { flex: 0 0 auto; color: var(--theme-accent-light); }
+.king-auth-session-current {
+  color: var(--theme-accent-light); font-size: .85rem; font-weight: 600;
+}
+.account-settings .king-auth-session p { margin: .5rem 0; font-size: .9rem; }
+.king-auth-session-app,
+.king-auth-session-dates { color: var(--theme-text-soft); }
+.king-auth-session-network { overflow-wrap: anywhere; }
+.king-auth-session-activity time { font-weight: 600; }
 .account-settings > button { justify-self: start; }
 .account-settings :is(button, input, select):focus-visible {
   outline: 2px solid var(--theme-accent-light); outline-offset: 3px;
