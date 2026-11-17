@@ -88,5 +88,5 @@ function Gate({ children }) {
 }
 
 export default function KingAuthGate({ children }) {
-  return <AuthProvider><Gate>{children}</Gate></AuthProvider>
+  return <AuthProvider appName="King Comics" appPath={sitePath('/')}><Gate>{children}</Gate></AuthProvider>
 }
